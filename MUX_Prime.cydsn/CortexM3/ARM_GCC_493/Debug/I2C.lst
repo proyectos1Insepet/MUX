@@ -1,0 +1,3553 @@
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"I2C.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.comm	count_teclas1,1,1
+  19              		.comm	comas1,1,1
+  20              		.comm	comas2,1,1
+  21              		.comm	id_coma1,1,1
+  22              		.comm	id_teclado1,1,1
+  23              		.comm	count_teclas2,1,1
+  24              		.comm	id_coma2,1,1
+  25              		.comm	id_teclado2,1,1
+  26              		.comm	posx1,2,2
+  27              		.comm	posy1,2,2
+  28              		.comm	sizeletra1,2,2
+  29              		.comm	posx2,2,2
+  30              		.comm	posy2,2,2
+  31              		.comm	sizeletra2,2,2
+  32              		.comm	teclas1,1,1
+  33              		.comm	teclas2,1,1
+  34              		.comm	flujo_LCD1,1,1
+  35              		.comm	flujo_LCD2,1,1
+  36              		.comm	flujo_LCD3,1,1
+  37              		.comm	flujo_LCD4,1,1
+  38              		.comm	Buffer_LCD1,30,4
+  39              		.comm	Buffer_LCD2,30,4
+  40              		.comm	count_protector,1,1
+  41              		.comm	count_protector2,1,1
+  42              		.comm	password_lcd,9,4
+  43              		.comm	imagen_grado1,2,2
+  44              		.comm	imagen_grado2,2,2
+  45              		.comm	imagen_grado3,2,2
+  46              		.comm	imagen_grado4,2,2
+  47              		.comm	prox_caso,16,4
+  48              		.comm	bloqueo_LCD,3,4
+  49              		.comm	ppux10,1,1
+  50              		.comm	nombre_pro1,17,4
+  51              		.comm	nombre_pro2,17,4
+  52              		.comm	nombre_pro3,17,4
+  53              		.comm	version,4,4
+  54              		.comm	lado1,93,4
+  55              		.comm	lado2,93,4
+  56              		.comm	lado3,93,4
+  57              		.comm	lado4,93,4
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 2
+
+
+  58              		.comm	nombre,33,4
+  59              		.comm	nit,15,4
+  60              		.comm	telefono,20,4
+  61              		.comm	direccion,33,4
+  62              		.comm	lema1,32,4
+  63              		.comm	lema2,32,4
+  64              		.comm	id_logo,2,4
+  65              		.comm	km,2,4
+  66              		.comm	fecha,3,4
+  67              		.comm	hora,2,4
+  68              		.comm	rventa1,97,4
+  69              		.comm	rventa2,97,4
+  70              		.comm	rventa3,97,4
+  71              		.comm	rventa4,97,4
+  72              		.comm	ok_RF,1,1
+  73              		.comm	ok_datosRF,1,1
+  74              		.comm	rf_mod,200,4
+  75              		.comm	buffer_i2c,64,4
+  76              		.comm	crc_total,1,1
+  77              		.comm	print1,2,4
+  78              		.comm	print2,2,4
+  79              		.section	.text.leer_hora,"ax",%progbits
+  80              		.align	2
+  81              		.global	leer_hora
+  82              		.thumb
+  83              		.thumb_func
+  84              		.type	leer_hora, %function
+  85              	leer_hora:
+  86              	.LFB63:
+  87              		.file 1 ".\\I2C.c"
+   1:.\I2C.c       **** /*
+   2:.\I2C.c       **** ***************************************************************************************************
+   3:.\I2C.c       **** *                                           GRP550/700 CODE
+   4:.\I2C.c       **** *
+   5:.\I2C.c       **** *                             (c) Copyright 2013; Sistemas Insepet LTDA
+   6:.\I2C.c       **** *
+   7:.\I2C.c       **** *               All rights reserved.  Protected by international copyright laws.
+   8:.\I2C.c       **** *               Knowledge of the source code may NOT be used to develop a similar product.
+   9:.\I2C.c       **** *               Please help us continue to provide the Embedded community with the finest
+  10:.\I2C.c       **** *               software available.  Your honesty is greatly appreciated.
+  11:.\I2C.c       **** ***************************************************************************************************
+  12:.\I2C.c       **** */
+  13:.\I2C.c       **** 
+  14:.\I2C.c       **** /*
+  15:.\I2C.c       **** ***************************************************************************************************
+  16:.\I2C.c       **** *
+  17:.\I2C.c       **** *                                             GRP550/700 CODE
+  18:.\I2C.c       **** *
+  19:.\I2C.c       **** *                                             CYPRESS PSoC5LP
+  20:.\I2C.c       **** *                                                with the
+  21:.\I2C.c       **** *                                            CY8C5969AXI-LP035
+  22:.\I2C.c       **** *
+  23:.\I2C.c       **** * Filename      : I2C.c
+  24:.\I2C.c       **** * Version       : V1.00
+  25:.\I2C.c       **** * Programmer(s) : 
+  26:.\I2C.c       ****                   
+  27:.\I2C.c       **** ***************************************************************************************************
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 3
+
+
+  28:.\I2C.c       **** */
+  29:.\I2C.c       **** 
+  30:.\I2C.c       **** 
+  31:.\I2C.c       **** /*
+  32:.\I2C.c       **** ***************************************************************************************************
+  33:.\I2C.c       **** *                                             INCLUDE FILES
+  34:.\I2C.c       **** ***************************************************************************************************
+  35:.\I2C.c       **** */
+  36:.\I2C.c       **** #include <device.h>
+  37:.\I2C.c       **** #include "VariablesG.h"
+  38:.\I2C.c       **** #include "LCD.h"
+  39:.\I2C.c       **** 
+  40:.\I2C.c       **** /*
+  41:.\I2C.c       **** ***************************************************************************************************
+  42:.\I2C.c       **** *                                         uint8 leer_hora( void )
+  43:.\I2C.c       **** *
+  44:.\I2C.c       **** * Description : 
+  45:.\I2C.c       **** *               
+  46:.\I2C.c       **** *
+  47:.\I2C.c       **** * Argument(s) : none
+  48:.\I2C.c       **** *
+  49:.\I2C.c       **** * Return(s)   : none
+  50:.\I2C.c       **** *
+  51:.\I2C.c       **** * Caller(s)   : 
+  52:.\I2C.c       **** *
+  53:.\I2C.c       **** * Note(s)     : none.
+  54:.\I2C.c       **** ***************************************************************************************************
+  55:.\I2C.c       **** */
+  56:.\I2C.c       **** uint8 leer_hora(){
+  88              		.loc 1 56 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 8
+  91              		@ frame_needed = 1, uses_anonymous_args = 0
+  92 0000 90B5     		push	{r4, r7, lr}
+  93              		.cfi_def_cfa_offset 12
+  94              		.cfi_offset 4, -12
+  95              		.cfi_offset 7, -8
+  96              		.cfi_offset 14, -4
+  97 0002 83B0     		sub	sp, sp, #12
+  98              		.cfi_def_cfa_offset 24
+  99 0004 00AF     		add	r7, sp, #0
+ 100              		.cfi_def_cfa_register 7
+  57:.\I2C.c       **** 	uint8 status,i;
+  58:.\I2C.c       **** 	for(i=1;i<=2;i++){
+ 101              		.loc 1 58 0
+ 102 0006 0123     		movs	r3, #1
+ 103 0008 FB71     		strb	r3, [r7, #7]
+ 104 000a 36E0     		b	.L2
+ 105              	.L9:
+  59:.\I2C.c       ****         I2C_1_MasterClearStatus();
+ 106              		.loc 1 59 0
+ 107 000c FFF7FEFF 		bl	I2C_1_MasterClearStatus
+  60:.\I2C.c       ****         status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
+ 108              		.loc 1 60 0
+ 109 0010 6820     		movs	r0, #104
+ 110 0012 0021     		movs	r1, #0
+ 111 0014 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 4
+
+
+ 112 0018 0346     		mov	r3, r0
+ 113 001a BB71     		strb	r3, [r7, #6]
+  61:.\I2C.c       ****         if(I2C_1_MSTR_NO_ERROR == status)								 		/* Check if transfer completed without errors *
+ 114              		.loc 1 61 0
+ 115 001c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 116 001e 002B     		cmp	r3, #0
+ 117 0020 26D1     		bne	.L3
+  62:.\I2C.c       ****     	{
+  63:.\I2C.c       ****             status = I2C_1_MasterWriteByte(i);
+ 118              		.loc 1 63 0
+ 119 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 120 0024 1846     		mov	r0, r3
+ 121 0026 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 122 002a 0346     		mov	r3, r0
+ 123 002c BB71     		strb	r3, [r7, #6]
+  64:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 124              		.loc 1 64 0
+ 125 002e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 126 0030 002B     		cmp	r3, #0
+ 127 0032 01D0     		beq	.L4
+  65:.\I2C.c       ****             {
+  66:.\I2C.c       ****                 return 0;
+ 128              		.loc 1 66 0
+ 129 0034 0023     		movs	r3, #0
+ 130 0036 24E0     		b	.L5
+ 131              	.L4:
+  67:.\I2C.c       ****             }
+  68:.\I2C.c       **** 			else{
+  69:.\I2C.c       **** 		        I2C_1_MasterSendStop(); 										/* Send Stop */
+ 132              		.loc 1 69 0
+ 133 0038 FFF7FEFF 		bl	I2C_1_MasterSendStop
+  70:.\I2C.c       **** 		        CyDelay(10);
+ 134              		.loc 1 70 0
+ 135 003c 0A20     		movs	r0, #10
+ 136 003e FFF7FEFF 		bl	CyDelay
+  71:.\I2C.c       **** 		        status = I2C_1_MasterSendStart(0x68, I2C_1_READ_XFER_MODE);
+ 137              		.loc 1 71 0
+ 138 0042 6820     		movs	r0, #104
+ 139 0044 0121     		movs	r1, #1
+ 140 0046 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 141 004a 0346     		mov	r3, r0
+ 142 004c BB71     		strb	r3, [r7, #6]
+  72:.\I2C.c       **** 		        if(I2C_1_MSTR_NO_ERROR == status){
+ 143              		.loc 1 72 0
+ 144 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 145 0050 002B     		cmp	r3, #0
+ 146 0052 0BD1     		bne	.L6
+  73:.\I2C.c       **** 		            hora[i-1] = I2C_1_MasterReadByte(I2C_1_NAK_DATA);
+ 147              		.loc 1 73 0
+ 148 0054 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 149 0056 5C1E     		subs	r4, r3, #1
+ 150 0058 0020     		movs	r0, #0
+ 151 005a FFF7FEFF 		bl	I2C_1_MasterReadByte
+ 152 005e 0346     		mov	r3, r0
+ 153 0060 1A46     		mov	r2, r3
+ 154 0062 0A4B     		ldr	r3, .L11
+ 155 0064 1A55     		strb	r2, [r3, r4]
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 5
+
+
+  74:.\I2C.c       **** 		        }
+  75:.\I2C.c       **** 				else{
+  76:.\I2C.c       **** 					return 0;
+  77:.\I2C.c       **** 				}
+  78:.\I2C.c       **** 		        I2C_1_MasterSendStop();	
+ 156              		.loc 1 78 0
+ 157 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 158 006a 03E0     		b	.L10
+ 159              	.L6:
+  76:.\I2C.c       **** 				}
+ 160              		.loc 1 76 0
+ 161 006c 0023     		movs	r3, #0
+ 162 006e 08E0     		b	.L5
+ 163              	.L3:
+  79:.\I2C.c       **** 			}
+  80:.\I2C.c       ****         }
+  81:.\I2C.c       **** 		else{
+  82:.\I2C.c       **** 			return 0;
+ 164              		.loc 1 82 0
+ 165 0070 0023     		movs	r3, #0
+ 166 0072 06E0     		b	.L5
+ 167              	.L10:
+  58:.\I2C.c       ****         I2C_1_MasterClearStatus();
+ 168              		.loc 1 58 0 discriminator 2
+ 169 0074 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 170 0076 0133     		adds	r3, r3, #1
+ 171 0078 FB71     		strb	r3, [r7, #7]
+ 172              	.L2:
+  58:.\I2C.c       ****         I2C_1_MasterClearStatus();
+ 173              		.loc 1 58 0 is_stmt 0 discriminator 1
+ 174 007a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 175 007c 022B     		cmp	r3, #2
+ 176 007e C5D9     		bls	.L9
+  83:.\I2C.c       **** 		}		
+  84:.\I2C.c       **** 	}
+  85:.\I2C.c       **** 	return 1;
+ 177              		.loc 1 85 0 is_stmt 1
+ 178 0080 0123     		movs	r3, #1
+ 179              	.L5:
+  86:.\I2C.c       **** }
+ 180              		.loc 1 86 0
+ 181 0082 1846     		mov	r0, r3
+ 182 0084 0C37     		adds	r7, r7, #12
+ 183              		.cfi_def_cfa_offset 12
+ 184 0086 BD46     		mov	sp, r7
+ 185              		.cfi_def_cfa_register 13
+ 186              		@ sp needed
+ 187 0088 90BD     		pop	{r4, r7, pc}
+ 188              	.L12:
+ 189 008a 00BF     		.align	2
+ 190              	.L11:
+ 191 008c 00000000 		.word	hora
+ 192              		.cfi_endproc
+ 193              	.LFE63:
+ 194              		.size	leer_hora, .-leer_hora
+ 195              		.section	.text.leer_fecha,"ax",%progbits
+ 196              		.align	2
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 6
+
+
+ 197              		.global	leer_fecha
+ 198              		.thumb
+ 199              		.thumb_func
+ 200              		.type	leer_fecha, %function
+ 201              	leer_fecha:
+ 202              	.LFB64:
+  87:.\I2C.c       **** 
+  88:.\I2C.c       **** /*
+  89:.\I2C.c       **** ***************************************************************************************************
+  90:.\I2C.c       **** *                                         uint8 leer_fecha( void )
+  91:.\I2C.c       **** *
+  92:.\I2C.c       **** * Description : 
+  93:.\I2C.c       **** *               
+  94:.\I2C.c       **** *
+  95:.\I2C.c       **** * Argument(s) : none
+  96:.\I2C.c       **** *
+  97:.\I2C.c       **** * Return(s)   : none
+  98:.\I2C.c       **** *
+  99:.\I2C.c       **** * Caller(s)   : 
+ 100:.\I2C.c       **** *
+ 101:.\I2C.c       **** * Note(s)     : none.
+ 102:.\I2C.c       **** ***************************************************************************************************
+ 103:.\I2C.c       **** */
+ 104:.\I2C.c       **** uint8 leer_fecha(){
+ 203              		.loc 1 104 0
+ 204              		.cfi_startproc
+ 205              		@ args = 0, pretend = 0, frame = 8
+ 206              		@ frame_needed = 1, uses_anonymous_args = 0
+ 207 0000 90B5     		push	{r4, r7, lr}
+ 208              		.cfi_def_cfa_offset 12
+ 209              		.cfi_offset 4, -12
+ 210              		.cfi_offset 7, -8
+ 211              		.cfi_offset 14, -4
+ 212 0002 83B0     		sub	sp, sp, #12
+ 213              		.cfi_def_cfa_offset 24
+ 214 0004 00AF     		add	r7, sp, #0
+ 215              		.cfi_def_cfa_register 7
+ 105:.\I2C.c       **** 	uint8 status,i;
+ 106:.\I2C.c       **** 	for(i=4;i<=6;i++){
+ 216              		.loc 1 106 0
+ 217 0006 0423     		movs	r3, #4
+ 218 0008 FB71     		strb	r3, [r7, #7]
+ 219 000a 36E0     		b	.L14
+ 220              	.L21:
+ 107:.\I2C.c       ****         I2C_1_MasterClearStatus();
+ 221              		.loc 1 107 0
+ 222 000c FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 108:.\I2C.c       ****         status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
+ 223              		.loc 1 108 0
+ 224 0010 6820     		movs	r0, #104
+ 225 0012 0021     		movs	r1, #0
+ 226 0014 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 227 0018 0346     		mov	r3, r0
+ 228 001a BB71     		strb	r3, [r7, #6]
+ 109:.\I2C.c       ****         if(I2C_1_MSTR_NO_ERROR == status)								 		/* Check if transfer completed without errors *
+ 229              		.loc 1 109 0
+ 230 001c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 7
+
+
+ 231 001e 002B     		cmp	r3, #0
+ 232 0020 26D1     		bne	.L15
+ 110:.\I2C.c       ****     	{
+ 111:.\I2C.c       ****             status = I2C_1_MasterWriteByte(i);
+ 233              		.loc 1 111 0
+ 234 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 235 0024 1846     		mov	r0, r3
+ 236 0026 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 237 002a 0346     		mov	r3, r0
+ 238 002c BB71     		strb	r3, [r7, #6]
+ 112:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 239              		.loc 1 112 0
+ 240 002e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 241 0030 002B     		cmp	r3, #0
+ 242 0032 01D0     		beq	.L16
+ 113:.\I2C.c       ****             {
+ 114:.\I2C.c       ****                 return 0;
+ 243              		.loc 1 114 0
+ 244 0034 0023     		movs	r3, #0
+ 245 0036 24E0     		b	.L17
+ 246              	.L16:
+ 115:.\I2C.c       ****             }
+ 116:.\I2C.c       **** 			else{
+ 117:.\I2C.c       **** 		        I2C_1_MasterSendStop(); 										/* Send Stop */
+ 247              		.loc 1 117 0
+ 248 0038 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 118:.\I2C.c       **** 		        CyDelay(10);
+ 249              		.loc 1 118 0
+ 250 003c 0A20     		movs	r0, #10
+ 251 003e FFF7FEFF 		bl	CyDelay
+ 119:.\I2C.c       **** 		        status = I2C_1_MasterSendStart(0x68, I2C_1_READ_XFER_MODE);
+ 252              		.loc 1 119 0
+ 253 0042 6820     		movs	r0, #104
+ 254 0044 0121     		movs	r1, #1
+ 255 0046 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 256 004a 0346     		mov	r3, r0
+ 257 004c BB71     		strb	r3, [r7, #6]
+ 120:.\I2C.c       **** 		        if(I2C_1_MSTR_NO_ERROR == status){
+ 258              		.loc 1 120 0
+ 259 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 260 0050 002B     		cmp	r3, #0
+ 261 0052 0BD1     		bne	.L18
+ 121:.\I2C.c       **** 		            fecha[i-4] = I2C_1_MasterReadByte(I2C_1_NAK_DATA);
+ 262              		.loc 1 121 0
+ 263 0054 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 264 0056 1C1F     		subs	r4, r3, #4
+ 265 0058 0020     		movs	r0, #0
+ 266 005a FFF7FEFF 		bl	I2C_1_MasterReadByte
+ 267 005e 0346     		mov	r3, r0
+ 268 0060 1A46     		mov	r2, r3
+ 269 0062 0A4B     		ldr	r3, .L23
+ 270 0064 1A55     		strb	r2, [r3, r4]
+ 122:.\I2C.c       **** 		        }
+ 123:.\I2C.c       **** 				else{
+ 124:.\I2C.c       **** 					return 0;
+ 125:.\I2C.c       **** 				}
+ 126:.\I2C.c       **** 		        I2C_1_MasterSendStop();	
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 8
+
+
+ 271              		.loc 1 126 0
+ 272 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 273 006a 03E0     		b	.L22
+ 274              	.L18:
+ 124:.\I2C.c       **** 				}
+ 275              		.loc 1 124 0
+ 276 006c 0023     		movs	r3, #0
+ 277 006e 08E0     		b	.L17
+ 278              	.L15:
+ 127:.\I2C.c       **** 			}
+ 128:.\I2C.c       ****         }
+ 129:.\I2C.c       **** 		else{
+ 130:.\I2C.c       **** 			return 0;
+ 279              		.loc 1 130 0
+ 280 0070 0023     		movs	r3, #0
+ 281 0072 06E0     		b	.L17
+ 282              	.L22:
+ 106:.\I2C.c       ****         I2C_1_MasterClearStatus();
+ 283              		.loc 1 106 0 discriminator 2
+ 284 0074 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 285 0076 0133     		adds	r3, r3, #1
+ 286 0078 FB71     		strb	r3, [r7, #7]
+ 287              	.L14:
+ 106:.\I2C.c       ****         I2C_1_MasterClearStatus();
+ 288              		.loc 1 106 0 is_stmt 0 discriminator 1
+ 289 007a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 290 007c 062B     		cmp	r3, #6
+ 291 007e C5D9     		bls	.L21
+ 131:.\I2C.c       **** 		}		
+ 132:.\I2C.c       **** 	}
+ 133:.\I2C.c       **** 	return 1;
+ 292              		.loc 1 133 0 is_stmt 1
+ 293 0080 0123     		movs	r3, #1
+ 294              	.L17:
+ 134:.\I2C.c       **** }
+ 295              		.loc 1 134 0
+ 296 0082 1846     		mov	r0, r3
+ 297 0084 0C37     		adds	r7, r7, #12
+ 298              		.cfi_def_cfa_offset 12
+ 299 0086 BD46     		mov	sp, r7
+ 300              		.cfi_def_cfa_register 13
+ 301              		@ sp needed
+ 302 0088 90BD     		pop	{r4, r7, pc}
+ 303              	.L24:
+ 304 008a 00BF     		.align	2
+ 305              	.L23:
+ 306 008c 00000000 		.word	fecha
+ 307              		.cfi_endproc
+ 308              	.LFE64:
+ 309              		.size	leer_fecha, .-leer_fecha
+ 310              		.section	.text.write_hora,"ax",%progbits
+ 311              		.align	2
+ 312              		.global	write_hora
+ 313              		.thumb
+ 314              		.thumb_func
+ 315              		.type	write_hora, %function
+ 316              	write_hora:
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 9
+
+
+ 317              	.LFB65:
+ 135:.\I2C.c       **** 
+ 136:.\I2C.c       **** /*
+ 137:.\I2C.c       **** ***************************************************************************************************
+ 138:.\I2C.c       **** *                                         uint8 write_hora( void )
+ 139:.\I2C.c       **** *
+ 140:.\I2C.c       **** * Description : 
+ 141:.\I2C.c       **** *               
+ 142:.\I2C.c       **** *
+ 143:.\I2C.c       **** * Argument(s) : none
+ 144:.\I2C.c       **** *
+ 145:.\I2C.c       **** * Return(s)   : none
+ 146:.\I2C.c       **** *
+ 147:.\I2C.c       **** * Caller(s)   : 
+ 148:.\I2C.c       **** *
+ 149:.\I2C.c       **** * Note(s)     : none.
+ 150:.\I2C.c       **** ***************************************************************************************************
+ 151:.\I2C.c       **** */
+ 152:.\I2C.c       **** 
+ 153:.\I2C.c       **** uint8 write_hora( void ){
+ 318              		.loc 1 153 0
+ 319              		.cfi_startproc
+ 320              		@ args = 0, pretend = 0, frame = 8
+ 321              		@ frame_needed = 1, uses_anonymous_args = 0
+ 322 0000 80B5     		push	{r7, lr}
+ 323              		.cfi_def_cfa_offset 8
+ 324              		.cfi_offset 7, -8
+ 325              		.cfi_offset 14, -4
+ 326 0002 82B0     		sub	sp, sp, #8
+ 327              		.cfi_def_cfa_offset 16
+ 328 0004 00AF     		add	r7, sp, #0
+ 329              		.cfi_def_cfa_register 7
+ 154:.\I2C.c       **** 	uint8 status, dato[3],i;
+ 155:.\I2C.c       **** 	dato[0]=1;
+ 330              		.loc 1 155 0
+ 331 0006 0123     		movs	r3, #1
+ 332 0008 3B70     		strb	r3, [r7]
+ 156:.\I2C.c       **** 	dato[1]=hora[0];
+ 333              		.loc 1 156 0
+ 334 000a 1A4B     		ldr	r3, .L34
+ 335 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 336 000e 7B70     		strb	r3, [r7, #1]
+ 157:.\I2C.c       **** 	dato[2]=hora[1];
+ 337              		.loc 1 157 0
+ 338 0010 184B     		ldr	r3, .L34
+ 339 0012 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 340 0014 BB70     		strb	r3, [r7, #2]
+ 158:.\I2C.c       **** 	I2C_1_MasterClearStatus();
+ 341              		.loc 1 158 0
+ 342 0016 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 159:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
+ 343              		.loc 1 159 0
+ 344 001a 6820     		movs	r0, #104
+ 345 001c 0021     		movs	r1, #0
+ 346 001e FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 347 0022 0346     		mov	r3, r0
+ 348 0024 BB71     		strb	r3, [r7, #6]
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 10
+
+
+ 160:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
+ 349              		.loc 1 160 0
+ 350 0026 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 351 0028 002B     		cmp	r3, #0
+ 352 002a 19D1     		bne	.L26
+ 161:.\I2C.c       ****     {
+ 162:.\I2C.c       ****         for(i=0; i<3; i++)
+ 353              		.loc 1 162 0
+ 354 002c 0023     		movs	r3, #0
+ 355 002e FB71     		strb	r3, [r7, #7]
+ 356 0030 12E0     		b	.L27
+ 357              	.L30:
+ 163:.\I2C.c       ****         {
+ 164:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 358              		.loc 1 164 0
+ 359 0032 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 360 0034 07F10802 		add	r2, r7, #8
+ 361 0038 1344     		add	r3, r3, r2
+ 362 003a 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
+ 363 003e 1846     		mov	r0, r3
+ 364 0040 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 365 0044 0346     		mov	r3, r0
+ 366 0046 BB71     		strb	r3, [r7, #6]
+ 165:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 367              		.loc 1 165 0
+ 368 0048 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 369 004a 002B     		cmp	r3, #0
+ 370 004c 01D0     		beq	.L28
+ 166:.\I2C.c       ****             {
+ 167:.\I2C.c       ****                 return 0;
+ 371              		.loc 1 167 0
+ 372 004e 0023     		movs	r3, #0
+ 373 0050 0BE0     		b	.L32
+ 374              	.L28:
+ 162:.\I2C.c       ****         {
+ 375              		.loc 1 162 0 discriminator 2
+ 376 0052 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 377 0054 0133     		adds	r3, r3, #1
+ 378 0056 FB71     		strb	r3, [r7, #7]
+ 379              	.L27:
+ 162:.\I2C.c       ****         {
+ 380              		.loc 1 162 0 is_stmt 0 discriminator 1
+ 381 0058 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 382 005a 022B     		cmp	r3, #2
+ 383 005c E9D9     		bls	.L30
+ 384 005e 01E0     		b	.L33
+ 385              	.L26:
+ 168:.\I2C.c       ****             }
+ 169:.\I2C.c       ****         }
+ 170:.\I2C.c       ****     }
+ 171:.\I2C.c       ****     else{
+ 172:.\I2C.c       **** 		return 0;
+ 386              		.loc 1 172 0 is_stmt 1
+ 387 0060 0023     		movs	r3, #0
+ 388 0062 02E0     		b	.L32
+ 389              	.L33:
+ 173:.\I2C.c       ****     }
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 11
+
+
+ 174:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 390              		.loc 1 174 0
+ 391 0064 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 175:.\I2C.c       **** 	return 1;
+ 392              		.loc 1 175 0
+ 393 0068 0123     		movs	r3, #1
+ 394              	.L32:
+ 176:.\I2C.c       **** }
+ 395              		.loc 1 176 0 discriminator 1
+ 396 006a 1846     		mov	r0, r3
+ 397 006c 0837     		adds	r7, r7, #8
+ 398              		.cfi_def_cfa_offset 8
+ 399 006e BD46     		mov	sp, r7
+ 400              		.cfi_def_cfa_register 13
+ 401              		@ sp needed
+ 402 0070 80BD     		pop	{r7, pc}
+ 403              	.L35:
+ 404 0072 00BF     		.align	2
+ 405              	.L34:
+ 406 0074 00000000 		.word	hora
+ 407              		.cfi_endproc
+ 408              	.LFE65:
+ 409              		.size	write_hora, .-write_hora
+ 410              		.section	.text.write_fecha,"ax",%progbits
+ 411              		.align	2
+ 412              		.global	write_fecha
+ 413              		.thumb
+ 414              		.thumb_func
+ 415              		.type	write_fecha, %function
+ 416              	write_fecha:
+ 417              	.LFB66:
+ 177:.\I2C.c       **** 
+ 178:.\I2C.c       **** /*
+ 179:.\I2C.c       **** ***************************************************************************************************
+ 180:.\I2C.c       **** *                                         uint8 write_fecha( void )
+ 181:.\I2C.c       **** *
+ 182:.\I2C.c       **** * Description : 
+ 183:.\I2C.c       **** *               
+ 184:.\I2C.c       **** *
+ 185:.\I2C.c       **** * Argument(s) : none
+ 186:.\I2C.c       **** *
+ 187:.\I2C.c       **** * Return(s)   : none
+ 188:.\I2C.c       **** *
+ 189:.\I2C.c       **** * Caller(s)   : 
+ 190:.\I2C.c       **** *
+ 191:.\I2C.c       **** * Note(s)     : none.
+ 192:.\I2C.c       **** ***************************************************************************************************
+ 193:.\I2C.c       **** */
+ 194:.\I2C.c       **** 
+ 195:.\I2C.c       **** uint8 write_fecha( void ){
+ 418              		.loc 1 195 0
+ 419              		.cfi_startproc
+ 420              		@ args = 0, pretend = 0, frame = 8
+ 421              		@ frame_needed = 1, uses_anonymous_args = 0
+ 422 0000 80B5     		push	{r7, lr}
+ 423              		.cfi_def_cfa_offset 8
+ 424              		.cfi_offset 7, -8
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 12
+
+
+ 425              		.cfi_offset 14, -4
+ 426 0002 82B0     		sub	sp, sp, #8
+ 427              		.cfi_def_cfa_offset 16
+ 428 0004 00AF     		add	r7, sp, #0
+ 429              		.cfi_def_cfa_register 7
+ 196:.\I2C.c       **** 	uint8 status, dato[4],i;
+ 197:.\I2C.c       **** 	dato[0]=4;
+ 430              		.loc 1 197 0
+ 431 0006 0423     		movs	r3, #4
+ 432 0008 3B70     		strb	r3, [r7]
+ 198:.\I2C.c       **** 	dato[1]=fecha[0];
+ 433              		.loc 1 198 0
+ 434 000a 1B4B     		ldr	r3, .L45
+ 435 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 436 000e 7B70     		strb	r3, [r7, #1]
+ 199:.\I2C.c       **** 	dato[2]=fecha[1];
+ 437              		.loc 1 199 0
+ 438 0010 194B     		ldr	r3, .L45
+ 439 0012 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 440 0014 BB70     		strb	r3, [r7, #2]
+ 200:.\I2C.c       **** 	dato[3]=fecha[2];
+ 441              		.loc 1 200 0
+ 442 0016 184B     		ldr	r3, .L45
+ 443 0018 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 444 001a FB70     		strb	r3, [r7, #3]
+ 201:.\I2C.c       **** 	I2C_1_MasterClearStatus();
+ 445              		.loc 1 201 0
+ 446 001c FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 202:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
+ 447              		.loc 1 202 0
+ 448 0020 6820     		movs	r0, #104
+ 449 0022 0021     		movs	r1, #0
+ 450 0024 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 451 0028 0346     		mov	r3, r0
+ 452 002a BB71     		strb	r3, [r7, #6]
+ 203:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
+ 453              		.loc 1 203 0
+ 454 002c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 455 002e 002B     		cmp	r3, #0
+ 456 0030 19D1     		bne	.L37
+ 204:.\I2C.c       ****     {
+ 205:.\I2C.c       ****         for(i=0; i<4; i++)
+ 457              		.loc 1 205 0
+ 458 0032 0023     		movs	r3, #0
+ 459 0034 FB71     		strb	r3, [r7, #7]
+ 460 0036 12E0     		b	.L38
+ 461              	.L41:
+ 206:.\I2C.c       ****         {
+ 207:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 462              		.loc 1 207 0
+ 463 0038 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 464 003a 07F10802 		add	r2, r7, #8
+ 465 003e 1344     		add	r3, r3, r2
+ 466 0040 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
+ 467 0044 1846     		mov	r0, r3
+ 468 0046 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 469 004a 0346     		mov	r3, r0
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 13
+
+
+ 470 004c BB71     		strb	r3, [r7, #6]
+ 208:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 471              		.loc 1 208 0
+ 472 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 473 0050 002B     		cmp	r3, #0
+ 474 0052 01D0     		beq	.L39
+ 209:.\I2C.c       ****             {
+ 210:.\I2C.c       ****                 return 0;
+ 475              		.loc 1 210 0
+ 476 0054 0023     		movs	r3, #0
+ 477 0056 0BE0     		b	.L43
+ 478              	.L39:
+ 205:.\I2C.c       ****         {
+ 479              		.loc 1 205 0 discriminator 2
+ 480 0058 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 481 005a 0133     		adds	r3, r3, #1
+ 482 005c FB71     		strb	r3, [r7, #7]
+ 483              	.L38:
+ 205:.\I2C.c       ****         {
+ 484              		.loc 1 205 0 is_stmt 0 discriminator 1
+ 485 005e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 486 0060 032B     		cmp	r3, #3
+ 487 0062 E9D9     		bls	.L41
+ 488 0064 01E0     		b	.L44
+ 489              	.L37:
+ 211:.\I2C.c       ****             }
+ 212:.\I2C.c       ****         }
+ 213:.\I2C.c       ****     }
+ 214:.\I2C.c       ****     else{
+ 215:.\I2C.c       **** 		return 0;
+ 490              		.loc 1 215 0 is_stmt 1
+ 491 0066 0023     		movs	r3, #0
+ 492 0068 02E0     		b	.L43
+ 493              	.L44:
+ 216:.\I2C.c       ****     }
+ 217:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 494              		.loc 1 217 0
+ 495 006a FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 218:.\I2C.c       **** 	return 1;
+ 496              		.loc 1 218 0
+ 497 006e 0123     		movs	r3, #1
+ 498              	.L43:
+ 219:.\I2C.c       **** }
+ 499              		.loc 1 219 0 discriminator 1
+ 500 0070 1846     		mov	r0, r3
+ 501 0072 0837     		adds	r7, r7, #8
+ 502              		.cfi_def_cfa_offset 8
+ 503 0074 BD46     		mov	sp, r7
+ 504              		.cfi_def_cfa_register 13
+ 505              		@ sp needed
+ 506 0076 80BD     		pop	{r7, pc}
+ 507              	.L46:
+ 508              		.align	2
+ 509              	.L45:
+ 510 0078 00000000 		.word	fecha
+ 511              		.cfi_endproc
+ 512              	.LFE66:
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 14
+
+
+ 513              		.size	write_fecha, .-write_fecha
+ 514              		.section	.text.write_eeprom,"ax",%progbits
+ 515              		.align	2
+ 516              		.global	write_eeprom
+ 517              		.thumb
+ 518              		.thumb_func
+ 519              		.type	write_eeprom, %function
+ 520              	write_eeprom:
+ 521              	.LFB67:
+ 220:.\I2C.c       **** 
+ 221:.\I2C.c       **** /*
+ 222:.\I2C.c       **** ***************************************************************************************************
+ 223:.\I2C.c       **** *                              uint8 write_eeprom(uint16 page, uint8 valor)
+ 224:.\I2C.c       **** *
+ 225:.\I2C.c       **** * Description : 
+ 226:.\I2C.c       **** *               
+ 227:.\I2C.c       **** *
+ 228:.\I2C.c       **** * Argument(s) : none
+ 229:.\I2C.c       **** *
+ 230:.\I2C.c       **** * Return(s)   : none
+ 231:.\I2C.c       **** *
+ 232:.\I2C.c       **** * Caller(s)   : 
+ 233:.\I2C.c       **** *
+ 234:.\I2C.c       **** * Note(s)     : none.
+ 235:.\I2C.c       **** ***************************************************************************************************
+ 236:.\I2C.c       **** */
+ 237:.\I2C.c       **** 
+ 238:.\I2C.c       **** uint8 write_eeprom(uint16 page, uint8 *valor){
+ 522              		.loc 1 238 0
+ 523              		.cfi_startproc
+ 524              		@ args = 0, pretend = 0, frame = 16
+ 525              		@ frame_needed = 1, uses_anonymous_args = 0
+ 526 0000 80B5     		push	{r7, lr}
+ 527              		.cfi_def_cfa_offset 8
+ 528              		.cfi_offset 7, -8
+ 529              		.cfi_offset 14, -4
+ 530 0002 84B0     		sub	sp, sp, #16
+ 531              		.cfi_def_cfa_offset 24
+ 532 0004 00AF     		add	r7, sp, #0
+ 533              		.cfi_def_cfa_register 7
+ 534 0006 0346     		mov	r3, r0
+ 535 0008 3960     		str	r1, [r7]
+ 536 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 239:.\I2C.c       **** 	uint8 status, dato[4],i;
+ 240:.\I2C.c       **** 	dato[1]=(page&0xFF);
+ 537              		.loc 1 240 0
+ 538 000c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 539 000e DBB2     		uxtb	r3, r3
+ 540 0010 7B72     		strb	r3, [r7, #9]
+ 241:.\I2C.c       **** 	page=(page>>8)&0xFF;
+ 541              		.loc 1 241 0
+ 542 0012 FB88     		ldrh	r3, [r7, #6]
+ 543 0014 1B0A     		lsrs	r3, r3, #8
+ 544 0016 FB80     		strh	r3, [r7, #6]	@ movhi
+ 242:.\I2C.c       **** 	dato[0]=page;
+ 545              		.loc 1 242 0
+ 546 0018 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 15
+
+
+ 547 001a DBB2     		uxtb	r3, r3
+ 548 001c 3B72     		strb	r3, [r7, #8]
+ 243:.\I2C.c       **** 	Pin_WP_Write(0);
+ 549              		.loc 1 243 0
+ 550 001e 0020     		movs	r0, #0
+ 551 0020 FFF7FEFF 		bl	Pin_WP_Write
+ 244:.\I2C.c       **** 	I2C_1_MasterClearStatus();
+ 552              		.loc 1 244 0
+ 553 0024 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 245:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x54, I2C_1_WRITE_XFER_MODE);
+ 554              		.loc 1 245 0
+ 555 0028 5420     		movs	r0, #84
+ 556 002a 0021     		movs	r1, #0
+ 557 002c FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 558 0030 0346     		mov	r3, r0
+ 559 0032 BB73     		strb	r3, [r7, #14]
+ 246:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
+ 560              		.loc 1 246 0
+ 561 0034 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 562 0036 002B     		cmp	r3, #0
+ 563 0038 35D1     		bne	.L48
+ 247:.\I2C.c       ****     {
+ 248:.\I2C.c       ****         for(i=0; i<2; i++)
+ 564              		.loc 1 248 0
+ 565 003a 0023     		movs	r3, #0
+ 566 003c FB73     		strb	r3, [r7, #15]
+ 567 003e 12E0     		b	.L49
+ 568              	.L52:
+ 249:.\I2C.c       ****         {
+ 250:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 569              		.loc 1 250 0
+ 570 0040 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 571 0042 07F11002 		add	r2, r7, #16
+ 572 0046 1344     		add	r3, r3, r2
+ 573 0048 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
+ 574 004c 1846     		mov	r0, r3
+ 575 004e FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 576 0052 0346     		mov	r3, r0
+ 577 0054 BB73     		strb	r3, [r7, #14]
+ 251:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 578              		.loc 1 251 0
+ 579 0056 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 580 0058 002B     		cmp	r3, #0
+ 581 005a 01D0     		beq	.L50
+ 252:.\I2C.c       ****             {
+ 253:.\I2C.c       ****                 return 0;
+ 582              		.loc 1 253 0
+ 583 005c 0023     		movs	r3, #0
+ 584 005e 2DE0     		b	.L57
+ 585              	.L50:
+ 248:.\I2C.c       ****         {
+ 586              		.loc 1 248 0 discriminator 2
+ 587 0060 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 588 0062 0133     		adds	r3, r3, #1
+ 589 0064 FB73     		strb	r3, [r7, #15]
+ 590              	.L49:
+ 248:.\I2C.c       ****         {
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 16
+
+
+ 591              		.loc 1 248 0 is_stmt 0 discriminator 1
+ 592 0066 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 593 0068 012B     		cmp	r3, #1
+ 594 006a E9D9     		bls	.L52
+ 254:.\I2C.c       ****             }
+ 255:.\I2C.c       ****         }
+ 256:.\I2C.c       ****         for(i=0; i<=valor[0]; i++)
+ 595              		.loc 1 256 0 is_stmt 1
+ 596 006c 0023     		movs	r3, #0
+ 597 006e FB73     		strb	r3, [r7, #15]
+ 598 0070 13E0     		b	.L53
+ 599              	.L55:
+ 257:.\I2C.c       ****         {
+ 258:.\I2C.c       ****             status = I2C_1_MasterWriteByte(valor[i]);
+ 600              		.loc 1 258 0
+ 601 0072 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 602 0074 3A68     		ldr	r2, [r7]
+ 603 0076 1344     		add	r3, r3, r2
+ 604 0078 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 605 007a 1846     		mov	r0, r3
+ 606 007c FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 607 0080 0346     		mov	r3, r0
+ 608 0082 BB73     		strb	r3, [r7, #14]
+ 259:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 609              		.loc 1 259 0
+ 610 0084 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 611 0086 002B     		cmp	r3, #0
+ 612 0088 01D0     		beq	.L54
+ 260:.\I2C.c       ****             {
+ 261:.\I2C.c       ****                 return 0;
+ 613              		.loc 1 261 0
+ 614 008a 0023     		movs	r3, #0
+ 615 008c 16E0     		b	.L57
+ 616              	.L54:
+ 262:.\I2C.c       ****             }
+ 263:.\I2C.c       **** 			CyDelay(5);
+ 617              		.loc 1 263 0 discriminator 2
+ 618 008e 0520     		movs	r0, #5
+ 619 0090 FFF7FEFF 		bl	CyDelay
+ 256:.\I2C.c       ****         {
+ 620              		.loc 1 256 0 discriminator 2
+ 621 0094 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 622 0096 0133     		adds	r3, r3, #1
+ 623 0098 FB73     		strb	r3, [r7, #15]
+ 624              	.L53:
+ 256:.\I2C.c       ****         {
+ 625              		.loc 1 256 0 is_stmt 0 discriminator 1
+ 626 009a 3B68     		ldr	r3, [r7]
+ 627 009c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 628 009e FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
+ 629 00a0 9A42     		cmp	r2, r3
+ 630 00a2 E6D9     		bls	.L55
+ 631 00a4 01E0     		b	.L58
+ 632              	.L48:
+ 264:.\I2C.c       ****         }		
+ 265:.\I2C.c       ****     }
+ 266:.\I2C.c       ****     else{
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 17
+
+
+ 267:.\I2C.c       **** 		return 0;
+ 633              		.loc 1 267 0 is_stmt 1
+ 634 00a6 0023     		movs	r3, #0
+ 635 00a8 08E0     		b	.L57
+ 636              	.L58:
+ 268:.\I2C.c       ****     }
+ 269:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 637              		.loc 1 269 0
+ 638 00aa FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 270:.\I2C.c       **** 	CyDelay(6);
+ 639              		.loc 1 270 0
+ 640 00ae 0620     		movs	r0, #6
+ 641 00b0 FFF7FEFF 		bl	CyDelay
+ 271:.\I2C.c       **** 	Pin_WP_Write(1);
+ 642              		.loc 1 271 0
+ 643 00b4 0120     		movs	r0, #1
+ 644 00b6 FFF7FEFF 		bl	Pin_WP_Write
+ 272:.\I2C.c       **** 	return 1;
+ 645              		.loc 1 272 0
+ 646 00ba 0123     		movs	r3, #1
+ 647              	.L57:
+ 273:.\I2C.c       **** }
+ 648              		.loc 1 273 0 discriminator 1
+ 649 00bc 1846     		mov	r0, r3
+ 650 00be 1037     		adds	r7, r7, #16
+ 651              		.cfi_def_cfa_offset 8
+ 652 00c0 BD46     		mov	sp, r7
+ 653              		.cfi_def_cfa_register 13
+ 654              		@ sp needed
+ 655 00c2 80BD     		pop	{r7, pc}
+ 656              		.cfi_endproc
+ 657              	.LFE67:
+ 658              		.size	write_eeprom, .-write_eeprom
+ 659              		.section	.text.leer_eeprom,"ax",%progbits
+ 660              		.align	2
+ 661              		.global	leer_eeprom
+ 662              		.thumb
+ 663              		.thumb_func
+ 664              		.type	leer_eeprom, %function
+ 665              	leer_eeprom:
+ 666              	.LFB68:
+ 274:.\I2C.c       **** 
+ 275:.\I2C.c       **** /*
+ 276:.\I2C.c       **** ***************************************************************************************************
+ 277:.\I2C.c       **** *                               uint8 leer_eeprom(uint16 page, uint8 size))
+ 278:.\I2C.c       **** *
+ 279:.\I2C.c       **** * Description : 
+ 280:.\I2C.c       **** *               
+ 281:.\I2C.c       **** *
+ 282:.\I2C.c       **** * Argument(s) : none
+ 283:.\I2C.c       **** *
+ 284:.\I2C.c       **** * Return(s)   : none
+ 285:.\I2C.c       **** *
+ 286:.\I2C.c       **** * Caller(s)   : 
+ 287:.\I2C.c       **** *
+ 288:.\I2C.c       **** * Note(s)     : none.
+ 289:.\I2C.c       **** ***************************************************************************************************
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 18
+
+
+ 290:.\I2C.c       **** */
+ 291:.\I2C.c       **** uint8 leer_eeprom(uint16 page, volatile uint8 size){
+ 667              		.loc 1 291 0
+ 668              		.cfi_startproc
+ 669              		@ args = 0, pretend = 0, frame = 24
+ 670              		@ frame_needed = 1, uses_anonymous_args = 0
+ 671 0000 90B5     		push	{r4, r7, lr}
+ 672              		.cfi_def_cfa_offset 12
+ 673              		.cfi_offset 4, -12
+ 674              		.cfi_offset 7, -8
+ 675              		.cfi_offset 14, -4
+ 676 0002 87B0     		sub	sp, sp, #28
+ 677              		.cfi_def_cfa_offset 40
+ 678 0004 00AF     		add	r7, sp, #0
+ 679              		.cfi_def_cfa_register 7
+ 680 0006 0346     		mov	r3, r0
+ 681 0008 0A46     		mov	r2, r1
+ 682 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 683 000c 1346     		mov	r3, r2
+ 684 000e 7B71     		strb	r3, [r7, #5]
+ 292:.\I2C.c       **** 	uint16 status, dato[4],i;
+ 293:.\I2C.c       **** 	dato[1]=(page&0xFF);
+ 685              		.loc 1 293 0
+ 686 0010 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 687 0012 DBB2     		uxtb	r3, r3
+ 688 0014 9BB2     		uxth	r3, r3
+ 689 0016 FB81     		strh	r3, [r7, #14]	@ movhi
+ 294:.\I2C.c       **** 	page=(page>>8)&0xFF;
+ 690              		.loc 1 294 0
+ 691 0018 FB88     		ldrh	r3, [r7, #6]
+ 692 001a 1B0A     		lsrs	r3, r3, #8
+ 693 001c FB80     		strh	r3, [r7, #6]	@ movhi
+ 295:.\I2C.c       **** 	dato[0]=page;	
+ 694              		.loc 1 295 0
+ 695 001e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 696 0020 BB81     		strh	r3, [r7, #12]	@ movhi
+ 296:.\I2C.c       ****     I2C_1_MasterClearStatus();
+ 697              		.loc 1 296 0
+ 698 0022 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 297:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x54, I2C_1_WRITE_XFER_MODE);
+ 699              		.loc 1 297 0
+ 700 0026 5420     		movs	r0, #84
+ 701 0028 0021     		movs	r1, #0
+ 702 002a FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 703 002e 0346     		mov	r3, r0
+ 704 0030 BB82     		strh	r3, [r7, #20]	@ movhi
+ 298:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status)								 		/* Check if transfer completed without errors */
+ 705              		.loc 1 298 0
+ 706 0032 BB8A     		ldrh	r3, [r7, #20]
+ 707 0034 002B     		cmp	r3, #0
+ 708 0036 1ED1     		bne	.L60
+ 299:.\I2C.c       **** 	{
+ 300:.\I2C.c       ****         for(i=0;i<2;i++)
+ 709              		.loc 1 300 0
+ 710 0038 0023     		movs	r3, #0
+ 711 003a FB82     		strh	r3, [r7, #22]	@ movhi
+ 712 003c 17E0     		b	.L61
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 19
+
+
+ 713              	.L64:
+ 301:.\I2C.c       ****         {
+ 302:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 714              		.loc 1 302 0
+ 715 003e FB8A     		ldrh	r3, [r7, #22]
+ 716 0040 5B00     		lsls	r3, r3, #1
+ 717 0042 07F11802 		add	r2, r7, #24
+ 718 0046 1344     		add	r3, r3, r2
+ 719 0048 33F80C3C 		ldrh	r3, [r3, #-12]
+ 720 004c DBB2     		uxtb	r3, r3
+ 721 004e 1846     		mov	r0, r3
+ 722 0050 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 723 0054 0346     		mov	r3, r0
+ 724 0056 BB82     		strh	r3, [r7, #20]	@ movhi
+ 303:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 725              		.loc 1 303 0
+ 726 0058 BB8A     		ldrh	r3, [r7, #20]
+ 727 005a 002B     		cmp	r3, #0
+ 728 005c 01D0     		beq	.L62
+ 304:.\I2C.c       ****             {
+ 305:.\I2C.c       ****             	return 0;
+ 729              		.loc 1 305 0
+ 730 005e 0023     		movs	r3, #0
+ 731 0060 39E0     		b	.L70
+ 732              	.L62:
+ 306:.\I2C.c       ****             }
+ 307:.\I2C.c       **** 			CyDelay(5);
+ 733              		.loc 1 307 0 discriminator 2
+ 734 0062 0520     		movs	r0, #5
+ 735 0064 FFF7FEFF 		bl	CyDelay
+ 300:.\I2C.c       ****         {
+ 736              		.loc 1 300 0 discriminator 2
+ 737 0068 FB8A     		ldrh	r3, [r7, #22]
+ 738 006a 0133     		adds	r3, r3, #1
+ 739 006c FB82     		strh	r3, [r7, #22]	@ movhi
+ 740              	.L61:
+ 300:.\I2C.c       ****         {
+ 741              		.loc 1 300 0 is_stmt 0 discriminator 1
+ 742 006e FB8A     		ldrh	r3, [r7, #22]
+ 743 0070 012B     		cmp	r3, #1
+ 744 0072 E4D9     		bls	.L64
+ 745 0074 01E0     		b	.L71
+ 746              	.L60:
+ 308:.\I2C.c       ****         }		
+ 309:.\I2C.c       ****     }
+ 310:.\I2C.c       **** 	else{
+ 311:.\I2C.c       **** 		return 0;
+ 747              		.loc 1 311 0 is_stmt 1
+ 748 0076 0023     		movs	r3, #0
+ 749 0078 2DE0     		b	.L70
+ 750              	.L71:
+ 312:.\I2C.c       **** 	}
+ 313:.\I2C.c       **** 	I2C_1_MasterSendStop();	
+ 751              		.loc 1 313 0
+ 752 007a FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 314:.\I2C.c       ****     CyDelay(50);
+ 753              		.loc 1 314 0
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 20
+
+
+ 754 007e 3220     		movs	r0, #50
+ 755 0080 FFF7FEFF 		bl	CyDelay
+ 315:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x54, I2C_1_READ_XFER_MODE);
+ 756              		.loc 1 315 0
+ 757 0084 5420     		movs	r0, #84
+ 758 0086 0121     		movs	r1, #1
+ 759 0088 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 760 008c 0346     		mov	r3, r0
+ 761 008e BB82     		strh	r3, [r7, #20]	@ movhi
+ 316:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status){
+ 762              		.loc 1 316 0
+ 763 0090 BB8A     		ldrh	r3, [r7, #20]
+ 764 0092 002B     		cmp	r3, #0
+ 765 0094 17D1     		bne	.L66
+ 317:.\I2C.c       **** 		for(i=0;i<size;i++){
+ 766              		.loc 1 317 0
+ 767 0096 0023     		movs	r3, #0
+ 768 0098 FB82     		strh	r3, [r7, #22]	@ movhi
+ 769 009a 0DE0     		b	.L67
+ 770              	.L68:
+ 318:.\I2C.c       **** 	        buffer_i2c[i] = I2C_1_MasterReadByte(I2C_1_ACK_DATA);
+ 771              		.loc 1 318 0 discriminator 3
+ 772 009c FC8A     		ldrh	r4, [r7, #22]
+ 773 009e 0120     		movs	r0, #1
+ 774 00a0 FFF7FEFF 		bl	I2C_1_MasterReadByte
+ 775 00a4 0346     		mov	r3, r0
+ 776 00a6 1A46     		mov	r2, r3
+ 777 00a8 0D4B     		ldr	r3, .L73
+ 778 00aa 1A55     		strb	r2, [r3, r4]
+ 319:.\I2C.c       **** 			CyDelay(5);
+ 779              		.loc 1 319 0 discriminator 3
+ 780 00ac 0520     		movs	r0, #5
+ 781 00ae FFF7FEFF 		bl	CyDelay
+ 317:.\I2C.c       **** 		for(i=0;i<size;i++){
+ 782              		.loc 1 317 0 discriminator 3
+ 783 00b2 FB8A     		ldrh	r3, [r7, #22]
+ 784 00b4 0133     		adds	r3, r3, #1
+ 785 00b6 FB82     		strh	r3, [r7, #22]	@ movhi
+ 786              	.L67:
+ 317:.\I2C.c       **** 		for(i=0;i<size;i++){
+ 787              		.loc 1 317 0 is_stmt 0 discriminator 1
+ 788 00b8 7B79     		ldrb	r3, [r7, #5]
+ 789 00ba DBB2     		uxtb	r3, r3
+ 790 00bc 9BB2     		uxth	r3, r3
+ 791 00be FA8A     		ldrh	r2, [r7, #22]
+ 792 00c0 9A42     		cmp	r2, r3
+ 793 00c2 EBD3     		bcc	.L68
+ 794 00c4 01E0     		b	.L72
+ 795              	.L66:
+ 320:.\I2C.c       **** 		}
+ 321:.\I2C.c       ****     }
+ 322:.\I2C.c       **** 	else{
+ 323:.\I2C.c       **** 		return 0;
+ 796              		.loc 1 323 0 is_stmt 1
+ 797 00c6 0023     		movs	r3, #0
+ 798 00c8 05E0     		b	.L70
+ 799              	.L72:
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 21
+
+
+ 324:.\I2C.c       **** 	}
+ 325:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 800              		.loc 1 325 0
+ 801 00ca FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 326:.\I2C.c       **** 	CyDelay(6);	
+ 802              		.loc 1 326 0
+ 803 00ce 0620     		movs	r0, #6
+ 804 00d0 FFF7FEFF 		bl	CyDelay
+ 327:.\I2C.c       **** 	return 1;
+ 805              		.loc 1 327 0
+ 806 00d4 0123     		movs	r3, #1
+ 807              	.L70:
+ 328:.\I2C.c       **** }
+ 808              		.loc 1 328 0 discriminator 1
+ 809 00d6 1846     		mov	r0, r3
+ 810 00d8 1C37     		adds	r7, r7, #28
+ 811              		.cfi_def_cfa_offset 12
+ 812 00da BD46     		mov	sp, r7
+ 813              		.cfi_def_cfa_register 13
+ 814              		@ sp needed
+ 815 00dc 90BD     		pop	{r4, r7, pc}
+ 816              	.L74:
+ 817 00de 00BF     		.align	2
+ 818              	.L73:
+ 819 00e0 00000000 		.word	buffer_i2c
+ 820              		.cfi_endproc
+ 821              	.LFE68:
+ 822              		.size	leer_eeprom, .-leer_eeprom
+ 823              		.section	.text.write_psoc1,"ax",%progbits
+ 824              		.align	2
+ 825              		.global	write_psoc1
+ 826              		.thumb
+ 827              		.thumb_func
+ 828              		.type	write_psoc1, %function
+ 829              	write_psoc1:
+ 830              	.LFB69:
+ 329:.\I2C.c       **** 
+ 330:.\I2C.c       **** /*
+ 331:.\I2C.c       **** ***************************************************************************************************
+ 332:.\I2C.c       **** *                                   uint8 write_psoc1( uint8 puerto, uint8 valor )
+ 333:.\I2C.c       **** *
+ 334:.\I2C.c       **** * Description : 
+ 335:.\I2C.c       **** *               
+ 336:.\I2C.c       **** *
+ 337:.\I2C.c       **** * Argument(s) : none
+ 338:.\I2C.c       **** *
+ 339:.\I2C.c       **** * Return(s)   : none
+ 340:.\I2C.c       **** *
+ 341:.\I2C.c       **** * Caller(s)   : 
+ 342:.\I2C.c       **** *
+ 343:.\I2C.c       **** * Note(s)     : none.
+ 344:.\I2C.c       **** ***************************************************************************************************
+ 345:.\I2C.c       **** */
+ 346:.\I2C.c       **** 
+ 347:.\I2C.c       **** uint8 write_psoc1( uint8 puerto, uint8 valor ){
+ 831              		.loc 1 347 0
+ 832              		.cfi_startproc
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 22
+
+
+ 833              		@ args = 0, pretend = 0, frame = 16
+ 834              		@ frame_needed = 1, uses_anonymous_args = 0
+ 835 0000 80B5     		push	{r7, lr}
+ 836              		.cfi_def_cfa_offset 8
+ 837              		.cfi_offset 7, -8
+ 838              		.cfi_offset 14, -4
+ 839 0002 84B0     		sub	sp, sp, #16
+ 840              		.cfi_def_cfa_offset 24
+ 841 0004 00AF     		add	r7, sp, #0
+ 842              		.cfi_def_cfa_register 7
+ 843 0006 0346     		mov	r3, r0
+ 844 0008 0A46     		mov	r2, r1
+ 845 000a FB71     		strb	r3, [r7, #7]
+ 846 000c 1346     		mov	r3, r2
+ 847 000e BB71     		strb	r3, [r7, #6]
+ 348:.\I2C.c       **** 	uint8 status, dato[2],i;
+ 349:.\I2C.c       **** 	dato[0]=puerto;
+ 848              		.loc 1 349 0
+ 849 0010 FB79     		ldrb	r3, [r7, #7]
+ 850 0012 3B73     		strb	r3, [r7, #12]
+ 350:.\I2C.c       **** 	dato[1]=valor;
+ 851              		.loc 1 350 0
+ 852 0014 BB79     		ldrb	r3, [r7, #6]
+ 853 0016 7B73     		strb	r3, [r7, #13]
+ 351:.\I2C.c       **** 	I2C_1_MasterClearStatus();
+ 854              		.loc 1 351 0
+ 855 0018 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 352:.\I2C.c       ****     status = I2C_1_MasterSendStart(7u, I2C_1_WRITE_XFER_MODE);
+ 856              		.loc 1 352 0
+ 857 001c 0720     		movs	r0, #7
+ 858 001e 0021     		movs	r1, #0
+ 859 0020 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 860 0024 0346     		mov	r3, r0
+ 861 0026 BB73     		strb	r3, [r7, #14]
+ 353:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
+ 862              		.loc 1 353 0
+ 863 0028 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 864 002a 002B     		cmp	r3, #0
+ 865 002c 19D1     		bne	.L76
+ 354:.\I2C.c       ****     {
+ 355:.\I2C.c       ****         for(i=0; i<2; i++)
+ 866              		.loc 1 355 0
+ 867 002e 0023     		movs	r3, #0
+ 868 0030 FB73     		strb	r3, [r7, #15]
+ 869 0032 12E0     		b	.L77
+ 870              	.L80:
+ 356:.\I2C.c       ****         {
+ 357:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 871              		.loc 1 357 0
+ 872 0034 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 873 0036 07F11002 		add	r2, r7, #16
+ 874 003a 1344     		add	r3, r3, r2
+ 875 003c 13F8043C 		ldrb	r3, [r3, #-4]	@ zero_extendqisi2
+ 876 0040 1846     		mov	r0, r3
+ 877 0042 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 878 0046 0346     		mov	r3, r0
+ 879 0048 BB73     		strb	r3, [r7, #14]
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 23
+
+
+ 358:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 880              		.loc 1 358 0
+ 881 004a BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 882 004c 002B     		cmp	r3, #0
+ 883 004e 01D0     		beq	.L78
+ 359:.\I2C.c       ****             {
+ 360:.\I2C.c       ****                 return 0;
+ 884              		.loc 1 360 0
+ 885 0050 0023     		movs	r3, #0
+ 886 0052 0BE0     		b	.L82
+ 887              	.L78:
+ 355:.\I2C.c       ****         {
+ 888              		.loc 1 355 0 discriminator 2
+ 889 0054 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 890 0056 0133     		adds	r3, r3, #1
+ 891 0058 FB73     		strb	r3, [r7, #15]
+ 892              	.L77:
+ 355:.\I2C.c       ****         {
+ 893              		.loc 1 355 0 is_stmt 0 discriminator 1
+ 894 005a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 895 005c 012B     		cmp	r3, #1
+ 896 005e E9D9     		bls	.L80
+ 897 0060 01E0     		b	.L83
+ 898              	.L76:
+ 361:.\I2C.c       ****             }
+ 362:.\I2C.c       ****         }
+ 363:.\I2C.c       ****     }
+ 364:.\I2C.c       ****     else{
+ 365:.\I2C.c       **** 		return 0;
+ 899              		.loc 1 365 0 is_stmt 1
+ 900 0062 0023     		movs	r3, #0
+ 901 0064 02E0     		b	.L82
+ 902              	.L83:
+ 366:.\I2C.c       ****     }
+ 367:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 903              		.loc 1 367 0
+ 904 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 368:.\I2C.c       **** 	return 1;
+ 905              		.loc 1 368 0
+ 906 006a 0123     		movs	r3, #1
+ 907              	.L82:
+ 369:.\I2C.c       **** }
+ 908              		.loc 1 369 0 discriminator 1
+ 909 006c 1846     		mov	r0, r3
+ 910 006e 1037     		adds	r7, r7, #16
+ 911              		.cfi_def_cfa_offset 8
+ 912 0070 BD46     		mov	sp, r7
+ 913              		.cfi_def_cfa_register 13
+ 914              		@ sp needed
+ 915 0072 80BD     		pop	{r7, pc}
+ 916              		.cfi_endproc
+ 917              	.LFE69:
+ 918              		.size	write_psoc1, .-write_psoc1
+ 919              		.text
+ 920              	.Letext0:
+ 921              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 922              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 24
+
+
+ 923              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 924              		.file 5 ".\\VariablesG.h"
+ 925              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 926              		.section	.debug_info,"",%progbits
+ 927              	.Ldebug_info0:
+ 928 0000 E7090000 		.4byte	0x9e7
+ 929 0004 0400     		.2byte	0x4
+ 930 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 931 000a 04       		.byte	0x4
+ 932 000b 01       		.uleb128 0x1
+ 933 000c 7A010000 		.4byte	.LASF109
+ 934 0010 01       		.byte	0x1
+ 935 0011 00000000 		.4byte	.LASF110
+ 936 0015 36000000 		.4byte	.LASF111
+ 937 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 938 001d 00000000 		.4byte	0
+ 939 0021 00000000 		.4byte	.Ldebug_line0
+ 940 0025 02       		.uleb128 0x2
+ 941 0026 01       		.byte	0x1
+ 942 0027 06       		.byte	0x6
+ 943 0028 63000000 		.4byte	.LASF0
+ 944 002c 02       		.uleb128 0x2
+ 945 002d 01       		.byte	0x1
+ 946 002e 08       		.byte	0x8
+ 947 002f 53020000 		.4byte	.LASF1
+ 948 0033 02       		.uleb128 0x2
+ 949 0034 02       		.byte	0x2
+ 950 0035 05       		.byte	0x5
+ 951 0036 87000000 		.4byte	.LASF2
+ 952 003a 02       		.uleb128 0x2
+ 953 003b 02       		.byte	0x2
+ 954 003c 07       		.byte	0x7
+ 955 003d 33030000 		.4byte	.LASF3
+ 956 0041 03       		.uleb128 0x3
+ 957 0042 A3030000 		.4byte	.LASF9
+ 958 0046 02       		.byte	0x2
+ 959 0047 3F       		.byte	0x3f
+ 960 0048 4C000000 		.4byte	0x4c
+ 961 004c 02       		.uleb128 0x2
+ 962 004d 04       		.byte	0x4
+ 963 004e 05       		.byte	0x5
+ 964 004f 90040000 		.4byte	.LASF4
+ 965 0053 02       		.uleb128 0x2
+ 966 0054 04       		.byte	0x4
+ 967 0055 07       		.byte	0x7
+ 968 0056 E0030000 		.4byte	.LASF5
+ 969 005a 02       		.uleb128 0x2
+ 970 005b 08       		.byte	0x8
+ 971 005c 05       		.byte	0x5
+ 972 005d 67010000 		.4byte	.LASF6
+ 973 0061 02       		.uleb128 0x2
+ 974 0062 08       		.byte	0x8
+ 975 0063 07       		.byte	0x7
+ 976 0064 9A020000 		.4byte	.LASF7
+ 977 0068 04       		.uleb128 0x4
+ 978 0069 04       		.byte	0x4
+ 979 006a 05       		.byte	0x5
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 25
+
+
+ 980 006b 696E7400 		.ascii	"int\000"
+ 981 006f 02       		.uleb128 0x2
+ 982 0070 04       		.byte	0x4
+ 983 0071 07       		.byte	0x7
+ 984 0072 D5020000 		.4byte	.LASF8
+ 985 0076 03       		.uleb128 0x3
+ 986 0077 11020000 		.4byte	.LASF10
+ 987 007b 03       		.byte	0x3
+ 988 007c 2C       		.byte	0x2c
+ 989 007d 41000000 		.4byte	0x41
+ 990 0081 03       		.uleb128 0x3
+ 991 0082 34010000 		.4byte	.LASF11
+ 992 0086 04       		.byte	0x4
+ 993 0087 B3       		.byte	0xb3
+ 994 0088 2C000000 		.4byte	0x2c
+ 995 008c 03       		.uleb128 0x3
+ 996 008d 1D010000 		.4byte	.LASF12
+ 997 0091 04       		.byte	0x4
+ 998 0092 B4       		.byte	0xb4
+ 999 0093 3A000000 		.4byte	0x3a
+ 1000 0097 02       		.uleb128 0x2
+ 1001 0098 04       		.byte	0x4
+ 1002 0099 04       		.byte	0x4
+ 1003 009a 55010000 		.4byte	.LASF13
+ 1004 009e 02       		.uleb128 0x2
+ 1005 009f 08       		.byte	0x8
+ 1006 00a0 04       		.byte	0x4
+ 1007 00a1 73040000 		.4byte	.LASF14
+ 1008 00a5 02       		.uleb128 0x2
+ 1009 00a6 01       		.byte	0x1
+ 1010 00a7 08       		.byte	0x8
+ 1011 00a8 63030000 		.4byte	.LASF15
+ 1012 00ac 05       		.uleb128 0x5
+ 1013 00ad 81000000 		.4byte	0x81
+ 1014 00b1 05       		.uleb128 0x5
+ 1015 00b2 8C000000 		.4byte	0x8c
+ 1016 00b6 02       		.uleb128 0x2
+ 1017 00b7 04       		.byte	0x4
+ 1018 00b8 07       		.byte	0x7
+ 1019 00b9 08020000 		.4byte	.LASF16
+ 1020 00bd 06       		.uleb128 0x6
+ 1021 00be 81000000 		.4byte	0x81
+ 1022 00c2 CD000000 		.4byte	0xcd
+ 1023 00c6 07       		.uleb128 0x7
+ 1024 00c7 B6000000 		.4byte	0xb6
+ 1025 00cb 03       		.byte	0x3
+ 1026 00cc 00       		.byte	0
+ 1027 00cd 08       		.uleb128 0x8
+ 1028 00ce 46010000 		.4byte	.LASF21
+ 1029 00d2 5D       		.byte	0x5d
+ 1030 00d3 05       		.byte	0x5
+ 1031 00d4 5C       		.byte	0x5c
+ 1032 00d5 22010000 		.4byte	0x122
+ 1033 00d9 09       		.uleb128 0x9
+ 1034 00da 64697200 		.ascii	"dir\000"
+ 1035 00de 05       		.byte	0x5
+ 1036 00df 5D       		.byte	0x5d
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 26
+
+
+ 1037 00e0 AC000000 		.4byte	0xac
+ 1038 00e4 00       		.byte	0
+ 1039 00e5 0A       		.uleb128 0xa
+ 1040 00e6 99040000 		.4byte	.LASF17
+ 1041 00ea 05       		.byte	0x5
+ 1042 00eb 5E       		.byte	0x5e
+ 1043 00ec AC000000 		.4byte	0xac
+ 1044 00f0 01       		.byte	0x1
+ 1045 00f1 0A       		.uleb128 0xa
+ 1046 00f2 24020000 		.4byte	.LASF18
+ 1047 00f6 05       		.byte	0x5
+ 1048 00f7 5F       		.byte	0x5f
+ 1049 00f8 38010000 		.4byte	0x138
+ 1050 00fc 02       		.byte	0x2
+ 1051 00fd 09       		.uleb128 0x9
+ 1052 00fe 70707500 		.ascii	"ppu\000"
+ 1053 0102 05       		.byte	0x5
+ 1054 0103 60       		.byte	0x60
+ 1055 0104 53010000 		.4byte	0x153
+ 1056 0108 4A       		.byte	0x4a
+ 1057 0109 0A       		.uleb128 0xa
+ 1058 010a 46030000 		.4byte	.LASF19
+ 1059 010e 05       		.byte	0x5
+ 1060 010f 61       		.byte	0x61
+ 1061 0110 6E010000 		.4byte	0x16e
+ 1062 0114 59       		.byte	0x59
+ 1063 0115 0A       		.uleb128 0xa
+ 1064 0116 CC030000 		.4byte	.LASF20
+ 1065 011a 05       		.byte	0x5
+ 1066 011b 62       		.byte	0x62
+ 1067 011c AC000000 		.4byte	0xac
+ 1068 0120 5C       		.byte	0x5c
+ 1069 0121 00       		.byte	0
+ 1070 0122 06       		.uleb128 0x6
+ 1071 0123 81000000 		.4byte	0x81
+ 1072 0127 38010000 		.4byte	0x138
+ 1073 012b 07       		.uleb128 0x7
+ 1074 012c B6000000 		.4byte	0xb6
+ 1075 0130 02       		.byte	0x2
+ 1076 0131 07       		.uleb128 0x7
+ 1077 0132 B6000000 		.4byte	0xb6
+ 1078 0136 17       		.byte	0x17
+ 1079 0137 00       		.byte	0
+ 1080 0138 05       		.uleb128 0x5
+ 1081 0139 22010000 		.4byte	0x122
+ 1082 013d 06       		.uleb128 0x6
+ 1083 013e 81000000 		.4byte	0x81
+ 1084 0142 53010000 		.4byte	0x153
+ 1085 0146 07       		.uleb128 0x7
+ 1086 0147 B6000000 		.4byte	0xb6
+ 1087 014b 02       		.byte	0x2
+ 1088 014c 07       		.uleb128 0x7
+ 1089 014d B6000000 		.4byte	0xb6
+ 1090 0151 04       		.byte	0x4
+ 1091 0152 00       		.byte	0
+ 1092 0153 05       		.uleb128 0x5
+ 1093 0154 3D010000 		.4byte	0x13d
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 27
+
+
+ 1094 0158 06       		.uleb128 0x6
+ 1095 0159 81000000 		.4byte	0x81
+ 1096 015d 6E010000 		.4byte	0x16e
+ 1097 0161 07       		.uleb128 0x7
+ 1098 0162 B6000000 		.4byte	0xb6
+ 1099 0166 02       		.byte	0x2
+ 1100 0167 07       		.uleb128 0x7
+ 1101 0168 B6000000 		.4byte	0xb6
+ 1102 016c 00       		.byte	0
+ 1103 016d 00       		.byte	0
+ 1104 016e 05       		.uleb128 0x5
+ 1105 016f 58010000 		.4byte	0x158
+ 1106 0173 08       		.uleb128 0x8
+ 1107 0174 F2030000 		.4byte	.LASF22
+ 1108 0178 61       		.byte	0x61
+ 1109 0179 05       		.byte	0x5
+ 1110 017a 75       		.byte	0x75
+ 1111 017b 4A020000 		.4byte	0x24a
+ 1112 017f 0A       		.uleb128 0xa
+ 1113 0180 6D020000 		.4byte	.LASF23
+ 1114 0184 05       		.byte	0x5
+ 1115 0185 76       		.byte	0x76
+ 1116 0186 81000000 		.4byte	0x81
+ 1117 018a 00       		.byte	0
+ 1118 018b 0A       		.uleb128 0xa
+ 1119 018c 46030000 		.4byte	.LASF19
+ 1120 0190 05       		.byte	0x5
+ 1121 0191 77       		.byte	0x77
+ 1122 0192 81000000 		.4byte	0x81
+ 1123 0196 01       		.byte	0x1
+ 1124 0197 09       		.uleb128 0x9
+ 1125 0198 70707500 		.ascii	"ppu\000"
+ 1126 019c 05       		.byte	0x5
+ 1127 019d 78       		.byte	0x78
+ 1128 019e 4A020000 		.4byte	0x24a
+ 1129 01a2 02       		.byte	0x2
+ 1130 01a3 0A       		.uleb128 0xa
+ 1131 01a4 B2000000 		.4byte	.LASF24
+ 1132 01a8 05       		.byte	0x5
+ 1133 01a9 79       		.byte	0x79
+ 1134 01aa 5A020000 		.4byte	0x25a
+ 1135 01ae 07       		.byte	0x7
+ 1136 01af 0A       		.uleb128 0xa
+ 1137 01b0 76020000 		.4byte	.LASF25
+ 1138 01b4 05       		.byte	0x5
+ 1139 01b5 7A       		.byte	0x7a
+ 1140 01b6 5A020000 		.4byte	0x25a
+ 1141 01ba 10       		.byte	0x10
+ 1142 01bb 0A       		.uleb128 0xa
+ 1143 01bc 12030000 		.4byte	.LASF26
+ 1144 01c0 05       		.byte	0x5
+ 1145 01c1 7B       		.byte	0x7b
+ 1146 01c2 81000000 		.4byte	0x81
+ 1147 01c6 19       		.byte	0x19
+ 1148 01c7 0A       		.uleb128 0xa
+ 1149 01c8 2B010000 		.4byte	.LASF27
+ 1150 01cc 05       		.byte	0x5
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 28
+
+
+ 1151 01cd 7C       		.byte	0x7c
+ 1152 01ce 81000000 		.4byte	0x81
+ 1153 01d2 1A       		.byte	0x1a
+ 1154 01d3 0A       		.uleb128 0xa
+ 1155 01d4 18040000 		.4byte	.LASF28
+ 1156 01d8 05       		.byte	0x5
+ 1157 01d9 7D       		.byte	0x7d
+ 1158 01da 6A020000 		.4byte	0x26a
+ 1159 01de 1B       		.byte	0x1b
+ 1160 01df 09       		.uleb128 0x9
+ 1161 01e0 696400   		.ascii	"id\000"
+ 1162 01e3 05       		.byte	0x5
+ 1163 01e4 7E       		.byte	0x7e
+ 1164 01e5 7A020000 		.4byte	0x27a
+ 1165 01e9 23       		.byte	0x23
+ 1166 01ea 09       		.uleb128 0x9
+ 1167 01eb 6B6D00   		.ascii	"km\000"
+ 1168 01ee 05       		.byte	0x5
+ 1169 01ef 7F       		.byte	0x7f
+ 1170 01f0 8A020000 		.4byte	0x28a
+ 1171 01f4 33       		.byte	0x33
+ 1172 01f5 0A       		.uleb128 0xa
+ 1173 01f6 6D040000 		.4byte	.LASF29
+ 1174 01fa 05       		.byte	0x5
+ 1175 01fb 80       		.byte	0x80
+ 1176 01fc 5A020000 		.4byte	0x25a
+ 1177 0200 3E       		.byte	0x3e
+ 1178 0201 0A       		.uleb128 0xa
+ 1179 0202 08010000 		.4byte	.LASF30
+ 1180 0206 05       		.byte	0x5
+ 1181 0207 81       		.byte	0x81
+ 1182 0208 81000000 		.4byte	0x81
+ 1183 020c 47       		.byte	0x47
+ 1184 020d 0A       		.uleb128 0xa
+ 1185 020e 62040000 		.4byte	.LASF31
+ 1186 0212 05       		.byte	0x5
+ 1187 0213 82       		.byte	0x82
+ 1188 0214 81000000 		.4byte	0x81
+ 1189 0218 48       		.byte	0x48
+ 1190 0219 0A       		.uleb128 0xa
+ 1191 021a AB000000 		.4byte	.LASF32
+ 1192 021e 05       		.byte	0x5
+ 1193 021f 83       		.byte	0x83
+ 1194 0220 8A020000 		.4byte	0x28a
+ 1195 0224 49       		.byte	0x49
+ 1196 0225 0A       		.uleb128 0xa
+ 1197 0226 DA000000 		.4byte	.LASF33
+ 1198 022a 05       		.byte	0x5
+ 1199 022b 84       		.byte	0x84
+ 1200 022c 8A020000 		.4byte	0x28a
+ 1201 0230 54       		.byte	0x54
+ 1202 0231 0A       		.uleb128 0xa
+ 1203 0232 E3000000 		.4byte	.LASF34
+ 1204 0236 05       		.byte	0x5
+ 1205 0237 85       		.byte	0x85
+ 1206 0238 81000000 		.4byte	0x81
+ 1207 023c 5F       		.byte	0x5f
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 29
+
+
+ 1208 023d 0A       		.uleb128 0xa
+ 1209 023e CA020000 		.4byte	.LASF35
+ 1210 0242 05       		.byte	0x5
+ 1211 0243 86       		.byte	0x86
+ 1212 0244 81000000 		.4byte	0x81
+ 1213 0248 60       		.byte	0x60
+ 1214 0249 00       		.byte	0
+ 1215 024a 06       		.uleb128 0x6
+ 1216 024b 81000000 		.4byte	0x81
+ 1217 024f 5A020000 		.4byte	0x25a
+ 1218 0253 07       		.uleb128 0x7
+ 1219 0254 B6000000 		.4byte	0xb6
+ 1220 0258 04       		.byte	0x4
+ 1221 0259 00       		.byte	0
+ 1222 025a 06       		.uleb128 0x6
+ 1223 025b 81000000 		.4byte	0x81
+ 1224 025f 6A020000 		.4byte	0x26a
+ 1225 0263 07       		.uleb128 0x7
+ 1226 0264 B6000000 		.4byte	0xb6
+ 1227 0268 08       		.byte	0x8
+ 1228 0269 00       		.byte	0
+ 1229 026a 06       		.uleb128 0x6
+ 1230 026b 81000000 		.4byte	0x81
+ 1231 026f 7A020000 		.4byte	0x27a
+ 1232 0273 07       		.uleb128 0x7
+ 1233 0274 B6000000 		.4byte	0xb6
+ 1234 0278 07       		.byte	0x7
+ 1235 0279 00       		.byte	0
+ 1236 027a 06       		.uleb128 0x6
+ 1237 027b 81000000 		.4byte	0x81
+ 1238 027f 8A020000 		.4byte	0x28a
+ 1239 0283 07       		.uleb128 0x7
+ 1240 0284 B6000000 		.4byte	0xb6
+ 1241 0288 0F       		.byte	0xf
+ 1242 0289 00       		.byte	0
+ 1243 028a 06       		.uleb128 0x6
+ 1244 028b 81000000 		.4byte	0x81
+ 1245 028f 9A020000 		.4byte	0x29a
+ 1246 0293 07       		.uleb128 0x7
+ 1247 0294 B6000000 		.4byte	0xb6
+ 1248 0298 0A       		.byte	0xa
+ 1249 0299 00       		.byte	0
+ 1250 029a 0B       		.uleb128 0xb
+ 1251 029b 49020000 		.4byte	.LASF37
+ 1252 029f 01       		.byte	0x1
+ 1253 02a0 38       		.byte	0x38
+ 1254 02a1 81000000 		.4byte	0x81
+ 1255 02a5 00000000 		.4byte	.LFB63
+ 1256 02a9 90000000 		.4byte	.LFE63-.LFB63
+ 1257 02ad 01       		.uleb128 0x1
+ 1258 02ae 9C       		.byte	0x9c
+ 1259 02af CE020000 		.4byte	0x2ce
+ 1260 02b3 0C       		.uleb128 0xc
+ 1261 02b4 4C030000 		.4byte	.LASF36
+ 1262 02b8 01       		.byte	0x1
+ 1263 02b9 39       		.byte	0x39
+ 1264 02ba 81000000 		.4byte	0x81
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 30
+
+
+ 1265 02be 02       		.uleb128 0x2
+ 1266 02bf 91       		.byte	0x91
+ 1267 02c0 6E       		.sleb128 -18
+ 1268 02c1 0D       		.uleb128 0xd
+ 1269 02c2 6900     		.ascii	"i\000"
+ 1270 02c4 01       		.byte	0x1
+ 1271 02c5 39       		.byte	0x39
+ 1272 02c6 81000000 		.4byte	0x81
+ 1273 02ca 02       		.uleb128 0x2
+ 1274 02cb 91       		.byte	0x91
+ 1275 02cc 6F       		.sleb128 -17
+ 1276 02cd 00       		.byte	0
+ 1277 02ce 0B       		.uleb128 0xb
+ 1278 02cf 08040000 		.4byte	.LASF38
+ 1279 02d3 01       		.byte	0x1
+ 1280 02d4 68       		.byte	0x68
+ 1281 02d5 81000000 		.4byte	0x81
+ 1282 02d9 00000000 		.4byte	.LFB64
+ 1283 02dd 90000000 		.4byte	.LFE64-.LFB64
+ 1284 02e1 01       		.uleb128 0x1
+ 1285 02e2 9C       		.byte	0x9c
+ 1286 02e3 02030000 		.4byte	0x302
+ 1287 02e7 0C       		.uleb128 0xc
+ 1288 02e8 4C030000 		.4byte	.LASF36
+ 1289 02ec 01       		.byte	0x1
+ 1290 02ed 69       		.byte	0x69
+ 1291 02ee 81000000 		.4byte	0x81
+ 1292 02f2 02       		.uleb128 0x2
+ 1293 02f3 91       		.byte	0x91
+ 1294 02f4 6E       		.sleb128 -18
+ 1295 02f5 0D       		.uleb128 0xd
+ 1296 02f6 6900     		.ascii	"i\000"
+ 1297 02f8 01       		.byte	0x1
+ 1298 02f9 69       		.byte	0x69
+ 1299 02fa 81000000 		.4byte	0x81
+ 1300 02fe 02       		.uleb128 0x2
+ 1301 02ff 91       		.byte	0x91
+ 1302 0300 6F       		.sleb128 -17
+ 1303 0301 00       		.byte	0
+ 1304 0302 0E       		.uleb128 0xe
+ 1305 0303 FD000000 		.4byte	.LASF40
+ 1306 0307 01       		.byte	0x1
+ 1307 0308 99       		.byte	0x99
+ 1308 0309 81000000 		.4byte	0x81
+ 1309 030d 00000000 		.4byte	.LFB65
+ 1310 0311 78000000 		.4byte	.LFE65-.LFB65
+ 1311 0315 01       		.uleb128 0x1
+ 1312 0316 9C       		.byte	0x9c
+ 1313 0317 44030000 		.4byte	0x344
+ 1314 031b 0C       		.uleb128 0xc
+ 1315 031c 4C030000 		.4byte	.LASF36
+ 1316 0320 01       		.byte	0x1
+ 1317 0321 9A       		.byte	0x9a
+ 1318 0322 81000000 		.4byte	0x81
+ 1319 0326 02       		.uleb128 0x2
+ 1320 0327 91       		.byte	0x91
+ 1321 0328 76       		.sleb128 -10
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 31
+
+
+ 1322 0329 0C       		.uleb128 0xc
+ 1323 032a 03040000 		.4byte	.LASF39
+ 1324 032e 01       		.byte	0x1
+ 1325 032f 9A       		.byte	0x9a
+ 1326 0330 44030000 		.4byte	0x344
+ 1327 0334 02       		.uleb128 0x2
+ 1328 0335 91       		.byte	0x91
+ 1329 0336 70       		.sleb128 -16
+ 1330 0337 0D       		.uleb128 0xd
+ 1331 0338 6900     		.ascii	"i\000"
+ 1332 033a 01       		.byte	0x1
+ 1333 033b 9A       		.byte	0x9a
+ 1334 033c 81000000 		.4byte	0x81
+ 1335 0340 02       		.uleb128 0x2
+ 1336 0341 91       		.byte	0x91
+ 1337 0342 77       		.sleb128 -9
+ 1338 0343 00       		.byte	0
+ 1339 0344 06       		.uleb128 0x6
+ 1340 0345 81000000 		.4byte	0x81
+ 1341 0349 54030000 		.4byte	0x354
+ 1342 034d 07       		.uleb128 0x7
+ 1343 034e B6000000 		.4byte	0xb6
+ 1344 0352 02       		.byte	0x2
+ 1345 0353 00       		.byte	0
+ 1346 0354 0E       		.uleb128 0xe
+ 1347 0355 50040000 		.4byte	.LASF41
+ 1348 0359 01       		.byte	0x1
+ 1349 035a C3       		.byte	0xc3
+ 1350 035b 81000000 		.4byte	0x81
+ 1351 035f 00000000 		.4byte	.LFB66
+ 1352 0363 7C000000 		.4byte	.LFE66-.LFB66
+ 1353 0367 01       		.uleb128 0x1
+ 1354 0368 9C       		.byte	0x9c
+ 1355 0369 96030000 		.4byte	0x396
+ 1356 036d 0C       		.uleb128 0xc
+ 1357 036e 4C030000 		.4byte	.LASF36
+ 1358 0372 01       		.byte	0x1
+ 1359 0373 C4       		.byte	0xc4
+ 1360 0374 81000000 		.4byte	0x81
+ 1361 0378 02       		.uleb128 0x2
+ 1362 0379 91       		.byte	0x91
+ 1363 037a 76       		.sleb128 -10
+ 1364 037b 0C       		.uleb128 0xc
+ 1365 037c 03040000 		.4byte	.LASF39
+ 1366 0380 01       		.byte	0x1
+ 1367 0381 C4       		.byte	0xc4
+ 1368 0382 BD000000 		.4byte	0xbd
+ 1369 0386 02       		.uleb128 0x2
+ 1370 0387 91       		.byte	0x91
+ 1371 0388 70       		.sleb128 -16
+ 1372 0389 0D       		.uleb128 0xd
+ 1373 038a 6900     		.ascii	"i\000"
+ 1374 038c 01       		.byte	0x1
+ 1375 038d C4       		.byte	0xc4
+ 1376 038e 81000000 		.4byte	0x81
+ 1377 0392 02       		.uleb128 0x2
+ 1378 0393 91       		.byte	0x91
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 32
+
+
+ 1379 0394 77       		.sleb128 -9
+ 1380 0395 00       		.byte	0
+ 1381 0396 0E       		.uleb128 0xe
+ 1382 0397 E9020000 		.4byte	.LASF42
+ 1383 039b 01       		.byte	0x1
+ 1384 039c EE       		.byte	0xee
+ 1385 039d 81000000 		.4byte	0x81
+ 1386 03a1 00000000 		.4byte	.LFB67
+ 1387 03a5 C4000000 		.4byte	.LFE67-.LFB67
+ 1388 03a9 01       		.uleb128 0x1
+ 1389 03aa 9C       		.byte	0x9c
+ 1390 03ab F4030000 		.4byte	0x3f4
+ 1391 03af 0F       		.uleb128 0xf
+ 1392 03b0 75010000 		.4byte	.LASF43
+ 1393 03b4 01       		.byte	0x1
+ 1394 03b5 EE       		.byte	0xee
+ 1395 03b6 8C000000 		.4byte	0x8c
+ 1396 03ba 02       		.uleb128 0x2
+ 1397 03bb 91       		.byte	0x91
+ 1398 03bc 6E       		.sleb128 -18
+ 1399 03bd 0F       		.uleb128 0xf
+ 1400 03be F7000000 		.4byte	.LASF44
+ 1401 03c2 01       		.byte	0x1
+ 1402 03c3 EE       		.byte	0xee
+ 1403 03c4 F4030000 		.4byte	0x3f4
+ 1404 03c8 02       		.uleb128 0x2
+ 1405 03c9 91       		.byte	0x91
+ 1406 03ca 68       		.sleb128 -24
+ 1407 03cb 0C       		.uleb128 0xc
+ 1408 03cc 4C030000 		.4byte	.LASF36
+ 1409 03d0 01       		.byte	0x1
+ 1410 03d1 EF       		.byte	0xef
+ 1411 03d2 81000000 		.4byte	0x81
+ 1412 03d6 02       		.uleb128 0x2
+ 1413 03d7 91       		.byte	0x91
+ 1414 03d8 76       		.sleb128 -10
+ 1415 03d9 0C       		.uleb128 0xc
+ 1416 03da 03040000 		.4byte	.LASF39
+ 1417 03de 01       		.byte	0x1
+ 1418 03df EF       		.byte	0xef
+ 1419 03e0 BD000000 		.4byte	0xbd
+ 1420 03e4 02       		.uleb128 0x2
+ 1421 03e5 91       		.byte	0x91
+ 1422 03e6 70       		.sleb128 -16
+ 1423 03e7 0D       		.uleb128 0xd
+ 1424 03e8 6900     		.ascii	"i\000"
+ 1425 03ea 01       		.byte	0x1
+ 1426 03eb EF       		.byte	0xef
+ 1427 03ec 81000000 		.4byte	0x81
+ 1428 03f0 02       		.uleb128 0x2
+ 1429 03f1 91       		.byte	0x91
+ 1430 03f2 77       		.sleb128 -9
+ 1431 03f3 00       		.byte	0
+ 1432 03f4 10       		.uleb128 0x10
+ 1433 03f5 04       		.byte	0x4
+ 1434 03f6 81000000 		.4byte	0x81
+ 1435 03fa 11       		.uleb128 0x11
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 33
+
+
+ 1436 03fb 11010000 		.4byte	.LASF45
+ 1437 03ff 01       		.byte	0x1
+ 1438 0400 2301     		.2byte	0x123
+ 1439 0402 81000000 		.4byte	0x81
+ 1440 0406 00000000 		.4byte	.LFB68
+ 1441 040a E4000000 		.4byte	.LFE68-.LFB68
+ 1442 040e 01       		.uleb128 0x1
+ 1443 040f 9C       		.byte	0x9c
+ 1444 0410 5E040000 		.4byte	0x45e
+ 1445 0414 12       		.uleb128 0x12
+ 1446 0415 75010000 		.4byte	.LASF43
+ 1447 0419 01       		.byte	0x1
+ 1448 041a 2301     		.2byte	0x123
+ 1449 041c 8C000000 		.4byte	0x8c
+ 1450 0420 02       		.uleb128 0x2
+ 1451 0421 91       		.byte	0x91
+ 1452 0422 5E       		.sleb128 -34
+ 1453 0423 12       		.uleb128 0x12
+ 1454 0424 13040000 		.4byte	.LASF46
+ 1455 0428 01       		.byte	0x1
+ 1456 0429 2301     		.2byte	0x123
+ 1457 042b AC000000 		.4byte	0xac
+ 1458 042f 02       		.uleb128 0x2
+ 1459 0430 91       		.byte	0x91
+ 1460 0431 5D       		.sleb128 -35
+ 1461 0432 13       		.uleb128 0x13
+ 1462 0433 4C030000 		.4byte	.LASF36
+ 1463 0437 01       		.byte	0x1
+ 1464 0438 2401     		.2byte	0x124
+ 1465 043a 8C000000 		.4byte	0x8c
+ 1466 043e 02       		.uleb128 0x2
+ 1467 043f 91       		.byte	0x91
+ 1468 0440 6C       		.sleb128 -20
+ 1469 0441 13       		.uleb128 0x13
+ 1470 0442 03040000 		.4byte	.LASF39
+ 1471 0446 01       		.byte	0x1
+ 1472 0447 2401     		.2byte	0x124
+ 1473 0449 5E040000 		.4byte	0x45e
+ 1474 044d 02       		.uleb128 0x2
+ 1475 044e 91       		.byte	0x91
+ 1476 044f 64       		.sleb128 -28
+ 1477 0450 14       		.uleb128 0x14
+ 1478 0451 6900     		.ascii	"i\000"
+ 1479 0453 01       		.byte	0x1
+ 1480 0454 2401     		.2byte	0x124
+ 1481 0456 8C000000 		.4byte	0x8c
+ 1482 045a 02       		.uleb128 0x2
+ 1483 045b 91       		.byte	0x91
+ 1484 045c 6E       		.sleb128 -18
+ 1485 045d 00       		.byte	0
+ 1486 045e 06       		.uleb128 0x6
+ 1487 045f 8C000000 		.4byte	0x8c
+ 1488 0463 6E040000 		.4byte	0x46e
+ 1489 0467 07       		.uleb128 0x7
+ 1490 0468 B6000000 		.4byte	0xb6
+ 1491 046c 03       		.byte	0x3
+ 1492 046d 00       		.byte	0
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 34
+
+
+ 1493 046e 11       		.uleb128 0x11
+ 1494 046f 7B000000 		.4byte	.LASF47
+ 1495 0473 01       		.byte	0x1
+ 1496 0474 5B01     		.2byte	0x15b
+ 1497 0476 81000000 		.4byte	0x81
+ 1498 047a 00000000 		.4byte	.LFB69
+ 1499 047e 74000000 		.4byte	.LFE69-.LFB69
+ 1500 0482 01       		.uleb128 0x1
+ 1501 0483 9C       		.byte	0x9c
+ 1502 0484 D2040000 		.4byte	0x4d2
+ 1503 0488 12       		.uleb128 0x12
+ 1504 0489 AB040000 		.4byte	.LASF48
+ 1505 048d 01       		.byte	0x1
+ 1506 048e 5B01     		.2byte	0x15b
+ 1507 0490 81000000 		.4byte	0x81
+ 1508 0494 02       		.uleb128 0x2
+ 1509 0495 91       		.byte	0x91
+ 1510 0496 6F       		.sleb128 -17
+ 1511 0497 12       		.uleb128 0x12
+ 1512 0498 F7000000 		.4byte	.LASF44
+ 1513 049c 01       		.byte	0x1
+ 1514 049d 5B01     		.2byte	0x15b
+ 1515 049f 81000000 		.4byte	0x81
+ 1516 04a3 02       		.uleb128 0x2
+ 1517 04a4 91       		.byte	0x91
+ 1518 04a5 6E       		.sleb128 -18
+ 1519 04a6 13       		.uleb128 0x13
+ 1520 04a7 4C030000 		.4byte	.LASF36
+ 1521 04ab 01       		.byte	0x1
+ 1522 04ac 5C01     		.2byte	0x15c
+ 1523 04ae 81000000 		.4byte	0x81
+ 1524 04b2 02       		.uleb128 0x2
+ 1525 04b3 91       		.byte	0x91
+ 1526 04b4 76       		.sleb128 -10
+ 1527 04b5 13       		.uleb128 0x13
+ 1528 04b6 03040000 		.4byte	.LASF39
+ 1529 04ba 01       		.byte	0x1
+ 1530 04bb 5C01     		.2byte	0x15c
+ 1531 04bd D2040000 		.4byte	0x4d2
+ 1532 04c1 02       		.uleb128 0x2
+ 1533 04c2 91       		.byte	0x91
+ 1534 04c3 74       		.sleb128 -12
+ 1535 04c4 14       		.uleb128 0x14
+ 1536 04c5 6900     		.ascii	"i\000"
+ 1537 04c7 01       		.byte	0x1
+ 1538 04c8 5C01     		.2byte	0x15c
+ 1539 04ca 81000000 		.4byte	0x81
+ 1540 04ce 02       		.uleb128 0x2
+ 1541 04cf 91       		.byte	0x91
+ 1542 04d0 77       		.sleb128 -9
+ 1543 04d1 00       		.byte	0
+ 1544 04d2 06       		.uleb128 0x6
+ 1545 04d3 81000000 		.4byte	0x81
+ 1546 04d7 E2040000 		.4byte	0x4e2
+ 1547 04db 07       		.uleb128 0x7
+ 1548 04dc B6000000 		.4byte	0xb6
+ 1549 04e0 01       		.byte	0x1
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 35
+
+
+ 1550 04e1 00       		.byte	0
+ 1551 04e2 15       		.uleb128 0x15
+ 1552 04e3 68030000 		.4byte	.LASF49
+ 1553 04e7 06       		.byte	0x6
+ 1554 04e8 2A06     		.2byte	0x62a
+ 1555 04ea EE040000 		.4byte	0x4ee
+ 1556 04ee 05       		.uleb128 0x5
+ 1557 04ef 76000000 		.4byte	0x76
+ 1558 04f3 16       		.uleb128 0x16
+ 1559 04f4 95030000 		.4byte	.LASF50
+ 1560 04f8 05       		.byte	0x5
+ 1561 04f9 4A       		.byte	0x4a
+ 1562 04fa AC000000 		.4byte	0xac
+ 1563 04fe 05       		.uleb128 0x5
+ 1564 04ff 03       		.byte	0x3
+ 1565 0500 00000000 		.4byte	count_teclas1
+ 1566 0504 16       		.uleb128 0x16
+ 1567 0505 B2040000 		.4byte	.LASF51
+ 1568 0509 05       		.byte	0x5
+ 1569 050a 4A       		.byte	0x4a
+ 1570 050b AC000000 		.4byte	0xac
+ 1571 050f 05       		.uleb128 0x5
+ 1572 0510 03       		.byte	0x3
+ 1573 0511 00000000 		.4byte	comas1
+ 1574 0515 16       		.uleb128 0x16
+ 1575 0516 B9040000 		.4byte	.LASF52
+ 1576 051a 05       		.byte	0x5
+ 1577 051b 4A       		.byte	0x4a
+ 1578 051c AC000000 		.4byte	0xac
+ 1579 0520 05       		.uleb128 0x5
+ 1580 0521 03       		.byte	0x3
+ 1581 0522 00000000 		.4byte	comas2
+ 1582 0526 16       		.uleb128 0x16
+ 1583 0527 1F040000 		.4byte	.LASF53
+ 1584 052b 05       		.byte	0x5
+ 1585 052c 4A       		.byte	0x4a
+ 1586 052d AC000000 		.4byte	0xac
+ 1587 0531 05       		.uleb128 0x5
+ 1588 0532 03       		.byte	0x3
+ 1589 0533 00000000 		.4byte	id_coma1
+ 1590 0537 16       		.uleb128 0x16
+ 1591 0538 61020000 		.4byte	.LASF54
+ 1592 053c 05       		.byte	0x5
+ 1593 053d 4A       		.byte	0x4a
+ 1594 053e AC000000 		.4byte	0xac
+ 1595 0542 05       		.uleb128 0x5
+ 1596 0543 03       		.byte	0x3
+ 1597 0544 00000000 		.4byte	id_teclado1
+ 1598 0548 16       		.uleb128 0x16
+ 1599 0549 20000000 		.4byte	.LASF55
+ 1600 054d 05       		.byte	0x5
+ 1601 054e 4A       		.byte	0x4a
+ 1602 054f AC000000 		.4byte	0xac
+ 1603 0553 05       		.uleb128 0x5
+ 1604 0554 03       		.byte	0x3
+ 1605 0555 00000000 		.4byte	count_teclas2
+ 1606 0559 16       		.uleb128 0x16
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 36
+
+
+ 1607 055a 28040000 		.4byte	.LASF56
+ 1608 055e 05       		.byte	0x5
+ 1609 055f 4A       		.byte	0x4a
+ 1610 0560 AC000000 		.4byte	0xac
+ 1611 0564 05       		.uleb128 0x5
+ 1612 0565 03       		.byte	0x3
+ 1613 0566 00000000 		.4byte	id_coma2
+ 1614 056a 16       		.uleb128 0x16
+ 1615 056b 3D040000 		.4byte	.LASF57
+ 1616 056f 05       		.byte	0x5
+ 1617 0570 4A       		.byte	0x4a
+ 1618 0571 AC000000 		.4byte	0xac
+ 1619 0575 05       		.uleb128 0x5
+ 1620 0576 03       		.byte	0x3
+ 1621 0577 00000000 		.4byte	id_teclado2
+ 1622 057b 16       		.uleb128 0x16
+ 1623 057c 08000000 		.4byte	.LASF58
+ 1624 0580 05       		.byte	0x5
+ 1625 0581 4B       		.byte	0x4b
+ 1626 0582 B1000000 		.4byte	0xb1
+ 1627 0586 05       		.uleb128 0x5
+ 1628 0587 03       		.byte	0x3
+ 1629 0588 00000000 		.4byte	posx1
+ 1630 058c 16       		.uleb128 0x16
+ 1631 058d 3A010000 		.4byte	.LASF59
+ 1632 0591 05       		.byte	0x5
+ 1633 0592 4B       		.byte	0x4b
+ 1634 0593 B1000000 		.4byte	0xb1
+ 1635 0597 05       		.uleb128 0x5
+ 1636 0598 03       		.byte	0x3
+ 1637 0599 00000000 		.4byte	posy1
+ 1638 059d 16       		.uleb128 0x16
+ 1639 059e A0040000 		.4byte	.LASF60
+ 1640 05a2 05       		.byte	0x5
+ 1641 05a3 4B       		.byte	0x4b
+ 1642 05a4 B1000000 		.4byte	0xb1
+ 1643 05a8 05       		.uleb128 0x5
+ 1644 05a9 03       		.byte	0x3
+ 1645 05aa 00000000 		.4byte	sizeletra1
+ 1646 05ae 16       		.uleb128 0x16
+ 1647 05af 0E000000 		.4byte	.LASF61
+ 1648 05b3 05       		.byte	0x5
+ 1649 05b4 4B       		.byte	0x4b
+ 1650 05b5 B1000000 		.4byte	0xb1
+ 1651 05b9 05       		.uleb128 0x5
+ 1652 05ba 03       		.byte	0x3
+ 1653 05bb 00000000 		.4byte	posx2
+ 1654 05bf 16       		.uleb128 0x16
+ 1655 05c0 40010000 		.4byte	.LASF62
+ 1656 05c4 05       		.byte	0x5
+ 1657 05c5 4B       		.byte	0x4b
+ 1658 05c6 B1000000 		.4byte	0xb1
+ 1659 05ca 05       		.uleb128 0x5
+ 1660 05cb 03       		.byte	0x3
+ 1661 05cc 00000000 		.4byte	posy2
+ 1662 05d0 16       		.uleb128 0x16
+ 1663 05d1 F6020000 		.4byte	.LASF63
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 37
+
+
+ 1664 05d5 05       		.byte	0x5
+ 1665 05d6 4B       		.byte	0x4b
+ 1666 05d7 B1000000 		.4byte	0xb1
+ 1667 05db 05       		.uleb128 0x5
+ 1668 05dc 03       		.byte	0x3
+ 1669 05dd 00000000 		.4byte	sizeletra2
+ 1670 05e1 16       		.uleb128 0x16
+ 1671 05e2 53030000 		.4byte	.LASF64
+ 1672 05e6 05       		.byte	0x5
+ 1673 05e7 4C       		.byte	0x4c
+ 1674 05e8 AC000000 		.4byte	0xac
+ 1675 05ec 05       		.uleb128 0x5
+ 1676 05ed 03       		.byte	0x3
+ 1677 05ee 00000000 		.4byte	teclas1
+ 1678 05f2 16       		.uleb128 0x16
+ 1679 05f3 5B030000 		.4byte	.LASF65
+ 1680 05f7 05       		.byte	0x5
+ 1681 05f8 4C       		.byte	0x4c
+ 1682 05f9 AC000000 		.4byte	0xac
+ 1683 05fd 05       		.uleb128 0x5
+ 1684 05fe 03       		.byte	0x3
+ 1685 05ff 00000000 		.4byte	teclas2
+ 1686 0603 16       		.uleb128 0x16
+ 1687 0604 B9000000 		.4byte	.LASF66
+ 1688 0608 05       		.byte	0x5
+ 1689 0609 4D       		.byte	0x4d
+ 1690 060a AC000000 		.4byte	0xac
+ 1691 060e 05       		.uleb128 0x5
+ 1692 060f 03       		.byte	0x3
+ 1693 0610 00000000 		.4byte	flujo_LCD1
+ 1694 0614 16       		.uleb128 0x16
+ 1695 0615 C4000000 		.4byte	.LASF67
+ 1696 0619 05       		.byte	0x5
+ 1697 061a 4D       		.byte	0x4d
+ 1698 061b AC000000 		.4byte	0xac
+ 1699 061f 05       		.uleb128 0x5
+ 1700 0620 03       		.byte	0x3
+ 1701 0621 00000000 		.4byte	flujo_LCD2
+ 1702 0625 16       		.uleb128 0x16
+ 1703 0626 CF000000 		.4byte	.LASF68
+ 1704 062a 05       		.byte	0x5
+ 1705 062b 4D       		.byte	0x4d
+ 1706 062c AC000000 		.4byte	0xac
+ 1707 0630 05       		.uleb128 0x5
+ 1708 0631 03       		.byte	0x3
+ 1709 0632 00000000 		.4byte	flujo_LCD3
+ 1710 0636 16       		.uleb128 0x16
+ 1711 0637 19020000 		.4byte	.LASF69
+ 1712 063b 05       		.byte	0x5
+ 1713 063c 4D       		.byte	0x4d
+ 1714 063d AC000000 		.4byte	0xac
+ 1715 0641 05       		.uleb128 0x5
+ 1716 0642 03       		.byte	0x3
+ 1717 0643 00000000 		.4byte	flujo_LCD4
+ 1718 0647 06       		.uleb128 0x6
+ 1719 0648 81000000 		.4byte	0x81
+ 1720 064c 57060000 		.4byte	0x657
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 38
+
+
+ 1721 0650 07       		.uleb128 0x7
+ 1722 0651 B6000000 		.4byte	0xb6
+ 1723 0655 1D       		.byte	0x1d
+ 1724 0656 00       		.byte	0
+ 1725 0657 16       		.uleb128 0x16
+ 1726 0658 1B030000 		.4byte	.LASF70
+ 1727 065c 05       		.byte	0x5
+ 1728 065d 4E       		.byte	0x4e
+ 1729 065e 68060000 		.4byte	0x668
+ 1730 0662 05       		.uleb128 0x5
+ 1731 0663 03       		.byte	0x3
+ 1732 0664 00000000 		.4byte	Buffer_LCD1
+ 1733 0668 05       		.uleb128 0x5
+ 1734 0669 47060000 		.4byte	0x647
+ 1735 066d 16       		.uleb128 0x16
+ 1736 066e 27030000 		.4byte	.LASF71
+ 1737 0672 05       		.byte	0x5
+ 1738 0673 4F       		.byte	0x4f
+ 1739 0674 7E060000 		.4byte	0x67e
+ 1740 0678 05       		.uleb128 0x5
+ 1741 0679 03       		.byte	0x3
+ 1742 067a 00000000 		.4byte	Buffer_LCD2
+ 1743 067e 05       		.uleb128 0x5
+ 1744 067f 47060000 		.4byte	0x647
+ 1745 0683 16       		.uleb128 0x16
+ 1746 0684 91000000 		.4byte	.LASF72
+ 1747 0688 05       		.byte	0x5
+ 1748 0689 50       		.byte	0x50
+ 1749 068a AC000000 		.4byte	0xac
+ 1750 068e 05       		.uleb128 0x5
+ 1751 068f 03       		.byte	0x3
+ 1752 0690 00000000 		.4byte	count_protector
+ 1753 0694 16       		.uleb128 0x16
+ 1754 0695 38020000 		.4byte	.LASF73
+ 1755 0699 05       		.byte	0x5
+ 1756 069a 50       		.byte	0x50
+ 1757 069b AC000000 		.4byte	0xac
+ 1758 069f 05       		.uleb128 0x5
+ 1759 06a0 03       		.byte	0x3
+ 1760 06a1 00000000 		.4byte	count_protector2
+ 1761 06a5 16       		.uleb128 0x16
+ 1762 06a6 83040000 		.4byte	.LASF74
+ 1763 06aa 05       		.byte	0x5
+ 1764 06ab 51       		.byte	0x51
+ 1765 06ac B6060000 		.4byte	0x6b6
+ 1766 06b0 05       		.uleb128 0x5
+ 1767 06b1 03       		.byte	0x3
+ 1768 06b2 00000000 		.4byte	password_lcd
+ 1769 06b6 05       		.uleb128 0x5
+ 1770 06b7 5A020000 		.4byte	0x25a
+ 1771 06bb 16       		.uleb128 0x16
+ 1772 06bc 7E020000 		.4byte	.LASF75
+ 1773 06c0 05       		.byte	0x5
+ 1774 06c1 52       		.byte	0x52
+ 1775 06c2 B1000000 		.4byte	0xb1
+ 1776 06c6 05       		.uleb128 0x5
+ 1777 06c7 03       		.byte	0x3
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 39
+
+
+ 1778 06c8 00000000 		.4byte	imagen_grado1
+ 1779 06cc 16       		.uleb128 0x16
+ 1780 06cd 8C020000 		.4byte	.LASF76
+ 1781 06d1 05       		.byte	0x5
+ 1782 06d2 52       		.byte	0x52
+ 1783 06d3 B1000000 		.4byte	0xb1
+ 1784 06d7 05       		.uleb128 0x5
+ 1785 06d8 03       		.byte	0x3
+ 1786 06d9 00000000 		.4byte	imagen_grado2
+ 1787 06dd 16       		.uleb128 0x16
+ 1788 06de C0040000 		.4byte	.LASF77
+ 1789 06e2 05       		.byte	0x5
+ 1790 06e3 52       		.byte	0x52
+ 1791 06e4 B1000000 		.4byte	0xb1
+ 1792 06e8 05       		.uleb128 0x5
+ 1793 06e9 03       		.byte	0x3
+ 1794 06ea 00000000 		.4byte	imagen_grado3
+ 1795 06ee 16       		.uleb128 0x16
+ 1796 06ef B1020000 		.4byte	.LASF78
+ 1797 06f3 05       		.byte	0x5
+ 1798 06f4 52       		.byte	0x52
+ 1799 06f5 B1000000 		.4byte	0xb1
+ 1800 06f9 05       		.uleb128 0x5
+ 1801 06fa 03       		.byte	0x3
+ 1802 06fb 00000000 		.4byte	imagen_grado4
+ 1803 06ff 06       		.uleb128 0x6
+ 1804 0700 8C000000 		.4byte	0x8c
+ 1805 0704 15070000 		.4byte	0x715
+ 1806 0708 07       		.uleb128 0x7
+ 1807 0709 B6000000 		.4byte	0xb6
+ 1808 070d 03       		.byte	0x3
+ 1809 070e 07       		.uleb128 0x7
+ 1810 070f B6000000 		.4byte	0xb6
+ 1811 0713 01       		.byte	0x1
+ 1812 0714 00       		.byte	0
+ 1813 0715 16       		.uleb128 0x16
+ 1814 0716 A1000000 		.4byte	.LASF79
+ 1815 071a 05       		.byte	0x5
+ 1816 071b 53       		.byte	0x53
+ 1817 071c 26070000 		.4byte	0x726
+ 1818 0720 05       		.uleb128 0x5
+ 1819 0721 03       		.byte	0x3
+ 1820 0722 00000000 		.4byte	prox_caso
+ 1821 0726 05       		.uleb128 0x5
+ 1822 0727 FF060000 		.4byte	0x6ff
+ 1823 072b 16       		.uleb128 0x16
+ 1824 072c 6F000000 		.4byte	.LASF80
+ 1825 0730 05       		.byte	0x5
+ 1826 0731 54       		.byte	0x54
+ 1827 0732 3C070000 		.4byte	0x73c
+ 1828 0736 05       		.uleb128 0x5
+ 1829 0737 03       		.byte	0x3
+ 1830 0738 00000000 		.4byte	bloqueo_LCD
+ 1831 073c 05       		.uleb128 0x5
+ 1832 073d 44030000 		.4byte	0x344
+ 1833 0741 16       		.uleb128 0x16
+ 1834 0742 E2020000 		.4byte	.LASF81
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 40
+
+
+ 1835 0746 05       		.byte	0x5
+ 1836 0747 58       		.byte	0x58
+ 1837 0748 AC000000 		.4byte	0xac
+ 1838 074c 05       		.uleb128 0x5
+ 1839 074d 03       		.byte	0x3
+ 1840 074e 00000000 		.4byte	ppux10
+ 1841 0752 06       		.uleb128 0x6
+ 1842 0753 81000000 		.4byte	0x81
+ 1843 0757 62070000 		.4byte	0x762
+ 1844 075b 07       		.uleb128 0x7
+ 1845 075c B6000000 		.4byte	0xb6
+ 1846 0760 10       		.byte	0x10
+ 1847 0761 00       		.byte	0
+ 1848 0762 16       		.uleb128 0x16
+ 1849 0763 14000000 		.4byte	.LASF82
+ 1850 0767 05       		.byte	0x5
+ 1851 0768 59       		.byte	0x59
+ 1852 0769 73070000 		.4byte	0x773
+ 1853 076d 05       		.uleb128 0x5
+ 1854 076e 03       		.byte	0x3
+ 1855 076f 00000000 		.4byte	nombre_pro1
+ 1856 0773 05       		.uleb128 0x5
+ 1857 0774 52070000 		.4byte	0x752
+ 1858 0778 16       		.uleb128 0x16
+ 1859 0779 31040000 		.4byte	.LASF83
+ 1860 077d 05       		.byte	0x5
+ 1861 077e 59       		.byte	0x59
+ 1862 077f 89070000 		.4byte	0x789
+ 1863 0783 05       		.uleb128 0x5
+ 1864 0784 03       		.byte	0x3
+ 1865 0785 00000000 		.4byte	nombre_pro2
+ 1866 0789 05       		.uleb128 0x5
+ 1867 078a 52070000 		.4byte	0x752
+ 1868 078e 16       		.uleb128 0x16
+ 1869 078f 2C020000 		.4byte	.LASF84
+ 1870 0793 05       		.byte	0x5
+ 1871 0794 59       		.byte	0x59
+ 1872 0795 9F070000 		.4byte	0x79f
+ 1873 0799 05       		.uleb128 0x5
+ 1874 079a 03       		.byte	0x3
+ 1875 079b 00000000 		.4byte	nombre_pro3
+ 1876 079f 05       		.uleb128 0x5
+ 1877 07a0 52070000 		.4byte	0x752
+ 1878 07a4 16       		.uleb128 0x16
+ 1879 07a5 2E000000 		.4byte	.LASF85
+ 1880 07a9 05       		.byte	0x5
+ 1881 07aa 5A       		.byte	0x5a
+ 1882 07ab B5070000 		.4byte	0x7b5
+ 1883 07af 05       		.uleb128 0x5
+ 1884 07b0 03       		.byte	0x3
+ 1885 07b1 00000000 		.4byte	version
+ 1886 07b5 05       		.uleb128 0x5
+ 1887 07b6 BD000000 		.4byte	0xbd
+ 1888 07ba 16       		.uleb128 0x16
+ 1889 07bb 4F010000 		.4byte	.LASF86
+ 1890 07bf 05       		.byte	0x5
+ 1891 07c0 64       		.byte	0x64
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 41
+
+
+ 1892 07c1 CD000000 		.4byte	0xcd
+ 1893 07c5 05       		.uleb128 0x5
+ 1894 07c6 03       		.byte	0x3
+ 1895 07c7 00000000 		.4byte	lado1
+ 1896 07cb 16       		.uleb128 0x16
+ 1897 07cc B3030000 		.4byte	.LASF87
+ 1898 07d0 05       		.byte	0x5
+ 1899 07d1 65       		.byte	0x65
+ 1900 07d2 CD000000 		.4byte	0xcd
+ 1901 07d6 05       		.uleb128 0x5
+ 1902 07d7 03       		.byte	0x3
+ 1903 07d8 00000000 		.4byte	lado2
+ 1904 07dc 16       		.uleb128 0x16
+ 1905 07dd 5B010000 		.4byte	.LASF88
+ 1906 07e1 05       		.byte	0x5
+ 1907 07e2 66       		.byte	0x66
+ 1908 07e3 CD000000 		.4byte	0xcd
+ 1909 07e7 05       		.uleb128 0x5
+ 1910 07e8 03       		.byte	0x3
+ 1911 07e9 00000000 		.4byte	lado3
+ 1912 07ed 16       		.uleb128 0x16
+ 1913 07ee 61010000 		.4byte	.LASF89
+ 1914 07f2 05       		.byte	0x5
+ 1915 07f3 67       		.byte	0x67
+ 1916 07f4 CD000000 		.4byte	0xcd
+ 1917 07f8 05       		.uleb128 0x5
+ 1918 07f9 03       		.byte	0x3
+ 1919 07fa 00000000 		.4byte	lado4
+ 1920 07fe 06       		.uleb128 0x6
+ 1921 07ff 81000000 		.4byte	0x81
+ 1922 0803 0E080000 		.4byte	0x80e
+ 1923 0807 07       		.uleb128 0x7
+ 1924 0808 B6000000 		.4byte	0xb6
+ 1925 080c 20       		.byte	0x20
+ 1926 080d 00       		.byte	0
+ 1927 080e 16       		.uleb128 0x16
+ 1928 080f 24010000 		.4byte	.LASF90
+ 1929 0813 05       		.byte	0x5
+ 1930 0814 6B       		.byte	0x6b
+ 1931 0815 1F080000 		.4byte	0x81f
+ 1932 0819 05       		.uleb128 0x5
+ 1933 081a 03       		.byte	0x3
+ 1934 081b 00000000 		.4byte	nombre
+ 1935 081f 05       		.uleb128 0x5
+ 1936 0820 FE070000 		.4byte	0x7fe
+ 1937 0824 06       		.uleb128 0x6
+ 1938 0825 81000000 		.4byte	0x81
+ 1939 0829 34080000 		.4byte	0x834
+ 1940 082d 07       		.uleb128 0x7
+ 1941 082e B6000000 		.4byte	0xb6
+ 1942 0832 0E       		.byte	0xe
+ 1943 0833 00       		.byte	0
+ 1944 0834 17       		.uleb128 0x17
+ 1945 0835 6E697400 		.ascii	"nit\000"
+ 1946 0839 05       		.byte	0x5
+ 1947 083a 6C       		.byte	0x6c
+ 1948 083b 45080000 		.4byte	0x845
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 42
+
+
+ 1949 083f 05       		.uleb128 0x5
+ 1950 0840 03       		.byte	0x3
+ 1951 0841 00000000 		.4byte	nit
+ 1952 0845 05       		.uleb128 0x5
+ 1953 0846 24080000 		.4byte	0x824
+ 1954 084a 06       		.uleb128 0x6
+ 1955 084b 81000000 		.4byte	0x81
+ 1956 084f 5A080000 		.4byte	0x85a
+ 1957 0853 07       		.uleb128 0x7
+ 1958 0854 B6000000 		.4byte	0xb6
+ 1959 0858 13       		.byte	0x13
+ 1960 0859 00       		.byte	0
+ 1961 085a 16       		.uleb128 0x16
+ 1962 085b 7A040000 		.4byte	.LASF91
+ 1963 085f 05       		.byte	0x5
+ 1964 0860 6D       		.byte	0x6d
+ 1965 0861 6B080000 		.4byte	0x86b
+ 1966 0865 05       		.uleb128 0x5
+ 1967 0866 03       		.byte	0x3
+ 1968 0867 00000000 		.4byte	telefono
+ 1969 086b 05       		.uleb128 0x5
+ 1970 086c 4A080000 		.4byte	0x84a
+ 1971 0870 16       		.uleb128 0x16
+ 1972 0871 D6030000 		.4byte	.LASF92
+ 1973 0875 05       		.byte	0x5
+ 1974 0876 6E       		.byte	0x6e
+ 1975 0877 81080000 		.4byte	0x881
+ 1976 087b 05       		.uleb128 0x5
+ 1977 087c 03       		.byte	0x3
+ 1978 087d 00000000 		.4byte	direccion
+ 1979 0881 05       		.uleb128 0x5
+ 1980 0882 FE070000 		.4byte	0x7fe
+ 1981 0886 06       		.uleb128 0x6
+ 1982 0887 81000000 		.4byte	0x81
+ 1983 088b 96080000 		.4byte	0x896
+ 1984 088f 07       		.uleb128 0x7
+ 1985 0890 B6000000 		.4byte	0xb6
+ 1986 0894 1F       		.byte	0x1f
+ 1987 0895 00       		.byte	0
+ 1988 0896 16       		.uleb128 0x16
+ 1989 0897 01030000 		.4byte	.LASF93
+ 1990 089b 05       		.byte	0x5
+ 1991 089c 6F       		.byte	0x6f
+ 1992 089d A7080000 		.4byte	0x8a7
+ 1993 08a1 05       		.uleb128 0x5
+ 1994 08a2 03       		.byte	0x3
+ 1995 08a3 00000000 		.4byte	lema1
+ 1996 08a7 05       		.uleb128 0x5
+ 1997 08a8 86080000 		.4byte	0x886
+ 1998 08ac 16       		.uleb128 0x16
+ 1999 08ad 07030000 		.4byte	.LASF94
+ 2000 08b1 05       		.byte	0x5
+ 2001 08b2 70       		.byte	0x70
+ 2002 08b3 BD080000 		.4byte	0x8bd
+ 2003 08b7 05       		.uleb128 0x5
+ 2004 08b8 03       		.byte	0x3
+ 2005 08b9 00000000 		.4byte	lema2
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 43
+
+
+ 2006 08bd 05       		.uleb128 0x5
+ 2007 08be 86080000 		.4byte	0x886
+ 2008 08c2 16       		.uleb128 0x16
+ 2009 08c3 C4030000 		.4byte	.LASF95
+ 2010 08c7 05       		.byte	0x5
+ 2011 08c8 71       		.byte	0x71
+ 2012 08c9 D3080000 		.4byte	0x8d3
+ 2013 08cd 05       		.uleb128 0x5
+ 2014 08ce 03       		.byte	0x3
+ 2015 08cf 00000000 		.4byte	id_logo
+ 2016 08d3 05       		.uleb128 0x5
+ 2017 08d4 D2040000 		.4byte	0x4d2
+ 2018 08d8 17       		.uleb128 0x17
+ 2019 08d9 6B6D00   		.ascii	"km\000"
+ 2020 08dc 05       		.byte	0x5
+ 2021 08dd 72       		.byte	0x72
+ 2022 08de E8080000 		.4byte	0x8e8
+ 2023 08e2 05       		.uleb128 0x5
+ 2024 08e3 03       		.byte	0x3
+ 2025 08e4 00000000 		.4byte	km
+ 2026 08e8 05       		.uleb128 0x5
+ 2027 08e9 D2040000 		.4byte	0x4d2
+ 2028 08ed 16       		.uleb128 0x16
+ 2029 08ee AD030000 		.4byte	.LASF96
+ 2030 08f2 05       		.byte	0x5
+ 2031 08f3 73       		.byte	0x73
+ 2032 08f4 44030000 		.4byte	0x344
+ 2033 08f8 05       		.uleb128 0x5
+ 2034 08f9 03       		.byte	0x3
+ 2035 08fa 00000000 		.4byte	fecha
+ 2036 08fe 16       		.uleb128 0x16
+ 2037 08ff 0D030000 		.4byte	.LASF97
+ 2038 0903 05       		.byte	0x5
+ 2039 0904 74       		.byte	0x74
+ 2040 0905 D2040000 		.4byte	0x4d2
+ 2041 0909 05       		.uleb128 0x5
+ 2042 090a 03       		.byte	0x3
+ 2043 090b 00000000 		.4byte	hora
+ 2044 090f 16       		.uleb128 0x16
+ 2045 0910 75030000 		.4byte	.LASF98
+ 2046 0914 05       		.byte	0x5
+ 2047 0915 88       		.byte	0x88
+ 2048 0916 73010000 		.4byte	0x173
+ 2049 091a 05       		.uleb128 0x5
+ 2050 091b 03       		.byte	0x3
+ 2051 091c 00000000 		.4byte	rventa1
+ 2052 0920 16       		.uleb128 0x16
+ 2053 0921 7D030000 		.4byte	.LASF99
+ 2054 0925 05       		.byte	0x5
+ 2055 0926 89       		.byte	0x89
+ 2056 0927 73010000 		.4byte	0x173
+ 2057 092b 05       		.uleb128 0x5
+ 2058 092c 03       		.byte	0x3
+ 2059 092d 00000000 		.4byte	rventa2
+ 2060 0931 16       		.uleb128 0x16
+ 2061 0932 85030000 		.4byte	.LASF100
+ 2062 0936 05       		.byte	0x5
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 44
+
+
+ 2063 0937 8A       		.byte	0x8a
+ 2064 0938 73010000 		.4byte	0x173
+ 2065 093c 05       		.uleb128 0x5
+ 2066 093d 03       		.byte	0x3
+ 2067 093e 00000000 		.4byte	rventa3
+ 2068 0942 16       		.uleb128 0x16
+ 2069 0943 8D030000 		.4byte	.LASF101
+ 2070 0947 05       		.byte	0x5
+ 2071 0948 8B       		.byte	0x8b
+ 2072 0949 73010000 		.4byte	0x173
+ 2073 094d 05       		.uleb128 0x5
+ 2074 094e 03       		.byte	0x3
+ 2075 094f 00000000 		.4byte	rventa4
+ 2076 0953 16       		.uleb128 0x16
+ 2077 0954 5C040000 		.4byte	.LASF102
+ 2078 0958 05       		.byte	0x5
+ 2079 0959 90       		.byte	0x90
+ 2080 095a 81000000 		.4byte	0x81
+ 2081 095e 05       		.uleb128 0x5
+ 2082 095f 03       		.byte	0x3
+ 2083 0960 00000000 		.4byte	ok_RF
+ 2084 0964 16       		.uleb128 0x16
+ 2085 0965 BF020000 		.4byte	.LASF103
+ 2086 0969 05       		.byte	0x5
+ 2087 096a 91       		.byte	0x91
+ 2088 096b 81000000 		.4byte	0x81
+ 2089 096f 05       		.uleb128 0x5
+ 2090 0970 03       		.byte	0x3
+ 2091 0971 00000000 		.4byte	ok_datosRF
+ 2092 0975 06       		.uleb128 0x6
+ 2093 0976 81000000 		.4byte	0x81
+ 2094 097a 85090000 		.4byte	0x985
+ 2095 097e 07       		.uleb128 0x7
+ 2096 097f B6000000 		.4byte	0xb6
+ 2097 0983 C7       		.byte	0xc7
+ 2098 0984 00       		.byte	0
+ 2099 0985 16       		.uleb128 0x16
+ 2100 0986 49040000 		.4byte	.LASF104
+ 2101 098a 05       		.byte	0x5
+ 2102 098b 92       		.byte	0x92
+ 2103 098c 75090000 		.4byte	0x975
+ 2104 0990 05       		.uleb128 0x5
+ 2105 0991 03       		.byte	0x3
+ 2106 0992 00000000 		.4byte	rf_mod
+ 2107 0996 06       		.uleb128 0x6
+ 2108 0997 81000000 		.4byte	0x81
+ 2109 099b A6090000 		.4byte	0x9a6
+ 2110 099f 07       		.uleb128 0x7
+ 2111 09a0 B6000000 		.4byte	0xb6
+ 2112 09a4 3F       		.byte	0x3f
+ 2113 09a5 00       		.byte	0
+ 2114 09a6 16       		.uleb128 0x16
+ 2115 09a7 B9030000 		.4byte	.LASF105
+ 2116 09ab 05       		.byte	0x5
+ 2117 09ac 97       		.byte	0x97
+ 2118 09ad 96090000 		.4byte	0x996
+ 2119 09b1 05       		.uleb128 0x5
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 45
+
+
+ 2120 09b2 03       		.byte	0x3
+ 2121 09b3 00000000 		.4byte	buffer_i2c
+ 2122 09b7 16       		.uleb128 0x16
+ 2123 09b8 F9030000 		.4byte	.LASF106
+ 2124 09bc 05       		.byte	0x5
+ 2125 09bd 9C       		.byte	0x9c
+ 2126 09be 81000000 		.4byte	0x81
+ 2127 09c2 05       		.uleb128 0x5
+ 2128 09c3 03       		.byte	0x3
+ 2129 09c4 00000000 		.4byte	crc_total
+ 2130 09c8 16       		.uleb128 0x16
+ 2131 09c9 E9000000 		.4byte	.LASF107
+ 2132 09cd 05       		.byte	0x5
+ 2133 09ce A0       		.byte	0xa0
+ 2134 09cf D2040000 		.4byte	0x4d2
+ 2135 09d3 05       		.uleb128 0x5
+ 2136 09d4 03       		.byte	0x3
+ 2137 09d5 00000000 		.4byte	print1
+ 2138 09d9 16       		.uleb128 0x16
+ 2139 09da F0000000 		.4byte	.LASF108
+ 2140 09de 05       		.byte	0x5
+ 2141 09df A1       		.byte	0xa1
+ 2142 09e0 D2040000 		.4byte	0x4d2
+ 2143 09e4 05       		.uleb128 0x5
+ 2144 09e5 03       		.byte	0x3
+ 2145 09e6 00000000 		.4byte	print2
+ 2146 09ea 00       		.byte	0
+ 2147              		.section	.debug_abbrev,"",%progbits
+ 2148              	.Ldebug_abbrev0:
+ 2149 0000 01       		.uleb128 0x1
+ 2150 0001 11       		.uleb128 0x11
+ 2151 0002 01       		.byte	0x1
+ 2152 0003 25       		.uleb128 0x25
+ 2153 0004 0E       		.uleb128 0xe
+ 2154 0005 13       		.uleb128 0x13
+ 2155 0006 0B       		.uleb128 0xb
+ 2156 0007 03       		.uleb128 0x3
+ 2157 0008 0E       		.uleb128 0xe
+ 2158 0009 1B       		.uleb128 0x1b
+ 2159 000a 0E       		.uleb128 0xe
+ 2160 000b 55       		.uleb128 0x55
+ 2161 000c 17       		.uleb128 0x17
+ 2162 000d 11       		.uleb128 0x11
+ 2163 000e 01       		.uleb128 0x1
+ 2164 000f 10       		.uleb128 0x10
+ 2165 0010 17       		.uleb128 0x17
+ 2166 0011 00       		.byte	0
+ 2167 0012 00       		.byte	0
+ 2168 0013 02       		.uleb128 0x2
+ 2169 0014 24       		.uleb128 0x24
+ 2170 0015 00       		.byte	0
+ 2171 0016 0B       		.uleb128 0xb
+ 2172 0017 0B       		.uleb128 0xb
+ 2173 0018 3E       		.uleb128 0x3e
+ 2174 0019 0B       		.uleb128 0xb
+ 2175 001a 03       		.uleb128 0x3
+ 2176 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 46
+
+
+ 2177 001c 00       		.byte	0
+ 2178 001d 00       		.byte	0
+ 2179 001e 03       		.uleb128 0x3
+ 2180 001f 16       		.uleb128 0x16
+ 2181 0020 00       		.byte	0
+ 2182 0021 03       		.uleb128 0x3
+ 2183 0022 0E       		.uleb128 0xe
+ 2184 0023 3A       		.uleb128 0x3a
+ 2185 0024 0B       		.uleb128 0xb
+ 2186 0025 3B       		.uleb128 0x3b
+ 2187 0026 0B       		.uleb128 0xb
+ 2188 0027 49       		.uleb128 0x49
+ 2189 0028 13       		.uleb128 0x13
+ 2190 0029 00       		.byte	0
+ 2191 002a 00       		.byte	0
+ 2192 002b 04       		.uleb128 0x4
+ 2193 002c 24       		.uleb128 0x24
+ 2194 002d 00       		.byte	0
+ 2195 002e 0B       		.uleb128 0xb
+ 2196 002f 0B       		.uleb128 0xb
+ 2197 0030 3E       		.uleb128 0x3e
+ 2198 0031 0B       		.uleb128 0xb
+ 2199 0032 03       		.uleb128 0x3
+ 2200 0033 08       		.uleb128 0x8
+ 2201 0034 00       		.byte	0
+ 2202 0035 00       		.byte	0
+ 2203 0036 05       		.uleb128 0x5
+ 2204 0037 35       		.uleb128 0x35
+ 2205 0038 00       		.byte	0
+ 2206 0039 49       		.uleb128 0x49
+ 2207 003a 13       		.uleb128 0x13
+ 2208 003b 00       		.byte	0
+ 2209 003c 00       		.byte	0
+ 2210 003d 06       		.uleb128 0x6
+ 2211 003e 01       		.uleb128 0x1
+ 2212 003f 01       		.byte	0x1
+ 2213 0040 49       		.uleb128 0x49
+ 2214 0041 13       		.uleb128 0x13
+ 2215 0042 01       		.uleb128 0x1
+ 2216 0043 13       		.uleb128 0x13
+ 2217 0044 00       		.byte	0
+ 2218 0045 00       		.byte	0
+ 2219 0046 07       		.uleb128 0x7
+ 2220 0047 21       		.uleb128 0x21
+ 2221 0048 00       		.byte	0
+ 2222 0049 49       		.uleb128 0x49
+ 2223 004a 13       		.uleb128 0x13
+ 2224 004b 2F       		.uleb128 0x2f
+ 2225 004c 0B       		.uleb128 0xb
+ 2226 004d 00       		.byte	0
+ 2227 004e 00       		.byte	0
+ 2228 004f 08       		.uleb128 0x8
+ 2229 0050 13       		.uleb128 0x13
+ 2230 0051 01       		.byte	0x1
+ 2231 0052 03       		.uleb128 0x3
+ 2232 0053 0E       		.uleb128 0xe
+ 2233 0054 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 47
+
+
+ 2234 0055 0B       		.uleb128 0xb
+ 2235 0056 3A       		.uleb128 0x3a
+ 2236 0057 0B       		.uleb128 0xb
+ 2237 0058 3B       		.uleb128 0x3b
+ 2238 0059 0B       		.uleb128 0xb
+ 2239 005a 01       		.uleb128 0x1
+ 2240 005b 13       		.uleb128 0x13
+ 2241 005c 00       		.byte	0
+ 2242 005d 00       		.byte	0
+ 2243 005e 09       		.uleb128 0x9
+ 2244 005f 0D       		.uleb128 0xd
+ 2245 0060 00       		.byte	0
+ 2246 0061 03       		.uleb128 0x3
+ 2247 0062 08       		.uleb128 0x8
+ 2248 0063 3A       		.uleb128 0x3a
+ 2249 0064 0B       		.uleb128 0xb
+ 2250 0065 3B       		.uleb128 0x3b
+ 2251 0066 0B       		.uleb128 0xb
+ 2252 0067 49       		.uleb128 0x49
+ 2253 0068 13       		.uleb128 0x13
+ 2254 0069 38       		.uleb128 0x38
+ 2255 006a 0B       		.uleb128 0xb
+ 2256 006b 00       		.byte	0
+ 2257 006c 00       		.byte	0
+ 2258 006d 0A       		.uleb128 0xa
+ 2259 006e 0D       		.uleb128 0xd
+ 2260 006f 00       		.byte	0
+ 2261 0070 03       		.uleb128 0x3
+ 2262 0071 0E       		.uleb128 0xe
+ 2263 0072 3A       		.uleb128 0x3a
+ 2264 0073 0B       		.uleb128 0xb
+ 2265 0074 3B       		.uleb128 0x3b
+ 2266 0075 0B       		.uleb128 0xb
+ 2267 0076 49       		.uleb128 0x49
+ 2268 0077 13       		.uleb128 0x13
+ 2269 0078 38       		.uleb128 0x38
+ 2270 0079 0B       		.uleb128 0xb
+ 2271 007a 00       		.byte	0
+ 2272 007b 00       		.byte	0
+ 2273 007c 0B       		.uleb128 0xb
+ 2274 007d 2E       		.uleb128 0x2e
+ 2275 007e 01       		.byte	0x1
+ 2276 007f 3F       		.uleb128 0x3f
+ 2277 0080 19       		.uleb128 0x19
+ 2278 0081 03       		.uleb128 0x3
+ 2279 0082 0E       		.uleb128 0xe
+ 2280 0083 3A       		.uleb128 0x3a
+ 2281 0084 0B       		.uleb128 0xb
+ 2282 0085 3B       		.uleb128 0x3b
+ 2283 0086 0B       		.uleb128 0xb
+ 2284 0087 49       		.uleb128 0x49
+ 2285 0088 13       		.uleb128 0x13
+ 2286 0089 11       		.uleb128 0x11
+ 2287 008a 01       		.uleb128 0x1
+ 2288 008b 12       		.uleb128 0x12
+ 2289 008c 06       		.uleb128 0x6
+ 2290 008d 40       		.uleb128 0x40
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 48
+
+
+ 2291 008e 18       		.uleb128 0x18
+ 2292 008f 9642     		.uleb128 0x2116
+ 2293 0091 19       		.uleb128 0x19
+ 2294 0092 01       		.uleb128 0x1
+ 2295 0093 13       		.uleb128 0x13
+ 2296 0094 00       		.byte	0
+ 2297 0095 00       		.byte	0
+ 2298 0096 0C       		.uleb128 0xc
+ 2299 0097 34       		.uleb128 0x34
+ 2300 0098 00       		.byte	0
+ 2301 0099 03       		.uleb128 0x3
+ 2302 009a 0E       		.uleb128 0xe
+ 2303 009b 3A       		.uleb128 0x3a
+ 2304 009c 0B       		.uleb128 0xb
+ 2305 009d 3B       		.uleb128 0x3b
+ 2306 009e 0B       		.uleb128 0xb
+ 2307 009f 49       		.uleb128 0x49
+ 2308 00a0 13       		.uleb128 0x13
+ 2309 00a1 02       		.uleb128 0x2
+ 2310 00a2 18       		.uleb128 0x18
+ 2311 00a3 00       		.byte	0
+ 2312 00a4 00       		.byte	0
+ 2313 00a5 0D       		.uleb128 0xd
+ 2314 00a6 34       		.uleb128 0x34
+ 2315 00a7 00       		.byte	0
+ 2316 00a8 03       		.uleb128 0x3
+ 2317 00a9 08       		.uleb128 0x8
+ 2318 00aa 3A       		.uleb128 0x3a
+ 2319 00ab 0B       		.uleb128 0xb
+ 2320 00ac 3B       		.uleb128 0x3b
+ 2321 00ad 0B       		.uleb128 0xb
+ 2322 00ae 49       		.uleb128 0x49
+ 2323 00af 13       		.uleb128 0x13
+ 2324 00b0 02       		.uleb128 0x2
+ 2325 00b1 18       		.uleb128 0x18
+ 2326 00b2 00       		.byte	0
+ 2327 00b3 00       		.byte	0
+ 2328 00b4 0E       		.uleb128 0xe
+ 2329 00b5 2E       		.uleb128 0x2e
+ 2330 00b6 01       		.byte	0x1
+ 2331 00b7 3F       		.uleb128 0x3f
+ 2332 00b8 19       		.uleb128 0x19
+ 2333 00b9 03       		.uleb128 0x3
+ 2334 00ba 0E       		.uleb128 0xe
+ 2335 00bb 3A       		.uleb128 0x3a
+ 2336 00bc 0B       		.uleb128 0xb
+ 2337 00bd 3B       		.uleb128 0x3b
+ 2338 00be 0B       		.uleb128 0xb
+ 2339 00bf 27       		.uleb128 0x27
+ 2340 00c0 19       		.uleb128 0x19
+ 2341 00c1 49       		.uleb128 0x49
+ 2342 00c2 13       		.uleb128 0x13
+ 2343 00c3 11       		.uleb128 0x11
+ 2344 00c4 01       		.uleb128 0x1
+ 2345 00c5 12       		.uleb128 0x12
+ 2346 00c6 06       		.uleb128 0x6
+ 2347 00c7 40       		.uleb128 0x40
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 49
+
+
+ 2348 00c8 18       		.uleb128 0x18
+ 2349 00c9 9642     		.uleb128 0x2116
+ 2350 00cb 19       		.uleb128 0x19
+ 2351 00cc 01       		.uleb128 0x1
+ 2352 00cd 13       		.uleb128 0x13
+ 2353 00ce 00       		.byte	0
+ 2354 00cf 00       		.byte	0
+ 2355 00d0 0F       		.uleb128 0xf
+ 2356 00d1 05       		.uleb128 0x5
+ 2357 00d2 00       		.byte	0
+ 2358 00d3 03       		.uleb128 0x3
+ 2359 00d4 0E       		.uleb128 0xe
+ 2360 00d5 3A       		.uleb128 0x3a
+ 2361 00d6 0B       		.uleb128 0xb
+ 2362 00d7 3B       		.uleb128 0x3b
+ 2363 00d8 0B       		.uleb128 0xb
+ 2364 00d9 49       		.uleb128 0x49
+ 2365 00da 13       		.uleb128 0x13
+ 2366 00db 02       		.uleb128 0x2
+ 2367 00dc 18       		.uleb128 0x18
+ 2368 00dd 00       		.byte	0
+ 2369 00de 00       		.byte	0
+ 2370 00df 10       		.uleb128 0x10
+ 2371 00e0 0F       		.uleb128 0xf
+ 2372 00e1 00       		.byte	0
+ 2373 00e2 0B       		.uleb128 0xb
+ 2374 00e3 0B       		.uleb128 0xb
+ 2375 00e4 49       		.uleb128 0x49
+ 2376 00e5 13       		.uleb128 0x13
+ 2377 00e6 00       		.byte	0
+ 2378 00e7 00       		.byte	0
+ 2379 00e8 11       		.uleb128 0x11
+ 2380 00e9 2E       		.uleb128 0x2e
+ 2381 00ea 01       		.byte	0x1
+ 2382 00eb 3F       		.uleb128 0x3f
+ 2383 00ec 19       		.uleb128 0x19
+ 2384 00ed 03       		.uleb128 0x3
+ 2385 00ee 0E       		.uleb128 0xe
+ 2386 00ef 3A       		.uleb128 0x3a
+ 2387 00f0 0B       		.uleb128 0xb
+ 2388 00f1 3B       		.uleb128 0x3b
+ 2389 00f2 05       		.uleb128 0x5
+ 2390 00f3 27       		.uleb128 0x27
+ 2391 00f4 19       		.uleb128 0x19
+ 2392 00f5 49       		.uleb128 0x49
+ 2393 00f6 13       		.uleb128 0x13
+ 2394 00f7 11       		.uleb128 0x11
+ 2395 00f8 01       		.uleb128 0x1
+ 2396 00f9 12       		.uleb128 0x12
+ 2397 00fa 06       		.uleb128 0x6
+ 2398 00fb 40       		.uleb128 0x40
+ 2399 00fc 18       		.uleb128 0x18
+ 2400 00fd 9642     		.uleb128 0x2116
+ 2401 00ff 19       		.uleb128 0x19
+ 2402 0100 01       		.uleb128 0x1
+ 2403 0101 13       		.uleb128 0x13
+ 2404 0102 00       		.byte	0
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 50
+
+
+ 2405 0103 00       		.byte	0
+ 2406 0104 12       		.uleb128 0x12
+ 2407 0105 05       		.uleb128 0x5
+ 2408 0106 00       		.byte	0
+ 2409 0107 03       		.uleb128 0x3
+ 2410 0108 0E       		.uleb128 0xe
+ 2411 0109 3A       		.uleb128 0x3a
+ 2412 010a 0B       		.uleb128 0xb
+ 2413 010b 3B       		.uleb128 0x3b
+ 2414 010c 05       		.uleb128 0x5
+ 2415 010d 49       		.uleb128 0x49
+ 2416 010e 13       		.uleb128 0x13
+ 2417 010f 02       		.uleb128 0x2
+ 2418 0110 18       		.uleb128 0x18
+ 2419 0111 00       		.byte	0
+ 2420 0112 00       		.byte	0
+ 2421 0113 13       		.uleb128 0x13
+ 2422 0114 34       		.uleb128 0x34
+ 2423 0115 00       		.byte	0
+ 2424 0116 03       		.uleb128 0x3
+ 2425 0117 0E       		.uleb128 0xe
+ 2426 0118 3A       		.uleb128 0x3a
+ 2427 0119 0B       		.uleb128 0xb
+ 2428 011a 3B       		.uleb128 0x3b
+ 2429 011b 05       		.uleb128 0x5
+ 2430 011c 49       		.uleb128 0x49
+ 2431 011d 13       		.uleb128 0x13
+ 2432 011e 02       		.uleb128 0x2
+ 2433 011f 18       		.uleb128 0x18
+ 2434 0120 00       		.byte	0
+ 2435 0121 00       		.byte	0
+ 2436 0122 14       		.uleb128 0x14
+ 2437 0123 34       		.uleb128 0x34
+ 2438 0124 00       		.byte	0
+ 2439 0125 03       		.uleb128 0x3
+ 2440 0126 08       		.uleb128 0x8
+ 2441 0127 3A       		.uleb128 0x3a
+ 2442 0128 0B       		.uleb128 0xb
+ 2443 0129 3B       		.uleb128 0x3b
+ 2444 012a 05       		.uleb128 0x5
+ 2445 012b 49       		.uleb128 0x49
+ 2446 012c 13       		.uleb128 0x13
+ 2447 012d 02       		.uleb128 0x2
+ 2448 012e 18       		.uleb128 0x18
+ 2449 012f 00       		.byte	0
+ 2450 0130 00       		.byte	0
+ 2451 0131 15       		.uleb128 0x15
+ 2452 0132 34       		.uleb128 0x34
+ 2453 0133 00       		.byte	0
+ 2454 0134 03       		.uleb128 0x3
+ 2455 0135 0E       		.uleb128 0xe
+ 2456 0136 3A       		.uleb128 0x3a
+ 2457 0137 0B       		.uleb128 0xb
+ 2458 0138 3B       		.uleb128 0x3b
+ 2459 0139 05       		.uleb128 0x5
+ 2460 013a 49       		.uleb128 0x49
+ 2461 013b 13       		.uleb128 0x13
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 51
+
+
+ 2462 013c 3F       		.uleb128 0x3f
+ 2463 013d 19       		.uleb128 0x19
+ 2464 013e 3C       		.uleb128 0x3c
+ 2465 013f 19       		.uleb128 0x19
+ 2466 0140 00       		.byte	0
+ 2467 0141 00       		.byte	0
+ 2468 0142 16       		.uleb128 0x16
+ 2469 0143 34       		.uleb128 0x34
+ 2470 0144 00       		.byte	0
+ 2471 0145 03       		.uleb128 0x3
+ 2472 0146 0E       		.uleb128 0xe
+ 2473 0147 3A       		.uleb128 0x3a
+ 2474 0148 0B       		.uleb128 0xb
+ 2475 0149 3B       		.uleb128 0x3b
+ 2476 014a 0B       		.uleb128 0xb
+ 2477 014b 49       		.uleb128 0x49
+ 2478 014c 13       		.uleb128 0x13
+ 2479 014d 3F       		.uleb128 0x3f
+ 2480 014e 19       		.uleb128 0x19
+ 2481 014f 02       		.uleb128 0x2
+ 2482 0150 18       		.uleb128 0x18
+ 2483 0151 00       		.byte	0
+ 2484 0152 00       		.byte	0
+ 2485 0153 17       		.uleb128 0x17
+ 2486 0154 34       		.uleb128 0x34
+ 2487 0155 00       		.byte	0
+ 2488 0156 03       		.uleb128 0x3
+ 2489 0157 08       		.uleb128 0x8
+ 2490 0158 3A       		.uleb128 0x3a
+ 2491 0159 0B       		.uleb128 0xb
+ 2492 015a 3B       		.uleb128 0x3b
+ 2493 015b 0B       		.uleb128 0xb
+ 2494 015c 49       		.uleb128 0x49
+ 2495 015d 13       		.uleb128 0x13
+ 2496 015e 3F       		.uleb128 0x3f
+ 2497 015f 19       		.uleb128 0x19
+ 2498 0160 02       		.uleb128 0x2
+ 2499 0161 18       		.uleb128 0x18
+ 2500 0162 00       		.byte	0
+ 2501 0163 00       		.byte	0
+ 2502 0164 00       		.byte	0
+ 2503              		.section	.debug_aranges,"",%progbits
+ 2504 0000 4C000000 		.4byte	0x4c
+ 2505 0004 0200     		.2byte	0x2
+ 2506 0006 00000000 		.4byte	.Ldebug_info0
+ 2507 000a 04       		.byte	0x4
+ 2508 000b 00       		.byte	0
+ 2509 000c 0000     		.2byte	0
+ 2510 000e 0000     		.2byte	0
+ 2511 0010 00000000 		.4byte	.LFB63
+ 2512 0014 90000000 		.4byte	.LFE63-.LFB63
+ 2513 0018 00000000 		.4byte	.LFB64
+ 2514 001c 90000000 		.4byte	.LFE64-.LFB64
+ 2515 0020 00000000 		.4byte	.LFB65
+ 2516 0024 78000000 		.4byte	.LFE65-.LFB65
+ 2517 0028 00000000 		.4byte	.LFB66
+ 2518 002c 7C000000 		.4byte	.LFE66-.LFB66
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 52
+
+
+ 2519 0030 00000000 		.4byte	.LFB67
+ 2520 0034 C4000000 		.4byte	.LFE67-.LFB67
+ 2521 0038 00000000 		.4byte	.LFB68
+ 2522 003c E4000000 		.4byte	.LFE68-.LFB68
+ 2523 0040 00000000 		.4byte	.LFB69
+ 2524 0044 74000000 		.4byte	.LFE69-.LFB69
+ 2525 0048 00000000 		.4byte	0
+ 2526 004c 00000000 		.4byte	0
+ 2527              		.section	.debug_ranges,"",%progbits
+ 2528              	.Ldebug_ranges0:
+ 2529 0000 00000000 		.4byte	.LFB63
+ 2530 0004 90000000 		.4byte	.LFE63
+ 2531 0008 00000000 		.4byte	.LFB64
+ 2532 000c 90000000 		.4byte	.LFE64
+ 2533 0010 00000000 		.4byte	.LFB65
+ 2534 0014 78000000 		.4byte	.LFE65
+ 2535 0018 00000000 		.4byte	.LFB66
+ 2536 001c 7C000000 		.4byte	.LFE66
+ 2537 0020 00000000 		.4byte	.LFB67
+ 2538 0024 C4000000 		.4byte	.LFE67
+ 2539 0028 00000000 		.4byte	.LFB68
+ 2540 002c E4000000 		.4byte	.LFE68
+ 2541 0030 00000000 		.4byte	.LFB69
+ 2542 0034 74000000 		.4byte	.LFE69
+ 2543 0038 00000000 		.4byte	0
+ 2544 003c 00000000 		.4byte	0
+ 2545              		.section	.debug_line,"",%progbits
+ 2546              	.Ldebug_line0:
+ 2547 0000 EF020000 		.section	.debug_str,"MS",%progbits,1
+ 2547      02005A01 
+ 2547      00000201 
+ 2547      FB0E0D00 
+ 2547      01010101 
+ 2548              	.LASF110:
+ 2549 0000 2E5C4932 		.ascii	".\\I2C.c\000"
+ 2549      432E6300 
+ 2550              	.LASF58:
+ 2551 0008 706F7378 		.ascii	"posx1\000"
+ 2551      3100
+ 2552              	.LASF61:
+ 2553 000e 706F7378 		.ascii	"posx2\000"
+ 2553      3200
+ 2554              	.LASF82:
+ 2555 0014 6E6F6D62 		.ascii	"nombre_pro1\000"
+ 2555      72655F70 
+ 2555      726F3100 
+ 2556              	.LASF55:
+ 2557 0020 636F756E 		.ascii	"count_teclas2\000"
+ 2557      745F7465 
+ 2557      636C6173 
+ 2557      3200
+ 2558              	.LASF85:
+ 2559 002e 76657273 		.ascii	"version\000"
+ 2559      696F6E00 
+ 2560              	.LASF111:
+ 2561 0036 433A5C55 		.ascii	"C:\\Users\\Usuario\\Desktop\\MUX\\MUX_Prime.cydsn\000"
+ 2561      73657273 
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 53
+
+
+ 2561      5C557375 
+ 2561      6172696F 
+ 2561      5C446573 
+ 2562              	.LASF0:
+ 2563 0063 7369676E 		.ascii	"signed char\000"
+ 2563      65642063 
+ 2563      68617200 
+ 2564              	.LASF80:
+ 2565 006f 626C6F71 		.ascii	"bloqueo_LCD\000"
+ 2565      75656F5F 
+ 2565      4C434400 
+ 2566              	.LASF47:
+ 2567 007b 77726974 		.ascii	"write_psoc1\000"
+ 2567      655F7073 
+ 2567      6F633100 
+ 2568              	.LASF2:
+ 2569 0087 73686F72 		.ascii	"short int\000"
+ 2569      7420696E 
+ 2569      7400
+ 2570              	.LASF72:
+ 2571 0091 636F756E 		.ascii	"count_protector\000"
+ 2571      745F7072 
+ 2571      6F746563 
+ 2571      746F7200 
+ 2572              	.LASF79:
+ 2573 00a1 70726F78 		.ascii	"prox_caso\000"
+ 2573      5F636173 
+ 2573      6F00
+ 2574              	.LASF32:
+ 2575 00ab 63656475 		.ascii	"cedula\000"
+ 2575      6C6100
+ 2576              	.LASF24:
+ 2577 00b2 64696E65 		.ascii	"dinero\000"
+ 2577      726F00
+ 2578              	.LASF66:
+ 2579 00b9 666C756A 		.ascii	"flujo_LCD1\000"
+ 2579      6F5F4C43 
+ 2579      443100
+ 2580              	.LASF67:
+ 2581 00c4 666C756A 		.ascii	"flujo_LCD2\000"
+ 2581      6F5F4C43 
+ 2581      443200
+ 2582              	.LASF68:
+ 2583 00cf 666C756A 		.ascii	"flujo_LCD3\000"
+ 2583      6F5F4C43 
+ 2583      443300
+ 2584              	.LASF33:
+ 2585 00da 70617373 		.ascii	"password\000"
+ 2585      776F7264 
+ 2585      00
+ 2586              	.LASF34:
+ 2587 00e3 7475726E 		.ascii	"turno\000"
+ 2587      6F00
+ 2588              	.LASF107:
+ 2589 00e9 7072696E 		.ascii	"print1\000"
+ 2589      743100
+ 2590              	.LASF108:
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 54
+
+
+ 2591 00f0 7072696E 		.ascii	"print2\000"
+ 2591      743200
+ 2592              	.LASF44:
+ 2593 00f7 76616C6F 		.ascii	"valor\000"
+ 2593      7200
+ 2594              	.LASF40:
+ 2595 00fd 77726974 		.ascii	"write_hora\000"
+ 2595      655F686F 
+ 2595      726100
+ 2596              	.LASF30:
+ 2597 0108 696D7072 		.ascii	"imprimir\000"
+ 2597      696D6972 
+ 2597      00
+ 2598              	.LASF45:
+ 2599 0111 6C656572 		.ascii	"leer_eeprom\000"
+ 2599      5F656570 
+ 2599      726F6D00 
+ 2600              	.LASF12:
+ 2601 011d 75696E74 		.ascii	"uint16\000"
+ 2601      313600
+ 2602              	.LASF90:
+ 2603 0124 6E6F6D62 		.ascii	"nombre\000"
+ 2603      726500
+ 2604              	.LASF27:
+ 2605 012b 6D616E67 		.ascii	"manguera\000"
+ 2605      75657261 
+ 2605      00
+ 2606              	.LASF11:
+ 2607 0134 75696E74 		.ascii	"uint8\000"
+ 2607      3800
+ 2608              	.LASF59:
+ 2609 013a 706F7379 		.ascii	"posy1\000"
+ 2609      3100
+ 2610              	.LASF62:
+ 2611 0140 706F7379 		.ascii	"posy2\000"
+ 2611      3200
+ 2612              	.LASF21:
+ 2613 0146 73757274 		.ascii	"surtidor\000"
+ 2613      69646F72 
+ 2613      00
+ 2614              	.LASF86:
+ 2615 014f 6C61646F 		.ascii	"lado1\000"
+ 2615      3100
+ 2616              	.LASF13:
+ 2617 0155 666C6F61 		.ascii	"float\000"
+ 2617      7400
+ 2618              	.LASF88:
+ 2619 015b 6C61646F 		.ascii	"lado3\000"
+ 2619      3300
+ 2620              	.LASF89:
+ 2621 0161 6C61646F 		.ascii	"lado4\000"
+ 2621      3400
+ 2622              	.LASF6:
+ 2623 0167 6C6F6E67 		.ascii	"long long int\000"
+ 2623      206C6F6E 
+ 2623      6720696E 
+ 2623      7400
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 55
+
+
+ 2624              	.LASF43:
+ 2625 0175 70616765 		.ascii	"page\000"
+ 2625      00
+ 2626              	.LASF109:
+ 2627 017a 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2627      4320342E 
+ 2627      392E3320 
+ 2627      32303135 
+ 2627      30333033 
+ 2628 01ad 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2628      20726576 
+ 2628      6973696F 
+ 2628      6E203232 
+ 2628      31323230 
+ 2629 01e0 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2629      66756E63 
+ 2629      74696F6E 
+ 2629      2D736563 
+ 2629      74696F6E 
+ 2630              	.LASF16:
+ 2631 0208 73697A65 		.ascii	"sizetype\000"
+ 2631      74797065 
+ 2631      00
+ 2632              	.LASF10:
+ 2633 0211 696E7433 		.ascii	"int32_t\000"
+ 2633      325F7400 
+ 2634              	.LASF69:
+ 2635 0219 666C756A 		.ascii	"flujo_LCD4\000"
+ 2635      6F5F4C43 
+ 2635      443400
+ 2636              	.LASF18:
+ 2637 0224 746F7461 		.ascii	"totales\000"
+ 2637      6C657300 
+ 2638              	.LASF84:
+ 2639 022c 6E6F6D62 		.ascii	"nombre_pro3\000"
+ 2639      72655F70 
+ 2639      726F3300 
+ 2640              	.LASF73:
+ 2641 0238 636F756E 		.ascii	"count_protector2\000"
+ 2641      745F7072 
+ 2641      6F746563 
+ 2641      746F7232 
+ 2641      00
+ 2642              	.LASF37:
+ 2643 0249 6C656572 		.ascii	"leer_hora\000"
+ 2643      5F686F72 
+ 2643      6100
+ 2644              	.LASF1:
+ 2645 0253 756E7369 		.ascii	"unsigned char\000"
+ 2645      676E6564 
+ 2645      20636861 
+ 2645      7200
+ 2646              	.LASF54:
+ 2647 0261 69645F74 		.ascii	"id_teclado1\000"
+ 2647      65636C61 
+ 2647      646F3100 
+ 2648              	.LASF23:
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 56
+
+
+ 2649 026d 706F7369 		.ascii	"posicion\000"
+ 2649      63696F6E 
+ 2649      00
+ 2650              	.LASF25:
+ 2651 0276 766F6C75 		.ascii	"volumen\000"
+ 2651      6D656E00 
+ 2652              	.LASF75:
+ 2653 027e 696D6167 		.ascii	"imagen_grado1\000"
+ 2653      656E5F67 
+ 2653      7261646F 
+ 2653      3100
+ 2654              	.LASF76:
+ 2655 028c 696D6167 		.ascii	"imagen_grado2\000"
+ 2655      656E5F67 
+ 2655      7261646F 
+ 2655      3200
+ 2656              	.LASF7:
+ 2657 029a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2657      206C6F6E 
+ 2657      6720756E 
+ 2657      7369676E 
+ 2657      65642069 
+ 2658              	.LASF78:
+ 2659 02b1 696D6167 		.ascii	"imagen_grado4\000"
+ 2659      656E5F67 
+ 2659      7261646F 
+ 2659      3400
+ 2660              	.LASF103:
+ 2661 02bf 6F6B5F64 		.ascii	"ok_datosRF\000"
+ 2661      61746F73 
+ 2661      524600
+ 2662              	.LASF35:
+ 2663 02ca 6175746F 		.ascii	"autorizado\000"
+ 2663      72697A61 
+ 2663      646F00
+ 2664              	.LASF8:
+ 2665 02d5 756E7369 		.ascii	"unsigned int\000"
+ 2665      676E6564 
+ 2665      20696E74 
+ 2665      00
+ 2666              	.LASF81:
+ 2667 02e2 70707578 		.ascii	"ppux10\000"
+ 2667      313000
+ 2668              	.LASF42:
+ 2669 02e9 77726974 		.ascii	"write_eeprom\000"
+ 2669      655F6565 
+ 2669      70726F6D 
+ 2669      00
+ 2670              	.LASF63:
+ 2671 02f6 73697A65 		.ascii	"sizeletra2\000"
+ 2671      6C657472 
+ 2671      613200
+ 2672              	.LASF93:
+ 2673 0301 6C656D61 		.ascii	"lema1\000"
+ 2673      3100
+ 2674              	.LASF94:
+ 2675 0307 6C656D61 		.ascii	"lema2\000"
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 57
+
+
+ 2675      3200
+ 2676              	.LASF97:
+ 2677 030d 686F7261 		.ascii	"hora\000"
+ 2677      00
+ 2678              	.LASF26:
+ 2679 0312 70726F64 		.ascii	"producto\000"
+ 2679      7563746F 
+ 2679      00
+ 2680              	.LASF70:
+ 2681 031b 42756666 		.ascii	"Buffer_LCD1\000"
+ 2681      65725F4C 
+ 2681      43443100 
+ 2682              	.LASF71:
+ 2683 0327 42756666 		.ascii	"Buffer_LCD2\000"
+ 2683      65725F4C 
+ 2683      43443200 
+ 2684              	.LASF3:
+ 2685 0333 73686F72 		.ascii	"short unsigned int\000"
+ 2685      7420756E 
+ 2685      7369676E 
+ 2685      65642069 
+ 2685      6E7400
+ 2686              	.LASF19:
+ 2687 0346 67726164 		.ascii	"grado\000"
+ 2687      6F00
+ 2688              	.LASF36:
+ 2689 034c 73746174 		.ascii	"status\000"
+ 2689      757300
+ 2690              	.LASF64:
+ 2691 0353 7465636C 		.ascii	"teclas1\000"
+ 2691      61733100 
+ 2692              	.LASF65:
+ 2693 035b 7465636C 		.ascii	"teclas2\000"
+ 2693      61733200 
+ 2694              	.LASF15:
+ 2695 0363 63686172 		.ascii	"char\000"
+ 2695      00
+ 2696              	.LASF49:
+ 2697 0368 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2697      52784275 
+ 2697      66666572 
+ 2697      00
+ 2698              	.LASF98:
+ 2699 0375 7276656E 		.ascii	"rventa1\000"
+ 2699      74613100 
+ 2700              	.LASF99:
+ 2701 037d 7276656E 		.ascii	"rventa2\000"
+ 2701      74613200 
+ 2702              	.LASF100:
+ 2703 0385 7276656E 		.ascii	"rventa3\000"
+ 2703      74613300 
+ 2704              	.LASF101:
+ 2705 038d 7276656E 		.ascii	"rventa4\000"
+ 2705      74613400 
+ 2706              	.LASF50:
+ 2707 0395 636F756E 		.ascii	"count_teclas1\000"
+ 2707      745F7465 
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 58
+
+
+ 2707      636C6173 
+ 2707      3100
+ 2708              	.LASF9:
+ 2709 03a3 5F5F696E 		.ascii	"__int32_t\000"
+ 2709      7433325F 
+ 2709      7400
+ 2710              	.LASF96:
+ 2711 03ad 66656368 		.ascii	"fecha\000"
+ 2711      6100
+ 2712              	.LASF87:
+ 2713 03b3 6C61646F 		.ascii	"lado2\000"
+ 2713      3200
+ 2714              	.LASF105:
+ 2715 03b9 62756666 		.ascii	"buffer_i2c\000"
+ 2715      65725F69 
+ 2715      326300
+ 2716              	.LASF95:
+ 2717 03c4 69645F6C 		.ascii	"id_logo\000"
+ 2717      6F676F00 
+ 2718              	.LASF20:
+ 2719 03cc 6D616E67 		.ascii	"mangueras\000"
+ 2719      75657261 
+ 2719      7300
+ 2720              	.LASF92:
+ 2721 03d6 64697265 		.ascii	"direccion\000"
+ 2721      6363696F 
+ 2721      6E00
+ 2722              	.LASF5:
+ 2723 03e0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2723      20756E73 
+ 2723      69676E65 
+ 2723      6420696E 
+ 2723      7400
+ 2724              	.LASF22:
+ 2725 03f2 72656369 		.ascii	"recibo\000"
+ 2725      626F00
+ 2726              	.LASF106:
+ 2727 03f9 6372635F 		.ascii	"crc_total\000"
+ 2727      746F7461 
+ 2727      6C00
+ 2728              	.LASF39:
+ 2729 0403 6461746F 		.ascii	"dato\000"
+ 2729      00
+ 2730              	.LASF38:
+ 2731 0408 6C656572 		.ascii	"leer_fecha\000"
+ 2731      5F666563 
+ 2731      686100
+ 2732              	.LASF46:
+ 2733 0413 73697A65 		.ascii	"size\000"
+ 2733      00
+ 2734              	.LASF28:
+ 2735 0418 70726573 		.ascii	"preset\000"
+ 2735      657400
+ 2736              	.LASF53:
+ 2737 041f 69645F63 		.ascii	"id_coma1\000"
+ 2737      6F6D6131 
+ 2737      00
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 59
+
+
+ 2738              	.LASF56:
+ 2739 0428 69645F63 		.ascii	"id_coma2\000"
+ 2739      6F6D6132 
+ 2739      00
+ 2740              	.LASF83:
+ 2741 0431 6E6F6D62 		.ascii	"nombre_pro2\000"
+ 2741      72655F70 
+ 2741      726F3200 
+ 2742              	.LASF57:
+ 2743 043d 69645F74 		.ascii	"id_teclado2\000"
+ 2743      65636C61 
+ 2743      646F3200 
+ 2744              	.LASF104:
+ 2745 0449 72665F6D 		.ascii	"rf_mod\000"
+ 2745      6F6400
+ 2746              	.LASF41:
+ 2747 0450 77726974 		.ascii	"write_fecha\000"
+ 2747      655F6665 
+ 2747      63686100 
+ 2748              	.LASF102:
+ 2749 045c 6F6B5F52 		.ascii	"ok_RF\000"
+ 2749      4600
+ 2750              	.LASF31:
+ 2751 0462 7469706F 		.ascii	"tipo_venta\000"
+ 2751      5F76656E 
+ 2751      746100
+ 2752              	.LASF29:
+ 2753 046d 706C6163 		.ascii	"placa\000"
+ 2753      6100
+ 2754              	.LASF14:
+ 2755 0473 646F7562 		.ascii	"double\000"
+ 2755      6C6500
+ 2756              	.LASF91:
+ 2757 047a 74656C65 		.ascii	"telefono\000"
+ 2757      666F6E6F 
+ 2757      00
+ 2758              	.LASF74:
+ 2759 0483 70617373 		.ascii	"password_lcd\000"
+ 2759      776F7264 
+ 2759      5F6C6364 
+ 2759      00
+ 2760              	.LASF4:
+ 2761 0490 6C6F6E67 		.ascii	"long int\000"
+ 2761      20696E74 
+ 2761      00
+ 2762              	.LASF17:
+ 2763 0499 65737461 		.ascii	"estado\000"
+ 2763      646F00
+ 2764              	.LASF60:
+ 2765 04a0 73697A65 		.ascii	"sizeletra1\000"
+ 2765      6C657472 
+ 2765      613100
+ 2766              	.LASF48:
+ 2767 04ab 70756572 		.ascii	"puerto\000"
+ 2767      746F00
+ 2768              	.LASF51:
+ 2769 04b2 636F6D61 		.ascii	"comas1\000"
+ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccOtOFhK.s 			page 60
+
+
+ 2769      733100
+ 2770              	.LASF52:
+ 2771 04b9 636F6D61 		.ascii	"comas2\000"
+ 2771      733200
+ 2772              	.LASF77:
+ 2773 04c0 696D6167 		.ascii	"imagen_grado3\000"
+ 2773      656E5F67 
+ 2773      7261646F 
+ 2773      3300
+ 2774              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

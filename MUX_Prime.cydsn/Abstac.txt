@@ -1,0 +1,44 @@
+Flujo LCD
+0   Inicio de protector
+1   Mantiene el protector se verifica en la Int del puerto de la LCD
+2   Teclado Numerico
+3   Espera a que elijan entre efectivo, credito u otras
+4   Venta en efectivo, elige pesos, galones o full
+5	Escoger el producto
+6   Esperar a levantar la manija o Cancelar
+7 	Comparar grado
+8	Tomar totales
+9	Programar
+10	Autorizar
+11  Espera a que termine la venta
+12	Toma reporte
+13	digita placa
+14	Imprime o no?
+15	Pide total pos venta
+16  Lectura de Id
+17  Otras opciones
+18  Pasword config modulo
+19  Menu
+
+
+
+100	Muestra imagen final y vuelve a case 0 
+101	Muestra una imagen por 2 seg y va al prox case
+102	Espera a que el cdg lo saque de ahi o se sale si no hay comunicacion
+103 Espera a que lo saque el CDG cuando reciba 
+104	Espera a que la venta efectivo llegue al CDG o que se pierda la comunicacion
+
+
+	
+	
+
+
+
+
+/******************************************************************/
+Id_teclado
+1 	Dinero o Volumen
+2 	Kilometraje
+3   cedula turno
+4	password turno
+	

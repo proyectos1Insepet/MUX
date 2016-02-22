@@ -1,0 +1,6 @@
+C:\Users\Recepcion\Documents\Prime 2.0\MUX\MUX_Prime.cydsn\MUX_Prime.cyprj|994db528-0d13-4ef4-8b9e-1f47fd1f02f2
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6f9f1f60-cb3a-4e7f-b021-17dd9f9ccde5
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|b810e6c1-bbac-492e-b831-96cc41bf9274
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|7636efe2-d347-4140-a70f-b223ea0550e6
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a69bcbd0-3b76-4e8a-8c7b-e49c43306847
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|60d2d40a-a3c2-4782-ba3d-f6a5cb185d5c

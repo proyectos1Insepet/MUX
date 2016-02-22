@@ -1,0 +1,3535 @@
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"I2C.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.comm	count_teclas1,1,1
+  19              		.comm	comas1,1,1
+  20              		.comm	comas2,1,1
+  21              		.comm	id_coma1,1,1
+  22              		.comm	id_teclado1,1,1
+  23              		.comm	count_teclas2,1,1
+  24              		.comm	id_coma2,1,1
+  25              		.comm	id_teclado2,1,1
+  26              		.comm	posx1,2,2
+  27              		.comm	posy1,2,2
+  28              		.comm	sizeletra1,2,2
+  29              		.comm	posx2,2,2
+  30              		.comm	posy2,2,2
+  31              		.comm	sizeletra2,2,2
+  32              		.comm	teclas1,1,1
+  33              		.comm	teclas2,1,1
+  34              		.comm	flujo_LCD1,1,1
+  35              		.comm	flujo_LCD2,1,1
+  36              		.comm	flujo_LCD3,1,1
+  37              		.comm	flujo_LCD4,1,1
+  38              		.comm	Buffer_LCD1,30,4
+  39              		.comm	Buffer_LCD2,30,4
+  40              		.comm	count_protector,1,1
+  41              		.comm	count_protector2,1,1
+  42              		.comm	password_lcd,9,4
+  43              		.comm	imagen_grado1,2,2
+  44              		.comm	imagen_grado2,2,2
+  45              		.comm	imagen_grado3,2,2
+  46              		.comm	imagen_grado4,2,2
+  47              		.comm	prox_caso,16,4
+  48              		.comm	bloqueo_LCD,3,4
+  49              		.comm	ppux10,1,1
+  50              		.comm	nombre_pro1,17,4
+  51              		.comm	nombre_pro2,17,4
+  52              		.comm	nombre_pro3,17,4
+  53              		.comm	version,4,4
+  54              		.comm	lado1,93,4
+  55              		.comm	lado2,93,4
+  56              		.comm	lado3,93,4
+  57              		.comm	lado4,93,4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 2
+
+
+  58              		.comm	nombre,33,4
+  59              		.comm	nit,15,4
+  60              		.comm	telefono,20,4
+  61              		.comm	direccion,33,4
+  62              		.comm	lema1,32,4
+  63              		.comm	lema2,32,4
+  64              		.comm	id_logo,2,4
+  65              		.comm	km,2,4
+  66              		.comm	fecha,3,4
+  67              		.comm	hora,2,4
+  68              		.comm	rventa1,97,4
+  69              		.comm	rventa2,97,4
+  70              		.comm	rventa3,97,4
+  71              		.comm	rventa4,97,4
+  72              		.comm	ok_RF,1,1
+  73              		.comm	ok_datosRF,1,1
+  74              		.comm	rf_mod,200,4
+  75              		.comm	buffer_i2c,64,4
+  76              		.comm	crc_total,1,1
+  77              		.comm	print1,2,4
+  78              		.comm	print2,2,4
+  79              		.section	.text.leer_hora,"ax",%progbits
+  80              		.align	2
+  81              		.global	leer_hora
+  82              		.thumb
+  83              		.thumb_func
+  84              		.type	leer_hora, %function
+  85              	leer_hora:
+  86              	.LFB63:
+  87              		.file 1 ".\\I2C.c"
+   1:.\I2C.c       **** /*
+   2:.\I2C.c       **** ***************************************************************************************************
+   3:.\I2C.c       **** *                                           GRP550/700 CODE
+   4:.\I2C.c       **** *
+   5:.\I2C.c       **** *                             (c) Copyright 2013; Sistemas Insepet LTDA
+   6:.\I2C.c       **** *
+   7:.\I2C.c       **** *               All rights reserved.  Protected by international copyright laws.
+   8:.\I2C.c       **** *               Knowledge of the source code may NOT be used to develop a similar product.
+   9:.\I2C.c       **** *               Please help us continue to provide the Embedded community with the finest
+  10:.\I2C.c       **** *               software available.  Your honesty is greatly appreciated.
+  11:.\I2C.c       **** ***************************************************************************************************
+  12:.\I2C.c       **** */
+  13:.\I2C.c       **** 
+  14:.\I2C.c       **** /*
+  15:.\I2C.c       **** ***************************************************************************************************
+  16:.\I2C.c       **** *
+  17:.\I2C.c       **** *                                             GRP550/700 CODE
+  18:.\I2C.c       **** *
+  19:.\I2C.c       **** *                                             CYPRESS PSoC5LP
+  20:.\I2C.c       **** *                                                with the
+  21:.\I2C.c       **** *                                            CY8C5969AXI-LP035
+  22:.\I2C.c       **** *
+  23:.\I2C.c       **** * Filename      : I2C.c
+  24:.\I2C.c       **** * Version       : V1.00
+  25:.\I2C.c       **** * Programmer(s) : 
+  26:.\I2C.c       ****                   
+  27:.\I2C.c       **** ***************************************************************************************************
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 3
+
+
+  28:.\I2C.c       **** */
+  29:.\I2C.c       **** 
+  30:.\I2C.c       **** 
+  31:.\I2C.c       **** /*
+  32:.\I2C.c       **** ***************************************************************************************************
+  33:.\I2C.c       **** *                                             INCLUDE FILES
+  34:.\I2C.c       **** ***************************************************************************************************
+  35:.\I2C.c       **** */
+  36:.\I2C.c       **** #include <device.h>
+  37:.\I2C.c       **** #include "VariablesG.h"
+  38:.\I2C.c       **** #include "LCD.h"
+  39:.\I2C.c       **** 
+  40:.\I2C.c       **** /*
+  41:.\I2C.c       **** ***************************************************************************************************
+  42:.\I2C.c       **** *                                         uint8 leer_hora( void )
+  43:.\I2C.c       **** *
+  44:.\I2C.c       **** * Description : 
+  45:.\I2C.c       **** *               
+  46:.\I2C.c       **** *
+  47:.\I2C.c       **** * Argument(s) : none
+  48:.\I2C.c       **** *
+  49:.\I2C.c       **** * Return(s)   : none
+  50:.\I2C.c       **** *
+  51:.\I2C.c       **** * Caller(s)   : 
+  52:.\I2C.c       **** *
+  53:.\I2C.c       **** * Note(s)     : none.
+  54:.\I2C.c       **** ***************************************************************************************************
+  55:.\I2C.c       **** */
+  56:.\I2C.c       **** uint8 leer_hora(){
+  88              		.loc 1 56 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 8
+  91              		@ frame_needed = 1, uses_anonymous_args = 0
+  92 0000 90B5     		push	{r4, r7, lr}
+  93              		.cfi_def_cfa_offset 12
+  94              		.cfi_offset 4, -12
+  95              		.cfi_offset 7, -8
+  96              		.cfi_offset 14, -4
+  97 0002 83B0     		sub	sp, sp, #12
+  98              		.cfi_def_cfa_offset 24
+  99 0004 00AF     		add	r7, sp, #0
+ 100              		.cfi_def_cfa_register 7
+  57:.\I2C.c       **** 	uint8 status,i;
+  58:.\I2C.c       **** 	for(i=1;i<=2;i++){
+ 101              		.loc 1 58 0
+ 102 0006 0123     		movs	r3, #1
+ 103 0008 FB71     		strb	r3, [r7, #7]
+ 104 000a 36E0     		b	.L2
+ 105              	.L9:
+  59:.\I2C.c       ****         I2C_1_MasterClearStatus();
+ 106              		.loc 1 59 0
+ 107 000c FFF7FEFF 		bl	I2C_1_MasterClearStatus
+  60:.\I2C.c       ****         status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
+ 108              		.loc 1 60 0
+ 109 0010 6820     		movs	r0, #104
+ 110 0012 0021     		movs	r1, #0
+ 111 0014 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 4
+
+
+ 112 0018 0346     		mov	r3, r0
+ 113 001a BB71     		strb	r3, [r7, #6]
+  61:.\I2C.c       ****         if(I2C_1_MSTR_NO_ERROR == status)								 		/* Check if transfer completed without errors *
+ 114              		.loc 1 61 0
+ 115 001c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 116 001e 002B     		cmp	r3, #0
+ 117 0020 29D1     		bne	.L3
+  62:.\I2C.c       ****     	{
+  63:.\I2C.c       ****             status = I2C_1_MasterWriteByte(i);
+ 118              		.loc 1 63 0
+ 119 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 120 0024 1846     		mov	r0, r3
+ 121 0026 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 122 002a 0346     		mov	r3, r0
+ 123 002c BB71     		strb	r3, [r7, #6]
+  64:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 124              		.loc 1 64 0
+ 125 002e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 126 0030 002B     		cmp	r3, #0
+ 127 0032 01D0     		beq	.L4
+  65:.\I2C.c       ****             {
+  66:.\I2C.c       ****                 return 0;
+ 128              		.loc 1 66 0
+ 129 0034 0023     		movs	r3, #0
+ 130 0036 24E0     		b	.L5
+ 131              	.L4:
+  67:.\I2C.c       ****             }
+  68:.\I2C.c       **** 			else{
+  69:.\I2C.c       **** 		        I2C_1_MasterSendStop(); 										/* Send Stop */
+ 132              		.loc 1 69 0
+ 133 0038 FFF7FEFF 		bl	I2C_1_MasterSendStop
+  70:.\I2C.c       **** 		        CyDelay(10);
+ 134              		.loc 1 70 0
+ 135 003c 0A20     		movs	r0, #10
+ 136 003e FFF7FEFF 		bl	CyDelay
+  71:.\I2C.c       **** 		        status = I2C_1_MasterSendStart(0x68, I2C_1_READ_XFER_MODE);
+ 137              		.loc 1 71 0
+ 138 0042 6820     		movs	r0, #104
+ 139 0044 0121     		movs	r1, #1
+ 140 0046 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 141 004a 0346     		mov	r3, r0
+ 142 004c BB71     		strb	r3, [r7, #6]
+  72:.\I2C.c       **** 		        if(I2C_1_MSTR_NO_ERROR == status){
+ 143              		.loc 1 72 0
+ 144 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 145 0050 002B     		cmp	r3, #0
+ 146 0052 0ED1     		bne	.L6
+  73:.\I2C.c       **** 		            hora[i-1] = I2C_1_MasterReadByte(I2C_1_NAK_DATA);
+ 147              		.loc 1 73 0
+ 148 0054 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 149 0056 5C1E     		subs	r4, r3, #1
+ 150 0058 0020     		movs	r0, #0
+ 151 005a FFF7FEFF 		bl	I2C_1_MasterReadByte
+ 152 005e 0346     		mov	r3, r0
+ 153 0060 1A46     		mov	r2, r3
+ 154 0062 0A4B     		ldr	r3, .L10
+ 155 0064 1A55     		strb	r2, [r3, r4]
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 5
+
+
+  74:.\I2C.c       **** 		        }
+  75:.\I2C.c       **** 				else{
+  76:.\I2C.c       **** 					return 0;
+  77:.\I2C.c       **** 				}
+  78:.\I2C.c       **** 		        I2C_1_MasterSendStop();	
+ 156              		.loc 1 78 0
+ 157 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
+  58:.\I2C.c       **** 	for(i=1;i<=2;i++){
+ 158              		.loc 1 58 0
+ 159 006a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 160 006c 0133     		adds	r3, r3, #1
+ 161 006e FB71     		strb	r3, [r7, #7]
+ 162 0070 03E0     		b	.L2
+ 163              	.L6:
+  76:.\I2C.c       **** 					return 0;
+ 164              		.loc 1 76 0
+ 165 0072 0023     		movs	r3, #0
+ 166 0074 05E0     		b	.L5
+ 167              	.L3:
+  79:.\I2C.c       **** 			}
+  80:.\I2C.c       ****         }
+  81:.\I2C.c       **** 		else{
+  82:.\I2C.c       **** 			return 0;
+ 168              		.loc 1 82 0
+ 169 0076 0023     		movs	r3, #0
+ 170 0078 03E0     		b	.L5
+ 171              	.L2:
+  58:.\I2C.c       **** 	for(i=1;i<=2;i++){
+ 172              		.loc 1 58 0 discriminator 1
+ 173 007a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 174 007c 022B     		cmp	r3, #2
+ 175 007e C5D9     		bls	.L9
+  83:.\I2C.c       **** 		}		
+  84:.\I2C.c       **** 	}
+  85:.\I2C.c       **** 	return 1;
+ 176              		.loc 1 85 0
+ 177 0080 0123     		movs	r3, #1
+ 178              	.L5:
+  86:.\I2C.c       **** }
+ 179              		.loc 1 86 0
+ 180 0082 1846     		mov	r0, r3
+ 181 0084 0C37     		adds	r7, r7, #12
+ 182 0086 BD46     		mov	sp, r7
+ 183              		@ sp needed
+ 184 0088 90BD     		pop	{r4, r7, pc}
+ 185              	.L11:
+ 186 008a 00BF     		.align	2
+ 187              	.L10:
+ 188 008c 00000000 		.word	hora
+ 189              		.cfi_endproc
+ 190              	.LFE63:
+ 191              		.size	leer_hora, .-leer_hora
+ 192              		.section	.text.leer_fecha,"ax",%progbits
+ 193              		.align	2
+ 194              		.global	leer_fecha
+ 195              		.thumb
+ 196              		.thumb_func
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 6
+
+
+ 197              		.type	leer_fecha, %function
+ 198              	leer_fecha:
+ 199              	.LFB64:
+  87:.\I2C.c       **** 
+  88:.\I2C.c       **** /*
+  89:.\I2C.c       **** ***************************************************************************************************
+  90:.\I2C.c       **** *                                         uint8 leer_fecha( void )
+  91:.\I2C.c       **** *
+  92:.\I2C.c       **** * Description : 
+  93:.\I2C.c       **** *               
+  94:.\I2C.c       **** *
+  95:.\I2C.c       **** * Argument(s) : none
+  96:.\I2C.c       **** *
+  97:.\I2C.c       **** * Return(s)   : none
+  98:.\I2C.c       **** *
+  99:.\I2C.c       **** * Caller(s)   : 
+ 100:.\I2C.c       **** *
+ 101:.\I2C.c       **** * Note(s)     : none.
+ 102:.\I2C.c       **** ***************************************************************************************************
+ 103:.\I2C.c       **** */
+ 104:.\I2C.c       **** uint8 leer_fecha(){
+ 200              		.loc 1 104 0
+ 201              		.cfi_startproc
+ 202              		@ args = 0, pretend = 0, frame = 8
+ 203              		@ frame_needed = 1, uses_anonymous_args = 0
+ 204 0000 90B5     		push	{r4, r7, lr}
+ 205              		.cfi_def_cfa_offset 12
+ 206              		.cfi_offset 4, -12
+ 207              		.cfi_offset 7, -8
+ 208              		.cfi_offset 14, -4
+ 209 0002 83B0     		sub	sp, sp, #12
+ 210              		.cfi_def_cfa_offset 24
+ 211 0004 00AF     		add	r7, sp, #0
+ 212              		.cfi_def_cfa_register 7
+ 105:.\I2C.c       **** 	uint8 status,i;
+ 106:.\I2C.c       **** 	for(i=4;i<=6;i++){
+ 213              		.loc 1 106 0
+ 214 0006 0423     		movs	r3, #4
+ 215 0008 FB71     		strb	r3, [r7, #7]
+ 216 000a 36E0     		b	.L13
+ 217              	.L20:
+ 107:.\I2C.c       ****         I2C_1_MasterClearStatus();
+ 218              		.loc 1 107 0
+ 219 000c FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 108:.\I2C.c       ****         status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
+ 220              		.loc 1 108 0
+ 221 0010 6820     		movs	r0, #104
+ 222 0012 0021     		movs	r1, #0
+ 223 0014 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 224 0018 0346     		mov	r3, r0
+ 225 001a BB71     		strb	r3, [r7, #6]
+ 109:.\I2C.c       ****         if(I2C_1_MSTR_NO_ERROR == status)								 		/* Check if transfer completed without errors *
+ 226              		.loc 1 109 0
+ 227 001c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 228 001e 002B     		cmp	r3, #0
+ 229 0020 29D1     		bne	.L14
+ 110:.\I2C.c       ****     	{
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 7
+
+
+ 111:.\I2C.c       ****             status = I2C_1_MasterWriteByte(i);
+ 230              		.loc 1 111 0
+ 231 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 232 0024 1846     		mov	r0, r3
+ 233 0026 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 234 002a 0346     		mov	r3, r0
+ 235 002c BB71     		strb	r3, [r7, #6]
+ 112:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 236              		.loc 1 112 0
+ 237 002e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 238 0030 002B     		cmp	r3, #0
+ 239 0032 01D0     		beq	.L15
+ 113:.\I2C.c       ****             {
+ 114:.\I2C.c       ****                 return 0;
+ 240              		.loc 1 114 0
+ 241 0034 0023     		movs	r3, #0
+ 242 0036 24E0     		b	.L16
+ 243              	.L15:
+ 115:.\I2C.c       ****             }
+ 116:.\I2C.c       **** 			else{
+ 117:.\I2C.c       **** 		        I2C_1_MasterSendStop(); 										/* Send Stop */
+ 244              		.loc 1 117 0
+ 245 0038 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 118:.\I2C.c       **** 		        CyDelay(10);
+ 246              		.loc 1 118 0
+ 247 003c 0A20     		movs	r0, #10
+ 248 003e FFF7FEFF 		bl	CyDelay
+ 119:.\I2C.c       **** 		        status = I2C_1_MasterSendStart(0x68, I2C_1_READ_XFER_MODE);
+ 249              		.loc 1 119 0
+ 250 0042 6820     		movs	r0, #104
+ 251 0044 0121     		movs	r1, #1
+ 252 0046 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 253 004a 0346     		mov	r3, r0
+ 254 004c BB71     		strb	r3, [r7, #6]
+ 120:.\I2C.c       **** 		        if(I2C_1_MSTR_NO_ERROR == status){
+ 255              		.loc 1 120 0
+ 256 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 257 0050 002B     		cmp	r3, #0
+ 258 0052 0ED1     		bne	.L17
+ 121:.\I2C.c       **** 		            fecha[i-4] = I2C_1_MasterReadByte(I2C_1_NAK_DATA);
+ 259              		.loc 1 121 0
+ 260 0054 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 261 0056 1C1F     		subs	r4, r3, #4
+ 262 0058 0020     		movs	r0, #0
+ 263 005a FFF7FEFF 		bl	I2C_1_MasterReadByte
+ 264 005e 0346     		mov	r3, r0
+ 265 0060 1A46     		mov	r2, r3
+ 266 0062 0A4B     		ldr	r3, .L21
+ 267 0064 1A55     		strb	r2, [r3, r4]
+ 122:.\I2C.c       **** 		        }
+ 123:.\I2C.c       **** 				else{
+ 124:.\I2C.c       **** 					return 0;
+ 125:.\I2C.c       **** 				}
+ 126:.\I2C.c       **** 		        I2C_1_MasterSendStop();	
+ 268              		.loc 1 126 0
+ 269 0066 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 106:.\I2C.c       **** 	for(i=4;i<=6;i++){
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 8
+
+
+ 270              		.loc 1 106 0
+ 271 006a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 272 006c 0133     		adds	r3, r3, #1
+ 273 006e FB71     		strb	r3, [r7, #7]
+ 274 0070 03E0     		b	.L13
+ 275              	.L17:
+ 124:.\I2C.c       **** 					return 0;
+ 276              		.loc 1 124 0
+ 277 0072 0023     		movs	r3, #0
+ 278 0074 05E0     		b	.L16
+ 279              	.L14:
+ 127:.\I2C.c       **** 			}
+ 128:.\I2C.c       ****         }
+ 129:.\I2C.c       **** 		else{
+ 130:.\I2C.c       **** 			return 0;
+ 280              		.loc 1 130 0
+ 281 0076 0023     		movs	r3, #0
+ 282 0078 03E0     		b	.L16
+ 283              	.L13:
+ 106:.\I2C.c       **** 	for(i=4;i<=6;i++){
+ 284              		.loc 1 106 0 discriminator 1
+ 285 007a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 286 007c 062B     		cmp	r3, #6
+ 287 007e C5D9     		bls	.L20
+ 131:.\I2C.c       **** 		}		
+ 132:.\I2C.c       **** 	}
+ 133:.\I2C.c       **** 	return 1;
+ 288              		.loc 1 133 0
+ 289 0080 0123     		movs	r3, #1
+ 290              	.L16:
+ 134:.\I2C.c       **** }
+ 291              		.loc 1 134 0
+ 292 0082 1846     		mov	r0, r3
+ 293 0084 0C37     		adds	r7, r7, #12
+ 294 0086 BD46     		mov	sp, r7
+ 295              		@ sp needed
+ 296 0088 90BD     		pop	{r4, r7, pc}
+ 297              	.L22:
+ 298 008a 00BF     		.align	2
+ 299              	.L21:
+ 300 008c 00000000 		.word	fecha
+ 301              		.cfi_endproc
+ 302              	.LFE64:
+ 303              		.size	leer_fecha, .-leer_fecha
+ 304              		.section	.text.write_hora,"ax",%progbits
+ 305              		.align	2
+ 306              		.global	write_hora
+ 307              		.thumb
+ 308              		.thumb_func
+ 309              		.type	write_hora, %function
+ 310              	write_hora:
+ 311              	.LFB65:
+ 135:.\I2C.c       **** 
+ 136:.\I2C.c       **** /*
+ 137:.\I2C.c       **** ***************************************************************************************************
+ 138:.\I2C.c       **** *                                         uint8 write_hora( void )
+ 139:.\I2C.c       **** *
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 9
+
+
+ 140:.\I2C.c       **** * Description : 
+ 141:.\I2C.c       **** *               
+ 142:.\I2C.c       **** *
+ 143:.\I2C.c       **** * Argument(s) : none
+ 144:.\I2C.c       **** *
+ 145:.\I2C.c       **** * Return(s)   : none
+ 146:.\I2C.c       **** *
+ 147:.\I2C.c       **** * Caller(s)   : 
+ 148:.\I2C.c       **** *
+ 149:.\I2C.c       **** * Note(s)     : none.
+ 150:.\I2C.c       **** ***************************************************************************************************
+ 151:.\I2C.c       **** */
+ 152:.\I2C.c       **** 
+ 153:.\I2C.c       **** uint8 write_hora( void ){
+ 312              		.loc 1 153 0
+ 313              		.cfi_startproc
+ 314              		@ args = 0, pretend = 0, frame = 8
+ 315              		@ frame_needed = 1, uses_anonymous_args = 0
+ 316 0000 80B5     		push	{r7, lr}
+ 317              		.cfi_def_cfa_offset 8
+ 318              		.cfi_offset 7, -8
+ 319              		.cfi_offset 14, -4
+ 320 0002 82B0     		sub	sp, sp, #8
+ 321              		.cfi_def_cfa_offset 16
+ 322 0004 00AF     		add	r7, sp, #0
+ 323              		.cfi_def_cfa_register 7
+ 154:.\I2C.c       **** 	uint8 status, dato[3],i;
+ 155:.\I2C.c       **** 	dato[0]=1;
+ 324              		.loc 1 155 0
+ 325 0006 0123     		movs	r3, #1
+ 326 0008 3B70     		strb	r3, [r7]
+ 156:.\I2C.c       **** 	dato[1]=hora[0];
+ 327              		.loc 1 156 0
+ 328 000a 1A4B     		ldr	r3, .L32
+ 329 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 330 000e 7B70     		strb	r3, [r7, #1]
+ 157:.\I2C.c       **** 	dato[2]=hora[1];
+ 331              		.loc 1 157 0
+ 332 0010 184B     		ldr	r3, .L32
+ 333 0012 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 334 0014 BB70     		strb	r3, [r7, #2]
+ 158:.\I2C.c       **** 	I2C_1_MasterClearStatus();
+ 335              		.loc 1 158 0
+ 336 0016 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 159:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
+ 337              		.loc 1 159 0
+ 338 001a 6820     		movs	r0, #104
+ 339 001c 0021     		movs	r1, #0
+ 340 001e FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 341 0022 0346     		mov	r3, r0
+ 342 0024 BB71     		strb	r3, [r7, #6]
+ 160:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
+ 343              		.loc 1 160 0
+ 344 0026 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 345 0028 002B     		cmp	r3, #0
+ 346 002a 19D1     		bne	.L24
+ 161:.\I2C.c       ****     {
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 10
+
+
+ 162:.\I2C.c       ****         for(i=0; i<3; i++)
+ 347              		.loc 1 162 0
+ 348 002c 0023     		movs	r3, #0
+ 349 002e FB71     		strb	r3, [r7, #7]
+ 350 0030 12E0     		b	.L25
+ 351              	.L28:
+ 163:.\I2C.c       ****         {
+ 164:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 352              		.loc 1 164 0
+ 353 0032 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 354 0034 07F10802 		add	r2, r7, #8
+ 355 0038 1344     		add	r3, r3, r2
+ 356 003a 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
+ 357 003e 1846     		mov	r0, r3
+ 358 0040 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 359 0044 0346     		mov	r3, r0
+ 360 0046 BB71     		strb	r3, [r7, #6]
+ 165:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 361              		.loc 1 165 0
+ 362 0048 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 363 004a 002B     		cmp	r3, #0
+ 364 004c 01D0     		beq	.L26
+ 166:.\I2C.c       ****             {
+ 167:.\I2C.c       ****                 return 0;
+ 365              		.loc 1 167 0
+ 366 004e 0023     		movs	r3, #0
+ 367 0050 0BE0     		b	.L30
+ 368              	.L26:
+ 162:.\I2C.c       ****         for(i=0; i<3; i++)
+ 369              		.loc 1 162 0
+ 370 0052 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 371 0054 0133     		adds	r3, r3, #1
+ 372 0056 FB71     		strb	r3, [r7, #7]
+ 373              	.L25:
+ 162:.\I2C.c       ****         for(i=0; i<3; i++)
+ 374              		.loc 1 162 0 is_stmt 0 discriminator 1
+ 375 0058 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 376 005a 022B     		cmp	r3, #2
+ 377 005c E9D9     		bls	.L28
+ 378 005e 01E0     		b	.L31
+ 379              	.L24:
+ 168:.\I2C.c       ****             }
+ 169:.\I2C.c       ****         }
+ 170:.\I2C.c       ****     }
+ 171:.\I2C.c       ****     else{
+ 172:.\I2C.c       **** 		return 0;
+ 380              		.loc 1 172 0 is_stmt 1
+ 381 0060 0023     		movs	r3, #0
+ 382 0062 02E0     		b	.L30
+ 383              	.L31:
+ 173:.\I2C.c       ****     }
+ 174:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 384              		.loc 1 174 0
+ 385 0064 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 175:.\I2C.c       **** 	return 1;
+ 386              		.loc 1 175 0
+ 387 0068 0123     		movs	r3, #1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 11
+
+
+ 388              	.L30:
+ 176:.\I2C.c       **** }
+ 389              		.loc 1 176 0
+ 390 006a 1846     		mov	r0, r3
+ 391 006c 0837     		adds	r7, r7, #8
+ 392 006e BD46     		mov	sp, r7
+ 393              		@ sp needed
+ 394 0070 80BD     		pop	{r7, pc}
+ 395              	.L33:
+ 396 0072 00BF     		.align	2
+ 397              	.L32:
+ 398 0074 00000000 		.word	hora
+ 399              		.cfi_endproc
+ 400              	.LFE65:
+ 401              		.size	write_hora, .-write_hora
+ 402              		.section	.text.write_fecha,"ax",%progbits
+ 403              		.align	2
+ 404              		.global	write_fecha
+ 405              		.thumb
+ 406              		.thumb_func
+ 407              		.type	write_fecha, %function
+ 408              	write_fecha:
+ 409              	.LFB66:
+ 177:.\I2C.c       **** 
+ 178:.\I2C.c       **** /*
+ 179:.\I2C.c       **** ***************************************************************************************************
+ 180:.\I2C.c       **** *                                         uint8 write_fecha( void )
+ 181:.\I2C.c       **** *
+ 182:.\I2C.c       **** * Description : 
+ 183:.\I2C.c       **** *               
+ 184:.\I2C.c       **** *
+ 185:.\I2C.c       **** * Argument(s) : none
+ 186:.\I2C.c       **** *
+ 187:.\I2C.c       **** * Return(s)   : none
+ 188:.\I2C.c       **** *
+ 189:.\I2C.c       **** * Caller(s)   : 
+ 190:.\I2C.c       **** *
+ 191:.\I2C.c       **** * Note(s)     : none.
+ 192:.\I2C.c       **** ***************************************************************************************************
+ 193:.\I2C.c       **** */
+ 194:.\I2C.c       **** 
+ 195:.\I2C.c       **** uint8 write_fecha( void ){
+ 410              		.loc 1 195 0
+ 411              		.cfi_startproc
+ 412              		@ args = 0, pretend = 0, frame = 8
+ 413              		@ frame_needed = 1, uses_anonymous_args = 0
+ 414 0000 80B5     		push	{r7, lr}
+ 415              		.cfi_def_cfa_offset 8
+ 416              		.cfi_offset 7, -8
+ 417              		.cfi_offset 14, -4
+ 418 0002 82B0     		sub	sp, sp, #8
+ 419              		.cfi_def_cfa_offset 16
+ 420 0004 00AF     		add	r7, sp, #0
+ 421              		.cfi_def_cfa_register 7
+ 196:.\I2C.c       **** 	uint8 status, dato[4],i;
+ 197:.\I2C.c       **** 	dato[0]=4;
+ 422              		.loc 1 197 0
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 12
+
+
+ 423 0006 0423     		movs	r3, #4
+ 424 0008 3B70     		strb	r3, [r7]
+ 198:.\I2C.c       **** 	dato[1]=fecha[0];
+ 425              		.loc 1 198 0
+ 426 000a 1B4B     		ldr	r3, .L43
+ 427 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 428 000e 7B70     		strb	r3, [r7, #1]
+ 199:.\I2C.c       **** 	dato[2]=fecha[1];
+ 429              		.loc 1 199 0
+ 430 0010 194B     		ldr	r3, .L43
+ 431 0012 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 432 0014 BB70     		strb	r3, [r7, #2]
+ 200:.\I2C.c       **** 	dato[3]=fecha[2];
+ 433              		.loc 1 200 0
+ 434 0016 184B     		ldr	r3, .L43
+ 435 0018 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 436 001a FB70     		strb	r3, [r7, #3]
+ 201:.\I2C.c       **** 	I2C_1_MasterClearStatus();
+ 437              		.loc 1 201 0
+ 438 001c FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 202:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x68, I2C_1_WRITE_XFER_MODE);
+ 439              		.loc 1 202 0
+ 440 0020 6820     		movs	r0, #104
+ 441 0022 0021     		movs	r1, #0
+ 442 0024 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 443 0028 0346     		mov	r3, r0
+ 444 002a BB71     		strb	r3, [r7, #6]
+ 203:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
+ 445              		.loc 1 203 0
+ 446 002c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 447 002e 002B     		cmp	r3, #0
+ 448 0030 19D1     		bne	.L35
+ 204:.\I2C.c       ****     {
+ 205:.\I2C.c       ****         for(i=0; i<4; i++)
+ 449              		.loc 1 205 0
+ 450 0032 0023     		movs	r3, #0
+ 451 0034 FB71     		strb	r3, [r7, #7]
+ 452 0036 12E0     		b	.L36
+ 453              	.L39:
+ 206:.\I2C.c       ****         {
+ 207:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 454              		.loc 1 207 0
+ 455 0038 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 456 003a 07F10802 		add	r2, r7, #8
+ 457 003e 1344     		add	r3, r3, r2
+ 458 0040 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
+ 459 0044 1846     		mov	r0, r3
+ 460 0046 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 461 004a 0346     		mov	r3, r0
+ 462 004c BB71     		strb	r3, [r7, #6]
+ 208:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 463              		.loc 1 208 0
+ 464 004e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 465 0050 002B     		cmp	r3, #0
+ 466 0052 01D0     		beq	.L37
+ 209:.\I2C.c       ****             {
+ 210:.\I2C.c       ****                 return 0;
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 13
+
+
+ 467              		.loc 1 210 0
+ 468 0054 0023     		movs	r3, #0
+ 469 0056 0BE0     		b	.L41
+ 470              	.L37:
+ 205:.\I2C.c       ****         for(i=0; i<4; i++)
+ 471              		.loc 1 205 0
+ 472 0058 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 473 005a 0133     		adds	r3, r3, #1
+ 474 005c FB71     		strb	r3, [r7, #7]
+ 475              	.L36:
+ 205:.\I2C.c       ****         for(i=0; i<4; i++)
+ 476              		.loc 1 205 0 is_stmt 0 discriminator 1
+ 477 005e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 478 0060 032B     		cmp	r3, #3
+ 479 0062 E9D9     		bls	.L39
+ 480 0064 01E0     		b	.L42
+ 481              	.L35:
+ 211:.\I2C.c       ****             }
+ 212:.\I2C.c       ****         }
+ 213:.\I2C.c       ****     }
+ 214:.\I2C.c       ****     else{
+ 215:.\I2C.c       **** 		return 0;
+ 482              		.loc 1 215 0 is_stmt 1
+ 483 0066 0023     		movs	r3, #0
+ 484 0068 02E0     		b	.L41
+ 485              	.L42:
+ 216:.\I2C.c       ****     }
+ 217:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 486              		.loc 1 217 0
+ 487 006a FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 218:.\I2C.c       **** 	return 1;
+ 488              		.loc 1 218 0
+ 489 006e 0123     		movs	r3, #1
+ 490              	.L41:
+ 219:.\I2C.c       **** }
+ 491              		.loc 1 219 0
+ 492 0070 1846     		mov	r0, r3
+ 493 0072 0837     		adds	r7, r7, #8
+ 494 0074 BD46     		mov	sp, r7
+ 495              		@ sp needed
+ 496 0076 80BD     		pop	{r7, pc}
+ 497              	.L44:
+ 498              		.align	2
+ 499              	.L43:
+ 500 0078 00000000 		.word	fecha
+ 501              		.cfi_endproc
+ 502              	.LFE66:
+ 503              		.size	write_fecha, .-write_fecha
+ 504              		.section	.text.write_eeprom,"ax",%progbits
+ 505              		.align	2
+ 506              		.global	write_eeprom
+ 507              		.thumb
+ 508              		.thumb_func
+ 509              		.type	write_eeprom, %function
+ 510              	write_eeprom:
+ 511              	.LFB67:
+ 220:.\I2C.c       **** 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 14
+
+
+ 221:.\I2C.c       **** /*
+ 222:.\I2C.c       **** ***************************************************************************************************
+ 223:.\I2C.c       **** *                              uint8 write_eeprom(uint16 page, uint8 valor)
+ 224:.\I2C.c       **** *
+ 225:.\I2C.c       **** * Description : 
+ 226:.\I2C.c       **** *               
+ 227:.\I2C.c       **** *
+ 228:.\I2C.c       **** * Argument(s) : none
+ 229:.\I2C.c       **** *
+ 230:.\I2C.c       **** * Return(s)   : none
+ 231:.\I2C.c       **** *
+ 232:.\I2C.c       **** * Caller(s)   : 
+ 233:.\I2C.c       **** *
+ 234:.\I2C.c       **** * Note(s)     : none.
+ 235:.\I2C.c       **** ***************************************************************************************************
+ 236:.\I2C.c       **** */
+ 237:.\I2C.c       **** 
+ 238:.\I2C.c       **** uint8 write_eeprom(uint16 page, uint8 *valor){
+ 512              		.loc 1 238 0
+ 513              		.cfi_startproc
+ 514              		@ args = 0, pretend = 0, frame = 16
+ 515              		@ frame_needed = 1, uses_anonymous_args = 0
+ 516 0000 80B5     		push	{r7, lr}
+ 517              		.cfi_def_cfa_offset 8
+ 518              		.cfi_offset 7, -8
+ 519              		.cfi_offset 14, -4
+ 520 0002 84B0     		sub	sp, sp, #16
+ 521              		.cfi_def_cfa_offset 24
+ 522 0004 00AF     		add	r7, sp, #0
+ 523              		.cfi_def_cfa_register 7
+ 524 0006 0346     		mov	r3, r0
+ 525 0008 3960     		str	r1, [r7]
+ 526 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 239:.\I2C.c       **** 	uint8 status, dato[4],i;
+ 240:.\I2C.c       **** 	dato[1]=(page&0xFF);
+ 527              		.loc 1 240 0
+ 528 000c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 529 000e DBB2     		uxtb	r3, r3
+ 530 0010 7B72     		strb	r3, [r7, #9]
+ 241:.\I2C.c       **** 	page=(page>>8)&0xFF;
+ 531              		.loc 1 241 0
+ 532 0012 FB88     		ldrh	r3, [r7, #6]
+ 533 0014 1B0A     		lsrs	r3, r3, #8
+ 534 0016 FB80     		strh	r3, [r7, #6]	@ movhi
+ 242:.\I2C.c       **** 	dato[0]=page;
+ 535              		.loc 1 242 0
+ 536 0018 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 537 001a DBB2     		uxtb	r3, r3
+ 538 001c 3B72     		strb	r3, [r7, #8]
+ 243:.\I2C.c       **** 	Pin_WP_Write(0);
+ 539              		.loc 1 243 0
+ 540 001e 0020     		movs	r0, #0
+ 541 0020 FFF7FEFF 		bl	Pin_WP_Write
+ 244:.\I2C.c       **** 	I2C_1_MasterClearStatus();
+ 542              		.loc 1 244 0
+ 543 0024 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 245:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x54, I2C_1_WRITE_XFER_MODE);
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 15
+
+
+ 544              		.loc 1 245 0
+ 545 0028 5420     		movs	r0, #84
+ 546 002a 0021     		movs	r1, #0
+ 547 002c FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 548 0030 0346     		mov	r3, r0
+ 549 0032 BB73     		strb	r3, [r7, #14]
+ 246:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
+ 550              		.loc 1 246 0
+ 551 0034 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 552 0036 002B     		cmp	r3, #0
+ 553 0038 35D1     		bne	.L46
+ 247:.\I2C.c       ****     {
+ 248:.\I2C.c       ****         for(i=0; i<2; i++)
+ 554              		.loc 1 248 0
+ 555 003a 0023     		movs	r3, #0
+ 556 003c FB73     		strb	r3, [r7, #15]
+ 557 003e 12E0     		b	.L47
+ 558              	.L50:
+ 249:.\I2C.c       ****         {
+ 250:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 559              		.loc 1 250 0
+ 560 0040 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 561 0042 07F11002 		add	r2, r7, #16
+ 562 0046 1344     		add	r3, r3, r2
+ 563 0048 13F8083C 		ldrb	r3, [r3, #-8]	@ zero_extendqisi2
+ 564 004c 1846     		mov	r0, r3
+ 565 004e FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 566 0052 0346     		mov	r3, r0
+ 567 0054 BB73     		strb	r3, [r7, #14]
+ 251:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 568              		.loc 1 251 0
+ 569 0056 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 570 0058 002B     		cmp	r3, #0
+ 571 005a 01D0     		beq	.L48
+ 252:.\I2C.c       ****             {
+ 253:.\I2C.c       ****                 return 0;
+ 572              		.loc 1 253 0
+ 573 005c 0023     		movs	r3, #0
+ 574 005e 2DE0     		b	.L55
+ 575              	.L48:
+ 248:.\I2C.c       ****         for(i=0; i<2; i++)
+ 576              		.loc 1 248 0
+ 577 0060 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 578 0062 0133     		adds	r3, r3, #1
+ 579 0064 FB73     		strb	r3, [r7, #15]
+ 580              	.L47:
+ 248:.\I2C.c       ****         for(i=0; i<2; i++)
+ 581              		.loc 1 248 0 is_stmt 0 discriminator 1
+ 582 0066 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 583 0068 012B     		cmp	r3, #1
+ 584 006a E9D9     		bls	.L50
+ 254:.\I2C.c       ****             }
+ 255:.\I2C.c       ****         }
+ 256:.\I2C.c       ****         for(i=0; i<=valor[0]; i++)
+ 585              		.loc 1 256 0 is_stmt 1
+ 586 006c 0023     		movs	r3, #0
+ 587 006e FB73     		strb	r3, [r7, #15]
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 16
+
+
+ 588 0070 13E0     		b	.L51
+ 589              	.L53:
+ 257:.\I2C.c       ****         {
+ 258:.\I2C.c       ****             status = I2C_1_MasterWriteByte(valor[i]);
+ 590              		.loc 1 258 0
+ 591 0072 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 592 0074 3A68     		ldr	r2, [r7]
+ 593 0076 1344     		add	r3, r3, r2
+ 594 0078 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 595 007a 1846     		mov	r0, r3
+ 596 007c FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 597 0080 0346     		mov	r3, r0
+ 598 0082 BB73     		strb	r3, [r7, #14]
+ 259:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 599              		.loc 1 259 0
+ 600 0084 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 601 0086 002B     		cmp	r3, #0
+ 602 0088 01D0     		beq	.L52
+ 260:.\I2C.c       ****             {
+ 261:.\I2C.c       ****                 return 0;
+ 603              		.loc 1 261 0
+ 604 008a 0023     		movs	r3, #0
+ 605 008c 16E0     		b	.L55
+ 606              	.L52:
+ 262:.\I2C.c       ****             }
+ 263:.\I2C.c       **** 			CyDelay(5);
+ 607              		.loc 1 263 0
+ 608 008e 0520     		movs	r0, #5
+ 609 0090 FFF7FEFF 		bl	CyDelay
+ 256:.\I2C.c       ****         for(i=0; i<=valor[0]; i++)
+ 610              		.loc 1 256 0
+ 611 0094 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 612 0096 0133     		adds	r3, r3, #1
+ 613 0098 FB73     		strb	r3, [r7, #15]
+ 614              	.L51:
+ 256:.\I2C.c       ****         for(i=0; i<=valor[0]; i++)
+ 615              		.loc 1 256 0 is_stmt 0 discriminator 1
+ 616 009a 3B68     		ldr	r3, [r7]
+ 617 009c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 618 009e FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
+ 619 00a0 9A42     		cmp	r2, r3
+ 620 00a2 E6D9     		bls	.L53
+ 621 00a4 01E0     		b	.L56
+ 622              	.L46:
+ 264:.\I2C.c       ****         }		
+ 265:.\I2C.c       ****     }
+ 266:.\I2C.c       ****     else{
+ 267:.\I2C.c       **** 		return 0;
+ 623              		.loc 1 267 0 is_stmt 1
+ 624 00a6 0023     		movs	r3, #0
+ 625 00a8 08E0     		b	.L55
+ 626              	.L56:
+ 268:.\I2C.c       ****     }
+ 269:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 627              		.loc 1 269 0
+ 628 00aa FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 270:.\I2C.c       **** 	CyDelay(6);
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 17
+
+
+ 629              		.loc 1 270 0
+ 630 00ae 0620     		movs	r0, #6
+ 631 00b0 FFF7FEFF 		bl	CyDelay
+ 271:.\I2C.c       **** 	Pin_WP_Write(1);
+ 632              		.loc 1 271 0
+ 633 00b4 0120     		movs	r0, #1
+ 634 00b6 FFF7FEFF 		bl	Pin_WP_Write
+ 272:.\I2C.c       **** 	return 1;
+ 635              		.loc 1 272 0
+ 636 00ba 0123     		movs	r3, #1
+ 637              	.L55:
+ 273:.\I2C.c       **** }
+ 638              		.loc 1 273 0
+ 639 00bc 1846     		mov	r0, r3
+ 640 00be 1037     		adds	r7, r7, #16
+ 641 00c0 BD46     		mov	sp, r7
+ 642              		@ sp needed
+ 643 00c2 80BD     		pop	{r7, pc}
+ 644              		.cfi_endproc
+ 645              	.LFE67:
+ 646              		.size	write_eeprom, .-write_eeprom
+ 647              		.section	.text.leer_eeprom,"ax",%progbits
+ 648              		.align	2
+ 649              		.global	leer_eeprom
+ 650              		.thumb
+ 651              		.thumb_func
+ 652              		.type	leer_eeprom, %function
+ 653              	leer_eeprom:
+ 654              	.LFB68:
+ 274:.\I2C.c       **** 
+ 275:.\I2C.c       **** /*
+ 276:.\I2C.c       **** ***************************************************************************************************
+ 277:.\I2C.c       **** *                               uint8 leer_eeprom(uint16 page, uint8 size))
+ 278:.\I2C.c       **** *
+ 279:.\I2C.c       **** * Description : 
+ 280:.\I2C.c       **** *               
+ 281:.\I2C.c       **** *
+ 282:.\I2C.c       **** * Argument(s) : none
+ 283:.\I2C.c       **** *
+ 284:.\I2C.c       **** * Return(s)   : none
+ 285:.\I2C.c       **** *
+ 286:.\I2C.c       **** * Caller(s)   : 
+ 287:.\I2C.c       **** *
+ 288:.\I2C.c       **** * Note(s)     : none.
+ 289:.\I2C.c       **** ***************************************************************************************************
+ 290:.\I2C.c       **** */
+ 291:.\I2C.c       **** uint8 leer_eeprom(uint16 page, volatile uint8 size){
+ 655              		.loc 1 291 0
+ 656              		.cfi_startproc
+ 657              		@ args = 0, pretend = 0, frame = 24
+ 658              		@ frame_needed = 1, uses_anonymous_args = 0
+ 659 0000 90B5     		push	{r4, r7, lr}
+ 660              		.cfi_def_cfa_offset 12
+ 661              		.cfi_offset 4, -12
+ 662              		.cfi_offset 7, -8
+ 663              		.cfi_offset 14, -4
+ 664 0002 87B0     		sub	sp, sp, #28
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 18
+
+
+ 665              		.cfi_def_cfa_offset 40
+ 666 0004 00AF     		add	r7, sp, #0
+ 667              		.cfi_def_cfa_register 7
+ 668 0006 0246     		mov	r2, r0
+ 669 0008 0B46     		mov	r3, r1
+ 670 000a FA80     		strh	r2, [r7, #6]	@ movhi
+ 671 000c 7B71     		strb	r3, [r7, #5]
+ 292:.\I2C.c       **** 	uint16 status, dato[4],i;
+ 293:.\I2C.c       **** 	dato[1]=(page&0xFF);
+ 672              		.loc 1 293 0
+ 673 000e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 674 0010 DBB2     		uxtb	r3, r3
+ 675 0012 9BB2     		uxth	r3, r3
+ 676 0014 FB81     		strh	r3, [r7, #14]	@ movhi
+ 294:.\I2C.c       **** 	page=(page>>8)&0xFF;
+ 677              		.loc 1 294 0
+ 678 0016 FB88     		ldrh	r3, [r7, #6]
+ 679 0018 1B0A     		lsrs	r3, r3, #8
+ 680 001a FB80     		strh	r3, [r7, #6]	@ movhi
+ 295:.\I2C.c       **** 	dato[0]=page;	
+ 681              		.loc 1 295 0
+ 682 001c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 683 001e BB81     		strh	r3, [r7, #12]	@ movhi
+ 296:.\I2C.c       ****     I2C_1_MasterClearStatus();
+ 684              		.loc 1 296 0
+ 685 0020 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 297:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x54, I2C_1_WRITE_XFER_MODE);
+ 686              		.loc 1 297 0
+ 687 0024 5420     		movs	r0, #84
+ 688 0026 0021     		movs	r1, #0
+ 689 0028 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 690 002c 0346     		mov	r3, r0
+ 691 002e BB82     		strh	r3, [r7, #20]	@ movhi
+ 298:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status)								 		/* Check if transfer completed without errors */
+ 692              		.loc 1 298 0
+ 693 0030 BB8A     		ldrh	r3, [r7, #20]
+ 694 0032 002B     		cmp	r3, #0
+ 695 0034 1ED1     		bne	.L58
+ 299:.\I2C.c       **** 	{
+ 300:.\I2C.c       ****         for(i=0;i<2;i++)
+ 696              		.loc 1 300 0
+ 697 0036 0023     		movs	r3, #0
+ 698 0038 FB82     		strh	r3, [r7, #22]	@ movhi
+ 699 003a 17E0     		b	.L59
+ 700              	.L62:
+ 301:.\I2C.c       ****         {
+ 302:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 701              		.loc 1 302 0
+ 702 003c FB8A     		ldrh	r3, [r7, #22]
+ 703 003e 5B00     		lsls	r3, r3, #1
+ 704 0040 07F11802 		add	r2, r7, #24
+ 705 0044 1344     		add	r3, r3, r2
+ 706 0046 33F80C3C 		ldrh	r3, [r3, #-12]
+ 707 004a DBB2     		uxtb	r3, r3
+ 708 004c 1846     		mov	r0, r3
+ 709 004e FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 710 0052 0346     		mov	r3, r0
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 19
+
+
+ 711 0054 BB82     		strh	r3, [r7, #20]	@ movhi
+ 303:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 712              		.loc 1 303 0
+ 713 0056 BB8A     		ldrh	r3, [r7, #20]
+ 714 0058 002B     		cmp	r3, #0
+ 715 005a 01D0     		beq	.L60
+ 304:.\I2C.c       ****             {
+ 305:.\I2C.c       ****             	return 0;
+ 716              		.loc 1 305 0
+ 717 005c 0023     		movs	r3, #0
+ 718 005e 38E0     		b	.L68
+ 719              	.L60:
+ 306:.\I2C.c       ****             }
+ 307:.\I2C.c       **** 			CyDelay(5);
+ 720              		.loc 1 307 0
+ 721 0060 0520     		movs	r0, #5
+ 722 0062 FFF7FEFF 		bl	CyDelay
+ 300:.\I2C.c       ****         for(i=0;i<2;i++)
+ 723              		.loc 1 300 0
+ 724 0066 FB8A     		ldrh	r3, [r7, #22]
+ 725 0068 0133     		adds	r3, r3, #1
+ 726 006a FB82     		strh	r3, [r7, #22]	@ movhi
+ 727              	.L59:
+ 300:.\I2C.c       ****         for(i=0;i<2;i++)
+ 728              		.loc 1 300 0 is_stmt 0 discriminator 1
+ 729 006c FB8A     		ldrh	r3, [r7, #22]
+ 730 006e 012B     		cmp	r3, #1
+ 731 0070 E4D9     		bls	.L62
+ 732 0072 01E0     		b	.L69
+ 733              	.L58:
+ 308:.\I2C.c       ****         }		
+ 309:.\I2C.c       ****     }
+ 310:.\I2C.c       **** 	else{
+ 311:.\I2C.c       **** 		return 0;
+ 734              		.loc 1 311 0 is_stmt 1
+ 735 0074 0023     		movs	r3, #0
+ 736 0076 2CE0     		b	.L68
+ 737              	.L69:
+ 312:.\I2C.c       **** 	}
+ 313:.\I2C.c       **** 	I2C_1_MasterSendStop();	
+ 738              		.loc 1 313 0
+ 739 0078 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 314:.\I2C.c       ****     CyDelay(50);
+ 740              		.loc 1 314 0
+ 741 007c 3220     		movs	r0, #50
+ 742 007e FFF7FEFF 		bl	CyDelay
+ 315:.\I2C.c       ****     status = I2C_1_MasterSendStart(0x54, I2C_1_READ_XFER_MODE);
+ 743              		.loc 1 315 0
+ 744 0082 5420     		movs	r0, #84
+ 745 0084 0121     		movs	r1, #1
+ 746 0086 FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 747 008a 0346     		mov	r3, r0
+ 748 008c BB82     		strh	r3, [r7, #20]	@ movhi
+ 316:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status){
+ 749              		.loc 1 316 0
+ 750 008e BB8A     		ldrh	r3, [r7, #20]
+ 751 0090 002B     		cmp	r3, #0
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 20
+
+
+ 752 0092 16D1     		bne	.L64
+ 317:.\I2C.c       **** 		for(i=0;i<size;i++){
+ 753              		.loc 1 317 0
+ 754 0094 0023     		movs	r3, #0
+ 755 0096 FB82     		strh	r3, [r7, #22]	@ movhi
+ 756 0098 0DE0     		b	.L65
+ 757              	.L66:
+ 318:.\I2C.c       **** 	        buffer_i2c[i] = I2C_1_MasterReadByte(I2C_1_ACK_DATA);
+ 758              		.loc 1 318 0 discriminator 2
+ 759 009a FC8A     		ldrh	r4, [r7, #22]
+ 760 009c 0120     		movs	r0, #1
+ 761 009e FFF7FEFF 		bl	I2C_1_MasterReadByte
+ 762 00a2 0346     		mov	r3, r0
+ 763 00a4 1A46     		mov	r2, r3
+ 764 00a6 0D4B     		ldr	r3, .L71
+ 765 00a8 1A55     		strb	r2, [r3, r4]
+ 319:.\I2C.c       **** 			CyDelay(5);
+ 766              		.loc 1 319 0 discriminator 2
+ 767 00aa 0520     		movs	r0, #5
+ 768 00ac FFF7FEFF 		bl	CyDelay
+ 317:.\I2C.c       **** 		for(i=0;i<size;i++){
+ 769              		.loc 1 317 0 discriminator 2
+ 770 00b0 FB8A     		ldrh	r3, [r7, #22]
+ 771 00b2 0133     		adds	r3, r3, #1
+ 772 00b4 FB82     		strh	r3, [r7, #22]	@ movhi
+ 773              	.L65:
+ 317:.\I2C.c       **** 		for(i=0;i<size;i++){
+ 774              		.loc 1 317 0 is_stmt 0 discriminator 1
+ 775 00b6 7B79     		ldrb	r3, [r7, #5]
+ 776 00b8 DBB2     		uxtb	r3, r3
+ 777 00ba FA8A     		ldrh	r2, [r7, #22]
+ 778 00bc 9A42     		cmp	r2, r3
+ 779 00be ECD3     		bcc	.L66
+ 780 00c0 01E0     		b	.L70
+ 781              	.L64:
+ 320:.\I2C.c       **** 		}
+ 321:.\I2C.c       ****     }
+ 322:.\I2C.c       **** 	else{
+ 323:.\I2C.c       **** 		return 0;
+ 782              		.loc 1 323 0 is_stmt 1
+ 783 00c2 0023     		movs	r3, #0
+ 784 00c4 05E0     		b	.L68
+ 785              	.L70:
+ 324:.\I2C.c       **** 	}
+ 325:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 786              		.loc 1 325 0
+ 787 00c6 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 326:.\I2C.c       **** 	CyDelay(6);	
+ 788              		.loc 1 326 0
+ 789 00ca 0620     		movs	r0, #6
+ 790 00cc FFF7FEFF 		bl	CyDelay
+ 327:.\I2C.c       **** 	return 1;
+ 791              		.loc 1 327 0
+ 792 00d0 0123     		movs	r3, #1
+ 793              	.L68:
+ 328:.\I2C.c       **** }
+ 794              		.loc 1 328 0
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 21
+
+
+ 795 00d2 1846     		mov	r0, r3
+ 796 00d4 1C37     		adds	r7, r7, #28
+ 797 00d6 BD46     		mov	sp, r7
+ 798              		@ sp needed
+ 799 00d8 90BD     		pop	{r4, r7, pc}
+ 800              	.L72:
+ 801 00da 00BF     		.align	2
+ 802              	.L71:
+ 803 00dc 00000000 		.word	buffer_i2c
+ 804              		.cfi_endproc
+ 805              	.LFE68:
+ 806              		.size	leer_eeprom, .-leer_eeprom
+ 807              		.section	.text.write_psoc1,"ax",%progbits
+ 808              		.align	2
+ 809              		.global	write_psoc1
+ 810              		.thumb
+ 811              		.thumb_func
+ 812              		.type	write_psoc1, %function
+ 813              	write_psoc1:
+ 814              	.LFB69:
+ 329:.\I2C.c       **** 
+ 330:.\I2C.c       **** /*
+ 331:.\I2C.c       **** ***************************************************************************************************
+ 332:.\I2C.c       **** *                                   uint8 write_psoc1( uint8 puerto, uint8 valor )
+ 333:.\I2C.c       **** *
+ 334:.\I2C.c       **** * Description : 
+ 335:.\I2C.c       **** *               
+ 336:.\I2C.c       **** *
+ 337:.\I2C.c       **** * Argument(s) : none
+ 338:.\I2C.c       **** *
+ 339:.\I2C.c       **** * Return(s)   : none
+ 340:.\I2C.c       **** *
+ 341:.\I2C.c       **** * Caller(s)   : 
+ 342:.\I2C.c       **** *
+ 343:.\I2C.c       **** * Note(s)     : none.
+ 344:.\I2C.c       **** ***************************************************************************************************
+ 345:.\I2C.c       **** */
+ 346:.\I2C.c       **** 
+ 347:.\I2C.c       **** uint8 write_psoc1( uint8 puerto, uint8 valor ){
+ 815              		.loc 1 347 0
+ 816              		.cfi_startproc
+ 817              		@ args = 0, pretend = 0, frame = 16
+ 818              		@ frame_needed = 1, uses_anonymous_args = 0
+ 819 0000 80B5     		push	{r7, lr}
+ 820              		.cfi_def_cfa_offset 8
+ 821              		.cfi_offset 7, -8
+ 822              		.cfi_offset 14, -4
+ 823 0002 84B0     		sub	sp, sp, #16
+ 824              		.cfi_def_cfa_offset 24
+ 825 0004 00AF     		add	r7, sp, #0
+ 826              		.cfi_def_cfa_register 7
+ 827 0006 0246     		mov	r2, r0
+ 828 0008 0B46     		mov	r3, r1
+ 829 000a FA71     		strb	r2, [r7, #7]
+ 830 000c BB71     		strb	r3, [r7, #6]
+ 348:.\I2C.c       **** 	uint8 status, dato[2],i;
+ 349:.\I2C.c       **** 	dato[0]=puerto;
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 22
+
+
+ 831              		.loc 1 349 0
+ 832 000e FB79     		ldrb	r3, [r7, #7]
+ 833 0010 3B73     		strb	r3, [r7, #12]
+ 350:.\I2C.c       **** 	dato[1]=valor;
+ 834              		.loc 1 350 0
+ 835 0012 BB79     		ldrb	r3, [r7, #6]
+ 836 0014 7B73     		strb	r3, [r7, #13]
+ 351:.\I2C.c       **** 	I2C_1_MasterClearStatus();
+ 837              		.loc 1 351 0
+ 838 0016 FFF7FEFF 		bl	I2C_1_MasterClearStatus
+ 352:.\I2C.c       ****     status = I2C_1_MasterSendStart(7u, I2C_1_WRITE_XFER_MODE);
+ 839              		.loc 1 352 0
+ 840 001a 0720     		movs	r0, #7
+ 841 001c 0021     		movs	r1, #0
+ 842 001e FFF7FEFF 		bl	I2C_1_MasterSendStart
+ 843 0022 0346     		mov	r3, r0
+ 844 0024 BB73     		strb	r3, [r7, #14]
+ 353:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
+ 845              		.loc 1 353 0
+ 846 0026 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 847 0028 002B     		cmp	r3, #0
+ 848 002a 19D1     		bne	.L74
+ 354:.\I2C.c       ****     {
+ 355:.\I2C.c       ****         for(i=0; i<2; i++)
+ 849              		.loc 1 355 0
+ 850 002c 0023     		movs	r3, #0
+ 851 002e FB73     		strb	r3, [r7, #15]
+ 852 0030 12E0     		b	.L75
+ 853              	.L78:
+ 356:.\I2C.c       ****         {
+ 357:.\I2C.c       ****             status = I2C_1_MasterWriteByte(dato[i]);
+ 854              		.loc 1 357 0
+ 855 0032 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 856 0034 07F11002 		add	r2, r7, #16
+ 857 0038 1344     		add	r3, r3, r2
+ 858 003a 13F8043C 		ldrb	r3, [r3, #-4]	@ zero_extendqisi2
+ 859 003e 1846     		mov	r0, r3
+ 860 0040 FFF7FEFF 		bl	I2C_1_MasterWriteByte
+ 861 0044 0346     		mov	r3, r0
+ 862 0046 BB73     		strb	r3, [r7, #14]
+ 358:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
+ 863              		.loc 1 358 0
+ 864 0048 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 865 004a 002B     		cmp	r3, #0
+ 866 004c 01D0     		beq	.L76
+ 359:.\I2C.c       ****             {
+ 360:.\I2C.c       ****                 return 0;
+ 867              		.loc 1 360 0
+ 868 004e 0023     		movs	r3, #0
+ 869 0050 0BE0     		b	.L80
+ 870              	.L76:
+ 355:.\I2C.c       ****         for(i=0; i<2; i++)
+ 871              		.loc 1 355 0
+ 872 0052 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 873 0054 0133     		adds	r3, r3, #1
+ 874 0056 FB73     		strb	r3, [r7, #15]
+ 875              	.L75:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 23
+
+
+ 355:.\I2C.c       ****         for(i=0; i<2; i++)
+ 876              		.loc 1 355 0 is_stmt 0 discriminator 1
+ 877 0058 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 878 005a 012B     		cmp	r3, #1
+ 879 005c E9D9     		bls	.L78
+ 880 005e 01E0     		b	.L81
+ 881              	.L74:
+ 361:.\I2C.c       ****             }
+ 362:.\I2C.c       ****         }
+ 363:.\I2C.c       ****     }
+ 364:.\I2C.c       ****     else{
+ 365:.\I2C.c       **** 		return 0;
+ 882              		.loc 1 365 0 is_stmt 1
+ 883 0060 0023     		movs	r3, #0
+ 884 0062 02E0     		b	.L80
+ 885              	.L81:
+ 366:.\I2C.c       ****     }
+ 367:.\I2C.c       ****     I2C_1_MasterSendStop();	
+ 886              		.loc 1 367 0
+ 887 0064 FFF7FEFF 		bl	I2C_1_MasterSendStop
+ 368:.\I2C.c       **** 	return 1;
+ 888              		.loc 1 368 0
+ 889 0068 0123     		movs	r3, #1
+ 890              	.L80:
+ 369:.\I2C.c       **** }
+ 891              		.loc 1 369 0
+ 892 006a 1846     		mov	r0, r3
+ 893 006c 1037     		adds	r7, r7, #16
+ 894 006e BD46     		mov	sp, r7
+ 895              		@ sp needed
+ 896 0070 80BD     		pop	{r7, pc}
+ 897              		.cfi_endproc
+ 898              	.LFE69:
+ 899              		.size	write_psoc1, .-write_psoc1
+ 900 0072 00BF     		.text
+ 901              	.Letext0:
+ 902              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.2\\psoc creator\\import\\gnu\\arm\\4.8.
+ 903              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.2\\psoc creator\\import\\gnu\\arm\\4.8.
+ 904              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 905              		.file 5 ".\\VariablesG.h"
+ 906              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 907              		.section	.debug_info,"",%progbits
+ 908              	.Ldebug_info0:
+ 909 0000 E7090000 		.4byte	0x9e7
+ 910 0004 0400     		.2byte	0x4
+ 911 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 912 000a 04       		.byte	0x4
+ 913 000b 01       		.uleb128 0x1
+ 914 000c F7000000 		.4byte	.LASF109
+ 915 0010 01       		.byte	0x1
+ 916 0011 00000000 		.4byte	.LASF110
+ 917 0015 83030000 		.4byte	.LASF111
+ 918 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 919 001d 00000000 		.4byte	0
+ 920 0021 00000000 		.4byte	.Ldebug_line0
+ 921 0025 02       		.uleb128 0x2
+ 922 0026 01       		.byte	0x1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 24
+
+
+ 923 0027 06       		.byte	0x6
+ 924 0028 3D000000 		.4byte	.LASF0
+ 925 002c 02       		.uleb128 0x2
+ 926 002d 01       		.byte	0x1
+ 927 002e 08       		.byte	0x8
+ 928 002f 24020000 		.4byte	.LASF1
+ 929 0033 02       		.uleb128 0x2
+ 930 0034 02       		.byte	0x2
+ 931 0035 05       		.byte	0x5
+ 932 0036 61000000 		.4byte	.LASF2
+ 933 003a 02       		.uleb128 0x2
+ 934 003b 02       		.byte	0x2
+ 935 003c 07       		.byte	0x7
+ 936 003d FD020000 		.4byte	.LASF3
+ 937 0041 03       		.uleb128 0x3
+ 938 0042 6D030000 		.4byte	.LASF9
+ 939 0046 02       		.byte	0x2
+ 940 0047 37       		.byte	0x37
+ 941 0048 4C000000 		.4byte	0x4c
+ 942 004c 02       		.uleb128 0x2
+ 943 004d 04       		.byte	0x4
+ 944 004e 05       		.byte	0x5
+ 945 004f D0010000 		.4byte	.LASF4
+ 946 0053 02       		.uleb128 0x2
+ 947 0054 04       		.byte	0x4
+ 948 0055 07       		.byte	0x7
+ 949 0056 E5030000 		.4byte	.LASF5
+ 950 005a 02       		.uleb128 0x2
+ 951 005b 08       		.byte	0x8
+ 952 005c 05       		.byte	0x5
+ 953 005d BD010000 		.4byte	.LASF6
+ 954 0061 02       		.uleb128 0x2
+ 955 0062 08       		.byte	0x8
+ 956 0063 07       		.byte	0x7
+ 957 0064 6B020000 		.4byte	.LASF7
+ 958 0068 04       		.uleb128 0x4
+ 959 0069 04       		.byte	0x4
+ 960 006a 05       		.byte	0x5
+ 961 006b 696E7400 		.ascii	"int\000"
+ 962 006f 02       		.uleb128 0x2
+ 963 0070 04       		.byte	0x4
+ 964 0071 07       		.byte	0x7
+ 965 0072 A6020000 		.4byte	.LASF8
+ 966 0076 03       		.uleb128 0x3
+ 967 0077 E2010000 		.4byte	.LASF10
+ 968 007b 03       		.byte	0x3
+ 969 007c 41       		.byte	0x41
+ 970 007d 41000000 		.4byte	0x41
+ 971 0081 03       		.uleb128 0x3
+ 972 0082 8A010000 		.4byte	.LASF11
+ 973 0086 04       		.byte	0x4
+ 974 0087 B3       		.byte	0xb3
+ 975 0088 2C000000 		.4byte	0x2c
+ 976 008c 03       		.uleb128 0x3
+ 977 008d 73010000 		.4byte	.LASF12
+ 978 0091 04       		.byte	0x4
+ 979 0092 B4       		.byte	0xb4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 25
+
+
+ 980 0093 3A000000 		.4byte	0x3a
+ 981 0097 02       		.uleb128 0x2
+ 982 0098 04       		.byte	0x4
+ 983 0099 04       		.byte	0x4
+ 984 009a AB010000 		.4byte	.LASF13
+ 985 009e 02       		.uleb128 0x2
+ 986 009f 08       		.byte	0x8
+ 987 00a0 04       		.byte	0x4
+ 988 00a1 78040000 		.4byte	.LASF14
+ 989 00a5 02       		.uleb128 0x2
+ 990 00a6 01       		.byte	0x1
+ 991 00a7 08       		.byte	0x8
+ 992 00a8 2D030000 		.4byte	.LASF15
+ 993 00ac 05       		.uleb128 0x5
+ 994 00ad 81000000 		.4byte	0x81
+ 995 00b1 05       		.uleb128 0x5
+ 996 00b2 8C000000 		.4byte	0x8c
+ 997 00b6 02       		.uleb128 0x2
+ 998 00b7 04       		.byte	0x4
+ 999 00b8 07       		.byte	0x7
+ 1000 00b9 D9010000 		.4byte	.LASF16
+ 1001 00bd 06       		.uleb128 0x6
+ 1002 00be 81000000 		.4byte	0x81
+ 1003 00c2 CD000000 		.4byte	0xcd
+ 1004 00c6 07       		.uleb128 0x7
+ 1005 00c7 B6000000 		.4byte	0xb6
+ 1006 00cb 03       		.byte	0x3
+ 1007 00cc 00       		.byte	0
+ 1008 00cd 08       		.uleb128 0x8
+ 1009 00ce 9C010000 		.4byte	.LASF21
+ 1010 00d2 5D       		.byte	0x5d
+ 1011 00d3 05       		.byte	0x5
+ 1012 00d4 5C       		.byte	0x5c
+ 1013 00d5 22010000 		.4byte	0x122
+ 1014 00d9 09       		.uleb128 0x9
+ 1015 00da 64697200 		.ascii	"dir\000"
+ 1016 00de 05       		.byte	0x5
+ 1017 00df 5D       		.byte	0x5d
+ 1018 00e0 AC000000 		.4byte	0xac
+ 1019 00e4 00       		.byte	0
+ 1020 00e5 0A       		.uleb128 0xa
+ 1021 00e6 95040000 		.4byte	.LASF17
+ 1022 00ea 05       		.byte	0x5
+ 1023 00eb 5E       		.byte	0x5e
+ 1024 00ec AC000000 		.4byte	0xac
+ 1025 00f0 01       		.byte	0x1
+ 1026 00f1 0A       		.uleb128 0xa
+ 1027 00f2 F5010000 		.4byte	.LASF18
+ 1028 00f6 05       		.byte	0x5
+ 1029 00f7 5F       		.byte	0x5f
+ 1030 00f8 38010000 		.4byte	0x138
+ 1031 00fc 02       		.byte	0x2
+ 1032 00fd 09       		.uleb128 0x9
+ 1033 00fe 70707500 		.ascii	"ppu\000"
+ 1034 0102 05       		.byte	0x5
+ 1035 0103 60       		.byte	0x60
+ 1036 0104 53010000 		.4byte	0x153
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 26
+
+
+ 1037 0108 4A       		.byte	0x4a
+ 1038 0109 0A       		.uleb128 0xa
+ 1039 010a 10030000 		.4byte	.LASF19
+ 1040 010e 05       		.byte	0x5
+ 1041 010f 61       		.byte	0x61
+ 1042 0110 6E010000 		.4byte	0x16e
+ 1043 0114 59       		.byte	0x59
+ 1044 0115 0A       		.uleb128 0xa
+ 1045 0116 D1030000 		.4byte	.LASF20
+ 1046 011a 05       		.byte	0x5
+ 1047 011b 62       		.byte	0x62
+ 1048 011c AC000000 		.4byte	0xac
+ 1049 0120 5C       		.byte	0x5c
+ 1050 0121 00       		.byte	0
+ 1051 0122 06       		.uleb128 0x6
+ 1052 0123 81000000 		.4byte	0x81
+ 1053 0127 38010000 		.4byte	0x138
+ 1054 012b 07       		.uleb128 0x7
+ 1055 012c B6000000 		.4byte	0xb6
+ 1056 0130 02       		.byte	0x2
+ 1057 0131 07       		.uleb128 0x7
+ 1058 0132 B6000000 		.4byte	0xb6
+ 1059 0136 17       		.byte	0x17
+ 1060 0137 00       		.byte	0
+ 1061 0138 05       		.uleb128 0x5
+ 1062 0139 22010000 		.4byte	0x122
+ 1063 013d 06       		.uleb128 0x6
+ 1064 013e 81000000 		.4byte	0x81
+ 1065 0142 53010000 		.4byte	0x153
+ 1066 0146 07       		.uleb128 0x7
+ 1067 0147 B6000000 		.4byte	0xb6
+ 1068 014b 02       		.byte	0x2
+ 1069 014c 07       		.uleb128 0x7
+ 1070 014d B6000000 		.4byte	0xb6
+ 1071 0151 04       		.byte	0x4
+ 1072 0152 00       		.byte	0
+ 1073 0153 05       		.uleb128 0x5
+ 1074 0154 3D010000 		.4byte	0x13d
+ 1075 0158 06       		.uleb128 0x6
+ 1076 0159 81000000 		.4byte	0x81
+ 1077 015d 6E010000 		.4byte	0x16e
+ 1078 0161 07       		.uleb128 0x7
+ 1079 0162 B6000000 		.4byte	0xb6
+ 1080 0166 02       		.byte	0x2
+ 1081 0167 07       		.uleb128 0x7
+ 1082 0168 B6000000 		.4byte	0xb6
+ 1083 016c 00       		.byte	0
+ 1084 016d 00       		.byte	0
+ 1085 016e 05       		.uleb128 0x5
+ 1086 016f 58010000 		.4byte	0x158
+ 1087 0173 08       		.uleb128 0x8
+ 1088 0174 F7030000 		.4byte	.LASF22
+ 1089 0178 61       		.byte	0x61
+ 1090 0179 05       		.byte	0x5
+ 1091 017a 75       		.byte	0x75
+ 1092 017b 4A020000 		.4byte	0x24a
+ 1093 017f 0A       		.uleb128 0xa
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 27
+
+
+ 1094 0180 3E020000 		.4byte	.LASF23
+ 1095 0184 05       		.byte	0x5
+ 1096 0185 76       		.byte	0x76
+ 1097 0186 81000000 		.4byte	0x81
+ 1098 018a 00       		.byte	0
+ 1099 018b 0A       		.uleb128 0xa
+ 1100 018c 10030000 		.4byte	.LASF19
+ 1101 0190 05       		.byte	0x5
+ 1102 0191 77       		.byte	0x77
+ 1103 0192 81000000 		.4byte	0x81
+ 1104 0196 01       		.byte	0x1
+ 1105 0197 09       		.uleb128 0x9
+ 1106 0198 70707500 		.ascii	"ppu\000"
+ 1107 019c 05       		.byte	0x5
+ 1108 019d 78       		.byte	0x78
+ 1109 019e 4A020000 		.4byte	0x24a
+ 1110 01a2 02       		.byte	0x2
+ 1111 01a3 0A       		.uleb128 0xa
+ 1112 01a4 8C000000 		.4byte	.LASF24
+ 1113 01a8 05       		.byte	0x5
+ 1114 01a9 79       		.byte	0x79
+ 1115 01aa 5A020000 		.4byte	0x25a
+ 1116 01ae 07       		.byte	0x7
+ 1117 01af 0A       		.uleb128 0xa
+ 1118 01b0 47020000 		.4byte	.LASF25
+ 1119 01b4 05       		.byte	0x5
+ 1120 01b5 7A       		.byte	0x7a
+ 1121 01b6 5A020000 		.4byte	0x25a
+ 1122 01ba 10       		.byte	0x10
+ 1123 01bb 0A       		.uleb128 0xa
+ 1124 01bc DC020000 		.4byte	.LASF26
+ 1125 01c0 05       		.byte	0x5
+ 1126 01c1 7B       		.byte	0x7b
+ 1127 01c2 81000000 		.4byte	0x81
+ 1128 01c6 19       		.byte	0x19
+ 1129 01c7 0A       		.uleb128 0xa
+ 1130 01c8 81010000 		.4byte	.LASF27
+ 1131 01cc 05       		.byte	0x5
+ 1132 01cd 7C       		.byte	0x7c
+ 1133 01ce 81000000 		.4byte	0x81
+ 1134 01d2 1A       		.byte	0x1a
+ 1135 01d3 0A       		.uleb128 0xa
+ 1136 01d4 1D040000 		.4byte	.LASF28
+ 1137 01d8 05       		.byte	0x5
+ 1138 01d9 7D       		.byte	0x7d
+ 1139 01da 6A020000 		.4byte	0x26a
+ 1140 01de 1B       		.byte	0x1b
+ 1141 01df 09       		.uleb128 0x9
+ 1142 01e0 696400   		.ascii	"id\000"
+ 1143 01e3 05       		.byte	0x5
+ 1144 01e4 7E       		.byte	0x7e
+ 1145 01e5 7A020000 		.4byte	0x27a
+ 1146 01e9 23       		.byte	0x23
+ 1147 01ea 09       		.uleb128 0x9
+ 1148 01eb 6B6D00   		.ascii	"km\000"
+ 1149 01ee 05       		.byte	0x5
+ 1150 01ef 7F       		.byte	0x7f
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 28
+
+
+ 1151 01f0 8A020000 		.4byte	0x28a
+ 1152 01f4 33       		.byte	0x33
+ 1153 01f5 0A       		.uleb128 0xa
+ 1154 01f6 72040000 		.4byte	.LASF29
+ 1155 01fa 05       		.byte	0x5
+ 1156 01fb 80       		.byte	0x80
+ 1157 01fc 5A020000 		.4byte	0x25a
+ 1158 0200 3E       		.byte	0x3e
+ 1159 0201 0A       		.uleb128 0xa
+ 1160 0202 E2000000 		.4byte	.LASF30
+ 1161 0206 05       		.byte	0x5
+ 1162 0207 81       		.byte	0x81
+ 1163 0208 81000000 		.4byte	0x81
+ 1164 020c 47       		.byte	0x47
+ 1165 020d 0A       		.uleb128 0xa
+ 1166 020e 67040000 		.4byte	.LASF31
+ 1167 0212 05       		.byte	0x5
+ 1168 0213 82       		.byte	0x82
+ 1169 0214 81000000 		.4byte	0x81
+ 1170 0218 48       		.byte	0x48
+ 1171 0219 0A       		.uleb128 0xa
+ 1172 021a 85000000 		.4byte	.LASF32
+ 1173 021e 05       		.byte	0x5
+ 1174 021f 83       		.byte	0x83
+ 1175 0220 8A020000 		.4byte	0x28a
+ 1176 0224 49       		.byte	0x49
+ 1177 0225 0A       		.uleb128 0xa
+ 1178 0226 B4000000 		.4byte	.LASF33
+ 1179 022a 05       		.byte	0x5
+ 1180 022b 84       		.byte	0x84
+ 1181 022c 8A020000 		.4byte	0x28a
+ 1182 0230 54       		.byte	0x54
+ 1183 0231 0A       		.uleb128 0xa
+ 1184 0232 BD000000 		.4byte	.LASF34
+ 1185 0236 05       		.byte	0x5
+ 1186 0237 85       		.byte	0x85
+ 1187 0238 81000000 		.4byte	0x81
+ 1188 023c 5F       		.byte	0x5f
+ 1189 023d 0A       		.uleb128 0xa
+ 1190 023e 9B020000 		.4byte	.LASF35
+ 1191 0242 05       		.byte	0x5
+ 1192 0243 86       		.byte	0x86
+ 1193 0244 81000000 		.4byte	0x81
+ 1194 0248 60       		.byte	0x60
+ 1195 0249 00       		.byte	0
+ 1196 024a 06       		.uleb128 0x6
+ 1197 024b 81000000 		.4byte	0x81
+ 1198 024f 5A020000 		.4byte	0x25a
+ 1199 0253 07       		.uleb128 0x7
+ 1200 0254 B6000000 		.4byte	0xb6
+ 1201 0258 04       		.byte	0x4
+ 1202 0259 00       		.byte	0
+ 1203 025a 06       		.uleb128 0x6
+ 1204 025b 81000000 		.4byte	0x81
+ 1205 025f 6A020000 		.4byte	0x26a
+ 1206 0263 07       		.uleb128 0x7
+ 1207 0264 B6000000 		.4byte	0xb6
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 29
+
+
+ 1208 0268 08       		.byte	0x8
+ 1209 0269 00       		.byte	0
+ 1210 026a 06       		.uleb128 0x6
+ 1211 026b 81000000 		.4byte	0x81
+ 1212 026f 7A020000 		.4byte	0x27a
+ 1213 0273 07       		.uleb128 0x7
+ 1214 0274 B6000000 		.4byte	0xb6
+ 1215 0278 07       		.byte	0x7
+ 1216 0279 00       		.byte	0
+ 1217 027a 06       		.uleb128 0x6
+ 1218 027b 81000000 		.4byte	0x81
+ 1219 027f 8A020000 		.4byte	0x28a
+ 1220 0283 07       		.uleb128 0x7
+ 1221 0284 B6000000 		.4byte	0xb6
+ 1222 0288 0F       		.byte	0xf
+ 1223 0289 00       		.byte	0
+ 1224 028a 06       		.uleb128 0x6
+ 1225 028b 81000000 		.4byte	0x81
+ 1226 028f 9A020000 		.4byte	0x29a
+ 1227 0293 07       		.uleb128 0x7
+ 1228 0294 B6000000 		.4byte	0xb6
+ 1229 0298 0A       		.byte	0xa
+ 1230 0299 00       		.byte	0
+ 1231 029a 0B       		.uleb128 0xb
+ 1232 029b 1A020000 		.4byte	.LASF37
+ 1233 029f 01       		.byte	0x1
+ 1234 02a0 38       		.byte	0x38
+ 1235 02a1 81000000 		.4byte	0x81
+ 1236 02a5 00000000 		.4byte	.LFB63
+ 1237 02a9 90000000 		.4byte	.LFE63-.LFB63
+ 1238 02ad 01       		.uleb128 0x1
+ 1239 02ae 9C       		.byte	0x9c
+ 1240 02af CE020000 		.4byte	0x2ce
+ 1241 02b3 0C       		.uleb128 0xc
+ 1242 02b4 16030000 		.4byte	.LASF36
+ 1243 02b8 01       		.byte	0x1
+ 1244 02b9 39       		.byte	0x39
+ 1245 02ba 81000000 		.4byte	0x81
+ 1246 02be 02       		.uleb128 0x2
+ 1247 02bf 91       		.byte	0x91
+ 1248 02c0 6E       		.sleb128 -18
+ 1249 02c1 0D       		.uleb128 0xd
+ 1250 02c2 6900     		.ascii	"i\000"
+ 1251 02c4 01       		.byte	0x1
+ 1252 02c5 39       		.byte	0x39
+ 1253 02c6 81000000 		.4byte	0x81
+ 1254 02ca 02       		.uleb128 0x2
+ 1255 02cb 91       		.byte	0x91
+ 1256 02cc 6F       		.sleb128 -17
+ 1257 02cd 00       		.byte	0
+ 1258 02ce 0B       		.uleb128 0xb
+ 1259 02cf 0D040000 		.4byte	.LASF38
+ 1260 02d3 01       		.byte	0x1
+ 1261 02d4 68       		.byte	0x68
+ 1262 02d5 81000000 		.4byte	0x81
+ 1263 02d9 00000000 		.4byte	.LFB64
+ 1264 02dd 90000000 		.4byte	.LFE64-.LFB64
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 30
+
+
+ 1265 02e1 01       		.uleb128 0x1
+ 1266 02e2 9C       		.byte	0x9c
+ 1267 02e3 02030000 		.4byte	0x302
+ 1268 02e7 0C       		.uleb128 0xc
+ 1269 02e8 16030000 		.4byte	.LASF36
+ 1270 02ec 01       		.byte	0x1
+ 1271 02ed 69       		.byte	0x69
+ 1272 02ee 81000000 		.4byte	0x81
+ 1273 02f2 02       		.uleb128 0x2
+ 1274 02f3 91       		.byte	0x91
+ 1275 02f4 6E       		.sleb128 -18
+ 1276 02f5 0D       		.uleb128 0xd
+ 1277 02f6 6900     		.ascii	"i\000"
+ 1278 02f8 01       		.byte	0x1
+ 1279 02f9 69       		.byte	0x69
+ 1280 02fa 81000000 		.4byte	0x81
+ 1281 02fe 02       		.uleb128 0x2
+ 1282 02ff 91       		.byte	0x91
+ 1283 0300 6F       		.sleb128 -17
+ 1284 0301 00       		.byte	0
+ 1285 0302 0E       		.uleb128 0xe
+ 1286 0303 D7000000 		.4byte	.LASF40
+ 1287 0307 01       		.byte	0x1
+ 1288 0308 99       		.byte	0x99
+ 1289 0309 81000000 		.4byte	0x81
+ 1290 030d 00000000 		.4byte	.LFB65
+ 1291 0311 78000000 		.4byte	.LFE65-.LFB65
+ 1292 0315 01       		.uleb128 0x1
+ 1293 0316 9C       		.byte	0x9c
+ 1294 0317 44030000 		.4byte	0x344
+ 1295 031b 0C       		.uleb128 0xc
+ 1296 031c 16030000 		.4byte	.LASF36
+ 1297 0320 01       		.byte	0x1
+ 1298 0321 9A       		.byte	0x9a
+ 1299 0322 81000000 		.4byte	0x81
+ 1300 0326 02       		.uleb128 0x2
+ 1301 0327 91       		.byte	0x91
+ 1302 0328 76       		.sleb128 -10
+ 1303 0329 0C       		.uleb128 0xc
+ 1304 032a 08040000 		.4byte	.LASF39
+ 1305 032e 01       		.byte	0x1
+ 1306 032f 9A       		.byte	0x9a
+ 1307 0330 44030000 		.4byte	0x344
+ 1308 0334 02       		.uleb128 0x2
+ 1309 0335 91       		.byte	0x91
+ 1310 0336 70       		.sleb128 -16
+ 1311 0337 0D       		.uleb128 0xd
+ 1312 0338 6900     		.ascii	"i\000"
+ 1313 033a 01       		.byte	0x1
+ 1314 033b 9A       		.byte	0x9a
+ 1315 033c 81000000 		.4byte	0x81
+ 1316 0340 02       		.uleb128 0x2
+ 1317 0341 91       		.byte	0x91
+ 1318 0342 77       		.sleb128 -9
+ 1319 0343 00       		.byte	0
+ 1320 0344 06       		.uleb128 0x6
+ 1321 0345 81000000 		.4byte	0x81
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 31
+
+
+ 1322 0349 54030000 		.4byte	0x354
+ 1323 034d 07       		.uleb128 0x7
+ 1324 034e B6000000 		.4byte	0xb6
+ 1325 0352 02       		.byte	0x2
+ 1326 0353 00       		.byte	0
+ 1327 0354 0E       		.uleb128 0xe
+ 1328 0355 55040000 		.4byte	.LASF41
+ 1329 0359 01       		.byte	0x1
+ 1330 035a C3       		.byte	0xc3
+ 1331 035b 81000000 		.4byte	0x81
+ 1332 035f 00000000 		.4byte	.LFB66
+ 1333 0363 7C000000 		.4byte	.LFE66-.LFB66
+ 1334 0367 01       		.uleb128 0x1
+ 1335 0368 9C       		.byte	0x9c
+ 1336 0369 96030000 		.4byte	0x396
+ 1337 036d 0C       		.uleb128 0xc
+ 1338 036e 16030000 		.4byte	.LASF36
+ 1339 0372 01       		.byte	0x1
+ 1340 0373 C4       		.byte	0xc4
+ 1341 0374 81000000 		.4byte	0x81
+ 1342 0378 02       		.uleb128 0x2
+ 1343 0379 91       		.byte	0x91
+ 1344 037a 76       		.sleb128 -10
+ 1345 037b 0C       		.uleb128 0xc
+ 1346 037c 08040000 		.4byte	.LASF39
+ 1347 0380 01       		.byte	0x1
+ 1348 0381 C4       		.byte	0xc4
+ 1349 0382 BD000000 		.4byte	0xbd
+ 1350 0386 02       		.uleb128 0x2
+ 1351 0387 91       		.byte	0x91
+ 1352 0388 70       		.sleb128 -16
+ 1353 0389 0D       		.uleb128 0xd
+ 1354 038a 6900     		.ascii	"i\000"
+ 1355 038c 01       		.byte	0x1
+ 1356 038d C4       		.byte	0xc4
+ 1357 038e 81000000 		.4byte	0x81
+ 1358 0392 02       		.uleb128 0x2
+ 1359 0393 91       		.byte	0x91
+ 1360 0394 77       		.sleb128 -9
+ 1361 0395 00       		.byte	0
+ 1362 0396 0E       		.uleb128 0xe
+ 1363 0397 B3020000 		.4byte	.LASF42
+ 1364 039b 01       		.byte	0x1
+ 1365 039c EE       		.byte	0xee
+ 1366 039d 81000000 		.4byte	0x81
+ 1367 03a1 00000000 		.4byte	.LFB67
+ 1368 03a5 C4000000 		.4byte	.LFE67-.LFB67
+ 1369 03a9 01       		.uleb128 0x1
+ 1370 03aa 9C       		.byte	0x9c
+ 1371 03ab F4030000 		.4byte	0x3f4
+ 1372 03af 0F       		.uleb128 0xf
+ 1373 03b0 CB010000 		.4byte	.LASF43
+ 1374 03b4 01       		.byte	0x1
+ 1375 03b5 EE       		.byte	0xee
+ 1376 03b6 8C000000 		.4byte	0x8c
+ 1377 03ba 02       		.uleb128 0x2
+ 1378 03bb 91       		.byte	0x91
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 32
+
+
+ 1379 03bc 6E       		.sleb128 -18
+ 1380 03bd 0F       		.uleb128 0xf
+ 1381 03be D1000000 		.4byte	.LASF44
+ 1382 03c2 01       		.byte	0x1
+ 1383 03c3 EE       		.byte	0xee
+ 1384 03c4 F4030000 		.4byte	0x3f4
+ 1385 03c8 02       		.uleb128 0x2
+ 1386 03c9 91       		.byte	0x91
+ 1387 03ca 68       		.sleb128 -24
+ 1388 03cb 0C       		.uleb128 0xc
+ 1389 03cc 16030000 		.4byte	.LASF36
+ 1390 03d0 01       		.byte	0x1
+ 1391 03d1 EF       		.byte	0xef
+ 1392 03d2 81000000 		.4byte	0x81
+ 1393 03d6 02       		.uleb128 0x2
+ 1394 03d7 91       		.byte	0x91
+ 1395 03d8 76       		.sleb128 -10
+ 1396 03d9 0C       		.uleb128 0xc
+ 1397 03da 08040000 		.4byte	.LASF39
+ 1398 03de 01       		.byte	0x1
+ 1399 03df EF       		.byte	0xef
+ 1400 03e0 BD000000 		.4byte	0xbd
+ 1401 03e4 02       		.uleb128 0x2
+ 1402 03e5 91       		.byte	0x91
+ 1403 03e6 70       		.sleb128 -16
+ 1404 03e7 0D       		.uleb128 0xd
+ 1405 03e8 6900     		.ascii	"i\000"
+ 1406 03ea 01       		.byte	0x1
+ 1407 03eb EF       		.byte	0xef
+ 1408 03ec 81000000 		.4byte	0x81
+ 1409 03f0 02       		.uleb128 0x2
+ 1410 03f1 91       		.byte	0x91
+ 1411 03f2 77       		.sleb128 -9
+ 1412 03f3 00       		.byte	0
+ 1413 03f4 10       		.uleb128 0x10
+ 1414 03f5 04       		.byte	0x4
+ 1415 03f6 81000000 		.4byte	0x81
+ 1416 03fa 11       		.uleb128 0x11
+ 1417 03fb EB000000 		.4byte	.LASF45
+ 1418 03ff 01       		.byte	0x1
+ 1419 0400 2301     		.2byte	0x123
+ 1420 0402 81000000 		.4byte	0x81
+ 1421 0406 00000000 		.4byte	.LFB68
+ 1422 040a E0000000 		.4byte	.LFE68-.LFB68
+ 1423 040e 01       		.uleb128 0x1
+ 1424 040f 9C       		.byte	0x9c
+ 1425 0410 5E040000 		.4byte	0x45e
+ 1426 0414 12       		.uleb128 0x12
+ 1427 0415 CB010000 		.4byte	.LASF43
+ 1428 0419 01       		.byte	0x1
+ 1429 041a 2301     		.2byte	0x123
+ 1430 041c 8C000000 		.4byte	0x8c
+ 1431 0420 02       		.uleb128 0x2
+ 1432 0421 91       		.byte	0x91
+ 1433 0422 5E       		.sleb128 -34
+ 1434 0423 12       		.uleb128 0x12
+ 1435 0424 18040000 		.4byte	.LASF46
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 33
+
+
+ 1436 0428 01       		.byte	0x1
+ 1437 0429 2301     		.2byte	0x123
+ 1438 042b AC000000 		.4byte	0xac
+ 1439 042f 02       		.uleb128 0x2
+ 1440 0430 91       		.byte	0x91
+ 1441 0431 5D       		.sleb128 -35
+ 1442 0432 13       		.uleb128 0x13
+ 1443 0433 16030000 		.4byte	.LASF36
+ 1444 0437 01       		.byte	0x1
+ 1445 0438 2401     		.2byte	0x124
+ 1446 043a 8C000000 		.4byte	0x8c
+ 1447 043e 02       		.uleb128 0x2
+ 1448 043f 91       		.byte	0x91
+ 1449 0440 6C       		.sleb128 -20
+ 1450 0441 13       		.uleb128 0x13
+ 1451 0442 08040000 		.4byte	.LASF39
+ 1452 0446 01       		.byte	0x1
+ 1453 0447 2401     		.2byte	0x124
+ 1454 0449 5E040000 		.4byte	0x45e
+ 1455 044d 02       		.uleb128 0x2
+ 1456 044e 91       		.byte	0x91
+ 1457 044f 64       		.sleb128 -28
+ 1458 0450 14       		.uleb128 0x14
+ 1459 0451 6900     		.ascii	"i\000"
+ 1460 0453 01       		.byte	0x1
+ 1461 0454 2401     		.2byte	0x124
+ 1462 0456 8C000000 		.4byte	0x8c
+ 1463 045a 02       		.uleb128 0x2
+ 1464 045b 91       		.byte	0x91
+ 1465 045c 6E       		.sleb128 -18
+ 1466 045d 00       		.byte	0
+ 1467 045e 06       		.uleb128 0x6
+ 1468 045f 8C000000 		.4byte	0x8c
+ 1469 0463 6E040000 		.4byte	0x46e
+ 1470 0467 07       		.uleb128 0x7
+ 1471 0468 B6000000 		.4byte	0xb6
+ 1472 046c 03       		.byte	0x3
+ 1473 046d 00       		.byte	0
+ 1474 046e 11       		.uleb128 0x11
+ 1475 046f 55000000 		.4byte	.LASF47
+ 1476 0473 01       		.byte	0x1
+ 1477 0474 5B01     		.2byte	0x15b
+ 1478 0476 81000000 		.4byte	0x81
+ 1479 047a 00000000 		.4byte	.LFB69
+ 1480 047e 72000000 		.4byte	.LFE69-.LFB69
+ 1481 0482 01       		.uleb128 0x1
+ 1482 0483 9C       		.byte	0x9c
+ 1483 0484 D2040000 		.4byte	0x4d2
+ 1484 0488 12       		.uleb128 0x12
+ 1485 0489 A7040000 		.4byte	.LASF48
+ 1486 048d 01       		.byte	0x1
+ 1487 048e 5B01     		.2byte	0x15b
+ 1488 0490 81000000 		.4byte	0x81
+ 1489 0494 02       		.uleb128 0x2
+ 1490 0495 91       		.byte	0x91
+ 1491 0496 6F       		.sleb128 -17
+ 1492 0497 12       		.uleb128 0x12
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 34
+
+
+ 1493 0498 D1000000 		.4byte	.LASF44
+ 1494 049c 01       		.byte	0x1
+ 1495 049d 5B01     		.2byte	0x15b
+ 1496 049f 81000000 		.4byte	0x81
+ 1497 04a3 02       		.uleb128 0x2
+ 1498 04a4 91       		.byte	0x91
+ 1499 04a5 6E       		.sleb128 -18
+ 1500 04a6 13       		.uleb128 0x13
+ 1501 04a7 16030000 		.4byte	.LASF36
+ 1502 04ab 01       		.byte	0x1
+ 1503 04ac 5C01     		.2byte	0x15c
+ 1504 04ae 81000000 		.4byte	0x81
+ 1505 04b2 02       		.uleb128 0x2
+ 1506 04b3 91       		.byte	0x91
+ 1507 04b4 76       		.sleb128 -10
+ 1508 04b5 13       		.uleb128 0x13
+ 1509 04b6 08040000 		.4byte	.LASF39
+ 1510 04ba 01       		.byte	0x1
+ 1511 04bb 5C01     		.2byte	0x15c
+ 1512 04bd D2040000 		.4byte	0x4d2
+ 1513 04c1 02       		.uleb128 0x2
+ 1514 04c2 91       		.byte	0x91
+ 1515 04c3 74       		.sleb128 -12
+ 1516 04c4 14       		.uleb128 0x14
+ 1517 04c5 6900     		.ascii	"i\000"
+ 1518 04c7 01       		.byte	0x1
+ 1519 04c8 5C01     		.2byte	0x15c
+ 1520 04ca 81000000 		.4byte	0x81
+ 1521 04ce 02       		.uleb128 0x2
+ 1522 04cf 91       		.byte	0x91
+ 1523 04d0 77       		.sleb128 -9
+ 1524 04d1 00       		.byte	0
+ 1525 04d2 06       		.uleb128 0x6
+ 1526 04d3 81000000 		.4byte	0x81
+ 1527 04d7 E2040000 		.4byte	0x4e2
+ 1528 04db 07       		.uleb128 0x7
+ 1529 04dc B6000000 		.4byte	0xb6
+ 1530 04e0 01       		.byte	0x1
+ 1531 04e1 00       		.byte	0
+ 1532 04e2 15       		.uleb128 0x15
+ 1533 04e3 32030000 		.4byte	.LASF49
+ 1534 04e7 06       		.byte	0x6
+ 1535 04e8 2A06     		.2byte	0x62a
+ 1536 04ea EE040000 		.4byte	0x4ee
+ 1537 04ee 05       		.uleb128 0x5
+ 1538 04ef 76000000 		.4byte	0x76
+ 1539 04f3 16       		.uleb128 0x16
+ 1540 04f4 5F030000 		.4byte	.LASF50
+ 1541 04f8 05       		.byte	0x5
+ 1542 04f9 4A       		.byte	0x4a
+ 1543 04fa AC000000 		.4byte	0xac
+ 1544 04fe 05       		.uleb128 0x5
+ 1545 04ff 03       		.byte	0x3
+ 1546 0500 00000000 		.4byte	count_teclas1
+ 1547 0504 16       		.uleb128 0x16
+ 1548 0505 AE040000 		.4byte	.LASF51
+ 1549 0509 05       		.byte	0x5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 35
+
+
+ 1550 050a 4A       		.byte	0x4a
+ 1551 050b AC000000 		.4byte	0xac
+ 1552 050f 05       		.uleb128 0x5
+ 1553 0510 03       		.byte	0x3
+ 1554 0511 00000000 		.4byte	comas1
+ 1555 0515 16       		.uleb128 0x16
+ 1556 0516 B5040000 		.4byte	.LASF52
+ 1557 051a 05       		.byte	0x5
+ 1558 051b 4A       		.byte	0x4a
+ 1559 051c AC000000 		.4byte	0xac
+ 1560 0520 05       		.uleb128 0x5
+ 1561 0521 03       		.byte	0x3
+ 1562 0522 00000000 		.4byte	comas2
+ 1563 0526 16       		.uleb128 0x16
+ 1564 0527 24040000 		.4byte	.LASF53
+ 1565 052b 05       		.byte	0x5
+ 1566 052c 4A       		.byte	0x4a
+ 1567 052d AC000000 		.4byte	0xac
+ 1568 0531 05       		.uleb128 0x5
+ 1569 0532 03       		.byte	0x3
+ 1570 0533 00000000 		.4byte	id_coma1
+ 1571 0537 16       		.uleb128 0x16
+ 1572 0538 32020000 		.4byte	.LASF54
+ 1573 053c 05       		.byte	0x5
+ 1574 053d 4A       		.byte	0x4a
+ 1575 053e AC000000 		.4byte	0xac
+ 1576 0542 05       		.uleb128 0x5
+ 1577 0543 03       		.byte	0x3
+ 1578 0544 00000000 		.4byte	id_teclado1
+ 1579 0548 16       		.uleb128 0x16
+ 1580 0549 20000000 		.4byte	.LASF55
+ 1581 054d 05       		.byte	0x5
+ 1582 054e 4A       		.byte	0x4a
+ 1583 054f AC000000 		.4byte	0xac
+ 1584 0553 05       		.uleb128 0x5
+ 1585 0554 03       		.byte	0x3
+ 1586 0555 00000000 		.4byte	count_teclas2
+ 1587 0559 16       		.uleb128 0x16
+ 1588 055a 2D040000 		.4byte	.LASF56
+ 1589 055e 05       		.byte	0x5
+ 1590 055f 4A       		.byte	0x4a
+ 1591 0560 AC000000 		.4byte	0xac
+ 1592 0564 05       		.uleb128 0x5
+ 1593 0565 03       		.byte	0x3
+ 1594 0566 00000000 		.4byte	id_coma2
+ 1595 056a 16       		.uleb128 0x16
+ 1596 056b 42040000 		.4byte	.LASF57
+ 1597 056f 05       		.byte	0x5
+ 1598 0570 4A       		.byte	0x4a
+ 1599 0571 AC000000 		.4byte	0xac
+ 1600 0575 05       		.uleb128 0x5
+ 1601 0576 03       		.byte	0x3
+ 1602 0577 00000000 		.4byte	id_teclado2
+ 1603 057b 16       		.uleb128 0x16
+ 1604 057c 08000000 		.4byte	.LASF58
+ 1605 0580 05       		.byte	0x5
+ 1606 0581 4B       		.byte	0x4b
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 36
+
+
+ 1607 0582 B1000000 		.4byte	0xb1
+ 1608 0586 05       		.uleb128 0x5
+ 1609 0587 03       		.byte	0x3
+ 1610 0588 00000000 		.4byte	posx1
+ 1611 058c 16       		.uleb128 0x16
+ 1612 058d 90010000 		.4byte	.LASF59
+ 1613 0591 05       		.byte	0x5
+ 1614 0592 4B       		.byte	0x4b
+ 1615 0593 B1000000 		.4byte	0xb1
+ 1616 0597 05       		.uleb128 0x5
+ 1617 0598 03       		.byte	0x3
+ 1618 0599 00000000 		.4byte	posy1
+ 1619 059d 16       		.uleb128 0x16
+ 1620 059e 9C040000 		.4byte	.LASF60
+ 1621 05a2 05       		.byte	0x5
+ 1622 05a3 4B       		.byte	0x4b
+ 1623 05a4 B1000000 		.4byte	0xb1
+ 1624 05a8 05       		.uleb128 0x5
+ 1625 05a9 03       		.byte	0x3
+ 1626 05aa 00000000 		.4byte	sizeletra1
+ 1627 05ae 16       		.uleb128 0x16
+ 1628 05af 0E000000 		.4byte	.LASF61
+ 1629 05b3 05       		.byte	0x5
+ 1630 05b4 4B       		.byte	0x4b
+ 1631 05b5 B1000000 		.4byte	0xb1
+ 1632 05b9 05       		.uleb128 0x5
+ 1633 05ba 03       		.byte	0x3
+ 1634 05bb 00000000 		.4byte	posx2
+ 1635 05bf 16       		.uleb128 0x16
+ 1636 05c0 96010000 		.4byte	.LASF62
+ 1637 05c4 05       		.byte	0x5
+ 1638 05c5 4B       		.byte	0x4b
+ 1639 05c6 B1000000 		.4byte	0xb1
+ 1640 05ca 05       		.uleb128 0x5
+ 1641 05cb 03       		.byte	0x3
+ 1642 05cc 00000000 		.4byte	posy2
+ 1643 05d0 16       		.uleb128 0x16
+ 1644 05d1 C0020000 		.4byte	.LASF63
+ 1645 05d5 05       		.byte	0x5
+ 1646 05d6 4B       		.byte	0x4b
+ 1647 05d7 B1000000 		.4byte	0xb1
+ 1648 05db 05       		.uleb128 0x5
+ 1649 05dc 03       		.byte	0x3
+ 1650 05dd 00000000 		.4byte	sizeletra2
+ 1651 05e1 16       		.uleb128 0x16
+ 1652 05e2 1D030000 		.4byte	.LASF64
+ 1653 05e6 05       		.byte	0x5
+ 1654 05e7 4C       		.byte	0x4c
+ 1655 05e8 AC000000 		.4byte	0xac
+ 1656 05ec 05       		.uleb128 0x5
+ 1657 05ed 03       		.byte	0x3
+ 1658 05ee 00000000 		.4byte	teclas1
+ 1659 05f2 16       		.uleb128 0x16
+ 1660 05f3 25030000 		.4byte	.LASF65
+ 1661 05f7 05       		.byte	0x5
+ 1662 05f8 4C       		.byte	0x4c
+ 1663 05f9 AC000000 		.4byte	0xac
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 37
+
+
+ 1664 05fd 05       		.uleb128 0x5
+ 1665 05fe 03       		.byte	0x3
+ 1666 05ff 00000000 		.4byte	teclas2
+ 1667 0603 16       		.uleb128 0x16
+ 1668 0604 93000000 		.4byte	.LASF66
+ 1669 0608 05       		.byte	0x5
+ 1670 0609 4D       		.byte	0x4d
+ 1671 060a AC000000 		.4byte	0xac
+ 1672 060e 05       		.uleb128 0x5
+ 1673 060f 03       		.byte	0x3
+ 1674 0610 00000000 		.4byte	flujo_LCD1
+ 1675 0614 16       		.uleb128 0x16
+ 1676 0615 9E000000 		.4byte	.LASF67
+ 1677 0619 05       		.byte	0x5
+ 1678 061a 4D       		.byte	0x4d
+ 1679 061b AC000000 		.4byte	0xac
+ 1680 061f 05       		.uleb128 0x5
+ 1681 0620 03       		.byte	0x3
+ 1682 0621 00000000 		.4byte	flujo_LCD2
+ 1683 0625 16       		.uleb128 0x16
+ 1684 0626 A9000000 		.4byte	.LASF68
+ 1685 062a 05       		.byte	0x5
+ 1686 062b 4D       		.byte	0x4d
+ 1687 062c AC000000 		.4byte	0xac
+ 1688 0630 05       		.uleb128 0x5
+ 1689 0631 03       		.byte	0x3
+ 1690 0632 00000000 		.4byte	flujo_LCD3
+ 1691 0636 16       		.uleb128 0x16
+ 1692 0637 EA010000 		.4byte	.LASF69
+ 1693 063b 05       		.byte	0x5
+ 1694 063c 4D       		.byte	0x4d
+ 1695 063d AC000000 		.4byte	0xac
+ 1696 0641 05       		.uleb128 0x5
+ 1697 0642 03       		.byte	0x3
+ 1698 0643 00000000 		.4byte	flujo_LCD4
+ 1699 0647 06       		.uleb128 0x6
+ 1700 0648 81000000 		.4byte	0x81
+ 1701 064c 57060000 		.4byte	0x657
+ 1702 0650 07       		.uleb128 0x7
+ 1703 0651 B6000000 		.4byte	0xb6
+ 1704 0655 1D       		.byte	0x1d
+ 1705 0656 00       		.byte	0
+ 1706 0657 16       		.uleb128 0x16
+ 1707 0658 E5020000 		.4byte	.LASF70
+ 1708 065c 05       		.byte	0x5
+ 1709 065d 4E       		.byte	0x4e
+ 1710 065e 68060000 		.4byte	0x668
+ 1711 0662 05       		.uleb128 0x5
+ 1712 0663 03       		.byte	0x3
+ 1713 0664 00000000 		.4byte	Buffer_LCD1
+ 1714 0668 05       		.uleb128 0x5
+ 1715 0669 47060000 		.4byte	0x647
+ 1716 066d 16       		.uleb128 0x16
+ 1717 066e F1020000 		.4byte	.LASF71
+ 1718 0672 05       		.byte	0x5
+ 1719 0673 4F       		.byte	0x4f
+ 1720 0674 7E060000 		.4byte	0x67e
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 38
+
+
+ 1721 0678 05       		.uleb128 0x5
+ 1722 0679 03       		.byte	0x3
+ 1723 067a 00000000 		.4byte	Buffer_LCD2
+ 1724 067e 05       		.uleb128 0x5
+ 1725 067f 47060000 		.4byte	0x647
+ 1726 0683 16       		.uleb128 0x16
+ 1727 0684 6B000000 		.4byte	.LASF72
+ 1728 0688 05       		.byte	0x5
+ 1729 0689 50       		.byte	0x50
+ 1730 068a AC000000 		.4byte	0xac
+ 1731 068e 05       		.uleb128 0x5
+ 1732 068f 03       		.byte	0x3
+ 1733 0690 00000000 		.4byte	count_protector
+ 1734 0694 16       		.uleb128 0x16
+ 1735 0695 09020000 		.4byte	.LASF73
+ 1736 0699 05       		.byte	0x5
+ 1737 069a 50       		.byte	0x50
+ 1738 069b AC000000 		.4byte	0xac
+ 1739 069f 05       		.uleb128 0x5
+ 1740 06a0 03       		.byte	0x3
+ 1741 06a1 00000000 		.4byte	count_protector2
+ 1742 06a5 16       		.uleb128 0x16
+ 1743 06a6 88040000 		.4byte	.LASF74
+ 1744 06aa 05       		.byte	0x5
+ 1745 06ab 51       		.byte	0x51
+ 1746 06ac B6060000 		.4byte	0x6b6
+ 1747 06b0 05       		.uleb128 0x5
+ 1748 06b1 03       		.byte	0x3
+ 1749 06b2 00000000 		.4byte	password_lcd
+ 1750 06b6 05       		.uleb128 0x5
+ 1751 06b7 5A020000 		.4byte	0x25a
+ 1752 06bb 16       		.uleb128 0x16
+ 1753 06bc 4F020000 		.4byte	.LASF75
+ 1754 06c0 05       		.byte	0x5
+ 1755 06c1 52       		.byte	0x52
+ 1756 06c2 B1000000 		.4byte	0xb1
+ 1757 06c6 05       		.uleb128 0x5
+ 1758 06c7 03       		.byte	0x3
+ 1759 06c8 00000000 		.4byte	imagen_grado1
+ 1760 06cc 16       		.uleb128 0x16
+ 1761 06cd 5D020000 		.4byte	.LASF76
+ 1762 06d1 05       		.byte	0x5
+ 1763 06d2 52       		.byte	0x52
+ 1764 06d3 B1000000 		.4byte	0xb1
+ 1765 06d7 05       		.uleb128 0x5
+ 1766 06d8 03       		.byte	0x3
+ 1767 06d9 00000000 		.4byte	imagen_grado2
+ 1768 06dd 16       		.uleb128 0x16
+ 1769 06de BC040000 		.4byte	.LASF77
+ 1770 06e2 05       		.byte	0x5
+ 1771 06e3 52       		.byte	0x52
+ 1772 06e4 B1000000 		.4byte	0xb1
+ 1773 06e8 05       		.uleb128 0x5
+ 1774 06e9 03       		.byte	0x3
+ 1775 06ea 00000000 		.4byte	imagen_grado3
+ 1776 06ee 16       		.uleb128 0x16
+ 1777 06ef 82020000 		.4byte	.LASF78
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 39
+
+
+ 1778 06f3 05       		.byte	0x5
+ 1779 06f4 52       		.byte	0x52
+ 1780 06f5 B1000000 		.4byte	0xb1
+ 1781 06f9 05       		.uleb128 0x5
+ 1782 06fa 03       		.byte	0x3
+ 1783 06fb 00000000 		.4byte	imagen_grado4
+ 1784 06ff 06       		.uleb128 0x6
+ 1785 0700 8C000000 		.4byte	0x8c
+ 1786 0704 15070000 		.4byte	0x715
+ 1787 0708 07       		.uleb128 0x7
+ 1788 0709 B6000000 		.4byte	0xb6
+ 1789 070d 03       		.byte	0x3
+ 1790 070e 07       		.uleb128 0x7
+ 1791 070f B6000000 		.4byte	0xb6
+ 1792 0713 01       		.byte	0x1
+ 1793 0714 00       		.byte	0
+ 1794 0715 16       		.uleb128 0x16
+ 1795 0716 7B000000 		.4byte	.LASF79
+ 1796 071a 05       		.byte	0x5
+ 1797 071b 53       		.byte	0x53
+ 1798 071c 26070000 		.4byte	0x726
+ 1799 0720 05       		.uleb128 0x5
+ 1800 0721 03       		.byte	0x3
+ 1801 0722 00000000 		.4byte	prox_caso
+ 1802 0726 05       		.uleb128 0x5
+ 1803 0727 FF060000 		.4byte	0x6ff
+ 1804 072b 16       		.uleb128 0x16
+ 1805 072c 49000000 		.4byte	.LASF80
+ 1806 0730 05       		.byte	0x5
+ 1807 0731 54       		.byte	0x54
+ 1808 0732 3C070000 		.4byte	0x73c
+ 1809 0736 05       		.uleb128 0x5
+ 1810 0737 03       		.byte	0x3
+ 1811 0738 00000000 		.4byte	bloqueo_LCD
+ 1812 073c 05       		.uleb128 0x5
+ 1813 073d 44030000 		.4byte	0x344
+ 1814 0741 16       		.uleb128 0x16
+ 1815 0742 36000000 		.4byte	.LASF81
+ 1816 0746 05       		.byte	0x5
+ 1817 0747 58       		.byte	0x58
+ 1818 0748 AC000000 		.4byte	0xac
+ 1819 074c 05       		.uleb128 0x5
+ 1820 074d 03       		.byte	0x3
+ 1821 074e 00000000 		.4byte	ppux10
+ 1822 0752 06       		.uleb128 0x6
+ 1823 0753 81000000 		.4byte	0x81
+ 1824 0757 62070000 		.4byte	0x762
+ 1825 075b 07       		.uleb128 0x7
+ 1826 075c B6000000 		.4byte	0xb6
+ 1827 0760 10       		.byte	0x10
+ 1828 0761 00       		.byte	0
+ 1829 0762 16       		.uleb128 0x16
+ 1830 0763 14000000 		.4byte	.LASF82
+ 1831 0767 05       		.byte	0x5
+ 1832 0768 59       		.byte	0x59
+ 1833 0769 73070000 		.4byte	0x773
+ 1834 076d 05       		.uleb128 0x5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 40
+
+
+ 1835 076e 03       		.byte	0x3
+ 1836 076f 00000000 		.4byte	nombre_pro1
+ 1837 0773 05       		.uleb128 0x5
+ 1838 0774 52070000 		.4byte	0x752
+ 1839 0778 16       		.uleb128 0x16
+ 1840 0779 36040000 		.4byte	.LASF83
+ 1841 077d 05       		.byte	0x5
+ 1842 077e 59       		.byte	0x59
+ 1843 077f 89070000 		.4byte	0x789
+ 1844 0783 05       		.uleb128 0x5
+ 1845 0784 03       		.byte	0x3
+ 1846 0785 00000000 		.4byte	nombre_pro2
+ 1847 0789 05       		.uleb128 0x5
+ 1848 078a 52070000 		.4byte	0x752
+ 1849 078e 16       		.uleb128 0x16
+ 1850 078f FD010000 		.4byte	.LASF84
+ 1851 0793 05       		.byte	0x5
+ 1852 0794 59       		.byte	0x59
+ 1853 0795 9F070000 		.4byte	0x79f
+ 1854 0799 05       		.uleb128 0x5
+ 1855 079a 03       		.byte	0x3
+ 1856 079b 00000000 		.4byte	nombre_pro3
+ 1857 079f 05       		.uleb128 0x5
+ 1858 07a0 52070000 		.4byte	0x752
+ 1859 07a4 16       		.uleb128 0x16
+ 1860 07a5 2E000000 		.4byte	.LASF85
+ 1861 07a9 05       		.byte	0x5
+ 1862 07aa 5A       		.byte	0x5a
+ 1863 07ab B5070000 		.4byte	0x7b5
+ 1864 07af 05       		.uleb128 0x5
+ 1865 07b0 03       		.byte	0x3
+ 1866 07b1 00000000 		.4byte	version
+ 1867 07b5 05       		.uleb128 0x5
+ 1868 07b6 BD000000 		.4byte	0xbd
+ 1869 07ba 16       		.uleb128 0x16
+ 1870 07bb A5010000 		.4byte	.LASF86
+ 1871 07bf 05       		.byte	0x5
+ 1872 07c0 64       		.byte	0x64
+ 1873 07c1 CD000000 		.4byte	0xcd
+ 1874 07c5 05       		.uleb128 0x5
+ 1875 07c6 03       		.byte	0x3
+ 1876 07c7 00000000 		.4byte	lado1
+ 1877 07cb 16       		.uleb128 0x16
+ 1878 07cc 7D030000 		.4byte	.LASF87
+ 1879 07d0 05       		.byte	0x5
+ 1880 07d1 65       		.byte	0x65
+ 1881 07d2 CD000000 		.4byte	0xcd
+ 1882 07d6 05       		.uleb128 0x5
+ 1883 07d7 03       		.byte	0x3
+ 1884 07d8 00000000 		.4byte	lado2
+ 1885 07dc 16       		.uleb128 0x16
+ 1886 07dd B1010000 		.4byte	.LASF88
+ 1887 07e1 05       		.byte	0x5
+ 1888 07e2 66       		.byte	0x66
+ 1889 07e3 CD000000 		.4byte	0xcd
+ 1890 07e7 05       		.uleb128 0x5
+ 1891 07e8 03       		.byte	0x3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 41
+
+
+ 1892 07e9 00000000 		.4byte	lado3
+ 1893 07ed 16       		.uleb128 0x16
+ 1894 07ee B7010000 		.4byte	.LASF89
+ 1895 07f2 05       		.byte	0x5
+ 1896 07f3 67       		.byte	0x67
+ 1897 07f4 CD000000 		.4byte	0xcd
+ 1898 07f8 05       		.uleb128 0x5
+ 1899 07f9 03       		.byte	0x3
+ 1900 07fa 00000000 		.4byte	lado4
+ 1901 07fe 06       		.uleb128 0x6
+ 1902 07ff 81000000 		.4byte	0x81
+ 1903 0803 0E080000 		.4byte	0x80e
+ 1904 0807 07       		.uleb128 0x7
+ 1905 0808 B6000000 		.4byte	0xb6
+ 1906 080c 20       		.byte	0x20
+ 1907 080d 00       		.byte	0
+ 1908 080e 16       		.uleb128 0x16
+ 1909 080f 7A010000 		.4byte	.LASF90
+ 1910 0813 05       		.byte	0x5
+ 1911 0814 6B       		.byte	0x6b
+ 1912 0815 1F080000 		.4byte	0x81f
+ 1913 0819 05       		.uleb128 0x5
+ 1914 081a 03       		.byte	0x3
+ 1915 081b 00000000 		.4byte	nombre
+ 1916 081f 05       		.uleb128 0x5
+ 1917 0820 FE070000 		.4byte	0x7fe
+ 1918 0824 06       		.uleb128 0x6
+ 1919 0825 81000000 		.4byte	0x81
+ 1920 0829 34080000 		.4byte	0x834
+ 1921 082d 07       		.uleb128 0x7
+ 1922 082e B6000000 		.4byte	0xb6
+ 1923 0832 0E       		.byte	0xe
+ 1924 0833 00       		.byte	0
+ 1925 0834 17       		.uleb128 0x17
+ 1926 0835 6E697400 		.ascii	"nit\000"
+ 1927 0839 05       		.byte	0x5
+ 1928 083a 6C       		.byte	0x6c
+ 1929 083b 45080000 		.4byte	0x845
+ 1930 083f 05       		.uleb128 0x5
+ 1931 0840 03       		.byte	0x3
+ 1932 0841 00000000 		.4byte	nit
+ 1933 0845 05       		.uleb128 0x5
+ 1934 0846 24080000 		.4byte	0x824
+ 1935 084a 06       		.uleb128 0x6
+ 1936 084b 81000000 		.4byte	0x81
+ 1937 084f 5A080000 		.4byte	0x85a
+ 1938 0853 07       		.uleb128 0x7
+ 1939 0854 B6000000 		.4byte	0xb6
+ 1940 0858 13       		.byte	0x13
+ 1941 0859 00       		.byte	0
+ 1942 085a 16       		.uleb128 0x16
+ 1943 085b 7F040000 		.4byte	.LASF91
+ 1944 085f 05       		.byte	0x5
+ 1945 0860 6D       		.byte	0x6d
+ 1946 0861 6B080000 		.4byte	0x86b
+ 1947 0865 05       		.uleb128 0x5
+ 1948 0866 03       		.byte	0x3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 42
+
+
+ 1949 0867 00000000 		.4byte	telefono
+ 1950 086b 05       		.uleb128 0x5
+ 1951 086c 4A080000 		.4byte	0x84a
+ 1952 0870 16       		.uleb128 0x16
+ 1953 0871 DB030000 		.4byte	.LASF92
+ 1954 0875 05       		.byte	0x5
+ 1955 0876 6E       		.byte	0x6e
+ 1956 0877 81080000 		.4byte	0x881
+ 1957 087b 05       		.uleb128 0x5
+ 1958 087c 03       		.byte	0x3
+ 1959 087d 00000000 		.4byte	direccion
+ 1960 0881 05       		.uleb128 0x5
+ 1961 0882 FE070000 		.4byte	0x7fe
+ 1962 0886 06       		.uleb128 0x6
+ 1963 0887 81000000 		.4byte	0x81
+ 1964 088b 96080000 		.4byte	0x896
+ 1965 088f 07       		.uleb128 0x7
+ 1966 0890 B6000000 		.4byte	0xb6
+ 1967 0894 1F       		.byte	0x1f
+ 1968 0895 00       		.byte	0
+ 1969 0896 16       		.uleb128 0x16
+ 1970 0897 CB020000 		.4byte	.LASF93
+ 1971 089b 05       		.byte	0x5
+ 1972 089c 6F       		.byte	0x6f
+ 1973 089d A7080000 		.4byte	0x8a7
+ 1974 08a1 05       		.uleb128 0x5
+ 1975 08a2 03       		.byte	0x3
+ 1976 08a3 00000000 		.4byte	lema1
+ 1977 08a7 05       		.uleb128 0x5
+ 1978 08a8 86080000 		.4byte	0x886
+ 1979 08ac 16       		.uleb128 0x16
+ 1980 08ad D1020000 		.4byte	.LASF94
+ 1981 08b1 05       		.byte	0x5
+ 1982 08b2 70       		.byte	0x70
+ 1983 08b3 BD080000 		.4byte	0x8bd
+ 1984 08b7 05       		.uleb128 0x5
+ 1985 08b8 03       		.byte	0x3
+ 1986 08b9 00000000 		.4byte	lema2
+ 1987 08bd 05       		.uleb128 0x5
+ 1988 08be 86080000 		.4byte	0x886
+ 1989 08c2 16       		.uleb128 0x16
+ 1990 08c3 C9030000 		.4byte	.LASF95
+ 1991 08c7 05       		.byte	0x5
+ 1992 08c8 71       		.byte	0x71
+ 1993 08c9 D3080000 		.4byte	0x8d3
+ 1994 08cd 05       		.uleb128 0x5
+ 1995 08ce 03       		.byte	0x3
+ 1996 08cf 00000000 		.4byte	id_logo
+ 1997 08d3 05       		.uleb128 0x5
+ 1998 08d4 D2040000 		.4byte	0x4d2
+ 1999 08d8 17       		.uleb128 0x17
+ 2000 08d9 6B6D00   		.ascii	"km\000"
+ 2001 08dc 05       		.byte	0x5
+ 2002 08dd 72       		.byte	0x72
+ 2003 08de E8080000 		.4byte	0x8e8
+ 2004 08e2 05       		.uleb128 0x5
+ 2005 08e3 03       		.byte	0x3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 43
+
+
+ 2006 08e4 00000000 		.4byte	km
+ 2007 08e8 05       		.uleb128 0x5
+ 2008 08e9 D2040000 		.4byte	0x4d2
+ 2009 08ed 16       		.uleb128 0x16
+ 2010 08ee 77030000 		.4byte	.LASF96
+ 2011 08f2 05       		.byte	0x5
+ 2012 08f3 73       		.byte	0x73
+ 2013 08f4 44030000 		.4byte	0x344
+ 2014 08f8 05       		.uleb128 0x5
+ 2015 08f9 03       		.byte	0x3
+ 2016 08fa 00000000 		.4byte	fecha
+ 2017 08fe 16       		.uleb128 0x16
+ 2018 08ff D7020000 		.4byte	.LASF97
+ 2019 0903 05       		.byte	0x5
+ 2020 0904 74       		.byte	0x74
+ 2021 0905 D2040000 		.4byte	0x4d2
+ 2022 0909 05       		.uleb128 0x5
+ 2023 090a 03       		.byte	0x3
+ 2024 090b 00000000 		.4byte	hora
+ 2025 090f 16       		.uleb128 0x16
+ 2026 0910 3F030000 		.4byte	.LASF98
+ 2027 0914 05       		.byte	0x5
+ 2028 0915 88       		.byte	0x88
+ 2029 0916 73010000 		.4byte	0x173
+ 2030 091a 05       		.uleb128 0x5
+ 2031 091b 03       		.byte	0x3
+ 2032 091c 00000000 		.4byte	rventa1
+ 2033 0920 16       		.uleb128 0x16
+ 2034 0921 47030000 		.4byte	.LASF99
+ 2035 0925 05       		.byte	0x5
+ 2036 0926 89       		.byte	0x89
+ 2037 0927 73010000 		.4byte	0x173
+ 2038 092b 05       		.uleb128 0x5
+ 2039 092c 03       		.byte	0x3
+ 2040 092d 00000000 		.4byte	rventa2
+ 2041 0931 16       		.uleb128 0x16
+ 2042 0932 4F030000 		.4byte	.LASF100
+ 2043 0936 05       		.byte	0x5
+ 2044 0937 8A       		.byte	0x8a
+ 2045 0938 73010000 		.4byte	0x173
+ 2046 093c 05       		.uleb128 0x5
+ 2047 093d 03       		.byte	0x3
+ 2048 093e 00000000 		.4byte	rventa3
+ 2049 0942 16       		.uleb128 0x16
+ 2050 0943 57030000 		.4byte	.LASF101
+ 2051 0947 05       		.byte	0x5
+ 2052 0948 8B       		.byte	0x8b
+ 2053 0949 73010000 		.4byte	0x173
+ 2054 094d 05       		.uleb128 0x5
+ 2055 094e 03       		.byte	0x3
+ 2056 094f 00000000 		.4byte	rventa4
+ 2057 0953 16       		.uleb128 0x16
+ 2058 0954 61040000 		.4byte	.LASF102
+ 2059 0958 05       		.byte	0x5
+ 2060 0959 90       		.byte	0x90
+ 2061 095a 81000000 		.4byte	0x81
+ 2062 095e 05       		.uleb128 0x5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 44
+
+
+ 2063 095f 03       		.byte	0x3
+ 2064 0960 00000000 		.4byte	ok_RF
+ 2065 0964 16       		.uleb128 0x16
+ 2066 0965 90020000 		.4byte	.LASF103
+ 2067 0969 05       		.byte	0x5
+ 2068 096a 91       		.byte	0x91
+ 2069 096b 81000000 		.4byte	0x81
+ 2070 096f 05       		.uleb128 0x5
+ 2071 0970 03       		.byte	0x3
+ 2072 0971 00000000 		.4byte	ok_datosRF
+ 2073 0975 06       		.uleb128 0x6
+ 2074 0976 81000000 		.4byte	0x81
+ 2075 097a 85090000 		.4byte	0x985
+ 2076 097e 07       		.uleb128 0x7
+ 2077 097f B6000000 		.4byte	0xb6
+ 2078 0983 C7       		.byte	0xc7
+ 2079 0984 00       		.byte	0
+ 2080 0985 16       		.uleb128 0x16
+ 2081 0986 4E040000 		.4byte	.LASF104
+ 2082 098a 05       		.byte	0x5
+ 2083 098b 92       		.byte	0x92
+ 2084 098c 75090000 		.4byte	0x975
+ 2085 0990 05       		.uleb128 0x5
+ 2086 0991 03       		.byte	0x3
+ 2087 0992 00000000 		.4byte	rf_mod
+ 2088 0996 06       		.uleb128 0x6
+ 2089 0997 81000000 		.4byte	0x81
+ 2090 099b A6090000 		.4byte	0x9a6
+ 2091 099f 07       		.uleb128 0x7
+ 2092 09a0 B6000000 		.4byte	0xb6
+ 2093 09a4 3F       		.byte	0x3f
+ 2094 09a5 00       		.byte	0
+ 2095 09a6 16       		.uleb128 0x16
+ 2096 09a7 BE030000 		.4byte	.LASF105
+ 2097 09ab 05       		.byte	0x5
+ 2098 09ac 97       		.byte	0x97
+ 2099 09ad 96090000 		.4byte	0x996
+ 2100 09b1 05       		.uleb128 0x5
+ 2101 09b2 03       		.byte	0x3
+ 2102 09b3 00000000 		.4byte	buffer_i2c
+ 2103 09b7 16       		.uleb128 0x16
+ 2104 09b8 FE030000 		.4byte	.LASF106
+ 2105 09bc 05       		.byte	0x5
+ 2106 09bd 9C       		.byte	0x9c
+ 2107 09be 81000000 		.4byte	0x81
+ 2108 09c2 05       		.uleb128 0x5
+ 2109 09c3 03       		.byte	0x3
+ 2110 09c4 00000000 		.4byte	crc_total
+ 2111 09c8 16       		.uleb128 0x16
+ 2112 09c9 C3000000 		.4byte	.LASF107
+ 2113 09cd 05       		.byte	0x5
+ 2114 09ce A0       		.byte	0xa0
+ 2115 09cf D2040000 		.4byte	0x4d2
+ 2116 09d3 05       		.uleb128 0x5
+ 2117 09d4 03       		.byte	0x3
+ 2118 09d5 00000000 		.4byte	print1
+ 2119 09d9 16       		.uleb128 0x16
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 45
+
+
+ 2120 09da CA000000 		.4byte	.LASF108
+ 2121 09de 05       		.byte	0x5
+ 2122 09df A1       		.byte	0xa1
+ 2123 09e0 D2040000 		.4byte	0x4d2
+ 2124 09e4 05       		.uleb128 0x5
+ 2125 09e5 03       		.byte	0x3
+ 2126 09e6 00000000 		.4byte	print2
+ 2127 09ea 00       		.byte	0
+ 2128              		.section	.debug_abbrev,"",%progbits
+ 2129              	.Ldebug_abbrev0:
+ 2130 0000 01       		.uleb128 0x1
+ 2131 0001 11       		.uleb128 0x11
+ 2132 0002 01       		.byte	0x1
+ 2133 0003 25       		.uleb128 0x25
+ 2134 0004 0E       		.uleb128 0xe
+ 2135 0005 13       		.uleb128 0x13
+ 2136 0006 0B       		.uleb128 0xb
+ 2137 0007 03       		.uleb128 0x3
+ 2138 0008 0E       		.uleb128 0xe
+ 2139 0009 1B       		.uleb128 0x1b
+ 2140 000a 0E       		.uleb128 0xe
+ 2141 000b 55       		.uleb128 0x55
+ 2142 000c 17       		.uleb128 0x17
+ 2143 000d 11       		.uleb128 0x11
+ 2144 000e 01       		.uleb128 0x1
+ 2145 000f 10       		.uleb128 0x10
+ 2146 0010 17       		.uleb128 0x17
+ 2147 0011 00       		.byte	0
+ 2148 0012 00       		.byte	0
+ 2149 0013 02       		.uleb128 0x2
+ 2150 0014 24       		.uleb128 0x24
+ 2151 0015 00       		.byte	0
+ 2152 0016 0B       		.uleb128 0xb
+ 2153 0017 0B       		.uleb128 0xb
+ 2154 0018 3E       		.uleb128 0x3e
+ 2155 0019 0B       		.uleb128 0xb
+ 2156 001a 03       		.uleb128 0x3
+ 2157 001b 0E       		.uleb128 0xe
+ 2158 001c 00       		.byte	0
+ 2159 001d 00       		.byte	0
+ 2160 001e 03       		.uleb128 0x3
+ 2161 001f 16       		.uleb128 0x16
+ 2162 0020 00       		.byte	0
+ 2163 0021 03       		.uleb128 0x3
+ 2164 0022 0E       		.uleb128 0xe
+ 2165 0023 3A       		.uleb128 0x3a
+ 2166 0024 0B       		.uleb128 0xb
+ 2167 0025 3B       		.uleb128 0x3b
+ 2168 0026 0B       		.uleb128 0xb
+ 2169 0027 49       		.uleb128 0x49
+ 2170 0028 13       		.uleb128 0x13
+ 2171 0029 00       		.byte	0
+ 2172 002a 00       		.byte	0
+ 2173 002b 04       		.uleb128 0x4
+ 2174 002c 24       		.uleb128 0x24
+ 2175 002d 00       		.byte	0
+ 2176 002e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 46
+
+
+ 2177 002f 0B       		.uleb128 0xb
+ 2178 0030 3E       		.uleb128 0x3e
+ 2179 0031 0B       		.uleb128 0xb
+ 2180 0032 03       		.uleb128 0x3
+ 2181 0033 08       		.uleb128 0x8
+ 2182 0034 00       		.byte	0
+ 2183 0035 00       		.byte	0
+ 2184 0036 05       		.uleb128 0x5
+ 2185 0037 35       		.uleb128 0x35
+ 2186 0038 00       		.byte	0
+ 2187 0039 49       		.uleb128 0x49
+ 2188 003a 13       		.uleb128 0x13
+ 2189 003b 00       		.byte	0
+ 2190 003c 00       		.byte	0
+ 2191 003d 06       		.uleb128 0x6
+ 2192 003e 01       		.uleb128 0x1
+ 2193 003f 01       		.byte	0x1
+ 2194 0040 49       		.uleb128 0x49
+ 2195 0041 13       		.uleb128 0x13
+ 2196 0042 01       		.uleb128 0x1
+ 2197 0043 13       		.uleb128 0x13
+ 2198 0044 00       		.byte	0
+ 2199 0045 00       		.byte	0
+ 2200 0046 07       		.uleb128 0x7
+ 2201 0047 21       		.uleb128 0x21
+ 2202 0048 00       		.byte	0
+ 2203 0049 49       		.uleb128 0x49
+ 2204 004a 13       		.uleb128 0x13
+ 2205 004b 2F       		.uleb128 0x2f
+ 2206 004c 0B       		.uleb128 0xb
+ 2207 004d 00       		.byte	0
+ 2208 004e 00       		.byte	0
+ 2209 004f 08       		.uleb128 0x8
+ 2210 0050 13       		.uleb128 0x13
+ 2211 0051 01       		.byte	0x1
+ 2212 0052 03       		.uleb128 0x3
+ 2213 0053 0E       		.uleb128 0xe
+ 2214 0054 0B       		.uleb128 0xb
+ 2215 0055 0B       		.uleb128 0xb
+ 2216 0056 3A       		.uleb128 0x3a
+ 2217 0057 0B       		.uleb128 0xb
+ 2218 0058 3B       		.uleb128 0x3b
+ 2219 0059 0B       		.uleb128 0xb
+ 2220 005a 01       		.uleb128 0x1
+ 2221 005b 13       		.uleb128 0x13
+ 2222 005c 00       		.byte	0
+ 2223 005d 00       		.byte	0
+ 2224 005e 09       		.uleb128 0x9
+ 2225 005f 0D       		.uleb128 0xd
+ 2226 0060 00       		.byte	0
+ 2227 0061 03       		.uleb128 0x3
+ 2228 0062 08       		.uleb128 0x8
+ 2229 0063 3A       		.uleb128 0x3a
+ 2230 0064 0B       		.uleb128 0xb
+ 2231 0065 3B       		.uleb128 0x3b
+ 2232 0066 0B       		.uleb128 0xb
+ 2233 0067 49       		.uleb128 0x49
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 47
+
+
+ 2234 0068 13       		.uleb128 0x13
+ 2235 0069 38       		.uleb128 0x38
+ 2236 006a 0B       		.uleb128 0xb
+ 2237 006b 00       		.byte	0
+ 2238 006c 00       		.byte	0
+ 2239 006d 0A       		.uleb128 0xa
+ 2240 006e 0D       		.uleb128 0xd
+ 2241 006f 00       		.byte	0
+ 2242 0070 03       		.uleb128 0x3
+ 2243 0071 0E       		.uleb128 0xe
+ 2244 0072 3A       		.uleb128 0x3a
+ 2245 0073 0B       		.uleb128 0xb
+ 2246 0074 3B       		.uleb128 0x3b
+ 2247 0075 0B       		.uleb128 0xb
+ 2248 0076 49       		.uleb128 0x49
+ 2249 0077 13       		.uleb128 0x13
+ 2250 0078 38       		.uleb128 0x38
+ 2251 0079 0B       		.uleb128 0xb
+ 2252 007a 00       		.byte	0
+ 2253 007b 00       		.byte	0
+ 2254 007c 0B       		.uleb128 0xb
+ 2255 007d 2E       		.uleb128 0x2e
+ 2256 007e 01       		.byte	0x1
+ 2257 007f 3F       		.uleb128 0x3f
+ 2258 0080 19       		.uleb128 0x19
+ 2259 0081 03       		.uleb128 0x3
+ 2260 0082 0E       		.uleb128 0xe
+ 2261 0083 3A       		.uleb128 0x3a
+ 2262 0084 0B       		.uleb128 0xb
+ 2263 0085 3B       		.uleb128 0x3b
+ 2264 0086 0B       		.uleb128 0xb
+ 2265 0087 49       		.uleb128 0x49
+ 2266 0088 13       		.uleb128 0x13
+ 2267 0089 11       		.uleb128 0x11
+ 2268 008a 01       		.uleb128 0x1
+ 2269 008b 12       		.uleb128 0x12
+ 2270 008c 06       		.uleb128 0x6
+ 2271 008d 40       		.uleb128 0x40
+ 2272 008e 18       		.uleb128 0x18
+ 2273 008f 9642     		.uleb128 0x2116
+ 2274 0091 19       		.uleb128 0x19
+ 2275 0092 01       		.uleb128 0x1
+ 2276 0093 13       		.uleb128 0x13
+ 2277 0094 00       		.byte	0
+ 2278 0095 00       		.byte	0
+ 2279 0096 0C       		.uleb128 0xc
+ 2280 0097 34       		.uleb128 0x34
+ 2281 0098 00       		.byte	0
+ 2282 0099 03       		.uleb128 0x3
+ 2283 009a 0E       		.uleb128 0xe
+ 2284 009b 3A       		.uleb128 0x3a
+ 2285 009c 0B       		.uleb128 0xb
+ 2286 009d 3B       		.uleb128 0x3b
+ 2287 009e 0B       		.uleb128 0xb
+ 2288 009f 49       		.uleb128 0x49
+ 2289 00a0 13       		.uleb128 0x13
+ 2290 00a1 02       		.uleb128 0x2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 48
+
+
+ 2291 00a2 18       		.uleb128 0x18
+ 2292 00a3 00       		.byte	0
+ 2293 00a4 00       		.byte	0
+ 2294 00a5 0D       		.uleb128 0xd
+ 2295 00a6 34       		.uleb128 0x34
+ 2296 00a7 00       		.byte	0
+ 2297 00a8 03       		.uleb128 0x3
+ 2298 00a9 08       		.uleb128 0x8
+ 2299 00aa 3A       		.uleb128 0x3a
+ 2300 00ab 0B       		.uleb128 0xb
+ 2301 00ac 3B       		.uleb128 0x3b
+ 2302 00ad 0B       		.uleb128 0xb
+ 2303 00ae 49       		.uleb128 0x49
+ 2304 00af 13       		.uleb128 0x13
+ 2305 00b0 02       		.uleb128 0x2
+ 2306 00b1 18       		.uleb128 0x18
+ 2307 00b2 00       		.byte	0
+ 2308 00b3 00       		.byte	0
+ 2309 00b4 0E       		.uleb128 0xe
+ 2310 00b5 2E       		.uleb128 0x2e
+ 2311 00b6 01       		.byte	0x1
+ 2312 00b7 3F       		.uleb128 0x3f
+ 2313 00b8 19       		.uleb128 0x19
+ 2314 00b9 03       		.uleb128 0x3
+ 2315 00ba 0E       		.uleb128 0xe
+ 2316 00bb 3A       		.uleb128 0x3a
+ 2317 00bc 0B       		.uleb128 0xb
+ 2318 00bd 3B       		.uleb128 0x3b
+ 2319 00be 0B       		.uleb128 0xb
+ 2320 00bf 27       		.uleb128 0x27
+ 2321 00c0 19       		.uleb128 0x19
+ 2322 00c1 49       		.uleb128 0x49
+ 2323 00c2 13       		.uleb128 0x13
+ 2324 00c3 11       		.uleb128 0x11
+ 2325 00c4 01       		.uleb128 0x1
+ 2326 00c5 12       		.uleb128 0x12
+ 2327 00c6 06       		.uleb128 0x6
+ 2328 00c7 40       		.uleb128 0x40
+ 2329 00c8 18       		.uleb128 0x18
+ 2330 00c9 9642     		.uleb128 0x2116
+ 2331 00cb 19       		.uleb128 0x19
+ 2332 00cc 01       		.uleb128 0x1
+ 2333 00cd 13       		.uleb128 0x13
+ 2334 00ce 00       		.byte	0
+ 2335 00cf 00       		.byte	0
+ 2336 00d0 0F       		.uleb128 0xf
+ 2337 00d1 05       		.uleb128 0x5
+ 2338 00d2 00       		.byte	0
+ 2339 00d3 03       		.uleb128 0x3
+ 2340 00d4 0E       		.uleb128 0xe
+ 2341 00d5 3A       		.uleb128 0x3a
+ 2342 00d6 0B       		.uleb128 0xb
+ 2343 00d7 3B       		.uleb128 0x3b
+ 2344 00d8 0B       		.uleb128 0xb
+ 2345 00d9 49       		.uleb128 0x49
+ 2346 00da 13       		.uleb128 0x13
+ 2347 00db 02       		.uleb128 0x2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 49
+
+
+ 2348 00dc 18       		.uleb128 0x18
+ 2349 00dd 00       		.byte	0
+ 2350 00de 00       		.byte	0
+ 2351 00df 10       		.uleb128 0x10
+ 2352 00e0 0F       		.uleb128 0xf
+ 2353 00e1 00       		.byte	0
+ 2354 00e2 0B       		.uleb128 0xb
+ 2355 00e3 0B       		.uleb128 0xb
+ 2356 00e4 49       		.uleb128 0x49
+ 2357 00e5 13       		.uleb128 0x13
+ 2358 00e6 00       		.byte	0
+ 2359 00e7 00       		.byte	0
+ 2360 00e8 11       		.uleb128 0x11
+ 2361 00e9 2E       		.uleb128 0x2e
+ 2362 00ea 01       		.byte	0x1
+ 2363 00eb 3F       		.uleb128 0x3f
+ 2364 00ec 19       		.uleb128 0x19
+ 2365 00ed 03       		.uleb128 0x3
+ 2366 00ee 0E       		.uleb128 0xe
+ 2367 00ef 3A       		.uleb128 0x3a
+ 2368 00f0 0B       		.uleb128 0xb
+ 2369 00f1 3B       		.uleb128 0x3b
+ 2370 00f2 05       		.uleb128 0x5
+ 2371 00f3 27       		.uleb128 0x27
+ 2372 00f4 19       		.uleb128 0x19
+ 2373 00f5 49       		.uleb128 0x49
+ 2374 00f6 13       		.uleb128 0x13
+ 2375 00f7 11       		.uleb128 0x11
+ 2376 00f8 01       		.uleb128 0x1
+ 2377 00f9 12       		.uleb128 0x12
+ 2378 00fa 06       		.uleb128 0x6
+ 2379 00fb 40       		.uleb128 0x40
+ 2380 00fc 18       		.uleb128 0x18
+ 2381 00fd 9642     		.uleb128 0x2116
+ 2382 00ff 19       		.uleb128 0x19
+ 2383 0100 01       		.uleb128 0x1
+ 2384 0101 13       		.uleb128 0x13
+ 2385 0102 00       		.byte	0
+ 2386 0103 00       		.byte	0
+ 2387 0104 12       		.uleb128 0x12
+ 2388 0105 05       		.uleb128 0x5
+ 2389 0106 00       		.byte	0
+ 2390 0107 03       		.uleb128 0x3
+ 2391 0108 0E       		.uleb128 0xe
+ 2392 0109 3A       		.uleb128 0x3a
+ 2393 010a 0B       		.uleb128 0xb
+ 2394 010b 3B       		.uleb128 0x3b
+ 2395 010c 05       		.uleb128 0x5
+ 2396 010d 49       		.uleb128 0x49
+ 2397 010e 13       		.uleb128 0x13
+ 2398 010f 02       		.uleb128 0x2
+ 2399 0110 18       		.uleb128 0x18
+ 2400 0111 00       		.byte	0
+ 2401 0112 00       		.byte	0
+ 2402 0113 13       		.uleb128 0x13
+ 2403 0114 34       		.uleb128 0x34
+ 2404 0115 00       		.byte	0
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 50
+
+
+ 2405 0116 03       		.uleb128 0x3
+ 2406 0117 0E       		.uleb128 0xe
+ 2407 0118 3A       		.uleb128 0x3a
+ 2408 0119 0B       		.uleb128 0xb
+ 2409 011a 3B       		.uleb128 0x3b
+ 2410 011b 05       		.uleb128 0x5
+ 2411 011c 49       		.uleb128 0x49
+ 2412 011d 13       		.uleb128 0x13
+ 2413 011e 02       		.uleb128 0x2
+ 2414 011f 18       		.uleb128 0x18
+ 2415 0120 00       		.byte	0
+ 2416 0121 00       		.byte	0
+ 2417 0122 14       		.uleb128 0x14
+ 2418 0123 34       		.uleb128 0x34
+ 2419 0124 00       		.byte	0
+ 2420 0125 03       		.uleb128 0x3
+ 2421 0126 08       		.uleb128 0x8
+ 2422 0127 3A       		.uleb128 0x3a
+ 2423 0128 0B       		.uleb128 0xb
+ 2424 0129 3B       		.uleb128 0x3b
+ 2425 012a 05       		.uleb128 0x5
+ 2426 012b 49       		.uleb128 0x49
+ 2427 012c 13       		.uleb128 0x13
+ 2428 012d 02       		.uleb128 0x2
+ 2429 012e 18       		.uleb128 0x18
+ 2430 012f 00       		.byte	0
+ 2431 0130 00       		.byte	0
+ 2432 0131 15       		.uleb128 0x15
+ 2433 0132 34       		.uleb128 0x34
+ 2434 0133 00       		.byte	0
+ 2435 0134 03       		.uleb128 0x3
+ 2436 0135 0E       		.uleb128 0xe
+ 2437 0136 3A       		.uleb128 0x3a
+ 2438 0137 0B       		.uleb128 0xb
+ 2439 0138 3B       		.uleb128 0x3b
+ 2440 0139 05       		.uleb128 0x5
+ 2441 013a 49       		.uleb128 0x49
+ 2442 013b 13       		.uleb128 0x13
+ 2443 013c 3F       		.uleb128 0x3f
+ 2444 013d 19       		.uleb128 0x19
+ 2445 013e 3C       		.uleb128 0x3c
+ 2446 013f 19       		.uleb128 0x19
+ 2447 0140 00       		.byte	0
+ 2448 0141 00       		.byte	0
+ 2449 0142 16       		.uleb128 0x16
+ 2450 0143 34       		.uleb128 0x34
+ 2451 0144 00       		.byte	0
+ 2452 0145 03       		.uleb128 0x3
+ 2453 0146 0E       		.uleb128 0xe
+ 2454 0147 3A       		.uleb128 0x3a
+ 2455 0148 0B       		.uleb128 0xb
+ 2456 0149 3B       		.uleb128 0x3b
+ 2457 014a 0B       		.uleb128 0xb
+ 2458 014b 49       		.uleb128 0x49
+ 2459 014c 13       		.uleb128 0x13
+ 2460 014d 3F       		.uleb128 0x3f
+ 2461 014e 19       		.uleb128 0x19
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 51
+
+
+ 2462 014f 02       		.uleb128 0x2
+ 2463 0150 18       		.uleb128 0x18
+ 2464 0151 00       		.byte	0
+ 2465 0152 00       		.byte	0
+ 2466 0153 17       		.uleb128 0x17
+ 2467 0154 34       		.uleb128 0x34
+ 2468 0155 00       		.byte	0
+ 2469 0156 03       		.uleb128 0x3
+ 2470 0157 08       		.uleb128 0x8
+ 2471 0158 3A       		.uleb128 0x3a
+ 2472 0159 0B       		.uleb128 0xb
+ 2473 015a 3B       		.uleb128 0x3b
+ 2474 015b 0B       		.uleb128 0xb
+ 2475 015c 49       		.uleb128 0x49
+ 2476 015d 13       		.uleb128 0x13
+ 2477 015e 3F       		.uleb128 0x3f
+ 2478 015f 19       		.uleb128 0x19
+ 2479 0160 02       		.uleb128 0x2
+ 2480 0161 18       		.uleb128 0x18
+ 2481 0162 00       		.byte	0
+ 2482 0163 00       		.byte	0
+ 2483 0164 00       		.byte	0
+ 2484              		.section	.debug_aranges,"",%progbits
+ 2485 0000 4C000000 		.4byte	0x4c
+ 2486 0004 0200     		.2byte	0x2
+ 2487 0006 00000000 		.4byte	.Ldebug_info0
+ 2488 000a 04       		.byte	0x4
+ 2489 000b 00       		.byte	0
+ 2490 000c 0000     		.2byte	0
+ 2491 000e 0000     		.2byte	0
+ 2492 0010 00000000 		.4byte	.LFB63
+ 2493 0014 90000000 		.4byte	.LFE63-.LFB63
+ 2494 0018 00000000 		.4byte	.LFB64
+ 2495 001c 90000000 		.4byte	.LFE64-.LFB64
+ 2496 0020 00000000 		.4byte	.LFB65
+ 2497 0024 78000000 		.4byte	.LFE65-.LFB65
+ 2498 0028 00000000 		.4byte	.LFB66
+ 2499 002c 7C000000 		.4byte	.LFE66-.LFB66
+ 2500 0030 00000000 		.4byte	.LFB67
+ 2501 0034 C4000000 		.4byte	.LFE67-.LFB67
+ 2502 0038 00000000 		.4byte	.LFB68
+ 2503 003c E0000000 		.4byte	.LFE68-.LFB68
+ 2504 0040 00000000 		.4byte	.LFB69
+ 2505 0044 72000000 		.4byte	.LFE69-.LFB69
+ 2506 0048 00000000 		.4byte	0
+ 2507 004c 00000000 		.4byte	0
+ 2508              		.section	.debug_ranges,"",%progbits
+ 2509              	.Ldebug_ranges0:
+ 2510 0000 00000000 		.4byte	.LFB63
+ 2511 0004 90000000 		.4byte	.LFE63
+ 2512 0008 00000000 		.4byte	.LFB64
+ 2513 000c 90000000 		.4byte	.LFE64
+ 2514 0010 00000000 		.4byte	.LFB65
+ 2515 0014 78000000 		.4byte	.LFE65
+ 2516 0018 00000000 		.4byte	.LFB66
+ 2517 001c 7C000000 		.4byte	.LFE66
+ 2518 0020 00000000 		.4byte	.LFB67
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 52
+
+
+ 2519 0024 C4000000 		.4byte	.LFE67
+ 2520 0028 00000000 		.4byte	.LFB68
+ 2521 002c E0000000 		.4byte	.LFE68
+ 2522 0030 00000000 		.4byte	.LFB69
+ 2523 0034 72000000 		.4byte	.LFE69
+ 2524 0038 00000000 		.4byte	0
+ 2525 003c 00000000 		.4byte	0
+ 2526              		.section	.debug_line,"",%progbits
+ 2527              	.Ldebug_line0:
+ 2528 0000 B7020000 		.section	.debug_str,"MS",%progbits,1
+ 2528      02005A01 
+ 2528      00000201 
+ 2528      FB0E0D00 
+ 2528      01010101 
+ 2529              	.LASF110:
+ 2530 0000 2E5C4932 		.ascii	".\\I2C.c\000"
+ 2530      432E6300 
+ 2531              	.LASF58:
+ 2532 0008 706F7378 		.ascii	"posx1\000"
+ 2532      3100
+ 2533              	.LASF61:
+ 2534 000e 706F7378 		.ascii	"posx2\000"
+ 2534      3200
+ 2535              	.LASF82:
+ 2536 0014 6E6F6D62 		.ascii	"nombre_pro1\000"
+ 2536      72655F70 
+ 2536      726F3100 
+ 2537              	.LASF55:
+ 2538 0020 636F756E 		.ascii	"count_teclas2\000"
+ 2538      745F7465 
+ 2538      636C6173 
+ 2538      3200
+ 2539              	.LASF85:
+ 2540 002e 76657273 		.ascii	"version\000"
+ 2540      696F6E00 
+ 2541              	.LASF81:
+ 2542 0036 70707578 		.ascii	"ppux10\000"
+ 2542      313000
+ 2543              	.LASF0:
+ 2544 003d 7369676E 		.ascii	"signed char\000"
+ 2544      65642063 
+ 2544      68617200 
+ 2545              	.LASF80:
+ 2546 0049 626C6F71 		.ascii	"bloqueo_LCD\000"
+ 2546      75656F5F 
+ 2546      4C434400 
+ 2547              	.LASF47:
+ 2548 0055 77726974 		.ascii	"write_psoc1\000"
+ 2548      655F7073 
+ 2548      6F633100 
+ 2549              	.LASF2:
+ 2550 0061 73686F72 		.ascii	"short int\000"
+ 2550      7420696E 
+ 2550      7400
+ 2551              	.LASF72:
+ 2552 006b 636F756E 		.ascii	"count_protector\000"
+ 2552      745F7072 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 53
+
+
+ 2552      6F746563 
+ 2552      746F7200 
+ 2553              	.LASF79:
+ 2554 007b 70726F78 		.ascii	"prox_caso\000"
+ 2554      5F636173 
+ 2554      6F00
+ 2555              	.LASF32:
+ 2556 0085 63656475 		.ascii	"cedula\000"
+ 2556      6C6100
+ 2557              	.LASF24:
+ 2558 008c 64696E65 		.ascii	"dinero\000"
+ 2558      726F00
+ 2559              	.LASF66:
+ 2560 0093 666C756A 		.ascii	"flujo_LCD1\000"
+ 2560      6F5F4C43 
+ 2560      443100
+ 2561              	.LASF67:
+ 2562 009e 666C756A 		.ascii	"flujo_LCD2\000"
+ 2562      6F5F4C43 
+ 2562      443200
+ 2563              	.LASF68:
+ 2564 00a9 666C756A 		.ascii	"flujo_LCD3\000"
+ 2564      6F5F4C43 
+ 2564      443300
+ 2565              	.LASF33:
+ 2566 00b4 70617373 		.ascii	"password\000"
+ 2566      776F7264 
+ 2566      00
+ 2567              	.LASF34:
+ 2568 00bd 7475726E 		.ascii	"turno\000"
+ 2568      6F00
+ 2569              	.LASF107:
+ 2570 00c3 7072696E 		.ascii	"print1\000"
+ 2570      743100
+ 2571              	.LASF108:
+ 2572 00ca 7072696E 		.ascii	"print2\000"
+ 2572      743200
+ 2573              	.LASF44:
+ 2574 00d1 76616C6F 		.ascii	"valor\000"
+ 2574      7200
+ 2575              	.LASF40:
+ 2576 00d7 77726974 		.ascii	"write_hora\000"
+ 2576      655F686F 
+ 2576      726100
+ 2577              	.LASF30:
+ 2578 00e2 696D7072 		.ascii	"imprimir\000"
+ 2578      696D6972 
+ 2578      00
+ 2579              	.LASF45:
+ 2580 00eb 6C656572 		.ascii	"leer_eeprom\000"
+ 2580      5F656570 
+ 2580      726F6D00 
+ 2581              	.LASF109:
+ 2582 00f7 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 2582      4320342E 
+ 2582      382E3420 
+ 2582      32303134 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 54
+
+
+ 2582      30353236 
+ 2583 012a 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 2583      20726576 
+ 2583      6973696F 
+ 2583      6E203231 
+ 2583      31333538 
+ 2584 015d 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 2584      66756E63 
+ 2584      74696F6E 
+ 2584      2D736563 
+ 2584      74696F6E 
+ 2585              	.LASF12:
+ 2586 0173 75696E74 		.ascii	"uint16\000"
+ 2586      313600
+ 2587              	.LASF90:
+ 2588 017a 6E6F6D62 		.ascii	"nombre\000"
+ 2588      726500
+ 2589              	.LASF27:
+ 2590 0181 6D616E67 		.ascii	"manguera\000"
+ 2590      75657261 
+ 2590      00
+ 2591              	.LASF11:
+ 2592 018a 75696E74 		.ascii	"uint8\000"
+ 2592      3800
+ 2593              	.LASF59:
+ 2594 0190 706F7379 		.ascii	"posy1\000"
+ 2594      3100
+ 2595              	.LASF62:
+ 2596 0196 706F7379 		.ascii	"posy2\000"
+ 2596      3200
+ 2597              	.LASF21:
+ 2598 019c 73757274 		.ascii	"surtidor\000"
+ 2598      69646F72 
+ 2598      00
+ 2599              	.LASF86:
+ 2600 01a5 6C61646F 		.ascii	"lado1\000"
+ 2600      3100
+ 2601              	.LASF13:
+ 2602 01ab 666C6F61 		.ascii	"float\000"
+ 2602      7400
+ 2603              	.LASF88:
+ 2604 01b1 6C61646F 		.ascii	"lado3\000"
+ 2604      3300
+ 2605              	.LASF89:
+ 2606 01b7 6C61646F 		.ascii	"lado4\000"
+ 2606      3400
+ 2607              	.LASF6:
+ 2608 01bd 6C6F6E67 		.ascii	"long long int\000"
+ 2608      206C6F6E 
+ 2608      6720696E 
+ 2608      7400
+ 2609              	.LASF43:
+ 2610 01cb 70616765 		.ascii	"page\000"
+ 2610      00
+ 2611              	.LASF4:
+ 2612 01d0 6C6F6E67 		.ascii	"long int\000"
+ 2612      20696E74 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 55
+
+
+ 2612      00
+ 2613              	.LASF16:
+ 2614 01d9 73697A65 		.ascii	"sizetype\000"
+ 2614      74797065 
+ 2614      00
+ 2615              	.LASF10:
+ 2616 01e2 696E7433 		.ascii	"int32_t\000"
+ 2616      325F7400 
+ 2617              	.LASF69:
+ 2618 01ea 666C756A 		.ascii	"flujo_LCD4\000"
+ 2618      6F5F4C43 
+ 2618      443400
+ 2619              	.LASF18:
+ 2620 01f5 746F7461 		.ascii	"totales\000"
+ 2620      6C657300 
+ 2621              	.LASF84:
+ 2622 01fd 6E6F6D62 		.ascii	"nombre_pro3\000"
+ 2622      72655F70 
+ 2622      726F3300 
+ 2623              	.LASF73:
+ 2624 0209 636F756E 		.ascii	"count_protector2\000"
+ 2624      745F7072 
+ 2624      6F746563 
+ 2624      746F7232 
+ 2624      00
+ 2625              	.LASF37:
+ 2626 021a 6C656572 		.ascii	"leer_hora\000"
+ 2626      5F686F72 
+ 2626      6100
+ 2627              	.LASF1:
+ 2628 0224 756E7369 		.ascii	"unsigned char\000"
+ 2628      676E6564 
+ 2628      20636861 
+ 2628      7200
+ 2629              	.LASF54:
+ 2630 0232 69645F74 		.ascii	"id_teclado1\000"
+ 2630      65636C61 
+ 2630      646F3100 
+ 2631              	.LASF23:
+ 2632 023e 706F7369 		.ascii	"posicion\000"
+ 2632      63696F6E 
+ 2632      00
+ 2633              	.LASF25:
+ 2634 0247 766F6C75 		.ascii	"volumen\000"
+ 2634      6D656E00 
+ 2635              	.LASF75:
+ 2636 024f 696D6167 		.ascii	"imagen_grado1\000"
+ 2636      656E5F67 
+ 2636      7261646F 
+ 2636      3100
+ 2637              	.LASF76:
+ 2638 025d 696D6167 		.ascii	"imagen_grado2\000"
+ 2638      656E5F67 
+ 2638      7261646F 
+ 2638      3200
+ 2639              	.LASF7:
+ 2640 026b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 56
+
+
+ 2640      206C6F6E 
+ 2640      6720756E 
+ 2640      7369676E 
+ 2640      65642069 
+ 2641              	.LASF78:
+ 2642 0282 696D6167 		.ascii	"imagen_grado4\000"
+ 2642      656E5F67 
+ 2642      7261646F 
+ 2642      3400
+ 2643              	.LASF103:
+ 2644 0290 6F6B5F64 		.ascii	"ok_datosRF\000"
+ 2644      61746F73 
+ 2644      524600
+ 2645              	.LASF35:
+ 2646 029b 6175746F 		.ascii	"autorizado\000"
+ 2646      72697A61 
+ 2646      646F00
+ 2647              	.LASF8:
+ 2648 02a6 756E7369 		.ascii	"unsigned int\000"
+ 2648      676E6564 
+ 2648      20696E74 
+ 2648      00
+ 2649              	.LASF42:
+ 2650 02b3 77726974 		.ascii	"write_eeprom\000"
+ 2650      655F6565 
+ 2650      70726F6D 
+ 2650      00
+ 2651              	.LASF63:
+ 2652 02c0 73697A65 		.ascii	"sizeletra2\000"
+ 2652      6C657472 
+ 2652      613200
+ 2653              	.LASF93:
+ 2654 02cb 6C656D61 		.ascii	"lema1\000"
+ 2654      3100
+ 2655              	.LASF94:
+ 2656 02d1 6C656D61 		.ascii	"lema2\000"
+ 2656      3200
+ 2657              	.LASF97:
+ 2658 02d7 686F7261 		.ascii	"hora\000"
+ 2658      00
+ 2659              	.LASF26:
+ 2660 02dc 70726F64 		.ascii	"producto\000"
+ 2660      7563746F 
+ 2660      00
+ 2661              	.LASF70:
+ 2662 02e5 42756666 		.ascii	"Buffer_LCD1\000"
+ 2662      65725F4C 
+ 2662      43443100 
+ 2663              	.LASF71:
+ 2664 02f1 42756666 		.ascii	"Buffer_LCD2\000"
+ 2664      65725F4C 
+ 2664      43443200 
+ 2665              	.LASF3:
+ 2666 02fd 73686F72 		.ascii	"short unsigned int\000"
+ 2666      7420756E 
+ 2666      7369676E 
+ 2666      65642069 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 57
+
+
+ 2666      6E7400
+ 2667              	.LASF19:
+ 2668 0310 67726164 		.ascii	"grado\000"
+ 2668      6F00
+ 2669              	.LASF36:
+ 2670 0316 73746174 		.ascii	"status\000"
+ 2670      757300
+ 2671              	.LASF64:
+ 2672 031d 7465636C 		.ascii	"teclas1\000"
+ 2672      61733100 
+ 2673              	.LASF65:
+ 2674 0325 7465636C 		.ascii	"teclas2\000"
+ 2674      61733200 
+ 2675              	.LASF15:
+ 2676 032d 63686172 		.ascii	"char\000"
+ 2676      00
+ 2677              	.LASF49:
+ 2678 0332 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2678      52784275 
+ 2678      66666572 
+ 2678      00
+ 2679              	.LASF98:
+ 2680 033f 7276656E 		.ascii	"rventa1\000"
+ 2680      74613100 
+ 2681              	.LASF99:
+ 2682 0347 7276656E 		.ascii	"rventa2\000"
+ 2682      74613200 
+ 2683              	.LASF100:
+ 2684 034f 7276656E 		.ascii	"rventa3\000"
+ 2684      74613300 
+ 2685              	.LASF101:
+ 2686 0357 7276656E 		.ascii	"rventa4\000"
+ 2686      74613400 
+ 2687              	.LASF50:
+ 2688 035f 636F756E 		.ascii	"count_teclas1\000"
+ 2688      745F7465 
+ 2688      636C6173 
+ 2688      3100
+ 2689              	.LASF9:
+ 2690 036d 5F5F696E 		.ascii	"__int32_t\000"
+ 2690      7433325F 
+ 2690      7400
+ 2691              	.LASF96:
+ 2692 0377 66656368 		.ascii	"fecha\000"
+ 2692      6100
+ 2693              	.LASF87:
+ 2694 037d 6C61646F 		.ascii	"lado2\000"
+ 2694      3200
+ 2695              	.LASF111:
+ 2696 0383 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prime 2.0\\MUX\\MU"
+ 2696      73657273 
+ 2696      5C526563 
+ 2696      65706369 
+ 2696      6F6E5C44 
+ 2697 03b0 585F5072 		.ascii	"X_Prime.cydsn\000"
+ 2697      696D652E 
+ 2697      63796473 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 58
+
+
+ 2697      6E00
+ 2698              	.LASF105:
+ 2699 03be 62756666 		.ascii	"buffer_i2c\000"
+ 2699      65725F69 
+ 2699      326300
+ 2700              	.LASF95:
+ 2701 03c9 69645F6C 		.ascii	"id_logo\000"
+ 2701      6F676F00 
+ 2702              	.LASF20:
+ 2703 03d1 6D616E67 		.ascii	"mangueras\000"
+ 2703      75657261 
+ 2703      7300
+ 2704              	.LASF92:
+ 2705 03db 64697265 		.ascii	"direccion\000"
+ 2705      6363696F 
+ 2705      6E00
+ 2706              	.LASF5:
+ 2707 03e5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2707      20756E73 
+ 2707      69676E65 
+ 2707      6420696E 
+ 2707      7400
+ 2708              	.LASF22:
+ 2709 03f7 72656369 		.ascii	"recibo\000"
+ 2709      626F00
+ 2710              	.LASF106:
+ 2711 03fe 6372635F 		.ascii	"crc_total\000"
+ 2711      746F7461 
+ 2711      6C00
+ 2712              	.LASF39:
+ 2713 0408 6461746F 		.ascii	"dato\000"
+ 2713      00
+ 2714              	.LASF38:
+ 2715 040d 6C656572 		.ascii	"leer_fecha\000"
+ 2715      5F666563 
+ 2715      686100
+ 2716              	.LASF46:
+ 2717 0418 73697A65 		.ascii	"size\000"
+ 2717      00
+ 2718              	.LASF28:
+ 2719 041d 70726573 		.ascii	"preset\000"
+ 2719      657400
+ 2720              	.LASF53:
+ 2721 0424 69645F63 		.ascii	"id_coma1\000"
+ 2721      6F6D6131 
+ 2721      00
+ 2722              	.LASF56:
+ 2723 042d 69645F63 		.ascii	"id_coma2\000"
+ 2723      6F6D6132 
+ 2723      00
+ 2724              	.LASF83:
+ 2725 0436 6E6F6D62 		.ascii	"nombre_pro2\000"
+ 2725      72655F70 
+ 2725      726F3200 
+ 2726              	.LASF57:
+ 2727 0442 69645F74 		.ascii	"id_teclado2\000"
+ 2727      65636C61 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccRU2GKu.s 			page 59
+
+
+ 2727      646F3200 
+ 2728              	.LASF104:
+ 2729 044e 72665F6D 		.ascii	"rf_mod\000"
+ 2729      6F6400
+ 2730              	.LASF41:
+ 2731 0455 77726974 		.ascii	"write_fecha\000"
+ 2731      655F6665 
+ 2731      63686100 
+ 2732              	.LASF102:
+ 2733 0461 6F6B5F52 		.ascii	"ok_RF\000"
+ 2733      4600
+ 2734              	.LASF31:
+ 2735 0467 7469706F 		.ascii	"tipo_venta\000"
+ 2735      5F76656E 
+ 2735      746100
+ 2736              	.LASF29:
+ 2737 0472 706C6163 		.ascii	"placa\000"
+ 2737      6100
+ 2738              	.LASF14:
+ 2739 0478 646F7562 		.ascii	"double\000"
+ 2739      6C6500
+ 2740              	.LASF91:
+ 2741 047f 74656C65 		.ascii	"telefono\000"
+ 2741      666F6E6F 
+ 2741      00
+ 2742              	.LASF74:
+ 2743 0488 70617373 		.ascii	"password_lcd\000"
+ 2743      776F7264 
+ 2743      5F6C6364 
+ 2743      00
+ 2744              	.LASF17:
+ 2745 0495 65737461 		.ascii	"estado\000"
+ 2745      646F00
+ 2746              	.LASF60:
+ 2747 049c 73697A65 		.ascii	"sizeletra1\000"
+ 2747      6C657472 
+ 2747      613100
+ 2748              	.LASF48:
+ 2749 04a7 70756572 		.ascii	"puerto\000"
+ 2749      746F00
+ 2750              	.LASF51:
+ 2751 04ae 636F6D61 		.ascii	"comas1\000"
+ 2751      733100
+ 2752              	.LASF52:
+ 2753 04b5 636F6D61 		.ascii	"comas2\000"
+ 2753      733200
+ 2754              	.LASF77:
+ 2755 04bc 696D6167 		.ascii	"imagen_grado3\000"
+ 2755      656E5F67 
+ 2755      7261646F 
+ 2755      3300
+ 2756              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
