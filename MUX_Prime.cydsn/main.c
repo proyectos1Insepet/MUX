@@ -1973,7 +1973,7 @@ void polling_rf(void){
 										estado_lcd2=0;	
 										if((lado2.estado==25)||(lado2.estado==27)){
 											set_imagen(2,46);
-											estado_pos[1]=0;
+											estado_pos[1]=0; //Duda de reinicio
 										}
 										lado2.estado=1;											
 									}									
@@ -2015,7 +2015,7 @@ void polling_rf(void){
 										estado_lcd2=0;
 										if((lado4.estado==25)||(lado4.estado==27)){
 											set_imagen(2,46);
-											estado_pos[3]=0;
+											estado_pos[3]=0; //intercambio pos2?
 										}
 										lado4.estado=1;											
 									}									
@@ -3597,7 +3597,7 @@ void polling_pos1(void){
 					  }					 
 					  if(rventa1.autorizado=='1'){
 	                      flujo_LCD1=16;                                
-	                      set_imagen(1,18);
+	                      set_imagen(1,18);     //Esperando ID
 						  rventa1.tipo_venta=1;	
 					  }
 					  else if (rventa1.autorizado=='0'){
@@ -4132,7 +4132,7 @@ void polling_pos1(void){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
                 switch(LCD_1_rxBuffer[3]){
                     case 0x3B:
-                     flujo_LCD1=11;
+                     flujo_LCD1=0;      // presiona cancelar
                      set_imagen(1,46);  //Cambio a imagen de pos a pos b
                     break; 
                 }
@@ -5510,7 +5510,7 @@ void polling_pos2(void){
             if((LCD_2_rxBuffer[0]==0xAA) && (LCD_2_rxBuffer[6]==0xC3) && (LCD_2_rxBuffer[7]==0x3C)){
                 switch(LCD_2_rxBuffer[3]){
                     case 0x3B:
-                     flujo_LCD2=11;
+                     flujo_LCD2=0;    //presiona cancelar
                      set_imagen(2,46);  //Cambio a imagen de pos a pos b
                     break; 
                 }
@@ -6312,15 +6312,15 @@ void polling_pos3(void){
             //CyDelay(100);            
             LCD_1_ClearRxBuffer();
          }
-		 if((count_protector>=30)&&(rventa3.tipo_venta==0)&&(id_teclado1=2)){
-			count_teclas1=0;
-			teclas1=7;
-			posx1=4;
-			posy1=3;
-			sizeletra1=1;				
-			set_imagen(1,10);
-	        flujo_LCD3=13;
-		 }		
+//		 if((count_protector>=30)&&(rventa3.tipo_venta==0)&&(id_teclado1=2)){
+//			count_teclas1=0;
+//			teclas1=7;
+//			posx1=4;
+//			posy1=3;
+//			sizeletra1=1;				
+//			set_imagen(1,10);
+//	        flujo_LCD3=13;
+//		 }		
         break;
         
         case 3:  
@@ -6883,7 +6883,7 @@ void polling_pos3(void){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
                 switch(LCD_1_rxBuffer[3]){
                     case 0x3B:
-                     flujo_LCD3=11;
+                     flujo_LCD3=0;
                      set_imagen(1,46); //Cambio de imagen de pos a pos b  
                     break; 
                 }
@@ -7059,9 +7059,9 @@ void polling_pos4(void){
 			rventa4.autorizado=0;			
 			PC_Start();
 		 }		
-         /*if(LCD_2_GetRxBufferSize()==8){ 
+         /*if(LCD_2_GetRxBufferSize()==8){ */
              isr_4_Stop(); 
-             Timer_Animacion2_Stop(); */
+             Timer_Animacion2_Stop(); 
 	         flujo_LCD4=3;
 	         set_imagen(2,4);
 			 CyDelay(100);
@@ -7239,16 +7239,16 @@ void polling_pos4(void){
             //CyDelay(100);            
             LCD_2_ClearRxBuffer();
          }
-		 if((count_protector2>=30)&&(rventa4.tipo_venta==0)&&(id_teclado2=2)){
-			count_teclas2=0;
-			teclas2=7;
-			posx2=4;
-			posy2=3;
-			sizeletra2=1;				
-			set_imagen(2,10);
-	        flujo_LCD4=13;
-            count_protector2=0;  //Añadir contador
-		 }		
+//		 if((count_protector2>=30)&&(rventa4.tipo_venta==0)&&(id_teclado2=2)){
+//			count_teclas2=0;
+//			teclas2=7;
+//			posx2=4;
+//			posy2=3;
+//			sizeletra2=1;				//Error de entrada
+//			set_imagen(2,10);
+//	        flujo_LCD4=13;
+//            //count_protector2=0;  //Añadir contador
+//		 }		
         break;
         
         case 3:  
@@ -7428,7 +7428,7 @@ void polling_pos4(void){
             if((LCD_2_rxBuffer[0]==0xAA) && (LCD_2_rxBuffer[6]==0xC3) && (LCD_2_rxBuffer[7]==0x3C)){
                 if(LCD_2_rxBuffer[3]==0x7E){					//Cancel
 					flujo_LCD4=0;
-                    estado_pos[1]=0;
+                    estado_pos[3]=0;
 					set_imagen(2,46);
 					estado_lcd2=0;		   //añadir parte de inicialización
                 }												
@@ -7811,7 +7811,7 @@ void polling_pos4(void){
             if((LCD_2_rxBuffer[0]==0xAA) && (LCD_2_rxBuffer[6]==0xC3) && (LCD_2_rxBuffer[7]==0x3C)){
                 switch(LCD_2_rxBuffer[3]){
                     case 0x3B:
-                     flujo_LCD4=11;
+                     flujo_LCD4=0;    //presiona cancelar
                      set_imagen(2,46);  //Cambio a imagen de pos a pos b
                     break; 
                 }

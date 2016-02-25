@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
   55              		.comm	lado2,93,4
   56              		.comm	lado3,93,4
   57              		.comm	lado4,93,4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 2
 
 
   58              		.comm	nombre,33,4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  102              		.size	msn_lecact, 15
  103              	msn_lecact:
  104 0034 4C656374 		.ascii	"Lectura Actual:"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 3
 
 
  104      75726120 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
   23:.\Protocolo.c **** *
   24:.\Protocolo.c **** * Filename      : Protocolo.c
   25:.\Protocolo.c **** * Version       : V1.00
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 4
 
 
   26:.\Protocolo.c **** * Programmer(s) : 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  140 000a 0122     		movs	r2, #1
  141 000c 1A70     		strb	r2, [r3]
   66:.\Protocolo.c **** }
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 5
 
 
  142              		.loc 1 66 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  174 000a FFF7FEFF 		bl	Surtidor_ClearRxBuffer
   89:.\Protocolo.c ****     Surtidor_PutChar(dir);
  175              		.loc 1 89 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 6
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 6
 
 
  176 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  216 0054 0346     		mov	r3, r0
  217 0056 FB73     		strb	r3, [r7, #15]
  103:.\Protocolo.c **** 	if((estado&0x0F)==dir){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 7
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 7
 
 
  218              		.loc 1 103 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  259              	.LFE64:
  260              		.size	get_estado, .-get_estado
  261              		.section	.text.ver_pos,"ax",%progbits
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 8
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 8
 
 
  262              		.align	2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  293              		.loc 1 139 0
  294 0018 334B     		ldr	r3, .L21+12
  295 001a FF22     		movs	r2, #255
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 9
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 9
 
 
  296 001c 1A70     		strb	r2, [r3]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  339 0062 1F4B     		ldr	r3, .L21+4
  340 0064 1B78     		ldrb	r3, [r3]
  341 0066 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 10
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 10
 
 
  342 0068 FF2B     		cmp	r3, #255
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  160:.\Protocolo.c **** 		}
  161:.\Protocolo.c **** 	}
  162:.\Protocolo.c **** 	if((lado1.dir!=0xFF)&&(lado2.dir!=0xFF)&&(lado3.dir!=0xFF)&&(lado4.dir!=0xFF)){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 11
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 11
 
 
  385              		.loc 1 162 0 is_stmt 1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  433              		.thumb
  434              		.thumb_func
  435              		.type	ver_error, %function
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 12
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 12
 
 
  436              	ver_error:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  467 0028 1B09     		lsrs	r3, r3, #4
  468 002a FB73     		strb	r3, [r7, #15]
  192:.\Protocolo.c ****        Surtidor_ClearRxBuffer();
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 13
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 13
 
 
  469              		.loc 1 192 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  500              		.loc 1 215 0
  501              		.cfi_startproc
  502              		@ args = 0, pretend = 0, frame = 40
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 14
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 14
 
 
  503              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  548              		.loc 1 224 0
  549 0046 FFF7FEFF 		bl	isr_1_Stop
  225:.\Protocolo.c **** 			Timer_RxSurtidor_Stop();
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 15
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 15
 
 
  550              		.loc 1 225 0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  592 009e FFF7FEFF 		bl	Surtidor_PutChar
  235:.\Protocolo.c ****         for(x=0;x<=8;x++){
  593              		.loc 1 235 0 discriminator 2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 16
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 16
 
 
  594 00a2 97F82730 		ldrb	r3, [r7, #39]	@ zero_extendqisi2
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  249:.\Protocolo.c **** 		isr_1_Stop();
  634              		.loc 1 249 0
  635 00e8 FFF7FEFF 		bl	isr_1_Stop
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 17
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 17
 
 
  250:.\Protocolo.c **** 		Timer_RxSurtidor_Stop();		
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  681 014c 05D0     		beq	.L39
  682 014e B12B     		cmp	r3, #177
  683 0150 05D1     		bne	.L42
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 18
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 18
 
 
  257:.\Protocolo.c ****                 case 0xB1:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  716 0170 00000000 		.word	.LC0
  717 0174 00000000 		.word	Rx_Surtidor
  718 0178 00000000 		.word	rx_timeout
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 19
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 19
 
 
  719              		.cfi_endproc
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  299:.\Protocolo.c **** }
  753              		.loc 1 299 0
  754 001e 0837     		adds	r7, r7, #8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 20
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 20
 
 
  755 0020 BD46     		mov	sp, r7
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  788 0014 DBB2     		uxtb	r3, r3
  789 0016 1846     		mov	r0, r3
  790 0018 FFF7FEFF 		bl	Surtidor_PutChar
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 21
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 21
 
 
  321:.\Protocolo.c ****     CyDelay(350);
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  839              		.loc 1 326 0
  840 0082 0023     		movs	r3, #0
  841 0084 FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 22
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 22
 
 
  842 0086 0EE0     		b	.L50
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  888 00d0 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  889 00d2 052B     		cmp	r3, #5
  890 00d4 EDD9     		bls	.L53
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 23
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 23
 
 
  331:.\Protocolo.c **** 				}			
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  338:.\Protocolo.c **** 				for(x=0;x<=3;x++){
  936              		.loc 1 338 0
  937 0122 0023     		movs	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 24
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 24
 
 
  938 0124 FB73     		strb	r3, [r7, #15]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  984              		.loc 1 341 0 is_stmt 0 discriminator 1
  985 0170 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  986 0172 052B     		cmp	r3, #5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 25
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 25
 
 
  987 0174 EDD9     		bls	.L61
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1032 01c0 5A76     		strb	r2, [r3, #25]
  350:.\Protocolo.c **** 				for(x=0;x<=3;x++){
  1033              		.loc 1 350 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 26
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 26
 
 
  1034 01c2 0023     		movs	r3, #0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  353:.\Protocolo.c **** 				for(x=0;x<=5;x++){
  1081              		.loc 1 353 0 is_stmt 0 discriminator 1
  1082 0210 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 27
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 27
 
 
  1083 0212 052B     		cmp	r3, #5
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1128 025e 204B     		ldr	r3, .L108+36
  1129 0260 5A76     		strb	r2, [r3, #25]
  362:.\Protocolo.c **** 				for(x=0;x<=3;x++){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 28
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 28
 
 
  1130              		.loc 1 362 0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1177              	.L73:
  365:.\Protocolo.c **** 				for(x=0;x<=5;x++){
  1178              		.loc 1 365 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 29
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 29
 
 
  1179 02b0 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1225              	.L48:
  373:.\Protocolo.c **** 		}
  374:.\Protocolo.c **** 		else{
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 30
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 30
 
 
  375:.\Protocolo.c **** 			return 0;
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1273 036a 894B     		ldr	r3, .L110+16
  1274 036c 5A76     		strb	r2, [r3, #25]
  382:.\Protocolo.c **** 				for(x=0;x<=5;x++){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 31
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 31
 
 
  1275              		.loc 1 382 0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1322              	.L83:
  385:.\Protocolo.c **** 				for(x=0;x<=7;x++){
  1323              		.loc 1 385 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 32
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 32
 
 
  1324 03bc FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1369 0408 DAB2     		uxtb	r2, r3
  1370 040a 634B     		ldr	r3, .L110+24
  1371 040c 5A76     		strb	r2, [r3, #25]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 33
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 33
 
 
  394:.\Protocolo.c **** 				for(x=0;x<=5;x++){
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1418 045a FB73     		strb	r3, [r7, #15]
  1419              	.L91:
  397:.\Protocolo.c **** 				for(x=0;x<=7;x++){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 34
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 34
 
 
  1420              		.loc 1 397 0 is_stmt 0 discriminator 1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1465 04a6 0133     		adds	r3, r3, #1
  1466 04a8 DAB2     		uxtb	r2, r3
  1467 04aa 3D4B     		ldr	r3, .L110+32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 35
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 35
 
 
  1468 04ac 5A76     		strb	r2, [r3, #25]
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1514 04f8 0133     		adds	r3, r3, #1
  1515 04fa FB73     		strb	r3, [r7, #15]
  1516              	.L98:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 36
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 36
 
 
  409:.\Protocolo.c **** 				for(x=0;x<=7;x++){
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1561 0544 DBB2     		uxtb	r3, r3
  1562 0546 0133     		adds	r3, r3, #1
  1563 0548 DAB2     		uxtb	r2, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 37
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 37
 
 
  1564 054a 0E4B     		ldr	r3, .L110+4
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1611 05a8 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  1612 05aa FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
  1613 05ac 1332     		adds	r2, r2, #19
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 38
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 38
 
 
  1614 05ae 1649     		ldr	r1, .L112
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1658              		.loc 1 428 0 is_stmt 1
  1659 05f6 0123     		movs	r3, #1
  1660 05f8 02E0     		b	.L77
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 39
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 39
 
 
  1661              	.L79:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  453:.\Protocolo.c **** uint8 programar(uint8 dir, uint8 grado, uint8 *valor, uint8 preset){
  1691              		.loc 1 453 0
  1692              		.cfi_startproc
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 40
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 40
 
 
  1693              		@ args = 0, pretend = 0, frame = 32
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1741 0048 052B     		cmp	r3, #5
  1742 004a 04D0     		beq	.L116
  1743              		.loc 1 459 0 is_stmt 0 discriminator 2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 41
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 41
 
 
  1744 004c B04B     		ldr	r3, .L158
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1789 008c DBB2     		uxtb	r3, r3
  1790 008e 072B     		cmp	r3, #7
  1791 0090 04D1     		bne	.L120
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 42
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 42
 
 
  1792              		.loc 1 468 0 is_stmt 0 discriminator 1
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1834 00ca CFE3     		b	.L157
  1835              	.L124:
  479:.\Protocolo.c **** 	}
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 43
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 43
 
 
  480:.\Protocolo.c **** 	if(version[1]!=7){		
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1881 0120 FB73     		strb	r3, [r7, #15]
  489:.\Protocolo.c **** 		buffer[8]=(valor[4]|0xE0);
  1882              		.loc 1 489 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 44
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 44
 
 
  1883 0122 3B68     		ldr	r3, [r7]
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1930 017e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1931 0180 63F01F03 		orn	r3, r3, #31
  1932 0184 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 45
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 45
 
 
  1933 0186 FB73     		strb	r3, [r7, #15]
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  1979 01de DBB2     		uxtb	r3, r3
  1980 01e0 FB73     		strb	r3, [r7, #15]
  505:.\Protocolo.c **** 				buffer[8]=(valor[5]|0xE0);
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 46
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 46
 
 
  1981              		.loc 1 505 0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2027 0236 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  2028 0238 63F01F03 		orn	r3, r3, #31
  2029 023c DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 47
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 47
 
 
  2030 023e 3B74     		strb	r3, [r7, #16]
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2075 0290 DBB2     		uxtb	r3, r3
  2076 0292 7B74     		strb	r3, [r7, #17]
  523:.\Protocolo.c **** 				buffer[10]=(valor[4]|0xE0);
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 48
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 48
 
 
  2077              		.loc 1 523 0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2121 02de 03F00F03 		and	r3, r3, #15
  2122 02e2 DBB2     		uxtb	r3, r3
  2123 02e4 63F01F03 		orn	r3, r3, #31
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 49
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 49
 
 
  2124 02e8 DBB2     		uxtb	r3, r3
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  537:.\Protocolo.c **** 			for(i=0;i<=10;i++){
  2170              		.loc 1 537 0 is_stmt 0 discriminator 1
  2171 0334 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 50
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 50
 
 
  2172 0336 0A2B     		cmp	r3, #10
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2215              		.loc 1 549 0
  2216 0382 3B68     		ldr	r3, [r7]
  2217 0384 0233     		adds	r3, r3, #2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 51
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 51
 
 
  2218 0386 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2264 03de 0233     		adds	r3, r3, #2
  2265 03e0 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  2266 03e2 63F01F03 		orn	r3, r3, #31
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 52
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 52
 
 
  2267 03e6 DBB2     		uxtb	r3, r3
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2312              		.loc 1 566 0
  2313 043a 3B68     		ldr	r3, [r7]
  2314 043c 0433     		adds	r3, r3, #4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 53
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 53
 
 
  2315 043e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2359              		.loc 1 576 0
  2360 048e FB23     		movs	r3, #251
  2361 0490 3B75     		strb	r3, [r7, #20]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 54
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 54
 
 
  577:.\Protocolo.c **** 			buffer[13]=0;
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2407              	.L126:
  584:.\Protocolo.c **** 		}	
  585:.\Protocolo.c **** 	}	
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 55
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 55
 
 
  586:.\Protocolo.c **** 	if(version[1]==7){
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2453 0536 FB73     		strb	r3, [r7, #15]
  595:.\Protocolo.c **** 		buffer[8]=(valor[4]|0xE0);
  2454              		.loc 1 595 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 56
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 56
 
 
  2455 0538 3B68     		ldr	r3, [r7]
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2501 058c 13F8183C 		ldrb	r3, [r3, #-24]	@ zero_extendqisi2
  2502 0590 03F00F03 		and	r3, r3, #15
  2503 0594 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 57
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 57
 
 
  2504 0596 1344     		add	r3, r3, r2
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  611:.\Protocolo.c **** 			buffer[6]=0xF8;
  2549              		.loc 1 611 0
  2550 05e6 F823     		movs	r3, #248
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 58
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 58
 
 
  2551 05e8 BB73     		strb	r3, [r7, #14]
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  619:.\Protocolo.c **** 				buffer[13]=0xE0;	
  2598              		.loc 1 619 0
  2599 0644 E023     		movs	r3, #224
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 59
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 59
 
 
  2600 0646 7B75     		strb	r3, [r7, #21]
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2645 0698 DBB2     		uxtb	r3, r3
  2646 069a 3B75     		strb	r3, [r7, #20]
  629:.\Protocolo.c **** 				buffer[13]=(valor[7]|0xE0);	
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 60
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 60
 
 
  2647              		.loc 1 629 0
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2692 06ea 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  2693 06ec 63F01F03 		orn	r3, r3, #31
  2694 06f0 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 61
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 61
 
 
  2695 06f2 3B75     		strb	r3, [r7, #20]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2739 073e 3B68     		ldr	r3, [r7]
  2740 0740 0333     		adds	r3, r3, #3
  2741 0742 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 62
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 62
 
 
  2742 0744 63F01F03 		orn	r3, r3, #31
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2787              		.loc 1 654 0 is_stmt 0 discriminator 1
  2788 0790 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
  2789 0792 0F2B     		cmp	r3, #15
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 63
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 63
 
 
  2790 0794 ECD9     		bls	.L150
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2831              	.L152:
  669:.\Protocolo.c **** 		if(rx_timeout==1){
  2832              		.loc 1 669 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 64
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 64
 
 
  2833 07e0 254B     		ldr	r3, .L162+4
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2874              	.L155:
  682:.\Protocolo.c ****            	Surtidor_PutChar(buffer[i]);
  2875              		.loc 1 682 0 discriminator 2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 65
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 65
 
 
  2876 082e 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2915 086e 2037     		adds	r7, r7, #32
  2916 0870 BD46     		mov	sp, r7
  2917              		@ sp needed
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 66
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 66
 
 
  2918 0872 80BD     		pop	{r7, pc}
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  2953 0010 0023     		movs	r3, #0
  2954 0012 3B73     		strb	r3, [r7, #12]
  2955 0014 0023     		movs	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 67
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 67
 
 
  2956 0016 7B73     		strb	r3, [r7, #13]
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3004 006a DBB2     		uxtb	r3, r3
  3005 006c DBB2     		uxtb	r3, r3
  3006 006e 63F01F03 		orn	r3, r3, #31
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 68
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 68
 
 
  3007 0072 DBB2     		uxtb	r3, r3
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3052 00be FA7D     		ldrb	r2, [r7, #23]	@ zero_extendqisi2
  3053 00c0 BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
  3054 00c2 07F12001 		add	r1, r7, #32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 69
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 69
 
 
  3055 00c6 0B44     		add	r3, r3, r1
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3099 0112 E323     		movs	r3, #227
  3100 0114 7B73     		strb	r3, [r7, #13]
  736:.\Protocolo.c **** 		buffer[2]=0xF4;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 70
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 70
 
 
  3101              		.loc 1 736 0
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3148 016a E6D9     		bls	.L172
  742:.\Protocolo.c **** 		}
  743:.\Protocolo.c **** 		buffer[11]=0xE0;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 71
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 71
 
 
  3149              		.loc 1 743 0 is_stmt 1
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3194              		.loc 1 750 0
  3195 01bc 0E23     		movs	r3, #14
  3196 01be FB77     		strb	r3, [r7, #31]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 72
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 72
 
 
  3197              	.L170:
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3240              		.loc 1 759 0 discriminator 2
  3241 0218 BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
  3242 021a 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 73
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 73
 
 
  3243 021c BB77     		strb	r3, [r7, #30]
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3279              		@ sp needed
  3280 024e 80BD     		pop	{r7, pc}
  3281              	.L183:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 74
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 74
 
 
  3282              		.align	2
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3315 0012 FB79     		ldrb	r3, [r7, #7]
  3316 0014 43F05003 		orr	r3, r3, #80
  3317 0018 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 75
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 75
 
 
  3318 001a 1846     		mov	r0, r3
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  807:.\Protocolo.c **** 					if((Surtidor_rxBuffer[0]==0xFF)&&(Surtidor_rxBuffer[1]==0xF6)&&(Surtidor_rxBuffer[3]==0xF9)){
  3364              		.loc 1 807 0 is_stmt 1
  3365 0076 9D4B     		ldr	r3, .L491+12
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 76
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 76
 
 
  3366 0078 1B78     		ldrb	r3, [r3]
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3414 00ca 0133     		adds	r3, r3, #1
  3415 00cc BB73     		strb	r3, [r7, #14]
  3416              	.L191:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 77
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 77
 
 
  808:.\Protocolo.c ****                     	for(y=0;y<=2;y++){
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3460 010e 01F03CBB 		b	.L199
  3461              	.L198:
  819:.\Protocolo.c ****                             }
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 78
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 78
 
 
  820:.\Protocolo.c **** 							lado1.totales[0][x+12]=Surtidor_rxBuffer[x+13];
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3506              		.loc 1 825 0 is_stmt 1
  3507 0158 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
  3508 015a 022B     		cmp	r3, #2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 79
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 79
 
 
  3509 015c 46D1     		bne	.L203
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3553 019e 0C33     		adds	r3, r3, #12
  3554 01a0 FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
  3555 01a2 2B32     		adds	r2, r2, #43
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 80
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 80
 
 
  3556 01a4 5149     		ldr	r1, .L491+12
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3600              	.L203:
  840:.\Protocolo.c **** 						}
  841:.\Protocolo.c **** 						if(nmangueras==3){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 81
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 81
 
 
  3601              		.loc 1 841 0
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  849:.\Protocolo.c **** 								lado1.totales[1][x+12]=Surtidor_rxBuffer[x+43];
  3646              		.loc 1 849 0
  3647 0232 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 82
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 82
 
 
  3648 0234 0C33     		adds	r3, r3, #12
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3693 027c 0CE0     		b	.L219
  3694              	.L220:
  855:.\Protocolo.c **** 								lado1.totales[2][x]=Surtidor_rxBuffer[x+64];
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 83
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 83
 
 
  3695              		.loc 1 855 0 discriminator 2
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3741 02ca 83F83220 		strb	r2, [r3, #50]
  857:.\Protocolo.c **** 							for(x=0;x<=7;x++){
  3742              		.loc 1 857 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 84
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 84
 
 
  3743 02ce FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  868:.\Protocolo.c **** 						}
  869:.\Protocolo.c **** 						Surtidor_ClearRxBuffer();
  3788              		.loc 1 869 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 85
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 85
 
 
  3789 031a FFF7FEFF 		bl	Surtidor_ClearRxBuffer
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3826 035c 904B     		ldr	r3, .L493
  3827 035e 1B78     		ldrb	r3, [r3]
  3828 0360 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 86
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 86
 
 
  3829 0362 FF2B     		cmp	r3, #255
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3877              	.L229:
  887:.\Protocolo.c ****                     	for(y=0;y<=2;y++){
  3878              		.loc 1 887 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 87
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 87
 
 
  3879 03b4 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  898:.\Protocolo.c ****                             }                             
  899:.\Protocolo.c **** 							lado1.totales[0][x+12]=Surtidor_rxBuffer[x+17];
  3923              		.loc 1 899 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 88
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 88
 
 
  3924 03f8 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  3969 0440 022B     		cmp	r3, #2
  3970 0442 46D1     		bne	.L240
  905:.\Protocolo.c **** 							for(x=0;x<=11;x++){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 89
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 89
 
 
  3971              		.loc 1 905 0
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4016 0488 3B32     		adds	r2, r2, #59
  4017 048a 4549     		ldr	r1, .L493
  4018 048c 8A5C     		ldrb	r2, [r1, r2]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 90
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 90
 
 
  4019 048e D2B2     		uxtb	r2, r2
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  920:.\Protocolo.c **** 						if(nmangueras==3){
  4062              		.loc 1 920 0
  4063 04d2 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 91
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 91
 
 
  4064 04d4 032B     		cmp	r3, #3
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4108 0518 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  4109 051a 0C33     		adds	r3, r3, #12
  4110 051c FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 92
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 92
 
 
  4111 051e 3B32     		adds	r2, r2, #59
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  934:.\Protocolo.c **** 								lado1.totales[2][x]=Surtidor_rxBuffer[x+88];
  4156              		.loc 1 934 0 discriminator 2
  4157 0564 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 93
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 93
 
 
  4158 0566 FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4204 05b4 D2B2     		uxtb	r2, r2
  4205 05b6 AB49     		ldr	r1, .L495+4
  4206 05b8 0B44     		add	r3, r3, r1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 94
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 94
 
 
  4207 05ba 83F83220 		strb	r2, [r3, #50]
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  949:.\Protocolo.c **** 						return 1;			
  4249              		.loc 1 949 0
  4250 05fe 0123     		movs	r3, #1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 95
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 95
 
 
  4251 0600 01F0C3B8 		b	.L199
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4288 0646 06D0     		beq	.L265
  4289              		.loc 1 966 0 is_stmt 0 discriminator 1
  4290 0648 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 96
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 96
 
 
  4291 064a 402B     		cmp	r3, #64
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4340              	.L269:
  969:.\Protocolo.c ****                     		for(x=0;x<=23;x++){
  4341              		.loc 1 969 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 97
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 97
 
 
  4342 06a2 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4385 06e0 0D33     		adds	r3, r3, #13
  4386 06e2 5F4A     		ldr	r2, .L495
  4387 06e4 D35C     		ldrb	r3, [r2, r3]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 98
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 98
 
 
  4388 06e6 DBB2     		uxtb	r3, r3
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4433 0730 FB73     		strb	r3, [r7, #15]
  4434              	.L277:
  982:.\Protocolo.c **** 						for(x=0;x<=3;x++){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 99
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 99
 
 
  4435              		.loc 1 982 0 is_stmt 0 discriminator 1
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  991:.\Protocolo.c ****                                     return 0;
  4480              		.loc 1 991 0
  4481 0776 0023     		movs	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 100
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 100
 
 
  4482 0778 01F007B8 		b	.L199
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4527 07c0 EFD9     		bls	.L286
  997:.\Protocolo.c **** 							}
  998:.\Protocolo.c ****     						Surtidor_ClearRxBuffer();
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 101
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 101
 
 
  4528              		.loc 1 998 0 is_stmt 1
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4572 0806 DBB2     		uxtb	r3, r3
  4573 0808 002B     		cmp	r3, #0
  4574 080a 02D1     		bne	.L291
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 102
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 102
 
 
 1007:.\Protocolo.c ****                                     return 0;
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4619              		.loc 1 1011 0 is_stmt 0 discriminator 1
  4620 0852 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  4621 0854 032B     		cmp	r3, #3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 103
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 103
 
 
  4622 0856 EFD9     		bls	.L294
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4667              		.loc 1 1019 0
  4668 08a4 0023     		movs	r3, #0
  4669 08a6 00F070BF 		b	.L199
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 104
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 104
 
 
  4670              	.L298:
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1025:.\Protocolo.c **** 							}
 1026:.\Protocolo.c ****     						Surtidor_ClearRxBuffer();
  4715              		.loc 1 1026 0 is_stmt 1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 105
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 105
 
 
  4716 08f2 FFF7FEFF 		bl	Surtidor_ClearRxBuffer
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4751 0930 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  4752 0932 582B     		cmp	r3, #88
  4753 0934 03D0     		beq	.L302
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 106
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 106
 
 
  4754 0936 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4802              		.loc 1 1048 0 is_stmt 0 discriminator 1
  4803 098a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  4804 098c 172B     		cmp	r3, #23
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 107
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 107
 
 
  4805 098e EED9     		bls	.L307
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4848 09cc D35C     		ldrb	r3, [r2, r3]
  4849 09ce DBB2     		uxtb	r3, r3
  4850 09d0 002B     		cmp	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 108
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 108
 
 
  4851 09d2 02D1     		bne	.L312
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1061:.\Protocolo.c **** 						for(x=0;x<=4;x++){
  4896              		.loc 1 1061 0 is_stmt 0 discriminator 1
  4897 0a1a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 109
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 109
 
 
  4898 0a1c 042B     		cmp	r3, #4
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  4942 0a5e 0023     		movs	r3, #0
  4943 0a60 00F093BE 		b	.L199
  4944              	.L320:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 110
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 110
 
 
 1071:.\Protocolo.c ****                                 }                                 
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1077:.\Protocolo.c ****     						Surtidor_ClearRxBuffer();
  4989              		.loc 1 1077 0 is_stmt 1
  4990 0aaa FFF7FEFF 		bl	Surtidor_ClearRxBuffer
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 111
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 111
 
 
 1078:.\Protocolo.c ****     						return 2;                            
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5035 0af2 02D1     		bne	.L328
 1086:.\Protocolo.c ****                                     return 0;
  5036              		.loc 1 1086 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 112
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 112
 
 
  5037 0af4 0023     		movs	r3, #0
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5083 0b40 FB73     		strb	r3, [r7, #15]
  5084              	.L330:
 1090:.\Protocolo.c **** 							for(x=0;x<=4;x++){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 113
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 113
 
 
  5085              		.loc 1 1090 0 is_stmt 0 discriminator 1
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1099:.\Protocolo.c ****                                 }                                 
 1100:.\Protocolo.c **** 								lado2.totales[2][x+12]=Surtidor_rxBuffer[x+101];
  5130              		.loc 1 1100 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 114
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 114
 
 
  5131 0b88 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1106:.\Protocolo.c ****     						return 3;                            
  5176              		.loc 1 1106 0
  5177 0bd4 0323     		movs	r3, #3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 115
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 115
 
 
  5178 0bd6 00F0D8BD 		b	.L199
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1125:.\Protocolo.c **** 				x=Surtidor_GetRxBufferSize();
  5214              		.loc 1 1125 0
  5215 0c1a FFF7FEFF 		bl	Surtidor_GetRxBufferSize
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 116
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 116
 
 
  5216 0c1e 0346     		mov	r3, r0
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5265 0c74 0344     		add	r3, r3, r0
  5266 0c76 0B44     		add	r3, r3, r1
  5267 0c78 0022     		movs	r2, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 117
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 117
 
 
  5268 0c7a 9A70     		strb	r2, [r3, #2]
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1136:.\Protocolo.c **** 						for(x=0;x<=7;x++){
  5311              		.loc 1 1136 0 is_stmt 1
  5312 0cb8 0023     		movs	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 118
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 118
 
 
  5313 0cba FB73     		strb	r3, [r7, #15]
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5358 0d00 8A5C     		ldrb	r2, [r1, r2]
  5359 0d02 D2B2     		uxtb	r2, r2
  5360 0d04 3D49     		ldr	r1, .L499+8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 119
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 119
 
 
  5361 0d06 0B44     		add	r3, r3, r1
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1150:.\Protocolo.c ****                                 if(Surtidor_rxBuffer[x+43]==0){
  5405              		.loc 1 1150 0
  5406 0d48 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 120
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 120
 
 
  5407 0d4a 2B33     		adds	r3, r3, #43
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5452              		.loc 1 1155 0 discriminator 2
  5453 0d96 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  5454 0d98 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 121
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 121
 
 
  5455 0d9a FB73     		strb	r3, [r7, #15]
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5497 0dda FB73     		strb	r3, [r7, #15]
  5498 0ddc 1FE0     		b	.L366
  5499              	.L368:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 122
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 122
 
 
 1166:.\Protocolo.c ****                                 if(Surtidor_rxBuffer[x+43]==0){
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5545 0e2a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  5546 0e2c FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
  5547 0e2e 3432     		adds	r2, r2, #52
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 123
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 123
 
 
  5548 0e30 A849     		ldr	r1, .L501
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5592              		.loc 1 1178 0
  5593 0e76 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  5594 0e78 4933     		adds	r3, r3, #73
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 124
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 124
 
 
  5595 0e7a 964A     		ldr	r2, .L501
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5640 0ec6 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  5641 0ec8 0133     		adds	r3, r3, #1
  5642 0eca FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 125
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 125
 
 
  5643              	.L376:
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5676 0f02 FFF7FEFF 		bl	Surtidor_GetRxBufferSize
  5677 0f06 0346     		mov	r3, r0
  5678 0f08 FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 126
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 126
 
 
 1205:.\Protocolo.c **** 				if((x==46)||(x==88)||(x==130)){				
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5728 0f60 0022     		movs	r2, #0
  5729 0f62 9A70     		strb	r2, [r3, #2]
 1208:.\Protocolo.c ****                     		for(x=0;x<=23;x++){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 127
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 127
 
 
  5730              		.loc 1 1208 0 discriminator 2
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5773 0fa0 0023     		movs	r3, #0
  5774 0fa2 FB73     		strb	r3, [r7, #15]
  5775 0fa4 15E0     		b	.L387
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 128
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 128
 
 
  5776              	.L389:
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5821 0fea 3B49     		ldr	r1, .L501+4
  5822 0fec 0B44     		add	r3, r3, r1
  5823 0fee 83F84A20 		strb	r2, [r3, #74]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 129
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 129
 
 
 1221:.\Protocolo.c **** 						for(x=0;x<=4;x++){
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5867 102e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  5868 1030 3B33     		adds	r3, r3, #59
  5869 1032 284A     		ldr	r2, .L501
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 130
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 130
 
 
  5870 1034 D35C     		ldrb	r3, [r2, r3]
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5915 107c 0133     		adds	r3, r3, #1
  5916 107e FB73     		strb	r3, [r7, #15]
  5917              	.L398:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 131
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 131
 
 
 1234:.\Protocolo.c **** 							for(x=0;x<=4;x++){
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  5960              	.L405:
 1245:.\Protocolo.c ****                                 if(Surtidor_rxBuffer[x+59]==0){
  5961              		.loc 1 1245 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 132
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 132
 
 
  5962 10c0 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6008 110a 8A5C     		ldrb	r2, [r1, r2]
  6009 110c D2B2     		uxtb	r2, r2
  6010 110e 9E49     		ldr	r1, .L503+4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 133
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 133
 
 
  6011 1110 0B44     		add	r3, r3, r1
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6055 1154 D35C     		ldrb	r3, [r2, r3]
  6056 1156 DBB2     		uxtb	r3, r3
  6057 1158 002B     		cmp	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 134
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 134
 
 
  6058 115a 01D1     		bne	.L411
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1262:.\Protocolo.c **** 							for(x=0;x<=4;x++){
  6103              		.loc 1 1262 0 is_stmt 0 discriminator 1
  6104 11a2 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 135
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 135
 
 
  6105 11a4 042B     		cmp	r3, #4
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6139 11d6 6E4B     		ldr	r3, .L503+12
  6140 11d8 5B78     		ldrb	r3, [r3, #1]
  6141 11da DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 136
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 136
 
 
  6142 11dc 072B     		cmp	r3, #7
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1290:.\Protocolo.c ****                     			lado4.totales[y][x]=0;
  6190              		.loc 1 1290 0 discriminator 2
  6191 1236 BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 137
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 137
 
 
  6192 1238 F87B     		ldrb	r0, [r7, #15]	@ zero_extendqisi2
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6237 127e 0133     		adds	r3, r3, #1
  6238 1280 FB73     		strb	r3, [r7, #15]
  6239              	.L424:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 138
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 138
 
 
 1293:.\Protocolo.c **** 						for(x=0;x<=7;x++){                          
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6283 12c2 FB73     		strb	r3, [r7, #15]
  6284 12c4 0CE0     		b	.L429
  6285              	.L430:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 139
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 139
 
 
 1303:.\Protocolo.c **** 							lado4.ppu[0][x]=Surtidor_rxBuffer[x+22];
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6331 130c 072B     		cmp	r3, #7
  6332 130e F0D9     		bls	.L433
 1308:.\Protocolo.c **** 							}
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 140
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 140
 
 
 1309:.\Protocolo.c **** 							for(x=0;x<=7;x++){
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6377 1350 FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
  6378 1352 3432     		adds	r2, r2, #52
  6379 1354 0B49     		ldr	r1, .L503
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 141
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 141
 
 
  6380 1356 8A5C     		ldrb	r2, [r1, r2]
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6425 13a4 9A76     		strb	r2, [r3, #26]
 1322:.\Protocolo.c **** 							for(x=0;x<=7;x++){
  6426              		.loc 1 1322 0 discriminator 2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 142
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 142
 
 
  6427 13a6 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1330:.\Protocolo.c **** 							}
 1331:.\Protocolo.c **** 							for(x=0;x<=3;x++){
  6472              		.loc 1 1331 0 is_stmt 1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 143
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 143
 
 
  6473 13ea 0023     		movs	r3, #0
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6519 1434 EFD9     		bls	.L448
 1336:.\Protocolo.c **** 							}
 1337:.\Protocolo.c **** 							for(x=0;x<=7;x++){
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 144
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 144
 
 
  6520              		.loc 1 1337 0 is_stmt 1
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6565 147a 5232     		adds	r2, r2, #82
  6566 147c 7349     		ldr	r1, .L505
  6567 147e 8A5C     		ldrb	r2, [r1, r2]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 145
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 145
 
 
  6568 1480 D2B2     		uxtb	r2, r2
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1360:.\Protocolo.c **** 				}
 1361:.\Protocolo.c **** 			}
 1362:.\Protocolo.c **** 			else{
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 146
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 146
 
 
 1363:.\Protocolo.c **** 				CyDelay(900);
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6652 150a BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
  6653 150c F87B     		ldrb	r0, [r7, #15]	@ zero_extendqisi2
  6654 150e 5049     		ldr	r1, .L505+4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 147
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 147
 
 
  6655 1510 1346     		mov	r3, r2
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6700              	.L461:
 1372:.\Protocolo.c **** 						for(x=0;x<=11;x++){
  6701              		.loc 1 1372 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 148
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 148
 
 
  6702 1556 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6746              	.L467:
 1382:.\Protocolo.c **** 							lado4.ppu[0][x]=Surtidor_rxBuffer[x+30];
  6747              		.loc 1 1382 0 discriminator 2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 149
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 149
 
 
  6748 159a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
 1387:.\Protocolo.c **** 							}
 1388:.\Protocolo.c **** 							for(x=0;x<=11;x++){
  6794              		.loc 1 1388 0 is_stmt 1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 150
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 150
 
 
  6795 15e4 0023     		movs	r3, #0
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6840 1628 0849     		ldr	r1, .L505
  6841 162a 8A5C     		ldrb	r2, [r1, r2]
  6842 162c D2B2     		uxtb	r2, r2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 151
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 151
 
 
  6843 162e 0849     		ldr	r1, .L505+4
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6887 1676 0133     		adds	r3, r3, #1
  6888 1678 FB73     		strb	r3, [r7, #15]
  6889              	.L477:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 152
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 152
 
 
 1401:.\Protocolo.c **** 							for(x=0;x<=11;x++){
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6933 16ba FB73     		strb	r3, [r7, #15]
  6934 16bc 0CE0     		b	.L482
  6935              	.L483:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 153
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 153
 
 
 1411:.\Protocolo.c **** 								lado4.ppu[1][x]=Surtidor_rxBuffer[x+72];
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  6980 1704 0023     		movs	r3, #0
  6981 1706 FB73     		strb	r3, [r7, #15]
  6982 1708 16E0     		b	.L486
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 154
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 154
 
 
  6983              	.L488:
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7028 1750 1149     		ldr	r1, .L507+4
  7029 1752 0B44     		add	r3, r3, r1
  7030 1754 83F85420 		strb	r2, [r3, #84]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 155
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 155
 
 
 1422:.\Protocolo.c **** 							for(x=0;x<=4;x++){
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7064              		.loc 1 1442 0
  7065 1784 0023     		movs	r3, #0
  7066 1786 00E0     		b	.L199
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 156
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 156
 
 
  7067              	.L185:
@@ -9339,32 +9339,32 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7097 0006 00000000 		.4byte	.Ldebug_abbrev0
  7098 000a 04       		.byte	0x4
  7099 000b 01       		.uleb128 0x1
- 7100 000c 3A040000 		.4byte	.LASF122
+ 7100 000c FF030000 		.4byte	.LASF122
  7101 0010 01       		.byte	0x1
- 7102 0011 85010000 		.4byte	.LASF123
- 7103 0015 F4000000 		.4byte	.LASF124
+ 7102 0011 4A010000 		.4byte	.LASF123
+ 7103 0015 D7040000 		.4byte	.LASF124
  7104 0019 00000000 		.4byte	.Ldebug_ranges0+0
  7105 001d 00000000 		.4byte	0
  7106 0021 00000000 		.4byte	.Ldebug_line0
  7107 0025 02       		.uleb128 0x2
  7108 0026 01       		.byte	0x1
  7109 0027 06       		.byte	0x6
- 7110 0028 DD040000 		.4byte	.LASF0
+ 7110 0028 A2040000 		.4byte	.LASF0
  7111 002c 02       		.uleb128 0x2
  7112 002d 01       		.byte	0x1
  7113 002e 08       		.byte	0x8
- 7114 002f 21040000 		.4byte	.LASF1
+ 7114 002f E6030000 		.4byte	.LASF1
  7115 0033 02       		.uleb128 0x2
  7116 0034 02       		.byte	0x2
  7117 0035 05       		.byte	0x5
- 7118 0036 8B030000 		.4byte	.LASF2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 157
+ 7118 0036 50030000 		.4byte	.LASF2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 157
 
 
  7119 003a 02       		.uleb128 0x2
  7120 003b 02       		.byte	0x2
  7121 003c 07       		.byte	0x7
- 7122 003d FF040000 		.4byte	.LASF3
+ 7122 003d C4040000 		.4byte	.LASF3
  7123 0041 03       		.uleb128 0x3
  7124 0042 74000000 		.4byte	.LASF9
  7125 0046 02       		.byte	0x2
@@ -9373,19 +9373,19 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7128 004c 02       		.uleb128 0x2
  7129 004d 04       		.byte	0x4
  7130 004e 05       		.byte	0x5
- 7131 004f 95030000 		.4byte	.LASF4
+ 7131 004f 5A030000 		.4byte	.LASF4
  7132 0053 02       		.uleb128 0x2
  7133 0054 04       		.byte	0x4
  7134 0055 07       		.byte	0x7
- 7135 0056 FC030000 		.4byte	.LASF5
+ 7135 0056 C1030000 		.4byte	.LASF5
  7136 005a 02       		.uleb128 0x2
  7137 005b 08       		.byte	0x8
  7138 005c 05       		.byte	0x5
- 7139 005d CC020000 		.4byte	.LASF6
+ 7139 005d 91020000 		.4byte	.LASF6
  7140 0061 02       		.uleb128 0x2
  7141 0062 08       		.byte	0x8
  7142 0063 07       		.byte	0x7
- 7143 0064 60010000 		.4byte	.LASF7
+ 7143 0064 25010000 		.4byte	.LASF7
  7144 0068 04       		.uleb128 0x4
  7145 0069 04       		.byte	0x4
  7146 006a 05       		.byte	0x5
@@ -9395,35 +9395,35 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7150 0071 07       		.byte	0x7
  7151 0072 5F000000 		.4byte	.LASF8
  7152 0076 03       		.uleb128 0x3
- 7153 0077 0E040000 		.4byte	.LASF10
+ 7153 0077 D3030000 		.4byte	.LASF10
  7154 007b 03       		.byte	0x3
  7155 007c 41       		.byte	0x41
  7156 007d 41000000 		.4byte	0x41
  7157 0081 03       		.uleb128 0x3
- 7158 0082 12050000 		.4byte	.LASF11
+ 7158 0082 EE040000 		.4byte	.LASF11
  7159 0086 04       		.byte	0x4
  7160 0087 B3       		.byte	0xb3
  7161 0088 2C000000 		.4byte	0x2c
  7162 008c 03       		.uleb128 0x3
- 7163 008d 5D020000 		.4byte	.LASF12
+ 7163 008d 22020000 		.4byte	.LASF12
  7164 0091 04       		.byte	0x4
  7165 0092 B4       		.byte	0xb4
  7166 0093 3A000000 		.4byte	0x3a
  7167 0097 02       		.uleb128 0x2
  7168 0098 04       		.byte	0x4
  7169 0099 04       		.byte	0x4
- 7170 009a 2F010000 		.4byte	.LASF13
+ 7170 009a F4000000 		.4byte	.LASF13
  7171 009e 02       		.uleb128 0x2
  7172 009f 08       		.byte	0x8
  7173 00a0 04       		.byte	0x4
- 7174 00a1 18050000 		.4byte	.LASF14
+ 7174 00a1 F4040000 		.4byte	.LASF14
  7175 00a5 02       		.uleb128 0x2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 158
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 158
 
 
  7176 00a6 01       		.byte	0x1
  7177 00a7 08       		.byte	0x8
- 7178 00a8 42020000 		.4byte	.LASF15
+ 7178 00a8 07020000 		.4byte	.LASF15
  7179 00ac 05       		.uleb128 0x5
  7180 00ad 81000000 		.4byte	0x81
  7181 00b1 05       		.uleb128 0x5
@@ -9431,7 +9431,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7183 00b6 02       		.uleb128 0x2
  7184 00b7 04       		.byte	0x4
  7185 00b8 07       		.byte	0x7
- 7186 00b9 F3030000 		.4byte	.LASF16
+ 7186 00b9 B8030000 		.4byte	.LASF16
  7187 00bd 06       		.uleb128 0x6
  7188 00be 81000000 		.4byte	0x81
  7189 00c2 CD000000 		.4byte	0xcd
@@ -9440,7 +9440,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7192 00cb 03       		.byte	0x3
  7193 00cc 00       		.byte	0
  7194 00cd 08       		.uleb128 0x8
- 7195 00ce AB030000 		.4byte	.LASF21
+ 7195 00ce 70030000 		.4byte	.LASF21
  7196 00d2 5D       		.byte	0x5d
  7197 00d3 05       		.byte	0x5
  7198 00d4 5C       		.byte	0x5c
@@ -9452,13 +9452,13 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7204 00e0 AC000000 		.4byte	0xac
  7205 00e4 00       		.byte	0
  7206 00e5 0A       		.uleb128 0xa
- 7207 00e6 59030000 		.4byte	.LASF17
+ 7207 00e6 1E030000 		.4byte	.LASF17
  7208 00ea 05       		.byte	0x5
  7209 00eb 5E       		.byte	0x5e
  7210 00ec AC000000 		.4byte	0xac
  7211 00f0 01       		.byte	0x1
  7212 00f1 0A       		.uleb128 0xa
- 7213 00f2 8F020000 		.4byte	.LASF18
+ 7213 00f2 54020000 		.4byte	.LASF18
  7214 00f6 05       		.byte	0x5
  7215 00f7 5F       		.byte	0x5f
  7216 00f8 38010000 		.4byte	0x138
@@ -9470,15 +9470,15 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7222 0104 53010000 		.4byte	0x153
  7223 0108 4A       		.byte	0x4a
  7224 0109 0A       		.uleb128 0xa
- 7225 010a 32050000 		.4byte	.LASF19
+ 7225 010a 0E050000 		.4byte	.LASF19
  7226 010e 05       		.byte	0x5
  7227 010f 61       		.byte	0x61
  7228 0110 6E010000 		.4byte	0x16e
  7229 0114 59       		.byte	0x59
  7230 0115 0A       		.uleb128 0xa
- 7231 0116 53020000 		.4byte	.LASF20
+ 7231 0116 18020000 		.4byte	.LASF20
  7232 011a 05       		.byte	0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 159
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 159
 
 
  7233 011b 62       		.byte	0x62
@@ -9522,7 +9522,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7271 016e 05       		.uleb128 0x5
  7272 016f 58010000 		.4byte	0x158
  7273 0173 08       		.uleb128 0x8
- 7274 0174 3F030000 		.4byte	.LASF22
+ 7274 0174 04030000 		.4byte	.LASF22
  7275 0178 61       		.byte	0x61
  7276 0179 05       		.byte	0x5
  7277 017a 75       		.byte	0x75
@@ -9534,11 +9534,11 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7283 0186 81000000 		.4byte	0x81
  7284 018a 00       		.byte	0
  7285 018b 0A       		.uleb128 0xa
- 7286 018c 32050000 		.4byte	.LASF19
+ 7286 018c 0E050000 		.4byte	.LASF19
  7287 0190 05       		.byte	0x5
  7288 0191 77       		.byte	0x77
  7289 0192 81000000 		.4byte	0x81
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 160
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 160
 
 
  7290 0196 01       		.byte	0x1
@@ -9549,25 +9549,25 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7295 019e 4A020000 		.4byte	0x24a
  7296 01a2 02       		.byte	0x2
  7297 01a3 0A       		.uleb128 0xa
- 7298 01a4 46030000 		.4byte	.LASF24
+ 7298 01a4 0B030000 		.4byte	.LASF24
  7299 01a8 05       		.byte	0x5
  7300 01a9 79       		.byte	0x79
  7301 01aa 5A020000 		.4byte	0x25a
  7302 01ae 07       		.byte	0x7
  7303 01af 0A       		.uleb128 0xa
- 7304 01b0 E0010000 		.4byte	.LASF25
+ 7304 01b0 A5010000 		.4byte	.LASF25
  7305 01b4 05       		.byte	0x5
  7306 01b5 7A       		.byte	0x7a
  7307 01b6 5A020000 		.4byte	0x25a
  7308 01ba 10       		.byte	0x10
  7309 01bb 0A       		.uleb128 0xa
- 7310 01bc DA020000 		.4byte	.LASF26
+ 7310 01bc 9F020000 		.4byte	.LASF26
  7311 01c0 05       		.byte	0x5
  7312 01c1 7B       		.byte	0x7b
  7313 01c2 81000000 		.4byte	0x81
  7314 01c6 19       		.byte	0x19
  7315 01c7 0A       		.uleb128 0xa
- 7316 01c8 29050000 		.4byte	.LASF27
+ 7316 01c8 05050000 		.4byte	.LASF27
  7317 01cc 05       		.byte	0x5
  7318 01cd 7C       		.byte	0x7c
  7319 01ce 81000000 		.4byte	0x81
@@ -9591,14 +9591,14 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7337 01f0 8A020000 		.4byte	0x28a
  7338 01f4 33       		.byte	0x33
  7339 01f5 0A       		.uleb128 0xa
- 7340 01f6 D2010000 		.4byte	.LASF29
+ 7340 01f6 97010000 		.4byte	.LASF29
  7341 01fa 05       		.byte	0x5
  7342 01fb 80       		.byte	0x80
  7343 01fc 5A020000 		.4byte	0x25a
  7344 0200 3E       		.byte	0x3e
  7345 0201 0A       		.uleb128 0xa
- 7346 0202 57010000 		.4byte	.LASF30
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 161
+ 7346 0202 1C010000 		.4byte	.LASF30
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 161
 
 
  7347 0206 05       		.byte	0x5
@@ -9606,13 +9606,13 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7349 0208 81000000 		.4byte	0x81
  7350 020c 47       		.byte	0x47
  7351 020d 0A       		.uleb128 0xa
- 7352 020e 7E020000 		.4byte	.LASF31
+ 7352 020e 43020000 		.4byte	.LASF31
  7353 0212 05       		.byte	0x5
  7354 0213 82       		.byte	0x82
  7355 0214 81000000 		.4byte	0x81
  7356 0218 48       		.byte	0x48
  7357 0219 0A       		.uleb128 0xa
- 7358 021a F2020000 		.4byte	.LASF32
+ 7358 021a B7020000 		.4byte	.LASF32
  7359 021e 05       		.byte	0x5
  7360 021f 83       		.byte	0x83
  7361 0220 8A020000 		.4byte	0x28a
@@ -9624,13 +9624,13 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7367 022c 8A020000 		.4byte	0x28a
  7368 0230 54       		.byte	0x54
  7369 0231 0A       		.uleb128 0xa
- 7370 0232 89020000 		.4byte	.LASF34
+ 7370 0232 4E020000 		.4byte	.LASF34
  7371 0236 05       		.byte	0x5
  7372 0237 85       		.byte	0x85
  7373 0238 81000000 		.4byte	0x81
  7374 023c 5F       		.byte	0x5f
  7375 023d 0A       		.uleb128 0xa
- 7376 023e 16040000 		.4byte	.LASF35
+ 7376 023e DB030000 		.4byte	.LASF35
  7377 0242 05       		.byte	0x5
  7378 0243 86       		.byte	0x86
  7379 0244 81000000 		.4byte	0x81
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7401 0278 07       		.byte	0x7
  7402 0279 00       		.byte	0
  7403 027a 06       		.uleb128 0x6
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 162
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 162
 
 
  7404 027b 81000000 		.4byte	0x81
@@ -9675,7 +9675,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7415 0298 0A       		.byte	0xa
  7416 0299 00       		.byte	0
  7417 029a 0B       		.uleb128 0xb
- 7418 029b 38050000 		.4byte	.LASF125
+ 7418 029b 14050000 		.4byte	.LASF125
  7419 029f 01       		.byte	0x1
  7420 02a0 3F       		.byte	0x3f
  7421 02a1 00000000 		.4byte	.LFB63
@@ -9683,7 +9683,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7423 02a9 01       		.uleb128 0x1
  7424 02aa 9C       		.byte	0x9c
  7425 02ab 0C       		.uleb128 0xc
- 7426 02ac 2F040000 		.4byte	.LASF36
+ 7426 02ac F4030000 		.4byte	.LASF36
  7427 02b0 01       		.byte	0x1
  7428 02b1 56       		.byte	0x56
  7429 02b2 81000000 		.4byte	0x81
@@ -9701,7 +9701,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7441 02d0 91       		.byte	0x91
  7442 02d1 6F       		.sleb128 -17
  7443 02d2 0E       		.uleb128 0xe
- 7444 02d3 59030000 		.4byte	.LASF17
+ 7444 02d3 1E030000 		.4byte	.LASF17
  7445 02d7 01       		.byte	0x1
  7446 02d8 57       		.byte	0x57
  7447 02d9 81000000 		.4byte	0x81
@@ -9710,7 +9710,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7450 02df 77       		.sleb128 -9
  7451 02e0 00       		.byte	0
  7452 02e1 0C       		.uleb128 0xc
- 7453 02e2 D8010000 		.4byte	.LASF37
+ 7453 02e2 9D010000 		.4byte	.LASF37
  7454 02e6 01       		.byte	0x1
  7455 02e7 86       		.byte	0x86
  7456 02e8 81000000 		.4byte	0x81
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7458 02f0 EC000000 		.4byte	.LFE65-.LFB65
  7459 02f4 01       		.uleb128 0x1
  7460 02f5 9C       		.byte	0x9c
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 163
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 163
 
 
  7461 02f6 07030000 		.4byte	0x307
@@ -9732,7 +9732,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7469 0305 77       		.sleb128 -9
  7470 0306 00       		.byte	0
  7471 0307 10       		.uleb128 0x10
- 7472 0308 BC040000 		.4byte	.LASF41
+ 7472 0308 81040000 		.4byte	.LASF41
  7473 030c 01       		.byte	0x1
  7474 030d BA       		.byte	0xba
  7475 030e 00000000 		.4byte	.LFB66
@@ -9749,7 +9749,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7486 0328 91       		.byte	0x91
  7487 0329 6F       		.sleb128 -17
  7488 032a 0E       		.uleb128 0xe
- 7489 032b 59030000 		.4byte	.LASF17
+ 7489 032b 1E030000 		.4byte	.LASF17
  7490 032f 01       		.byte	0x1
  7491 0330 BB       		.byte	0xbb
  7492 0331 81000000 		.4byte	0x81
@@ -9758,7 +9758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7495 0337 77       		.sleb128 -9
  7496 0338 00       		.byte	0
  7497 0339 0C       		.uleb128 0xc
- 7498 033a DF030000 		.4byte	.LASF38
+ 7498 033a A4030000 		.4byte	.LASF38
  7499 033e 01       		.byte	0x1
  7500 033f D7       		.byte	0xd7
  7501 0340 81000000 		.4byte	0x81
@@ -9776,9 +9776,9 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7513 035e 91       		.byte	0x91
  7514 035f 4F       		.sleb128 -49
  7515 0360 0E       		.uleb128 0xe
- 7516 0361 1F050000 		.4byte	.LASF39
+ 7516 0361 FB040000 		.4byte	.LASF39
  7517 0365 01       		.byte	0x1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 164
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 164
 
 
  7518 0366 D8       		.byte	0xd8
@@ -9795,7 +9795,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7529 0378 91       		.byte	0x91
  7530 0379 6F       		.sleb128 -17
  7531 037a 0E       		.uleb128 0xe
- 7532 037b 29020000 		.4byte	.LASF40
+ 7532 037b EE010000 		.4byte	.LASF40
  7533 037f 01       		.byte	0x1
  7534 0380 D8       		.byte	0xd8
  7535 0381 5A020000 		.4byte	0x25a
@@ -9811,7 +9811,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7545 0397 12       		.byte	0x12
  7546 0398 00       		.byte	0
  7547 0399 11       		.uleb128 0x11
- 7548 039a 21020000 		.4byte	.LASF42
+ 7548 039a E6010000 		.4byte	.LASF42
  7549 039e 01       		.byte	0x1
  7550 039f 2801     		.2byte	0x128
  7551 03a1 00000000 		.4byte	.LFB68
@@ -9829,7 +9829,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7563 03bd 77       		.sleb128 -9
  7564 03be 00       		.byte	0
  7565 03bf 13       		.uleb128 0x13
- 7566 03c0 E8010000 		.4byte	.LASF43
+ 7566 03c0 AD010000 		.4byte	.LASF43
  7567 03c4 01       		.byte	0x1
  7568 03c5 3D01     		.2byte	0x13d
  7569 03c7 81000000 		.4byte	0x81
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7572 03d3 01       		.uleb128 0x1
  7573 03d4 9C       		.byte	0x9c
  7574 03d5 F6030000 		.4byte	0x3f6
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 165
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 165
 
 
  7575 03d9 12       		.uleb128 0x12
@@ -9859,7 +9859,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7590 03f4 77       		.sleb128 -9
  7591 03f5 00       		.byte	0
  7592 03f6 13       		.uleb128 0x13
- 7593 03f7 E9030000 		.4byte	.LASF44
+ 7593 03f7 AE030000 		.4byte	.LASF44
  7594 03fb 01       		.byte	0x1
  7595 03fc C501     		.2byte	0x1c5
  7596 03fe 81000000 		.4byte	0x81
@@ -9877,7 +9877,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7608 041d 91       		.byte	0x91
  7609 041e 5F       		.sleb128 -33
  7610 041f 15       		.uleb128 0x15
- 7611 0420 32050000 		.4byte	.LASF19
+ 7611 0420 0E050000 		.4byte	.LASF19
  7612 0424 01       		.byte	0x1
  7613 0425 C501     		.2byte	0x1c5
  7614 0427 81000000 		.4byte	0x81
@@ -9885,7 +9885,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7616 042c 91       		.byte	0x91
  7617 042d 5E       		.sleb128 -34
  7618 042e 15       		.uleb128 0x15
- 7619 042f E9040000 		.4byte	.LASF45
+ 7619 042f AE040000 		.4byte	.LASF45
  7620 0433 01       		.byte	0x1
  7621 0434 C501     		.2byte	0x1c5
  7622 0436 96040000 		.4byte	0x496
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7629 0443 C501     		.2byte	0x1c5
  7630 0445 81000000 		.4byte	0x81
  7631 0449 02       		.uleb128 0x2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 166
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 166
 
 
  7632 044a 91       		.byte	0x91
@@ -9912,7 +9912,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7640 0459 91       		.byte	0x91
  7641 045a 60       		.sleb128 -32
  7642 045b 16       		.uleb128 0x16
- 7643 045c 3A030000 		.4byte	.LASF47
+ 7643 045c FF020000 		.4byte	.LASF47
  7644 0460 01       		.byte	0x1
  7645 0461 C601     		.2byte	0x1c6
  7646 0463 81000000 		.4byte	0x81
@@ -9920,7 +9920,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7648 0468 91       		.byte	0x91
  7649 0469 77       		.sleb128 -9
  7650 046a 16       		.uleb128 0x16
- 7651 046b C2030000 		.4byte	.LASF48
+ 7651 046b 87030000 		.4byte	.LASF48
  7652 046f 01       		.byte	0x1
  7653 0470 C601     		.2byte	0x1c6
  7654 0472 81000000 		.4byte	0x81
@@ -9955,10 +9955,10 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7683 04aa 11       		.byte	0x11
  7684 04ab 00       		.byte	0
  7685 04ac 13       		.uleb128 0x13
- 7686 04ad E3020000 		.4byte	.LASF50
+ 7686 04ad A8020000 		.4byte	.LASF50
  7687 04b1 01       		.byte	0x1
  7688 04b2 C902     		.2byte	0x2c9
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 167
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 167
 
 
  7689 04b4 81000000 		.4byte	0x81
@@ -10000,7 +10000,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7725 0500 91       		.byte	0x91
  7726 0501 64       		.sleb128 -28
  7727 0502 16       		.uleb128 0x16
- 7728 0503 3A030000 		.4byte	.LASF47
+ 7728 0503 FF020000 		.4byte	.LASF47
  7729 0507 01       		.byte	0x1
  7730 0508 CA02     		.2byte	0x2ca
  7731 050a 81000000 		.4byte	0x81
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7743 051e 00       		.byte	0
  7744 051f 06       		.uleb128 0x6
  7745 0520 81000000 		.4byte	0x81
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 168
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 168
 
 
  7746 0524 2F050000 		.4byte	0x52f
@@ -10027,7 +10027,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7749 052d 0E       		.byte	0xe
  7750 052e 00       		.byte	0
  7751 052f 13       		.uleb128 0x13
- 7752 0530 8F020000 		.4byte	.LASF18
+ 7752 0530 54020000 		.4byte	.LASF18
  7753 0534 01       		.byte	0x1
  7754 0535 1B03     		.2byte	0x31b
  7755 0537 81000000 		.4byte	0x81
@@ -10045,7 +10045,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7767 0556 91       		.byte	0x91
  7768 0557 6F       		.sleb128 -17
  7769 0558 15       		.uleb128 0x15
- 7770 0559 78030000 		.4byte	.LASF53
+ 7770 0559 3D030000 		.4byte	.LASF53
  7771 055d 01       		.byte	0x1
  7772 055e 1B03     		.2byte	0x31b
  7773 0560 81000000 		.4byte	0x81
@@ -10077,8 +10077,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7799 0590 FF       		.byte	0xff
  7800 0591 00       		.byte	0
  7801 0592 18       		.uleb128 0x18
- 7802 0593 C0010000 		.4byte	.LASF54
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 169
+ 7802 0593 85010000 		.4byte	.LASF54
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 169
 
 
  7803 0597 06       		.byte	0x6
@@ -10087,14 +10087,14 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7806 059e 05       		.uleb128 0x5
  7807 059f 82050000 		.4byte	0x582
  7808 05a3 18       		.uleb128 0x18
- 7809 05a4 9E030000 		.4byte	.LASF55
+ 7809 05a4 63030000 		.4byte	.LASF55
  7810 05a8 07       		.byte	0x7
  7811 05a9 2A06     		.2byte	0x62a
  7812 05ab AF050000 		.4byte	0x5af
  7813 05af 05       		.uleb128 0x5
  7814 05b0 76000000 		.4byte	0x76
  7815 05b4 19       		.uleb128 0x19
- 7816 05b5 A4020000 		.4byte	.LASF56
+ 7816 05b5 69020000 		.4byte	.LASF56
  7817 05b9 05       		.byte	0x5
  7818 05ba 4A       		.byte	0x4a
  7819 05bb AC000000 		.4byte	0xac
@@ -10102,7 +10102,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7821 05c0 03       		.byte	0x3
  7822 05c1 00000000 		.4byte	count_teclas1
  7823 05c5 19       		.uleb128 0x19
- 7824 05c6 B4030000 		.4byte	.LASF57
+ 7824 05c6 79030000 		.4byte	.LASF57
  7825 05ca 05       		.byte	0x5
  7826 05cb 4A       		.byte	0x4a
  7827 05cc AC000000 		.4byte	0xac
@@ -10110,7 +10110,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7829 05d1 03       		.byte	0x3
  7830 05d2 00000000 		.4byte	comas1
  7831 05d6 19       		.uleb128 0x19
- 7832 05d7 BB030000 		.4byte	.LASF58
+ 7832 05d7 80030000 		.4byte	.LASF58
  7833 05db 05       		.byte	0x5
  7834 05dc 4A       		.byte	0x4a
  7835 05dd AC000000 		.4byte	0xac
@@ -10126,7 +10126,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7845 05f3 03       		.byte	0x3
  7846 05f4 00000000 		.4byte	id_coma1
  7847 05f8 19       		.uleb128 0x19
- 7848 05f9 F7010000 		.4byte	.LASF60
+ 7848 05f9 BC010000 		.4byte	.LASF60
  7849 05fd 05       		.byte	0x5
  7850 05fe 4A       		.byte	0x4a
  7851 05ff AC000000 		.4byte	0xac
@@ -10134,11 +10134,11 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7853 0604 03       		.byte	0x3
  7854 0605 00000000 		.4byte	id_teclado1
  7855 0609 19       		.uleb128 0x19
- 7856 060a B2020000 		.4byte	.LASF61
+ 7856 060a 77020000 		.4byte	.LASF61
  7857 060e 05       		.byte	0x5
  7858 060f 4A       		.byte	0x4a
  7859 0610 AC000000 		.4byte	0xac
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 170
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 170
 
 
  7860 0614 05       		.uleb128 0x5
@@ -10153,7 +10153,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7869 0626 03       		.byte	0x3
  7870 0627 00000000 		.4byte	id_coma2
  7871 062b 19       		.uleb128 0x19
- 7872 062c 03020000 		.4byte	.LASF63
+ 7872 062c C8010000 		.4byte	.LASF63
  7873 0630 05       		.byte	0x5
  7874 0631 4A       		.byte	0x4a
  7875 0632 AC000000 		.4byte	0xac
@@ -10161,7 +10161,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7877 0637 03       		.byte	0x3
  7878 0638 00000000 		.4byte	id_teclado2
  7879 063c 19       		.uleb128 0x19
- 7880 063d C0020000 		.4byte	.LASF64
+ 7880 063d 85020000 		.4byte	.LASF64
  7881 0641 05       		.byte	0x5
  7882 0642 4B       		.byte	0x4b
  7883 0643 B1000000 		.4byte	0xb1
@@ -10169,7 +10169,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7885 0648 03       		.byte	0x3
  7886 0649 00000000 		.4byte	posx1
  7887 064d 19       		.uleb128 0x19
- 7888 064e 2E030000 		.4byte	.LASF65
+ 7888 064e F3020000 		.4byte	.LASF65
  7889 0652 05       		.byte	0x5
  7890 0653 4B       		.byte	0x4b
  7891 0654 B1000000 		.4byte	0xb1
@@ -10177,7 +10177,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7893 0659 03       		.byte	0x3
  7894 065a 00000000 		.4byte	posy1
  7895 065e 19       		.uleb128 0x19
- 7896 065f 44050000 		.4byte	.LASF66
+ 7896 065f 20050000 		.4byte	.LASF66
  7897 0663 05       		.byte	0x5
  7898 0664 4B       		.byte	0x4b
  7899 0665 B1000000 		.4byte	0xb1
@@ -10185,7 +10185,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7901 066a 03       		.byte	0x3
  7902 066b 00000000 		.4byte	sizeletra1
  7903 066f 19       		.uleb128 0x19
- 7904 0670 C6020000 		.4byte	.LASF67
+ 7904 0670 8B020000 		.4byte	.LASF67
  7905 0674 05       		.byte	0x5
  7906 0675 4B       		.byte	0x4b
  7907 0676 B1000000 		.4byte	0xb1
@@ -10193,18 +10193,18 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7909 067b 03       		.byte	0x3
  7910 067c 00000000 		.4byte	posx2
  7911 0680 19       		.uleb128 0x19
- 7912 0681 34030000 		.4byte	.LASF68
+ 7912 0681 F9020000 		.4byte	.LASF68
  7913 0685 05       		.byte	0x5
  7914 0686 4B       		.byte	0x4b
  7915 0687 B1000000 		.4byte	0xb1
  7916 068b 05       		.uleb128 0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 171
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 171
 
 
  7917 068c 03       		.byte	0x3
  7918 068d 00000000 		.4byte	posy2
  7919 0691 19       		.uleb128 0x19
- 7920 0692 4F050000 		.4byte	.LASF69
+ 7920 0692 2B050000 		.4byte	.LASF69
  7921 0696 05       		.byte	0x5
  7922 0697 4B       		.byte	0x4b
  7923 0698 B1000000 		.4byte	0xb1
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7971 06fe AC000000 		.4byte	0xac
  7972 0702 05       		.uleb128 0x5
  7973 0703 03       		.byte	0x3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 172
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 172
 
 
  7974 0704 00000000 		.4byte	flujo_LCD4
@@ -10270,7 +10270,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7980 0716 1D       		.byte	0x1d
  7981 0717 00       		.byte	0
  7982 0718 19       		.uleb128 0x19
- 7983 0719 4D030000 		.4byte	.LASF76
+ 7983 0719 12030000 		.4byte	.LASF76
  7984 071d 05       		.byte	0x5
  7985 071e 4E       		.byte	0x4e
  7986 071f 29070000 		.4byte	0x729
@@ -10280,7 +10280,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  7990 0729 05       		.uleb128 0x5
  7991 072a 08070000 		.4byte	0x708
  7992 072e 19       		.uleb128 0x19
- 7993 072f 36020000 		.4byte	.LASF77
+ 7993 072f FB010000 		.4byte	.LASF77
  7994 0733 05       		.byte	0x5
  7995 0734 4F       		.byte	0x4f
  7996 0735 3F070000 		.4byte	0x73f
@@ -10290,7 +10290,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8000 073f 05       		.uleb128 0x5
  8001 0740 08070000 		.4byte	0x708
  8002 0744 19       		.uleb128 0x19
- 8003 0745 EF040000 		.4byte	.LASF78
+ 8003 0745 B4040000 		.4byte	.LASF78
  8004 0749 05       		.byte	0x5
  8005 074a 50       		.byte	0x50
  8006 074b AC000000 		.4byte	0xac
@@ -10306,7 +10306,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8016 0761 03       		.byte	0x3
  8017 0762 00000000 		.4byte	count_protector2
  8018 0766 19       		.uleb128 0x19
- 8019 0767 97020000 		.4byte	.LASF80
+ 8019 0767 5C020000 		.4byte	.LASF80
  8020 076b 05       		.byte	0x5
  8021 076c 51       		.byte	0x51
  8022 076d 77070000 		.4byte	0x777
@@ -10316,9 +10316,9 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8026 0777 05       		.uleb128 0x5
  8027 0778 5A020000 		.4byte	0x25a
  8028 077c 19       		.uleb128 0x19
- 8029 077d 04030000 		.4byte	.LASF81
+ 8029 077d C9020000 		.4byte	.LASF81
  8030 0781 05       		.byte	0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 173
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 173
 
 
  8031 0782 52       		.byte	0x52
@@ -10327,7 +10327,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8034 0788 03       		.byte	0x3
  8035 0789 00000000 		.4byte	imagen_grado1
  8036 078d 19       		.uleb128 0x19
- 8037 078e 12030000 		.4byte	.LASF82
+ 8037 078e D7020000 		.4byte	.LASF82
  8038 0792 05       		.byte	0x5
  8039 0793 52       		.byte	0x52
  8040 0794 B1000000 		.4byte	0xb1
@@ -10335,7 +10335,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8042 0799 03       		.byte	0x3
  8043 079a 00000000 		.4byte	imagen_grado2
  8044 079e 19       		.uleb128 0x19
- 8045 079f 20030000 		.4byte	.LASF83
+ 8045 079f E5020000 		.4byte	.LASF83
  8046 07a3 05       		.byte	0x5
  8047 07a4 52       		.byte	0x52
  8048 07a5 B1000000 		.4byte	0xb1
@@ -10343,7 +10343,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8050 07aa 03       		.byte	0x3
  8051 07ab 00000000 		.4byte	imagen_grado3
  8052 07af 19       		.uleb128 0x19
- 8053 07b0 77010000 		.4byte	.LASF84
+ 8053 07b0 3C010000 		.4byte	.LASF84
  8054 07b4 05       		.byte	0x5
  8055 07b5 52       		.byte	0x52
  8056 07b6 B1000000 		.4byte	0xb1
@@ -10378,10 +10378,10 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8085 07fa 02       		.byte	0x2
  8086 07fb 00       		.byte	0
  8087 07fc 19       		.uleb128 0x19
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 174
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 174
 
 
- 8088 07fd 47020000 		.4byte	.LASF86
+ 8088 07fd 0C020000 		.4byte	.LASF86
  8089 0801 05       		.byte	0x5
  8090 0802 54       		.byte	0x54
  8091 0803 0D080000 		.4byte	0x80d
@@ -10391,7 +10391,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8095 080d 05       		.uleb128 0x5
  8096 080e EC070000 		.4byte	0x7ec
  8097 0812 19       		.uleb128 0x19
- 8098 0813 60030000 		.4byte	.LASF87
+ 8098 0813 25030000 		.4byte	.LASF87
  8099 0817 05       		.byte	0x5
  8100 0818 58       		.byte	0x58
  8101 0819 AC000000 		.4byte	0xac
@@ -10406,7 +10406,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8110 0831 10       		.byte	0x10
  8111 0832 00       		.byte	0
  8112 0833 19       		.uleb128 0x19
- 8113 0834 C7030000 		.4byte	.LASF88
+ 8113 0834 8C030000 		.4byte	.LASF88
  8114 0838 05       		.byte	0x5
  8115 0839 59       		.byte	0x59
  8116 083a 44080000 		.4byte	0x844
@@ -10416,7 +10416,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8120 0844 05       		.uleb128 0x5
  8121 0845 23080000 		.4byte	0x823
  8122 0849 19       		.uleb128 0x19
- 8123 084a D1040000 		.4byte	.LASF89
+ 8123 084a 96040000 		.4byte	.LASF89
  8124 084e 05       		.byte	0x5
  8125 084f 59       		.byte	0x59
  8126 0850 5A080000 		.4byte	0x85a
@@ -10426,7 +10426,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8130 085a 05       		.uleb128 0x5
  8131 085b 23080000 		.4byte	0x823
  8132 085f 19       		.uleb128 0x19
- 8133 0860 D3030000 		.4byte	.LASF90
+ 8133 0860 98030000 		.4byte	.LASF90
  8134 0864 05       		.byte	0x5
  8135 0865 59       		.byte	0x59
  8136 0866 70080000 		.4byte	0x870
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8142 0875 19       		.uleb128 0x19
  8143 0876 6C000000 		.4byte	.LASF91
  8144 087a 05       		.byte	0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 175
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 175
 
 
  8145 087b 5A       		.byte	0x5a
@@ -10449,7 +10449,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8150 0886 05       		.uleb128 0x5
  8151 0887 BD000000 		.4byte	0xbd
  8152 088b 19       		.uleb128 0x19
- 8153 088c 93010000 		.4byte	.LASF92
+ 8153 088c 58010000 		.4byte	.LASF92
  8154 0890 05       		.byte	0x5
  8155 0891 64       		.byte	0x64
  8156 0892 CD000000 		.4byte	0xcd
@@ -10457,7 +10457,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8158 0897 03       		.byte	0x3
  8159 0898 00000000 		.4byte	lado1
  8160 089c 19       		.uleb128 0x19
- 8161 089d 99010000 		.4byte	.LASF93
+ 8161 089d 5E010000 		.4byte	.LASF93
  8162 08a1 05       		.byte	0x5
  8163 08a2 65       		.byte	0x65
  8164 08a3 CD000000 		.4byte	0xcd
@@ -10465,7 +10465,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8166 08a8 03       		.byte	0x3
  8167 08a9 00000000 		.4byte	lado2
  8168 08ad 19       		.uleb128 0x19
- 8169 08ae 9F010000 		.4byte	.LASF94
+ 8169 08ae 64010000 		.4byte	.LASF94
  8170 08b2 05       		.byte	0x5
  8171 08b3 66       		.byte	0x66
  8172 08b4 CD000000 		.4byte	0xcd
@@ -10473,7 +10473,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8174 08b9 03       		.byte	0x3
  8175 08ba 00000000 		.4byte	lado3
  8176 08be 19       		.uleb128 0x19
- 8177 08bf A5010000 		.4byte	.LASF95
+ 8177 08bf 6A010000 		.4byte	.LASF95
  8178 08c3 05       		.byte	0x5
  8179 08c4 67       		.byte	0x67
  8180 08c5 CD000000 		.4byte	0xcd
@@ -10488,7 +10488,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8189 08dd 20       		.byte	0x20
  8190 08de 00       		.byte	0
  8191 08df 19       		.uleb128 0x19
- 8192 08e0 67030000 		.4byte	.LASF96
+ 8192 08e0 2C030000 		.4byte	.LASF96
  8193 08e4 05       		.byte	0x5
  8194 08e5 6B       		.byte	0x6b
  8195 08e6 F0080000 		.4byte	0x8f0
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8199 08f0 05       		.uleb128 0x5
  8200 08f1 CF080000 		.4byte	0x8cf
  8201 08f5 1A       		.uleb128 0x1a
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 176
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 176
 
 
  8202 08f6 6E697400 		.ascii	"nit\000"
@@ -10518,7 +10518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8216 0919 13       		.byte	0x13
  8217 091a 00       		.byte	0
  8218 091b 19       		.uleb128 0x19
- 8219 091c EE010000 		.4byte	.LASF97
+ 8219 091c B3010000 		.4byte	.LASF97
  8220 0920 05       		.byte	0x5
  8221 0921 6D       		.byte	0x6d
  8222 0922 2C090000 		.4byte	0x92c
@@ -10545,7 +10545,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8243 0955 1F       		.byte	0x1f
  8244 0956 00       		.byte	0
  8245 0957 19       		.uleb128 0x19
- 8246 0958 4B010000 		.4byte	.LASF99
+ 8246 0958 10010000 		.4byte	.LASF99
  8247 095c 05       		.byte	0x5
  8248 095d 6F       		.byte	0x6f
  8249 095e 68090000 		.4byte	0x968
@@ -10555,10 +10555,10 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8253 0968 05       		.uleb128 0x5
  8254 0969 47090000 		.4byte	0x947
  8255 096d 19       		.uleb128 0x19
- 8256 096e 51010000 		.4byte	.LASF100
+ 8256 096e 16010000 		.4byte	.LASF100
  8257 0972 05       		.byte	0x5
  8258 0973 70       		.byte	0x70
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 177
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 177
 
 
  8259 0974 7E090000 		.4byte	0x97e
@@ -10575,7 +10575,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8270 0991 01       		.byte	0x1
  8271 0992 00       		.byte	0
  8272 0993 19       		.uleb128 0x19
- 8273 0994 83030000 		.4byte	.LASF101
+ 8273 0994 48030000 		.4byte	.LASF101
  8274 0998 05       		.byte	0x5
  8275 0999 71       		.byte	0x71
  8276 099a A4090000 		.4byte	0x9a4
@@ -10595,7 +10595,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8290 09b9 05       		.uleb128 0x5
  8291 09ba 83090000 		.4byte	0x983
  8292 09be 19       		.uleb128 0x19
- 8293 09bf B6040000 		.4byte	.LASF102
+ 8293 09bf 7B040000 		.4byte	.LASF102
  8294 09c3 05       		.byte	0x5
  8295 09c4 73       		.byte	0x73
  8296 09c5 EC070000 		.4byte	0x7ec
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8313 09eb 05       		.uleb128 0x5
  8314 09ec 03       		.byte	0x3
  8315 09ed 00000000 		.4byte	rventa1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 178
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 178
 
 
  8316 09f1 19       		.uleb128 0x19
@@ -10654,7 +10654,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8346 0a30 03       		.byte	0x3
  8347 0a31 00000000 		.4byte	ok_RF
  8348 0a35 19       		.uleb128 0x19
- 8349 0a36 C6040000 		.4byte	.LASF109
+ 8349 0a36 8B040000 		.4byte	.LASF109
  8350 0a3a 05       		.byte	0x5
  8351 0a3b 91       		.byte	0x91
  8352 0a3c 81000000 		.4byte	0x81
@@ -10669,7 +10669,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8361 0a54 C7       		.byte	0xc7
  8362 0a55 00       		.byte	0
  8363 0a56 19       		.uleb128 0x19
- 8364 0a57 1A020000 		.4byte	.LASF110
+ 8364 0a57 DF010000 		.4byte	.LASF110
  8365 0a5b 05       		.byte	0x5
  8366 0a5c 92       		.byte	0x92
  8367 0a5d 460A0000 		.4byte	0xa46
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8370 0a63 00000000 		.4byte	rf_mod
  8371 0a67 06       		.uleb128 0x6
  8372 0a68 81000000 		.4byte	0x81
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 179
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 179
 
 
  8373 0a6c 770A0000 		.4byte	0xa77
@@ -10687,7 +10687,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8376 0a75 3F       		.byte	0x3f
  8377 0a76 00       		.byte	0
  8378 0a77 19       		.uleb128 0x19
- 8379 0a78 40010000 		.4byte	.LASF111
+ 8379 0a78 05010000 		.4byte	.LASF111
  8380 0a7c 05       		.byte	0x5
  8381 0a7d 97       		.byte	0x97
  8382 0a7e 670A0000 		.4byte	0xa67
@@ -10695,7 +10695,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8384 0a83 03       		.byte	0x3
  8385 0a84 00000000 		.4byte	buffer_i2c
  8386 0a88 19       		.uleb128 0x19
- 8387 0a89 6E030000 		.4byte	.LASF112
+ 8387 0a89 33030000 		.4byte	.LASF112
  8388 0a8d 05       		.byte	0x5
  8389 0a8e 9C       		.byte	0x9c
  8390 0a8f 81000000 		.4byte	0x81
@@ -10703,7 +10703,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8392 0a94 03       		.byte	0x3
  8393 0a95 00000000 		.4byte	crc_total
  8394 0a99 19       		.uleb128 0x19
- 8395 0a9a 70020000 		.4byte	.LASF113
+ 8395 0a9a 35020000 		.4byte	.LASF113
  8396 0a9e 05       		.byte	0x5
  8397 0a9f A0       		.byte	0xa0
  8398 0aa0 83090000 		.4byte	0x983
@@ -10711,7 +10711,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8400 0aa5 03       		.byte	0x3
  8401 0aa6 00000000 		.4byte	print1
  8402 0aaa 19       		.uleb128 0x19
- 8403 0aab 77020000 		.4byte	.LASF114
+ 8403 0aab 3C020000 		.4byte	.LASF114
  8404 0aaf 05       		.byte	0x5
  8405 0ab0 A1       		.byte	0xa1
  8406 0ab1 83090000 		.4byte	0x983
@@ -10719,7 +10719,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8408 0ab6 03       		.byte	0x3
  8409 0ab7 00000000 		.4byte	print2
  8410 0abb 19       		.uleb128 0x19
- 8411 0abc F9020000 		.4byte	.LASF115
+ 8411 0abc BE020000 		.4byte	.LASF115
  8412 0ac0 01       		.byte	0x1
  8413 0ac1 2F       		.byte	0x2f
  8414 0ac2 81000000 		.4byte	0x81
@@ -10727,7 +10727,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8416 0ac7 03       		.byte	0x3
  8417 0ac8 00000000 		.4byte	rx_timeout
  8418 0acc 19       		.uleb128 0x19
- 8419 0acd AB010000 		.4byte	.LASF116
+ 8419 0acd 70010000 		.4byte	.LASF116
  8420 0ad1 01       		.byte	0x1
  8421 0ad2 30       		.byte	0x30
  8422 0ad3 23080000 		.4byte	0x823
@@ -10738,14 +10738,14 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8427 0ade 81000000 		.4byte	0x81
  8428 0ae2 ED0A0000 		.4byte	0xaed
  8429 0ae6 07       		.uleb128 0x7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 180
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 180
 
 
  8430 0ae7 B6000000 		.4byte	0xb6
  8431 0aeb 0C       		.byte	0xc
  8432 0aec 00       		.byte	0
  8433 0aed 19       		.uleb128 0x19
- 8434 0aee B9010000 		.4byte	.LASF117
+ 8434 0aee 7E010000 		.4byte	.LASF117
  8435 0af2 01       		.byte	0x1
  8436 0af3 31       		.byte	0x31
  8437 0af4 DD0A0000 		.4byte	0xadd
@@ -10760,7 +10760,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8446 0b0c 0D       		.byte	0xd
  8447 0b0d 00       		.byte	0
  8448 0b0e 19       		.uleb128 0x19
- 8449 0b0f B2010000 		.4byte	.LASF118
+ 8449 0b0f 77010000 		.4byte	.LASF118
  8450 0b13 01       		.byte	0x1
  8451 0b14 32       		.byte	0x32
  8452 0b15 FE0A0000 		.4byte	0xafe
@@ -10768,7 +10768,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8454 0b1a 03       		.byte	0x3
  8455 0b1b 00000000 		.4byte	msn_td
  8456 0b1f 19       		.uleb128 0x19
- 8457 0b20 0F020000 		.4byte	.LASF119
+ 8457 0b20 D4010000 		.4byte	.LASF119
  8458 0b24 01       		.byte	0x1
  8459 0b25 33       		.byte	0x33
  8460 0b26 1F050000 		.4byte	0x51f
@@ -10776,7 +10776,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8462 0b2b 03       		.byte	0x3
  8463 0b2c 00000000 		.4byte	msn_lecact
  8464 0b30 19       		.uleb128 0x19
- 8465 0b31 35010000 		.4byte	.LASF120
+ 8465 0b31 FA000000 		.4byte	.LASF120
  8466 0b35 01       		.byte	0x1
  8467 0b36 34       		.byte	0x34
  8468 0b37 23080000 		.4byte	0x823
@@ -10784,7 +10784,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8470 0b3c 03       		.byte	0x3
  8471 0b3d 00000000 		.4byte	msn_lecaan
  8472 0b41 19       		.uleb128 0x19
- 8473 0b42 64020000 		.4byte	.LASF121
+ 8473 0b42 29020000 		.4byte	.LASF121
  8474 0b46 01       		.byte	0x1
  8475 0b47 35       		.byte	0x35
  8476 0b48 9C040000 		.4byte	0x49c
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8484 0001 11       		.uleb128 0x11
  8485 0002 01       		.byte	0x1
  8486 0003 25       		.uleb128 0x25
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 181
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 181
 
 
  8487 0004 0E       		.uleb128 0xe
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8541 003a 13       		.uleb128 0x13
  8542 003b 00       		.byte	0
  8543 003c 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 182
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 182
 
 
  8544 003d 06       		.uleb128 0x6
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8598 0073 0B       		.uleb128 0xb
  8599 0074 3B       		.uleb128 0x3b
  8600 0075 0B       		.uleb128 0xb
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 183
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 183
 
 
  8601 0076 49       		.uleb128 0x49
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8655 00ae 00       		.byte	0
  8656 00af 00       		.byte	0
  8657 00b0 0D       		.uleb128 0xd
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 184
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 184
 
 
  8658 00b1 05       		.uleb128 0x5
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8712 00e7 0B       		.uleb128 0xb
  8713 00e8 27       		.uleb128 0x27
  8714 00e9 19       		.uleb128 0x19
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 185
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 185
 
 
  8715 00ea 11       		.uleb128 0x11
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8769 0122 01       		.byte	0x1
  8770 0123 3F       		.uleb128 0x3f
  8771 0124 19       		.uleb128 0x19
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 186
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 186
 
 
  8772 0125 03       		.uleb128 0x3
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8826 015c 00       		.byte	0
  8827 015d 03       		.uleb128 0x3
  8828 015e 0E       		.uleb128 0xe
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 187
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 187
 
 
  8829 015f 3A       		.uleb128 0x3a
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8883 0195 34       		.uleb128 0x34
  8884 0196 00       		.byte	0
  8885 0197 03       		.uleb128 0x3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 188
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 188
 
 
  8886 0198 08       		.uleb128 0x8
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8940 0020 00000000 		.4byte	.LFB67
  8941 0024 7C010000 		.4byte	.LFE67
  8942 0028 00000000 		.4byte	.LFB68
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 189
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 189
 
 
  8943 002c 24000000 		.4byte	.LFE68
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  8974      657200
  8975              	.LASF8:
  8976 005f 756E7369 		.ascii	"unsigned int\000"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 190
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 190
 
 
  8976      676E6564 
@@ -11398,419 +11398,415 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 1
  9008      6F00
  9009              	.LASF28:
  9010 00ed 70726573 		.ascii	"preset\000"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 191
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 191
 
 
  9010      657400
- 9011              	.LASF124:
- 9012 00f4 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prime 2.0\\MUX\\MU"
- 9012      73657273 
- 9012      5C526563 
- 9012      65706369 
- 9012      6F6E5C44 
- 9013 0121 585F5072 		.ascii	"X_Prime.cydsn\000"
- 9013      696D652E 
- 9013      63796473 
- 9013      6E00
- 9014              	.LASF13:
- 9015 012f 666C6F61 		.ascii	"float\000"
- 9015      7400
- 9016              	.LASF120:
- 9017 0135 6D736E5F 		.ascii	"msn_lecaan\000"
- 9017      6C656361 
- 9017      616E00
- 9018              	.LASF111:
- 9019 0140 62756666 		.ascii	"buffer_i2c\000"
- 9019      65725F69 
- 9019      326300
- 9020              	.LASF99:
- 9021 014b 6C656D61 		.ascii	"lema1\000"
- 9021      3100
- 9022              	.LASF100:
- 9023 0151 6C656D61 		.ascii	"lema2\000"
- 9023      3200
- 9024              	.LASF30:
- 9025 0157 696D7072 		.ascii	"imprimir\000"
- 9025      696D6972 
- 9025      00
- 9026              	.LASF7:
- 9027 0160 6C6F6E67 		.ascii	"long long unsigned int\000"
- 9027      206C6F6E 
- 9027      6720756E 
- 9027      7369676E 
- 9027      65642069 
- 9028              	.LASF84:
- 9029 0177 696D6167 		.ascii	"imagen_grado4\000"
- 9029      656E5F67 
- 9029      7261646F 
- 9029      3400
- 9030              	.LASF123:
- 9031 0185 2E5C5072 		.ascii	".\\Protocolo.c\000"
- 9031      6F746F63 
- 9031      6F6C6F2E 
- 9031      6300
- 9032              	.LASF92:
- 9033 0193 6C61646F 		.ascii	"lado1\000"
- 9033      3100
- 9034              	.LASF93:
- 9035 0199 6C61646F 		.ascii	"lado2\000"
- 9035      3200
- 9036              	.LASF94:
- 9037 019f 6C61646F 		.ascii	"lado3\000"
- 9037      3300
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 192
+ 9011              	.LASF13:
+ 9012 00f4 666C6F61 		.ascii	"float\000"
+ 9012      7400
+ 9013              	.LASF120:
+ 9014 00fa 6D736E5F 		.ascii	"msn_lecaan\000"
+ 9014      6C656361 
+ 9014      616E00
+ 9015              	.LASF111:
+ 9016 0105 62756666 		.ascii	"buffer_i2c\000"
+ 9016      65725F69 
+ 9016      326300
+ 9017              	.LASF99:
+ 9018 0110 6C656D61 		.ascii	"lema1\000"
+ 9018      3100
+ 9019              	.LASF100:
+ 9020 0116 6C656D61 		.ascii	"lema2\000"
+ 9020      3200
+ 9021              	.LASF30:
+ 9022 011c 696D7072 		.ascii	"imprimir\000"
+ 9022      696D6972 
+ 9022      00
+ 9023              	.LASF7:
+ 9024 0125 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 9024      206C6F6E 
+ 9024      6720756E 
+ 9024      7369676E 
+ 9024      65642069 
+ 9025              	.LASF84:
+ 9026 013c 696D6167 		.ascii	"imagen_grado4\000"
+ 9026      656E5F67 
+ 9026      7261646F 
+ 9026      3400
+ 9027              	.LASF123:
+ 9028 014a 2E5C5072 		.ascii	".\\Protocolo.c\000"
+ 9028      6F746F63 
+ 9028      6F6C6F2E 
+ 9028      6300
+ 9029              	.LASF92:
+ 9030 0158 6C61646F 		.ascii	"lado1\000"
+ 9030      3100
+ 9031              	.LASF93:
+ 9032 015e 6C61646F 		.ascii	"lado2\000"
+ 9032      3200
+ 9033              	.LASF94:
+ 9034 0164 6C61646F 		.ascii	"lado3\000"
+ 9034      3300
+ 9035              	.LASF95:
+ 9036 016a 6C61646F 		.ascii	"lado4\000"
+ 9036      3400
+ 9037              	.LASF116:
+ 9038 0170 6D736E5F 		.ascii	"msn_tc\000"
+ 9038      746300
+ 9039              	.LASF118:
+ 9040 0177 6D736E5F 		.ascii	"msn_td\000"
+ 9040      746400
+ 9041              	.LASF117:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 192
 
 
- 9038              	.LASF95:
- 9039 01a5 6C61646F 		.ascii	"lado4\000"
- 9039      3400
- 9040              	.LASF116:
- 9041 01ab 6D736E5F 		.ascii	"msn_tc\000"
- 9041      746300
- 9042              	.LASF118:
- 9043 01b2 6D736E5F 		.ascii	"msn_td\000"
- 9043      746400
- 9044              	.LASF117:
- 9045 01b9 6D736E5F 		.ascii	"msn_te\000"
- 9045      746500
- 9046              	.LASF54:
- 9047 01c0 53757274 		.ascii	"Surtidor_rxBuffer\000"
- 9047      69646F72 
- 9047      5F727842 
- 9047      75666665 
- 9047      7200
- 9048              	.LASF29:
- 9049 01d2 706C6163 		.ascii	"placa\000"
- 9049      6100
- 9050              	.LASF37:
- 9051 01d8 7665725F 		.ascii	"ver_pos\000"
- 9051      706F7300 
- 9052              	.LASF25:
- 9053 01e0 766F6C75 		.ascii	"volumen\000"
- 9053      6D656E00 
- 9054              	.LASF43:
- 9055 01e8 76656E74 		.ascii	"venta\000"
- 9055      6100
- 9056              	.LASF97:
- 9057 01ee 74656C65 		.ascii	"telefono\000"
- 9057      666F6E6F 
- 9057      00
- 9058              	.LASF60:
- 9059 01f7 69645F74 		.ascii	"id_teclado1\000"
- 9059      65636C61 
- 9059      646F3100 
- 9060              	.LASF63:
- 9061 0203 69645F74 		.ascii	"id_teclado2\000"
- 9061      65636C61 
- 9061      646F3200 
- 9062              	.LASF119:
- 9063 020f 6D736E5F 		.ascii	"msn_lecact\000"
- 9063      6C656361 
- 9063      637400
- 9064              	.LASF110:
- 9065 021a 72665F6D 		.ascii	"rf_mod\000"
- 9065      6F6400
- 9066              	.LASF42:
- 9067 0221 64657465 		.ascii	"detener\000"
- 9067      6E657200 
- 9068              	.LASF40:
- 9069 0229 636F6D61 		.ascii	"comand_exten\000"
- 9069      6E645F65 
- 9069      7874656E 
- 9069      00
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 193
+ 9042 017e 6D736E5F 		.ascii	"msn_te\000"
+ 9042      746500
+ 9043              	.LASF54:
+ 9044 0185 53757274 		.ascii	"Surtidor_rxBuffer\000"
+ 9044      69646F72 
+ 9044      5F727842 
+ 9044      75666665 
+ 9044      7200
+ 9045              	.LASF29:
+ 9046 0197 706C6163 		.ascii	"placa\000"
+ 9046      6100
+ 9047              	.LASF37:
+ 9048 019d 7665725F 		.ascii	"ver_pos\000"
+ 9048      706F7300 
+ 9049              	.LASF25:
+ 9050 01a5 766F6C75 		.ascii	"volumen\000"
+ 9050      6D656E00 
+ 9051              	.LASF43:
+ 9052 01ad 76656E74 		.ascii	"venta\000"
+ 9052      6100
+ 9053              	.LASF97:
+ 9054 01b3 74656C65 		.ascii	"telefono\000"
+ 9054      666F6E6F 
+ 9054      00
+ 9055              	.LASF60:
+ 9056 01bc 69645F74 		.ascii	"id_teclado1\000"
+ 9056      65636C61 
+ 9056      646F3100 
+ 9057              	.LASF63:
+ 9058 01c8 69645F74 		.ascii	"id_teclado2\000"
+ 9058      65636C61 
+ 9058      646F3200 
+ 9059              	.LASF119:
+ 9060 01d4 6D736E5F 		.ascii	"msn_lecact\000"
+ 9060      6C656361 
+ 9060      637400
+ 9061              	.LASF110:
+ 9062 01df 72665F6D 		.ascii	"rf_mod\000"
+ 9062      6F6400
+ 9063              	.LASF42:
+ 9064 01e6 64657465 		.ascii	"detener\000"
+ 9064      6E657200 
+ 9065              	.LASF40:
+ 9066 01ee 636F6D61 		.ascii	"comand_exten\000"
+ 9066      6E645F65 
+ 9066      7874656E 
+ 9066      00
+ 9067              	.LASF77:
+ 9068 01fb 42756666 		.ascii	"Buffer_LCD2\000"
+ 9068      65725F4C 
+ 9068      43443200 
+ 9069              	.LASF15:
+ 9070 0207 63686172 		.ascii	"char\000"
+ 9070      00
+ 9071              	.LASF86:
+ 9072 020c 626C6F71 		.ascii	"bloqueo_LCD\000"
+ 9072      75656F5F 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 193
 
 
- 9070              	.LASF77:
- 9071 0236 42756666 		.ascii	"Buffer_LCD2\000"
- 9071      65725F4C 
- 9071      43443200 
- 9072              	.LASF15:
- 9073 0242 63686172 		.ascii	"char\000"
- 9073      00
- 9074              	.LASF86:
- 9075 0247 626C6F71 		.ascii	"bloqueo_LCD\000"
- 9075      75656F5F 
- 9075      4C434400 
- 9076              	.LASF20:
- 9077 0253 6D616E67 		.ascii	"mangueras\000"
- 9077      75657261 
- 9077      7300
- 9078              	.LASF12:
- 9079 025d 75696E74 		.ascii	"uint16\000"
- 9079      313600
- 9080              	.LASF121:
- 9081 0264 6D736E5F 		.ascii	"msn_tventas\000"
- 9081      7476656E 
- 9081      74617300 
- 9082              	.LASF113:
- 9083 0270 7072696E 		.ascii	"print1\000"
- 9083      743100
- 9084              	.LASF114:
- 9085 0277 7072696E 		.ascii	"print2\000"
- 9085      743200
- 9086              	.LASF31:
- 9087 027e 7469706F 		.ascii	"tipo_venta\000"
- 9087      5F76656E 
- 9087      746100
- 9088              	.LASF34:
- 9089 0289 7475726E 		.ascii	"turno\000"
- 9089      6F00
- 9090              	.LASF18:
- 9091 028f 746F7461 		.ascii	"totales\000"
- 9091      6C657300 
- 9092              	.LASF80:
- 9093 0297 70617373 		.ascii	"password_lcd\000"
- 9093      776F7264 
- 9093      5F6C6364 
- 9093      00
- 9094              	.LASF56:
- 9095 02a4 636F756E 		.ascii	"count_teclas1\000"
- 9095      745F7465 
- 9095      636C6173 
- 9095      3100
- 9096              	.LASF61:
- 9097 02b2 636F756E 		.ascii	"count_teclas2\000"
- 9097      745F7465 
- 9097      636C6173 
- 9097      3200
- 9098              	.LASF64:
- 9099 02c0 706F7378 		.ascii	"posx1\000"
- 9099      3100
- 9100              	.LASF67:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 194
+ 9072      4C434400 
+ 9073              	.LASF20:
+ 9074 0218 6D616E67 		.ascii	"mangueras\000"
+ 9074      75657261 
+ 9074      7300
+ 9075              	.LASF12:
+ 9076 0222 75696E74 		.ascii	"uint16\000"
+ 9076      313600
+ 9077              	.LASF121:
+ 9078 0229 6D736E5F 		.ascii	"msn_tventas\000"
+ 9078      7476656E 
+ 9078      74617300 
+ 9079              	.LASF113:
+ 9080 0235 7072696E 		.ascii	"print1\000"
+ 9080      743100
+ 9081              	.LASF114:
+ 9082 023c 7072696E 		.ascii	"print2\000"
+ 9082      743200
+ 9083              	.LASF31:
+ 9084 0243 7469706F 		.ascii	"tipo_venta\000"
+ 9084      5F76656E 
+ 9084      746100
+ 9085              	.LASF34:
+ 9086 024e 7475726E 		.ascii	"turno\000"
+ 9086      6F00
+ 9087              	.LASF18:
+ 9088 0254 746F7461 		.ascii	"totales\000"
+ 9088      6C657300 
+ 9089              	.LASF80:
+ 9090 025c 70617373 		.ascii	"password_lcd\000"
+ 9090      776F7264 
+ 9090      5F6C6364 
+ 9090      00
+ 9091              	.LASF56:
+ 9092 0269 636F756E 		.ascii	"count_teclas1\000"
+ 9092      745F7465 
+ 9092      636C6173 
+ 9092      3100
+ 9093              	.LASF61:
+ 9094 0277 636F756E 		.ascii	"count_teclas2\000"
+ 9094      745F7465 
+ 9094      636C6173 
+ 9094      3200
+ 9095              	.LASF64:
+ 9096 0285 706F7378 		.ascii	"posx1\000"
+ 9096      3100
+ 9097              	.LASF67:
+ 9098 028b 706F7378 		.ascii	"posx2\000"
+ 9098      3200
+ 9099              	.LASF6:
+ 9100 0291 6C6F6E67 		.ascii	"long long int\000"
+ 9100      206C6F6E 
+ 9100      6720696E 
+ 9100      7400
+ 9101              	.LASF26:
+ 9102 029f 70726F64 		.ascii	"producto\000"
+ 9102      7563746F 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 194
 
 
- 9101 02c6 706F7378 		.ascii	"posx2\000"
- 9101      3200
- 9102              	.LASF6:
- 9103 02cc 6C6F6E67 		.ascii	"long long int\000"
- 9103      206C6F6E 
- 9103      6720696E 
- 9103      7400
- 9104              	.LASF26:
- 9105 02da 70726F64 		.ascii	"producto\000"
- 9105      7563746F 
- 9105      00
- 9106              	.LASF50:
- 9107 02e3 63616D62 		.ascii	"cambiar_precio\000"
- 9107      6961725F 
- 9107      70726563 
- 9107      696F00
- 9108              	.LASF32:
- 9109 02f2 63656475 		.ascii	"cedula\000"
- 9109      6C6100
- 9110              	.LASF115:
- 9111 02f9 72785F74 		.ascii	"rx_timeout\000"
- 9111      696D656F 
- 9111      757400
- 9112              	.LASF81:
- 9113 0304 696D6167 		.ascii	"imagen_grado1\000"
- 9113      656E5F67 
- 9113      7261646F 
- 9113      3100
- 9114              	.LASF82:
- 9115 0312 696D6167 		.ascii	"imagen_grado2\000"
- 9115      656E5F67 
- 9115      7261646F 
- 9115      3200
- 9116              	.LASF83:
- 9117 0320 696D6167 		.ascii	"imagen_grado3\000"
- 9117      656E5F67 
- 9117      7261646F 
- 9117      3300
- 9118              	.LASF65:
- 9119 032e 706F7379 		.ascii	"posy1\000"
- 9119      3100
- 9120              	.LASF68:
- 9121 0334 706F7379 		.ascii	"posy2\000"
- 9121      3200
- 9122              	.LASF47:
- 9123 033a 73697A65 		.ascii	"size\000"
- 9123      00
- 9124              	.LASF22:
- 9125 033f 72656369 		.ascii	"recibo\000"
- 9125      626F00
- 9126              	.LASF24:
- 9127 0346 64696E65 		.ascii	"dinero\000"
- 9127      726F00
- 9128              	.LASF76:
- 9129 034d 42756666 		.ascii	"Buffer_LCD1\000"
- 9129      65725F4C 
- 9129      43443100 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 195
+ 9102      00
+ 9103              	.LASF50:
+ 9104 02a8 63616D62 		.ascii	"cambiar_precio\000"
+ 9104      6961725F 
+ 9104      70726563 
+ 9104      696F00
+ 9105              	.LASF32:
+ 9106 02b7 63656475 		.ascii	"cedula\000"
+ 9106      6C6100
+ 9107              	.LASF115:
+ 9108 02be 72785F74 		.ascii	"rx_timeout\000"
+ 9108      696D656F 
+ 9108      757400
+ 9109              	.LASF81:
+ 9110 02c9 696D6167 		.ascii	"imagen_grado1\000"
+ 9110      656E5F67 
+ 9110      7261646F 
+ 9110      3100
+ 9111              	.LASF82:
+ 9112 02d7 696D6167 		.ascii	"imagen_grado2\000"
+ 9112      656E5F67 
+ 9112      7261646F 
+ 9112      3200
+ 9113              	.LASF83:
+ 9114 02e5 696D6167 		.ascii	"imagen_grado3\000"
+ 9114      656E5F67 
+ 9114      7261646F 
+ 9114      3300
+ 9115              	.LASF65:
+ 9116 02f3 706F7379 		.ascii	"posy1\000"
+ 9116      3100
+ 9117              	.LASF68:
+ 9118 02f9 706F7379 		.ascii	"posy2\000"
+ 9118      3200
+ 9119              	.LASF47:
+ 9120 02ff 73697A65 		.ascii	"size\000"
+ 9120      00
+ 9121              	.LASF22:
+ 9122 0304 72656369 		.ascii	"recibo\000"
+ 9122      626F00
+ 9123              	.LASF24:
+ 9124 030b 64696E65 		.ascii	"dinero\000"
+ 9124      726F00
+ 9125              	.LASF76:
+ 9126 0312 42756666 		.ascii	"Buffer_LCD1\000"
+ 9126      65725F4C 
+ 9126      43443100 
+ 9127              	.LASF17:
+ 9128 031e 65737461 		.ascii	"estado\000"
+ 9128      646F00
+ 9129              	.LASF87:
+ 9130 0325 70707578 		.ascii	"ppux10\000"
+ 9130      313000
+ 9131              	.LASF96:
+ 9132 032c 6E6F6D62 		.ascii	"nombre\000"
+ 9132      726500
+ 9133              	.LASF112:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 195
 
 
- 9130              	.LASF17:
- 9131 0359 65737461 		.ascii	"estado\000"
- 9131      646F00
- 9132              	.LASF87:
- 9133 0360 70707578 		.ascii	"ppux10\000"
- 9133      313000
- 9134              	.LASF96:
- 9135 0367 6E6F6D62 		.ascii	"nombre\000"
- 9135      726500
- 9136              	.LASF112:
- 9137 036e 6372635F 		.ascii	"crc_total\000"
- 9137      746F7461 
- 9137      6C00
- 9138              	.LASF53:
- 9139 0378 6E6D616E 		.ascii	"nmangueras\000"
- 9139      67756572 
- 9139      617300
- 9140              	.LASF101:
- 9141 0383 69645F6C 		.ascii	"id_logo\000"
- 9141      6F676F00 
- 9142              	.LASF2:
- 9143 038b 73686F72 		.ascii	"short int\000"
- 9143      7420696E 
- 9143      7400
- 9144              	.LASF4:
- 9145 0395 6C6F6E67 		.ascii	"long int\000"
- 9145      20696E74 
- 9145      00
- 9146              	.LASF55:
- 9147 039e 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 9147      52784275 
- 9147      66666572 
- 9147      00
- 9148              	.LASF21:
- 9149 03ab 73757274 		.ascii	"surtidor\000"
- 9149      69646F72 
- 9149      00
- 9150              	.LASF57:
- 9151 03b4 636F6D61 		.ascii	"comas1\000"
- 9151      733100
- 9152              	.LASF58:
- 9153 03bb 636F6D61 		.ascii	"comas2\000"
- 9153      733200
- 9154              	.LASF48:
- 9155 03c2 74656D70 		.ascii	"temp\000"
- 9155      00
- 9156              	.LASF88:
- 9157 03c7 6E6F6D62 		.ascii	"nombre_pro1\000"
- 9157      72655F70 
- 9157      726F3100 
- 9158              	.LASF90:
- 9159 03d3 6E6F6D62 		.ascii	"nombre_pro3\000"
- 9159      72655F70 
- 9159      726F3300 
- 9160              	.LASF38:
- 9161 03df 65737461 		.ascii	"estado_ex\000"
- 9161      646F5F65 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 196
+ 9134 0333 6372635F 		.ascii	"crc_total\000"
+ 9134      746F7461 
+ 9134      6C00
+ 9135              	.LASF53:
+ 9136 033d 6E6D616E 		.ascii	"nmangueras\000"
+ 9136      67756572 
+ 9136      617300
+ 9137              	.LASF101:
+ 9138 0348 69645F6C 		.ascii	"id_logo\000"
+ 9138      6F676F00 
+ 9139              	.LASF2:
+ 9140 0350 73686F72 		.ascii	"short int\000"
+ 9140      7420696E 
+ 9140      7400
+ 9141              	.LASF4:
+ 9142 035a 6C6F6E67 		.ascii	"long int\000"
+ 9142      20696E74 
+ 9142      00
+ 9143              	.LASF55:
+ 9144 0363 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 9144      52784275 
+ 9144      66666572 
+ 9144      00
+ 9145              	.LASF21:
+ 9146 0370 73757274 		.ascii	"surtidor\000"
+ 9146      69646F72 
+ 9146      00
+ 9147              	.LASF57:
+ 9148 0379 636F6D61 		.ascii	"comas1\000"
+ 9148      733100
+ 9149              	.LASF58:
+ 9150 0380 636F6D61 		.ascii	"comas2\000"
+ 9150      733200
+ 9151              	.LASF48:
+ 9152 0387 74656D70 		.ascii	"temp\000"
+ 9152      00
+ 9153              	.LASF88:
+ 9154 038c 6E6F6D62 		.ascii	"nombre_pro1\000"
+ 9154      72655F70 
+ 9154      726F3100 
+ 9155              	.LASF90:
+ 9156 0398 6E6F6D62 		.ascii	"nombre_pro3\000"
+ 9156      72655F70 
+ 9156      726F3300 
+ 9157              	.LASF38:
+ 9158 03a4 65737461 		.ascii	"estado_ex\000"
+ 9158      646F5F65 
+ 9158      7800
+ 9159              	.LASF44:
+ 9160 03ae 70726F67 		.ascii	"programar\000"
+ 9160      72616D61 
+ 9160      7200
+ 9161              	.LASF16:
+ 9162 03b8 73697A65 		.ascii	"sizetype\000"
+ 9162      74797065 
+ 9162      00
+ 9163              	.LASF5:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 196
 
 
- 9161      7800
- 9162              	.LASF44:
- 9163 03e9 70726F67 		.ascii	"programar\000"
- 9163      72616D61 
- 9163      7200
- 9164              	.LASF16:
- 9165 03f3 73697A65 		.ascii	"sizetype\000"
- 9165      74797065 
- 9165      00
- 9166              	.LASF5:
- 9167 03fc 6C6F6E67 		.ascii	"long unsigned int\000"
- 9167      20756E73 
- 9167      69676E65 
- 9167      6420696E 
- 9167      7400
- 9168              	.LASF10:
- 9169 040e 696E7433 		.ascii	"int32_t\000"
- 9169      325F7400 
- 9170              	.LASF35:
- 9171 0416 6175746F 		.ascii	"autorizado\000"
- 9171      72697A61 
- 9171      646F00
- 9172              	.LASF1:
- 9173 0421 756E7369 		.ascii	"unsigned char\000"
- 9173      676E6564 
- 9173      20636861 
- 9173      7200
- 9174              	.LASF36:
- 9175 042f 6765745F 		.ascii	"get_estado\000"
- 9175      65737461 
- 9175      646F00
- 9176              	.LASF122:
- 9177 043a 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 9177      4320342E 
- 9177      382E3420 
- 9177      32303134 
- 9177      30353236 
- 9178 046d 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
- 9178      20726576 
- 9178      6973696F 
- 9178      6E203231 
- 9178      31333538 
- 9179 04a0 30202D66 		.ascii	"0 -ffunction-sections\000"
- 9179      66756E63 
- 9179      74696F6E 
- 9179      2D736563 
- 9179      74696F6E 
- 9180              	.LASF102:
- 9181 04b6 66656368 		.ascii	"fecha\000"
- 9181      6100
- 9182              	.LASF41:
- 9183 04bc 7665725F 		.ascii	"ver_error\000"
- 9183      6572726F 
- 9183      7200
- 9184              	.LASF109:
- 9185 04c6 6F6B5F64 		.ascii	"ok_datosRF\000"
- 9185      61746F73 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc9aa4nh.s 			page 197
+ 9164 03c1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 9164      20756E73 
+ 9164      69676E65 
+ 9164      6420696E 
+ 9164      7400
+ 9165              	.LASF10:
+ 9166 03d3 696E7433 		.ascii	"int32_t\000"
+ 9166      325F7400 
+ 9167              	.LASF35:
+ 9168 03db 6175746F 		.ascii	"autorizado\000"
+ 9168      72697A61 
+ 9168      646F00
+ 9169              	.LASF1:
+ 9170 03e6 756E7369 		.ascii	"unsigned char\000"
+ 9170      676E6564 
+ 9170      20636861 
+ 9170      7200
+ 9171              	.LASF36:
+ 9172 03f4 6765745F 		.ascii	"get_estado\000"
+ 9172      65737461 
+ 9172      646F00
+ 9173              	.LASF122:
+ 9174 03ff 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 9174      4320342E 
+ 9174      382E3420 
+ 9174      32303134 
+ 9174      30353236 
+ 9175 0432 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 9175      20726576 
+ 9175      6973696F 
+ 9175      6E203231 
+ 9175      31333538 
+ 9176 0465 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 9176      66756E63 
+ 9176      74696F6E 
+ 9176      2D736563 
+ 9176      74696F6E 
+ 9177              	.LASF102:
+ 9178 047b 66656368 		.ascii	"fecha\000"
+ 9178      6100
+ 9179              	.LASF41:
+ 9180 0481 7665725F 		.ascii	"ver_error\000"
+ 9180      6572726F 
+ 9180      7200
+ 9181              	.LASF109:
+ 9182 048b 6F6B5F64 		.ascii	"ok_datosRF\000"
+ 9182      61746F73 
+ 9182      524600
+ 9183              	.LASF89:
+ 9184 0496 6E6F6D62 		.ascii	"nombre_pro2\000"
+ 9184      72655F70 
+ 9184      726F3200 
+ 9185              	.LASF0:
+ 9186 04a2 7369676E 		.ascii	"signed char\000"
+ 9186      65642063 
+ 9186      68617200 
+ 9187              	.LASF45:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc3fClzk.s 			page 197
 
 
- 9185      524600
- 9186              	.LASF89:
- 9187 04d1 6E6F6D62 		.ascii	"nombre_pro2\000"
- 9187      72655F70 
- 9187      726F3200 
- 9188              	.LASF0:
- 9189 04dd 7369676E 		.ascii	"signed char\000"
- 9189      65642063 
- 9189      68617200 
- 9190              	.LASF45:
- 9191 04e9 76616C6F 		.ascii	"valor\000"
- 9191      7200
- 9192              	.LASF78:
- 9193 04ef 636F756E 		.ascii	"count_protector\000"
- 9193      745F7072 
- 9193      6F746563 
- 9193      746F7200 
- 9194              	.LASF3:
- 9195 04ff 73686F72 		.ascii	"short unsigned int\000"
- 9195      7420756E 
- 9195      7369676E 
- 9195      65642069 
- 9195      6E7400
- 9196              	.LASF11:
- 9197 0512 75696E74 		.ascii	"uint8\000"
- 9197      3800
- 9198              	.LASF14:
- 9199 0518 646F7562 		.ascii	"double\000"
- 9199      6C6500
- 9200              	.LASF39:
- 9201 051f 72785F65 		.ascii	"rx_extend\000"
- 9201      7874656E 
- 9201      6400
- 9202              	.LASF27:
- 9203 0529 6D616E67 		.ascii	"manguera\000"
- 9203      75657261 
- 9203      00
- 9204              	.LASF19:
- 9205 0532 67726164 		.ascii	"grado\000"
- 9205      6F00
- 9206              	.LASF125:
- 9207 0538 52785F53 		.ascii	"Rx_Surtidor\000"
- 9207      75727469 
- 9207      646F7200 
- 9208              	.LASF66:
- 9209 0544 73697A65 		.ascii	"sizeletra1\000"
- 9209      6C657472 
- 9209      613100
- 9210              	.LASF69:
- 9211 054f 73697A65 		.ascii	"sizeletra2\000"
- 9211      6C657472 
- 9211      613200
- 9212              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 9188 04ae 76616C6F 		.ascii	"valor\000"
+ 9188      7200
+ 9189              	.LASF78:
+ 9190 04b4 636F756E 		.ascii	"count_protector\000"
+ 9190      745F7072 
+ 9190      6F746563 
+ 9190      746F7200 
+ 9191              	.LASF3:
+ 9192 04c4 73686F72 		.ascii	"short unsigned int\000"
+ 9192      7420756E 
+ 9192      7369676E 
+ 9192      65642069 
+ 9192      6E7400
+ 9193              	.LASF124:
+ 9194 04d7 453A5C4D 		.ascii	"E:\\MUX\\MUX_Prime.cydsn\000"
+ 9194      55585C4D 
+ 9194      55585F50 
+ 9194      72696D65 
+ 9194      2E637964 
+ 9195              	.LASF11:
+ 9196 04ee 75696E74 		.ascii	"uint8\000"
+ 9196      3800
+ 9197              	.LASF14:
+ 9198 04f4 646F7562 		.ascii	"double\000"
+ 9198      6C6500
+ 9199              	.LASF39:
+ 9200 04fb 72785F65 		.ascii	"rx_extend\000"
+ 9200      7874656E 
+ 9200      6400
+ 9201              	.LASF27:
+ 9202 0505 6D616E67 		.ascii	"manguera\000"
+ 9202      75657261 
+ 9202      00
+ 9203              	.LASF19:
+ 9204 050e 67726164 		.ascii	"grado\000"
+ 9204      6F00
+ 9205              	.LASF125:
+ 9206 0514 52785F53 		.ascii	"Rx_Surtidor\000"
+ 9206      75727469 
+ 9206      646F7200 
+ 9207              	.LASF66:
+ 9208 0520 73697A65 		.ascii	"sizeletra1\000"
+ 9208      6C657472 
+ 9208      613100
+ 9209              	.LASF69:
+ 9210 052b 73697A65 		.ascii	"sizeletra2\000"
+ 9210      6C657472 
+ 9210      613200
+ 9211              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

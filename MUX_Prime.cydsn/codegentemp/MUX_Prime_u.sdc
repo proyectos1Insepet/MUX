@@ -1,3 +1,3 @@
-# Component constraints for C:\Users\Recepcion\Documents\Prime 2.0\MUX\MUX_Prime.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Users\Recepcion\Documents\Prime 2.0\MUX\MUX_Prime.cydsn\MUX_Prime.cyprj
-# Date: Fri, 19 Feb 2016 12:43:35 GMT
+# Component constraints for E:\MUX\MUX_Prime.cydsn\TopDesign\TopDesign.cysch
+# Project: E:\MUX\MUX_Prime.cydsn\MUX_Prime.cyprj
+# Date: Thu, 25 Feb 2016 17:41:41 GMT

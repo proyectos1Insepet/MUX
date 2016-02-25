@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
    2:.\Generated_Source\PSoC5/cyPm.c **** * File Name: cyPm.c
    3:.\Generated_Source\PSoC5/cyPm.c **** * Version 5.0
    4:.\Generated_Source\PSoC5/cyPm.c **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 2
 
 
    5:.\Generated_Source\PSoC5/cyPm.c **** * Description:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
   59:.\Generated_Source\PSoC5/cyPm.c **** *  during sleep/hibernate or that need to be altered in preparation for
   60:.\Generated_Source\PSoC5/cyPm.c **** *  sleep/hibernate. Shutdowns all the digital and analog clock dividers for the
   61:.\Generated_Source\PSoC5/cyPm.c **** *  active power mode configuration.
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 3
 
 
   62:.\Generated_Source\PSoC5/cyPm.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
   72 0020 894A     		ldr	r2, .L27
   73 0022 1278     		ldrb	r2, [r2]
   74 0024 D2B2     		uxtb	r2, r2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 4
 
 
   75 0026 22F00F02 		bic	r2, r2, #15
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  117 007a 03D0     		beq	.L2
  102:.\Generated_Source\PSoC5/cyPm.c ****     {
  103:.\Generated_Source\PSoC5/cyPm.c ****         /* IMO doubler enabled - save and disable */
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 5
 
 
  104:.\Generated_Source\PSoC5/cyPm.c ****         cyPmClockBackup.imo2x = CY_PM_ENABLED;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  121:.\Generated_Source\PSoC5/cyPm.c ****             CyMasterClk_SetSource(CY_MASTER_SOURCE_IMO);
  155              		.loc 1 121 0
  156 00bc 0020     		movs	r0, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 6
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 6
 
 
  157 00be FFF7FEFF 		bl	CyMasterClk_SetSource
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  143:.\Generated_Source\PSoC5/cyPm.c ****         CyPLL_OUT_Stop();
  190              		.loc 1 143 0
  191 00f0 FFF7FEFF 		bl	CyPLL_OUT_Stop
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 7
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 7
 
 
  192 00f4 02E0     		b	.L10
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  167:.\Generated_Source\PSoC5/cyPm.c **** 
  168:.\Generated_Source\PSoC5/cyPm.c ****         /* Settling time of the IMO is of the order of less than 6us */
  169:.\Generated_Source\PSoC5/cyPm.c ****         CyDelayUs(6u);
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 8
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 8
 
 
  223              		.loc 1 169 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  257              		.loc 1 185 0
  258 015c 3B4B     		ldr	r3, .L27+4
  259 015e 0022     		movs	r2, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 9
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 9
 
 
  260 0160 DA71     		strb	r2, [r3, #7]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  206:.\Generated_Source\PSoC5/cyPm.c ****     cyPmClockBackup.clkSyncDiv = CY_PM_CLKDIST_MSTR0_REG;
  294              		.loc 1 206 0
  295 01a2 314B     		ldr	r3, .L27+32
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 10
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 10
 
 
  296 01a4 1B78     		ldrb	r3, [r3]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  221:.\Generated_Source\PSoC5/cyPm.c ****     if(CY_PM_BUS_CLK_DIV_BY_ONE != cyPmClockBackup.clkBusDiv)
  336              		.loc 1 221 0
  337 01e8 184B     		ldr	r3, .L27+4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 11
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 11
 
 
  338 01ea 9B89     		ldrh	r3, [r3, #12]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  240:.\Generated_Source\PSoC5/cyPm.c ****     }
  241:.\Generated_Source\PSoC5/cyPm.c **** 
  242:.\Generated_Source\PSoC5/cyPm.c **** 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 12
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 12
 
 
  243:.\Generated_Source\PSoC5/cyPm.c ****     /***************************************************************************
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  414              		.section	.rodata
  415 0007 00       		.align	2
  416              	.LC0:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 13
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 13
 
 
  417 0008 02       		.byte	2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  440 0002 86B0     		sub	sp, sp, #24
  441              		.cfi_def_cfa_offset 32
  442 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 14
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 14
 
 
  443              		.cfi_def_cfa_register 7
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  478 0042 734B     		ldr	r3, .L55+16
  479 0044 724A     		ldr	r2, .L55+16
  480 0046 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 15
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 15
 
 
  481 0048 D2B2     		uxtb	r2, r2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  512 0080 FFF7FEFF 		bl	CyDelayCycles
  329:.\Generated_Source\PSoC5/cyPm.c **** 
  330:.\Generated_Source\PSoC5/cyPm.c ****             /* High output indicates oscillator failure */
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 16
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 16
 
 
  331:.\Generated_Source\PSoC5/cyPm.c ****             if(0u == (CY_PM_FASTCLK_XMHZ_CSR_REG & CY_PM_XMHZ_CSR_XERR))
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  539 00a6 3720     		movs	r0, #55
  540 00a8 FFF7FEFF 		bl	CyFlash_SetWaitCycles
  357:.\Generated_Source\PSoC5/cyPm.c **** 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 17
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 17
 
 
  358:.\Generated_Source\PSoC5/cyPm.c ****     /* XTAL and DSI clocks are ready to be source for Master clock. */
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  577 00e6 002B     		cmp	r3, #0
  578 00e8 0CD0     		beq	.L39
  375:.\Generated_Source\PSoC5/cyPm.c ****         (CY_IMO_FREQ_24MHZ == cyPmImoFreqMhz2Reg[cyPmClockBackup.imoFreq]))
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 18
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 18
 
 
  579              		.loc 1 375 0 discriminator 1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  391:.\Generated_Source\PSoC5/cyPm.c ****             CY_PM_FASTCLK_IMO_CR_REG &= ((uint8)(~CY_PM_FASTCLK_IMO_CR_USB));
  617              		.loc 1 391 0
  618 0136 344B     		ldr	r3, .L55+8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 19
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 19
 
 
  619 0138 334A     		ldr	r2, .L55+8
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  654              		.loc 1 409 0
  655 0176 FFF7FEFF 		bl	CyIMO_EnableDoubler
  656              	.L43:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 20
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 20
 
 
  410:.\Generated_Source\PSoC5/cyPm.c ****     }
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  690              		.loc 1 429 0
  691 01ba 1023     		movs	r3, #16
  692 01bc 3B61     		str	r3, [r7, #16]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 21
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 21
 
 
  430:.\Generated_Source\PSoC5/cyPm.c **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  448:.\Generated_Source\PSoC5/cyPm.c ****                 break;
  728              		.loc 1 448 0
  729 01fa 00BF     		nop
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 22
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 22
 
 
  730 01fc 18E0     		b	.L45
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  760 0238 294B     		ldr	r3, .L57
  761 023a 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
  469:.\Generated_Source\PSoC5/cyPm.c ****     if((CY_PM_MASTER_CLK_SRC_IMO == cyPmClockBackup.masterClkSrc) ||
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 23
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 23
 
 
  762              		.loc 1 469 0 discriminator 1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  486:.\Generated_Source\PSoC5/cyPm.c ****         CyIMO_Stop();
  800              		.loc 1 486 0
  801 027a FFF7FEFF 		bl	CyIMO_Stop
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 24
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 24
 
 
  802              	.L53:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  842 02c0 0A43     		orrs	r2, r2, r1
  843 02c2 D2B2     		uxtb	r2, r2
  844 02c4 D2B2     		uxtb	r2, r2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 25
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 25
 
 
  845 02c6 1A70     		strb	r2, [r3]
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  516:.\Generated_Source\PSoC5/cyPm.c **** *  will configure the template for the Alternate Active state to be the same as
  517:.\Generated_Source\PSoC5/cyPm.c **** *  the Active state with the exception that the CPU will be disabled during
  518:.\Generated_Source\PSoC5/cyPm.c **** *  Alternate Active.
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 26
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 26
 
 
  519:.\Generated_Source\PSoC5/cyPm.c **** *
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  573:.\Generated_Source\PSoC5/cyPm.c **** *  PM_ALT_ACT_SRC_NONE) is called and PICU interrupt occurs, the CPU will be
  574:.\Generated_Source\PSoC5/cyPm.c **** *  started while device remains in Alternate Active mode.
  575:.\Generated_Source\PSoC5/cyPm.c **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 27
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 27
 
 
  576:.\Generated_Source\PSoC5/cyPm.c **** * Parameters:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  630:.\Generated_Source\PSoC5/cyPm.c **** *  function must be called upon wakeup with a corresponding parameter. Please
  631:.\Generated_Source\PSoC5/cyPm.c **** *  refer to the CyPmReadStatus() API in the System Reference Guide for more
  632:.\Generated_Source\PSoC5/cyPm.c **** *  information.
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 28
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 28
 
 
  633:.\Generated_Source\PSoC5/cyPm.c **** *
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  663:.\Generated_Source\PSoC5/cyPm.c ****     #if(CY_PSOC3)
  664:.\Generated_Source\PSoC5/cyPm.c **** 
  665:.\Generated_Source\PSoC5/cyPm.c ****         /* FTW - save current and set new configuration */
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 29
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 29
 
 
  666:.\Generated_Source\PSoC5/cyPm.c ****         if((wakeupTime >= PM_ALT_ACT_TIME_FTW(1u)) && (wakeupTime <= PM_ALT_ACT_TIME_FTW(256u)))
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  922 0032 1B78     		ldrb	r3, [r3]
  923 0034 DAB2     		uxtb	r2, r3
  924 0036 1C4B     		ldr	r3, .L62+4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 30
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 30
 
 
  925 0038 5A71     		strb	r2, [r3, #5]
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  964              	
  965              	@ 0 "" 2
  720:.\Generated_Source\PSoC5/cyPm.c ****     CY_NOP;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 31
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 31
 
 
  966              		.loc 1 720 0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1009              		.align	2
  1010              		.global	CyPmSleep
  1011              		.thumb
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 32
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 32
 
 
  1012              		.thumb_func
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  782:.\Generated_Source\PSoC5/cyPm.c **** *  PM_SLEEP_TIME_ONE_PPS            One PPS: 1 second
  783:.\Generated_Source\PSoC5/cyPm.c **** *  PM_SLEEP_TIME_CTW_2MS            CTW: 2 ms
  784:.\Generated_Source\PSoC5/cyPm.c **** *  PM_SLEEP_TIME_CTW_4MS            CTW: 4 ms
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 33
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 33
 
 
  785:.\Generated_Source\PSoC5/cyPm.c **** *  PM_SLEEP_TIME_CTW_8MS            CTW: 8 ms
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  839:.\Generated_Source\PSoC5/cyPm.c **** *  measure Hibernate/Sleep regulator settling time after a reset. The holdoff
  840:.\Generated_Source\PSoC5/cyPm.c **** *  delay is measured using rising edges of the 1 kHz ILO.
  841:.\Generated_Source\PSoC5/cyPm.c **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 34
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 34
 
 
  842:.\Generated_Source\PSoC5/cyPm.c **** *  For PSoC 3 silicon hardware buzz should be disabled before entering a sleep
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  869:.\Generated_Source\PSoC5/cyPm.c ****         CY_PM_PWRSYS_SLP_TR_REG &= CY_PM_PWRSYS_SLP_TR_HIBSLP_HOLDOFF_MASK;
  1043              		.loc 1 869 0
  1044 0024 4B4B     		ldr	r3, .L74+4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 35
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 35
 
 
  1045 0026 4B4A     		ldr	r2, .L74+4
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  918:.\Generated_Source\PSoC5/cyPm.c ****                 else
  919:.\Generated_Source\PSoC5/cyPm.c ****                 {
  920:.\Generated_Source\PSoC5/cyPm.c ****                     cyPmBackup.hardwareBuzz = CY_PM_ENABLED;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 36
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 36
 
 
  921:.\Generated_Source\PSoC5/cyPm.c ****                 }
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  954:.\Generated_Source\PSoC5/cyPm.c ****         if((wakeupTime >= PM_SLEEP_TIME_CTW_2MS) && (wakeupTime <= PM_SLEEP_TIME_CTW_4096MS))
  955:.\Generated_Source\PSoC5/cyPm.c ****         {
  956:.\Generated_Source\PSoC5/cyPm.c ****             /* Save current and set new configuration of CTW */
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 37
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 37
 
 
  957:.\Generated_Source\PSoC5/cyPm.c ****             CyPmCtwSetInterval((uint8)(wakeupTime - 1u));
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  985:.\Generated_Source\PSoC5/cyPm.c **** 
  986:.\Generated_Source\PSoC5/cyPm.c ****     /* LCD */
  987:.\Generated_Source\PSoC5/cyPm.c ****     cyPmBackup.wakeupCfg2 = CY_PM_WAKEUP_CFG2_REG;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 38
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 38
 
 
  1096              		.loc 1 987 0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1125 00b2 2A4B     		ldr	r3, .L74+12
  1126 00b4 0022     		movs	r2, #0
  1127 00b6 83F82D20 		strb	r2, [r3, #45]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 39
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 39
 
 
 1013:.\Generated_Source\PSoC5/cyPm.c **** 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1165 00f8 00BF     		NOP
  1166              	
  1167              	@ 0 "" 2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 40
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 40
 
 
 1030:.\Generated_Source\PSoC5/cyPm.c **** 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1054:.\Generated_Source\PSoC5/cyPm.c ****     #endif /* CY_BOOT_CY_PM_SLEEP_AFTER_SLEEP_CALLBACK */
 1055:.\Generated_Source\PSoC5/cyPm.c **** 
 1056:.\Generated_Source\PSoC5/cyPm.c ****     /* Restore hardware configuration */
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 41
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 41
 
 
 1057:.\Generated_Source\PSoC5/cyPm.c ****     CyPmHibSlpRestore();
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1222              		@ sp needed
  1223 014e 80BD     		pop	{r7, pc}
  1224              	.L75:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 42
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 42
 
 
  1225              		.align	2
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1120:.\Generated_Source\PSoC5/cyPm.c **** *  After the wakeup PICU interrupt occurs, the Pin_ClearInterrupt() (where Pin
 1121:.\Generated_Source\PSoC5/cyPm.c **** *  is instance name of the Pins component) function must be called to clear the
 1122:.\Generated_Source\PSoC5/cyPm.c **** *  latched pin events to allow the proper Hibernate mode entry and to enable
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 43
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 43
 
 
 1123:.\Generated_Source\PSoC5/cyPm.c **** *  detection of future events.
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1151:.\Generated_Source\PSoC5/cyPm.c **** *  "PICU_INTTYPE_PICUx_INTTYPEy" controls  the PICU behavior. In the TRM, this
 1152:.\Generated_Source\PSoC5/cyPm.c **** *  register is "PICU[0..15]_INTTYPE[0..7]." In the Pins component datasheet,
 1153:.\Generated_Source\PSoC5/cyPm.c **** *  this register is referred to as the IRQ option. Once the wakeup occurs, the
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 44
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 44
 
 
 1154:.\Generated_Source\PSoC5/cyPm.c **** *  PICU wakeup source bit is restored and the PSoC returns to the Active state.
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1281 0004 00AF     		add	r7, sp, #0
  1282              		.cfi_def_cfa_register 7
  1283 0006 0346     		mov	r3, r0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 45
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 45
 
 
  1284 0008 FB80     		strh	r3, [r7, #6]	@ movhi
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1230:.\Generated_Source\PSoC5/cyPm.c ****     cyPmBackup.wakeupCfg0 = CY_PM_WAKEUP_CFG0_REG;
  1306              		.loc 1 1230 0
  1307 0034 434B     		ldr	r3, .L85+8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 46
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 46
 
 
  1308 0036 1B78     		ldrb	r3, [r3]
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1350 0084 0AD1     		bne	.L81
  1351 0086 04E0     		b	.L84
  1352              	.L78:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 47
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 47
 
 
 1219:.\Generated_Source\PSoC5/cyPm.c ****             CyExitCriticalSection(interruptState);
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1261:.\Generated_Source\PSoC5/cyPm.c ****     CY_PM_MODE_CSR_REG = (CY_PM_MODE_CSR_REG & ((uint8) (~CY_PM_MODE_CSR_MASK))) | CY_PM_MODE_CSR_H
  1387              		.loc 1 1261 0
  1388 00c6 1D4B     		ldr	r3, .L85
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 48
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 48
 
 
  1389 00c8 1C4A     		ldr	r2, .L85
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1424 00f4 1278     		ldrb	r2, [r2]
  1425 00f6 D2B2     		uxtb	r2, r2
  1426 00f8 D2B2     		uxtb	r2, r2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 49
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 49
 
 
  1427 00fa 22F00702 		bic	r2, r2, #7
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1465 0138 80BD     		pop	{r7, pc}
  1466              	.L86:
  1467 013a 00BF     		.align	2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 50
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 50
 
 
  1468              	.L85:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1489              		@ args = 0, pretend = 0, frame = 16
  1490              		@ frame_needed = 1, uses_anonymous_args = 0
  1491 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 51
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 51
 
 
  1492              		.cfi_def_cfa_offset 8
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1532 0042 1846     		mov	r0, r3
  1533 0044 FFF7FEFF 		bl	CyExitCriticalSection
 1343:.\Generated_Source\PSoC5/cyPm.c **** 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 52
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 52
 
 
 1344:.\Generated_Source\PSoC5/cyPm.c ****     return(tmpStatus);
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1559              		@ args = 0, pretend = 0, frame = 0
  1560              		@ frame_needed = 1, uses_anonymous_args = 0
  1561 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 53
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 53
 
 
  1562              		.cfi_def_cfa_offset 8
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1592 0032 1B78     		ldrb	r3, [r3]
  1593 0034 DBB2     		uxtb	r3, r3
  1594 0036 03F00203 		and	r3, r3, #2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 54
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 54
 
 
 1397:.\Generated_Source\PSoC5/cyPm.c ****                                 CY_PM_DISABLED : CY_PM_ENABLED;
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1634 007c 1278     		ldrb	r2, [r2]
  1635 007e D2B2     		uxtb	r2, r2
  1636 0080 42F01002 		orr	r2, r2, #16
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 55
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 55
 
 
  1637 0084 D2B2     		uxtb	r2, r2
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1663 00ac 074B     		ldr	r3, .L95+16
  1664 00ae FF22     		movs	r2, #255
  1665 00b0 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 56
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 56
 
 
 1438:.\Generated_Source\PSoC5/cyPm.c ****     CY_PM_PWRSYS_WAKE_TR1_REG = CY_PM_PWRSYS_WAKE_TR1;
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1695 0000 80B5     		push	{r7, lr}
  1696              		.cfi_def_cfa_offset 8
  1697              		.cfi_offset 7, -8
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 57
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 57
 
 
  1698              		.cfi_offset 14, -4
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1727 002e 0A4B     		ldr	r3, .L101
  1728 0030 DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
  1729 0032 002B     		cmp	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 58
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 58
 
 
  1730 0034 07D1     		bne	.L100
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1502:.\Generated_Source\PSoC5/cyPm.c **** /*******************************************************************************
 1503:.\Generated_Source\PSoC5/cyPm.c **** * Function Name: CyPmCtwSetInterval
 1504:.\Generated_Source\PSoC5/cyPm.c **** ********************************************************************************
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 59
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 59
 
 
 1505:.\Generated_Source\PSoC5/cyPm.c **** *
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1797 0022 DBB2     		uxtb	r3, r3
  1798 0024 03F00403 		and	r3, r3, #4
  1799 0028 002B     		cmp	r3, #0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 60
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 60
 
 
  1800 002a 19D0     		beq	.L104
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1837              		.loc 1 1548 0
  1838 006c 074B     		ldr	r3, .L108+4
  1839 006e FA79     		ldrb	r2, [r7, #7]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 61
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 61
 
 
  1840 0070 1A70     		strb	r2, [r3]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1571:.\Generated_Source\PSoC5/cyPm.c **** *  None
 1572:.\Generated_Source\PSoC5/cyPm.c **** *
 1573:.\Generated_Source\PSoC5/cyPm.c **** *******************************************************************************/
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 62
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 62
 
 
 1574:.\Generated_Source\PSoC5/cyPm.c **** void CyPmOppsSet(void) 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1911              		.align	2
  1912              	.L112:
  1913 0038 08430040 		.word	1073758984
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 63
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 63
 
 
  1914 003c 82430040 		.word	1073759106
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1942 000c 1E4A     		ldr	r2, .L119
  1943 000e 1278     		ldrb	r2, [r2]
  1944 0010 D2B2     		uxtb	r2, r2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 64
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 64
 
 
  1945 0012 22F00202 		bic	r2, r2, #2
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  1985              	.L115:
 1629:.\Generated_Source\PSoC5/cyPm.c ****         }   /* Required interval is already set */
 1630:.\Generated_Source\PSoC5/cyPm.c ****     }
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 65
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 65
 
 
 1631:.\Generated_Source\PSoC5/cyPm.c ****     else
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1644:.\Generated_Source\PSoC5/cyPm.c **** 
 1645:.\Generated_Source\PSoC5/cyPm.c **** 
 1646:.\Generated_Source\PSoC5/cyPm.c **** /*******************************************************************************
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 66
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 66
 
 
 1647:.\Generated_Source\PSoC5/cyPm.c **** * Function Name: CyPmHibSlpSaveSet
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2054 0020 DA72     		strb	r2, [r3, #11]
 1674:.\Generated_Source\PSoC5/cyPm.c ****     cyPmBackup.scctData[3u]   = CY_GET_REG8(CYREG_SC0_SW4 );
  2055              		.loc 1 1674 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 67
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 67
 
 
  2056 0022 7D4B     		ldr	r3, .L124+16
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2102 0070 DA74     		strb	r2, [r3, #19]
 1683:.\Generated_Source\PSoC5/cyPm.c ****     cyPmBackup.scctData[11u]  = CY_GET_REG8(CYREG_SC1_SW6 );
  2103              		.loc 1 1683 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 68
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 68
 
 
  2104 0072 714B     		ldr	r3, .L124+48
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2150 00c0 DA76     		strb	r2, [r3, #27]
 1692:.\Generated_Source\PSoC5/cyPm.c ****     cyPmBackup.scctData[19u]  = CY_GET_REG8(CYREG_SC2_SW8 );
  2151              		.loc 1 1692 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 69
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 69
 
 
  2152 00c2 654B     		ldr	r3, .L124+80
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2198 0116 83F82320 		strb	r2, [r3, #35]
 1701:.\Generated_Source\PSoC5/cyPm.c ****     cyPmBackup.scctData[27u]  = CY_GET_REG8(CYREG_SC3_SW10);
  2199              		.loc 1 1701 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 70
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 70
 
 
  2200 011a 574B     		ldr	r3, .L124+112
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2242 015c 344B     		ldr	r3, .L124+40
  2243 015e 0022     		movs	r2, #0
  2244 0160 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 71
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 71
 
 
 1714:.\Generated_Source\PSoC5/cyPm.c ****     CY_SET_REG8(CYREG_SC1_SW4 , 0u);
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2287 01a0 0022     		movs	r2, #0
  2288 01a2 1A70     		strb	r2, [r3]
 1726:.\Generated_Source\PSoC5/cyPm.c **** 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 72
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 72
 
 
 1727:.\Generated_Source\PSoC5/cyPm.c ****     CY_SET_REG8(CYREG_SC3_SW0 , 0u);
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1753:.\Generated_Source\PSoC5/cyPm.c ****             /* Disable SWV clocks */
 1754:.\Generated_Source\PSoC5/cyPm.c ****             CY_PM_MLOGIC_DBG_REG &= ((uint8)(~CY_PM_MLOGIC_DBG_SWV_CLK_EN));
 1755:.\Generated_Source\PSoC5/cyPm.c ****         }
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 73
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 73
 
 
 1756:.\Generated_Source\PSoC5/cyPm.c ****         else
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2348              	.L125:
  2349 0206 00BF     		.align	2
  2350              	.L124:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 74
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 74
 
 
  2351 0208 005A0040 		.word	1073764864
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1793:.\Generated_Source\PSoC5/cyPm.c **** *  None
 1794:.\Generated_Source\PSoC5/cyPm.c **** *
 1795:.\Generated_Source\PSoC5/cyPm.c **** * Return:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 75
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 75
 
 
 1796:.\Generated_Source\PSoC5/cyPm.c **** *  None
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2432 0034 3D4B     		ldr	r3, .L128+28
  2433 0036 374A     		ldr	r2, .L128+4
  2434 0038 D27B     		ldrb	r2, [r2, #15]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 76
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 76
 
 
  2435 003a 1A70     		strb	r2, [r3]
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2478 007e 254A     		ldr	r2, .L128+4
  2479 0080 127E     		ldrb	r2, [r2, #24]	@ zero_extendqisi2
  2480 0082 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 77
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 77
 
 
 1820:.\Generated_Source\PSoC5/cyPm.c ****     CY_SET_REG8(CYREG_SC2_SW3 , cyPmBackup.scctData[16u]);
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2525 00ce 1A70     		strb	r2, [r3]
 1830:.\Generated_Source\PSoC5/cyPm.c ****     CY_SET_REG8(CYREG_SC3_SW6 , cyPmBackup.scctData[25u]);
  2526              		.loc 1 1830 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 78
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 78
 
 
  2527 00d0 294B     		ldr	r3, .L128+104
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2555              		.loc 1 1856 0
  2556 0108 BD46     		mov	sp, r7
  2557              		@ sp needed
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 79
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 79
 
 
  2558 010a 5DF8047B 		ldr	r7, [sp], #4
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
 1866:.\Generated_Source\PSoC5/cyPm.c **** * Parameters:
 1867:.\Generated_Source\PSoC5/cyPm.c **** *  None
 1868:.\Generated_Source\PSoC5/cyPm.c **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 80
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 80
 
 
 1869:.\Generated_Source\PSoC5/cyPm.c **** * Return:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2640 003a 0023     		moveq	r3, #0
  2641 003c 0123     		movne	r3, #1
  2642 003e DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 81
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 81
 
 
  2643 0040 1A46     		mov	r2, r3
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2680              		.loc 1 1901 0
  2681 0084 DB09     		lsrs	r3, r3, #7
  2682 0086 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 82
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 82
 
 
  2683 0088 1A46     		mov	r2, r3
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2718              	.L138:
  2719              		.align	2
  2720              	.L137:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 83
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 83
 
 
  2721 00c4 F5460040 		.word	1073759989
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2750              		.loc 1 1944 0
  2751 000e 104B     		ldr	r3, .L143
  2752 0010 93F82A20 		ldrb	r2, [r3, #42]	@ zero_extendqisi2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 84
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 84
 
 
  2753 0014 0E4B     		ldr	r3, .L143
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2795              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
  2796              		.file 3 ".\\Generated_Source\\PSoC5\\cyPm.h"
  2797              		.section	.debug_info,"",%progbits
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 85
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 85
 
 
  2798              	.Ldebug_info0:
@@ -5047,45 +5047,45 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2801 0006 00000000 		.4byte	.Ldebug_abbrev0
  2802 000a 04       		.byte	0x4
  2803 000b 01       		.uleb128 0x1
- 2804 000c 02030000 		.4byte	.LASF86
+ 2804 000c D4020000 		.4byte	.LASF86
  2805 0010 01       		.byte	0x1
- 2806 0011 7C010000 		.4byte	.LASF87
- 2807 0015 34010000 		.4byte	.LASF88
+ 2806 0011 4E010000 		.4byte	.LASF87
+ 2807 0015 4F040000 		.4byte	.LASF88
  2808 0019 00000000 		.4byte	.Ldebug_ranges0+0
  2809 001d 00000000 		.4byte	0
  2810 0021 00000000 		.4byte	.Ldebug_line0
  2811 0025 02       		.uleb128 0x2
  2812 0026 01       		.byte	0x1
  2813 0027 06       		.byte	0x6
- 2814 0028 EE000000 		.4byte	.LASF0
+ 2814 0028 FB000000 		.4byte	.LASF0
  2815 002c 02       		.uleb128 0x2
  2816 002d 01       		.byte	0x1
  2817 002e 08       		.byte	0x8
- 2818 002f C9030000 		.4byte	.LASF1
+ 2818 002f 9B030000 		.4byte	.LASF1
  2819 0033 02       		.uleb128 0x2
  2820 0034 02       		.byte	0x2
  2821 0035 05       		.byte	0x5
- 2822 0036 02040000 		.4byte	.LASF2
+ 2822 0036 D4030000 		.4byte	.LASF2
  2823 003a 02       		.uleb128 0x2
  2824 003b 02       		.byte	0x2
  2825 003c 07       		.byte	0x7
- 2826 003d 4A020000 		.4byte	.LASF3
+ 2826 003d 1C020000 		.4byte	.LASF3
  2827 0041 02       		.uleb128 0x2
  2828 0042 04       		.byte	0x4
  2829 0043 05       		.byte	0x5
- 2830 0044 19010000 		.4byte	.LASF4
+ 2830 0044 26010000 		.4byte	.LASF4
  2831 0048 02       		.uleb128 0x2
  2832 0049 04       		.byte	0x4
  2833 004a 07       		.byte	0x7
- 2834 004b F0010000 		.4byte	.LASF5
+ 2834 004b C2010000 		.4byte	.LASF5
  2835 004f 02       		.uleb128 0x2
  2836 0050 08       		.byte	0x8
  2837 0051 05       		.byte	0x5
- 2838 0052 E0000000 		.4byte	.LASF6
+ 2838 0052 ED000000 		.4byte	.LASF6
  2839 0056 02       		.uleb128 0x2
  2840 0057 08       		.byte	0x8
  2841 0058 07       		.byte	0x7
- 2842 0059 6F000000 		.4byte	.LASF7
+ 2842 0059 7C000000 		.4byte	.LASF7
  2843 005d 03       		.uleb128 0x3
  2844 005e 04       		.byte	0x4
  2845 005f 05       		.byte	0x5
@@ -5093,12 +5093,12 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2847 0064 02       		.uleb128 0x2
  2848 0065 04       		.byte	0x4
  2849 0066 07       		.byte	0x7
- 2850 0067 D2010000 		.4byte	.LASF8
+ 2850 0067 A4010000 		.4byte	.LASF8
  2851 006b 04       		.uleb128 0x4
- 2852 006c 6F010000 		.4byte	.LASF9
+ 2852 006c 41010000 		.4byte	.LASF9
  2853 0070 02       		.byte	0x2
  2854 0071 B3       		.byte	0xb3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 86
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 86
 
 
  2855 0072 2C000000 		.4byte	0x2c
@@ -5108,29 +5108,29 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2859 007c B4       		.byte	0xb4
  2860 007d 3A000000 		.4byte	0x3a
  2861 0081 04       		.uleb128 0x4
- 2862 0082 9C010000 		.4byte	.LASF11
+ 2862 0082 6E010000 		.4byte	.LASF11
  2863 0086 02       		.byte	0x2
  2864 0087 B5       		.byte	0xb5
  2865 0088 48000000 		.4byte	0x48
  2866 008c 02       		.uleb128 0x2
  2867 008d 04       		.byte	0x4
  2868 008e 04       		.byte	0x4
- 2869 008f 95030000 		.4byte	.LASF12
+ 2869 008f 67030000 		.4byte	.LASF12
  2870 0093 02       		.uleb128 0x2
  2871 0094 08       		.byte	0x8
  2872 0095 04       		.byte	0x4
- 2873 0096 75010000 		.4byte	.LASF13
+ 2873 0096 47010000 		.4byte	.LASF13
  2874 009a 02       		.uleb128 0x2
  2875 009b 01       		.byte	0x1
  2876 009c 08       		.byte	0x8
- 2877 009d 2C040000 		.4byte	.LASF14
+ 2877 009d FE030000 		.4byte	.LASF14
  2878 00a1 05       		.uleb128 0x5
- 2879 00a2 C5040000 		.4byte	.LASF15
+ 2879 00a2 A1040000 		.4byte	.LASF15
  2880 00a6 02       		.byte	0x2
  2881 00a7 5501     		.2byte	0x155
  2882 00a9 48000000 		.4byte	0x48
  2883 00ad 05       		.uleb128 0x5
- 2884 00ae B8030000 		.4byte	.LASF16
+ 2884 00ae 8A030000 		.4byte	.LASF16
  2885 00b2 02       		.byte	0x2
  2886 00b3 5D01     		.2byte	0x15d
  2887 00b5 B9000000 		.4byte	0xb9
@@ -5139,162 +5139,162 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  2890 00be 02       		.uleb128 0x2
  2891 00bf 04       		.byte	0x4
  2892 00c0 07       		.byte	0x7
- 2893 00c1 C8020000 		.4byte	.LASF17
+ 2893 00c1 9A020000 		.4byte	.LASF17
  2894 00c5 07       		.uleb128 0x7
- 2895 00c6 09020000 		.4byte	.LASF34
+ 2895 00c6 DB010000 		.4byte	.LASF34
  2896 00ca 12       		.byte	0x12
  2897 00cb 03       		.byte	0x3
  2898 00cc F9       		.byte	0xf9
  2899 00cd 91010000 		.4byte	0x191
  2900 00d1 08       		.uleb128 0x8
- 2901 00d2 F4020000 		.4byte	.LASF18
+ 2901 00d2 C6020000 		.4byte	.LASF18
  2902 00d6 03       		.byte	0x3
  2903 00d7 FC       		.byte	0xfc
  2904 00d8 6B000000 		.4byte	0x6b
  2905 00dc 00       		.byte	0
  2906 00dd 08       		.uleb128 0x8
- 2907 00de FB020000 		.4byte	.LASF19
+ 2907 00de CD020000 		.4byte	.LASF19
  2908 00e2 03       		.byte	0x3
  2909 00e3 FD       		.byte	0xfd
  2910 00e4 6B000000 		.4byte	0x6b
  2911 00e8 01       		.byte	0x1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 87
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 87
 
 
  2912 00e9 08       		.uleb128 0x8
- 2913 00ea 31000000 		.4byte	.LASF20
+ 2913 00ea 3E000000 		.4byte	.LASF20
  2914 00ee 03       		.byte	0x3
  2915 00ef FE       		.byte	0xfe
  2916 00f0 6B000000 		.4byte	0x6b
  2917 00f4 02       		.byte	0x2
  2918 00f5 08       		.uleb128 0x8
- 2919 00f6 E8010000 		.4byte	.LASF21
+ 2919 00f6 BA010000 		.4byte	.LASF21
  2920 00fa 03       		.byte	0x3
  2921 00fb FF       		.byte	0xff
  2922 00fc 6B000000 		.4byte	0x6b
  2923 0100 03       		.byte	0x3
  2924 0101 09       		.uleb128 0x9
- 2925 0102 AF000000 		.4byte	.LASF22
+ 2925 0102 BC000000 		.4byte	.LASF22
  2926 0106 03       		.byte	0x3
  2927 0107 0001     		.2byte	0x100
  2928 0109 6B000000 		.4byte	0x6b
  2929 010d 04       		.byte	0x4
  2930 010e 09       		.uleb128 0x9
- 2931 010f CE040000 		.4byte	.LASF23
+ 2931 010f AA040000 		.4byte	.LASF23
  2932 0113 03       		.byte	0x3
  2933 0114 0101     		.2byte	0x101
  2934 0116 6B000000 		.4byte	0x6b
  2935 011a 05       		.byte	0x5
  2936 011b 09       		.uleb128 0x9
- 2937 011c FA040000 		.4byte	.LASF24
+ 2937 011c D6040000 		.4byte	.LASF24
  2938 0120 03       		.byte	0x3
  2939 0121 0201     		.2byte	0x102
  2940 0123 6B000000 		.4byte	0x6b
  2941 0127 06       		.byte	0x6
  2942 0128 09       		.uleb128 0x9
- 2943 0129 8B030000 		.4byte	.LASF25
+ 2943 0129 5D030000 		.4byte	.LASF25
  2944 012d 03       		.byte	0x3
  2945 012e 0301     		.2byte	0x103
  2946 0130 6B000000 		.4byte	0x6b
  2947 0134 07       		.byte	0x7
  2948 0135 09       		.uleb128 0x9
- 2949 0136 A3020000 		.4byte	.LASF26
+ 2949 0136 75020000 		.4byte	.LASF26
  2950 013a 03       		.byte	0x3
  2951 013b 0401     		.2byte	0x104
  2952 013d 6B000000 		.4byte	0x6b
  2953 0141 08       		.byte	0x8
  2954 0142 09       		.uleb128 0x9
- 2955 0143 13010000 		.4byte	.LASF27
+ 2955 0143 20010000 		.4byte	.LASF27
  2956 0147 03       		.byte	0x3
  2957 0148 0501     		.2byte	0x105
  2958 014a 6B000000 		.4byte	0x6b
  2959 014e 09       		.byte	0x9
  2960 014f 09       		.uleb128 0x9
- 2961 0150 52000000 		.4byte	.LASF28
+ 2961 0150 5F000000 		.4byte	.LASF28
  2962 0154 03       		.byte	0x3
  2963 0155 0601     		.2byte	0x106
  2964 0157 6B000000 		.4byte	0x6b
  2965 015b 0A       		.byte	0xa
  2966 015c 09       		.uleb128 0x9
- 2967 015d FA000000 		.4byte	.LASF29
+ 2967 015d 07010000 		.4byte	.LASF29
  2968 0161 03       		.byte	0x3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 88
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 88
 
 
  2969 0162 0701     		.2byte	0x107
  2970 0164 76000000 		.4byte	0x76
  2971 0168 0C       		.byte	0xc
  2972 0169 09       		.uleb128 0x9
- 2973 016a E7030000 		.4byte	.LASF30
+ 2973 016a B9030000 		.4byte	.LASF30
  2974 016e 03       		.byte	0x3
  2975 016f 0801     		.2byte	0x108
  2976 0171 6B000000 		.4byte	0x6b
  2977 0175 0E       		.byte	0xe
  2978 0176 09       		.uleb128 0x9
- 2979 0177 A3010000 		.4byte	.LASF31
+ 2979 0177 75010000 		.4byte	.LASF31
  2980 017b 03       		.byte	0x3
  2981 017c 0901     		.2byte	0x109
  2982 017e 6B000000 		.4byte	0x6b
  2983 0182 0F       		.byte	0xf
  2984 0183 09       		.uleb128 0x9
- 2985 0184 7D040000 		.4byte	.LASF32
+ 2985 0184 31000000 		.4byte	.LASF32
  2986 0188 03       		.byte	0x3
  2987 0189 0A01     		.2byte	0x10a
  2988 018b 6B000000 		.4byte	0x6b
  2989 018f 10       		.byte	0x10
  2990 0190 00       		.byte	0
  2991 0191 05       		.uleb128 0x5
- 2992 0192 30020000 		.4byte	.LASF33
+ 2992 0192 02020000 		.4byte	.LASF33
  2993 0196 03       		.byte	0x3
  2994 0197 0C01     		.2byte	0x10c
  2995 0199 C5000000 		.4byte	0xc5
  2996 019d 0A       		.uleb128 0xa
- 2997 019e 1F020000 		.4byte	.LASF35
+ 2997 019e F1010000 		.4byte	.LASF35
  2998 01a2 2F       		.byte	0x2f
  2999 01a3 03       		.byte	0x3
  3000 01a4 0F01     		.2byte	0x10f
  3001 01a6 AF020000 		.4byte	0x2af
  3002 01aa 09       		.uleb128 0x9
- 3003 01ab D3000000 		.4byte	.LASF36
+ 3003 01ab E0000000 		.4byte	.LASF36
  3004 01af 03       		.byte	0x3
  3005 01b0 1101     		.2byte	0x111
  3006 01b2 6B000000 		.4byte	0x6b
  3007 01b6 00       		.byte	0
  3008 01b7 09       		.uleb128 0x9
- 3009 01b8 F6030000 		.4byte	.LASF37
+ 3009 01b8 C8030000 		.4byte	.LASF37
  3010 01bc 03       		.byte	0x3
  3011 01bd 1201     		.2byte	0x112
  3012 01bf 6B000000 		.4byte	0x6b
  3013 01c3 01       		.byte	0x1
  3014 01c4 09       		.uleb128 0x9
- 3015 01c5 1E040000 		.4byte	.LASF38
+ 3015 01c5 F0030000 		.4byte	.LASF38
  3016 01c9 03       		.byte	0x3
  3017 01ca 1301     		.2byte	0x113
  3018 01cc 6B000000 		.4byte	0x6b
  3019 01d0 02       		.byte	0x2
  3020 01d1 09       		.uleb128 0x9
- 3021 01d2 BC020000 		.4byte	.LASF39
+ 3021 01d2 8E020000 		.4byte	.LASF39
  3022 01d6 03       		.byte	0x3
  3023 01d7 1501     		.2byte	0x115
  3024 01d9 6B000000 		.4byte	0x6b
  3025 01dd 03       		.byte	0x3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 89
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 89
 
 
  3026 01de 09       		.uleb128 0x9
- 3027 01df 69020000 		.4byte	.LASF40
+ 3027 01df 3B020000 		.4byte	.LASF40
  3028 01e3 03       		.byte	0x3
  3029 01e4 1F01     		.2byte	0x11f
  3030 01e6 6B000000 		.4byte	0x6b
  3031 01ea 04       		.byte	0x4
  3032 01eb 09       		.uleb128 0x9
- 3033 01ec 74020000 		.4byte	.LASF41
+ 3033 01ec 46020000 		.4byte	.LASF41
  3034 01f0 03       		.byte	0x3
  3035 01f1 2001     		.2byte	0x120
  3036 01f3 6B000000 		.4byte	0x6b
  3037 01f7 05       		.byte	0x5
  3038 01f8 09       		.uleb128 0x9
- 3039 01f9 7F020000 		.4byte	.LASF42
+ 3039 01f9 51020000 		.4byte	.LASF42
  3040 01fd 03       		.byte	0x3
  3041 01fe 2101     		.2byte	0x121
  3042 0200 6B000000 		.4byte	0x6b
@@ -5312,70 +5312,70 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3054 021a 6B000000 		.4byte	0x6b
  3055 021e 08       		.byte	0x8
  3056 021f 09       		.uleb128 0x9
- 3057 0220 DF010000 		.4byte	.LASF45
+ 3057 0220 B1010000 		.4byte	.LASF45
  3058 0224 03       		.byte	0x3
  3059 0225 2601     		.2byte	0x126
  3060 0227 AF020000 		.4byte	0x2af
  3061 022b 09       		.byte	0x9
  3062 022c 09       		.uleb128 0x9
- 3063 022d 02020000 		.4byte	.LASF46
+ 3063 022d D4010000 		.4byte	.LASF46
  3064 0231 03       		.byte	0x3
  3065 0232 2901     		.2byte	0x129
  3066 0234 6B000000 		.4byte	0x6b
  3067 0238 25       		.byte	0x25
  3068 0239 09       		.uleb128 0x9
- 3069 023a F1040000 		.4byte	.LASF47
+ 3069 023a CD040000 		.4byte	.LASF47
  3070 023e 03       		.byte	0x3
  3071 023f 2A01     		.2byte	0x12a
  3072 0241 6B000000 		.4byte	0x6b
  3073 0245 26       		.byte	0x26
  3074 0246 09       		.uleb128 0x9
- 3075 0247 A4040000 		.4byte	.LASF48
+ 3075 0247 80040000 		.4byte	.LASF48
  3076 024b 03       		.byte	0x3
  3077 024c 2B01     		.2byte	0x12b
  3078 024e 6B000000 		.4byte	0x6b
  3079 0252 27       		.byte	0x27
  3080 0253 09       		.uleb128 0x9
- 3081 0254 A6000000 		.4byte	.LASF49
+ 3081 0254 B3000000 		.4byte	.LASF49
  3082 0258 03       		.byte	0x3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 90
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 90
 
 
  3083 0259 2C01     		.2byte	0x12c
  3084 025b 6B000000 		.4byte	0x6b
  3085 025f 28       		.byte	0x28
  3086 0260 09       		.uleb128 0x9
- 3087 0261 CC000000 		.4byte	.LASF50
+ 3087 0261 D9000000 		.4byte	.LASF50
  3088 0265 03       		.byte	0x3
  3089 0266 2D01     		.2byte	0x12d
  3090 0268 6B000000 		.4byte	0x6b
  3091 026c 29       		.byte	0x29
  3092 026d 09       		.uleb128 0x9
- 3093 026e A5030000 		.4byte	.LASF51
+ 3093 026e 77030000 		.4byte	.LASF51
  3094 0272 03       		.byte	0x3
  3095 0273 2E01     		.2byte	0x12e
  3096 0275 6B000000 		.4byte	0x6b
  3097 0279 2A       		.byte	0x2a
  3098 027a 09       		.uleb128 0x9
- 3099 027b DE040000 		.4byte	.LASF52
+ 3099 027b BA040000 		.4byte	.LASF52
  3100 027f 03       		.byte	0x3
  3101 0280 2F01     		.2byte	0x12f
  3102 0282 6B000000 		.4byte	0x6b
  3103 0286 2B       		.byte	0x2b
  3104 0287 09       		.uleb128 0x9
- 3105 0288 C7010000 		.4byte	.LASF53
+ 3105 0288 99010000 		.4byte	.LASF53
  3106 028c 03       		.byte	0x3
  3107 028d 3101     		.2byte	0x131
  3108 028f 6B000000 		.4byte	0x6b
  3109 0293 2C       		.byte	0x2c
  3110 0294 09       		.uleb128 0x9
- 3111 0295 31040000 		.4byte	.LASF54
+ 3111 0295 03040000 		.4byte	.LASF54
  3112 0299 03       		.byte	0x3
  3113 029a 3201     		.2byte	0x132
  3114 029c 6B000000 		.4byte	0x6b
  3115 02a0 2D       		.byte	0x2d
  3116 02a1 09       		.uleb128 0x9
- 3117 02a2 97020000 		.4byte	.LASF55
+ 3117 02a2 69020000 		.4byte	.LASF55
  3118 02a6 03       		.byte	0x3
  3119 02a7 3401     		.2byte	0x134
  3120 02a9 6B000000 		.4byte	0x6b
@@ -5389,23 +5389,23 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3128 02bd 1B       		.byte	0x1b
  3129 02be 00       		.byte	0
  3130 02bf 05       		.uleb128 0x5
- 3131 02c0 3E000000 		.4byte	.LASF56
+ 3131 02c0 4B000000 		.4byte	.LASF56
  3132 02c4 03       		.byte	0x3
  3133 02c5 3601     		.2byte	0x136
  3134 02c7 9D010000 		.4byte	0x19d
  3135 02cb 0D       		.uleb128 0xd
- 3136 02cc AD020000 		.4byte	.LASF66
+ 3136 02cc 7F020000 		.4byte	.LASF66
  3137 02d0 01       		.byte	0x1
  3138 02d1 54       		.byte	0x54
  3139 02d2 00000000 		.4byte	.LFB0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 91
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 91
 
 
  3140 02d6 80020000 		.4byte	.LFE0-.LFB0
  3141 02da 01       		.uleb128 0x1
  3142 02db 9C       		.byte	0x9c
  3143 02dc 0E       		.uleb128 0xe
- 3144 02dd 5D000000 		.4byte	.LASF60
+ 3144 02dd 6A000000 		.4byte	.LASF60
  3145 02e1 01       		.byte	0x1
  3146 02e2 1E01     		.2byte	0x11e
  3147 02e4 00000000 		.4byte	.LFB1
@@ -5414,7 +5414,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3150 02ed 9C       		.byte	0x9c
  3151 02ee 2D030000 		.4byte	0x32d
  3152 02f2 0F       		.uleb128 0xf
- 3153 02f3 9D040000 		.4byte	.LASF57
+ 3153 02f3 79040000 		.4byte	.LASF57
  3154 02f7 01       		.byte	0x1
  3155 02f8 2001     		.2byte	0x120
  3156 02fa A1000000 		.4byte	0xa1
@@ -5430,7 +5430,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3166 030c 91       		.byte	0x91
  3167 030d 76       		.sleb128 -10
  3168 030e 0F       		.uleb128 0xf
- 3169 030f 8A020000 		.4byte	.LASF58
+ 3169 030f 5C020000 		.4byte	.LASF58
  3170 0313 01       		.byte	0x1
  3171 0314 2201     		.2byte	0x122
  3172 0316 76000000 		.4byte	0x76
@@ -5438,7 +5438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3174 031b 91       		.byte	0x91
  3175 031c 6E       		.sleb128 -18
  3176 031d 0F       		.uleb128 0xf
- 3177 031e E1020000 		.4byte	.LASF59
+ 3177 031e B3020000 		.4byte	.LASF59
  3178 0322 01       		.byte	0x1
  3179 0323 2601     		.2byte	0x126
  3180 0325 3D030000 		.4byte	0x33d
@@ -5456,9 +5456,9 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3192 033d 11       		.uleb128 0x11
  3193 033e 2D030000 		.4byte	0x32d
  3194 0342 0E       		.uleb128 0xe
- 3195 0343 AD030000 		.4byte	.LASF61
+ 3195 0343 7F030000 		.4byte	.LASF61
  3196 0347 01       		.byte	0x1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 92
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 92
 
 
  3197 0348 8802     		.2byte	0x288
@@ -5468,7 +5468,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3201 0353 9C       		.byte	0x9c
  3202 0354 77030000 		.4byte	0x377
  3203 0358 12       		.uleb128 0x12
- 3204 0359 BA040000 		.4byte	.LASF62
+ 3204 0359 96040000 		.4byte	.LASF62
  3205 035d 01       		.byte	0x1
  3206 035e 8802     		.2byte	0x288
  3207 0360 76000000 		.4byte	0x76
@@ -5476,7 +5476,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3209 0365 91       		.byte	0x91
  3210 0366 76       		.sleb128 -10
  3211 0367 12       		.uleb128 0x12
- 3212 0368 7E030000 		.4byte	.LASF63
+ 3212 0368 50030000 		.4byte	.LASF63
  3213 036c 01       		.byte	0x1
  3214 036d 8802     		.2byte	0x288
  3215 036f 76000000 		.4byte	0x76
@@ -5485,7 +5485,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3218 0375 74       		.sleb128 -12
  3219 0376 00       		.byte	0
  3220 0377 0E       		.uleb128 0xe
- 3221 0378 9B030000 		.4byte	.LASF64
+ 3221 0378 6D030000 		.4byte	.LASF64
  3222 037c 01       		.byte	0x1
  3223 037d 5403     		.2byte	0x354
  3224 037f 00000000 		.4byte	.LFB3
@@ -5494,7 +5494,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3227 0388 9C       		.byte	0x9c
  3228 0389 BB030000 		.4byte	0x3bb
  3229 038d 12       		.uleb128 0x12
- 3230 038e BA040000 		.4byte	.LASF62
+ 3230 038e 96040000 		.4byte	.LASF62
  3231 0392 01       		.byte	0x1
  3232 0393 5403     		.2byte	0x354
  3233 0395 6B000000 		.4byte	0x6b
@@ -5502,7 +5502,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3235 039a 91       		.byte	0x91
  3236 039b 6F       		.sleb128 -17
  3237 039c 12       		.uleb128 0x12
- 3238 039d 7E030000 		.4byte	.LASF63
+ 3238 039d 50030000 		.4byte	.LASF63
  3239 03a1 01       		.byte	0x1
  3240 03a2 5403     		.2byte	0x354
  3241 03a4 76000000 		.4byte	0x76
@@ -5510,7 +5510,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3243 03a9 91       		.byte	0x91
  3244 03aa 6C       		.sleb128 -20
  3245 03ab 0F       		.uleb128 0xf
- 3246 03ac 04010000 		.4byte	.LASF65
+ 3246 03ac 11010000 		.4byte	.LASF65
  3247 03b0 01       		.byte	0x1
  3248 03b1 5603     		.2byte	0x356
  3249 03b3 6B000000 		.4byte	0x6b
@@ -5518,11 +5518,11 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3251 03b8 91       		.byte	0x91
  3252 03b9 77       		.sleb128 -9
  3253 03ba 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 93
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 93
 
 
  3254 03bb 13       		.uleb128 0x13
- 3255 03bc 41040000 		.4byte	.LASF67
+ 3255 03bc 13040000 		.4byte	.LASF67
  3256 03c0 01       		.byte	0x1
  3257 03c1 6A04     		.2byte	0x46a
  3258 03c3 00000000 		.4byte	.LFB4
@@ -5530,7 +5530,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3260 03cb 01       		.uleb128 0x1
  3261 03cc 9C       		.byte	0x9c
  3262 03cd 0E       		.uleb128 0xe
- 3263 03ce D1020000 		.4byte	.LASF68
+ 3263 03ce A3020000 		.4byte	.LASF68
  3264 03d2 01       		.byte	0x1
  3265 03d3 AC04     		.2byte	0x4ac
  3266 03d5 00000000 		.4byte	.LFB5
@@ -5539,7 +5539,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3269 03de 9C       		.byte	0x9c
  3270 03df 02040000 		.4byte	0x402
  3271 03e3 12       		.uleb128 0x12
- 3272 03e4 7E030000 		.4byte	.LASF63
+ 3272 03e4 50030000 		.4byte	.LASF63
  3273 03e8 01       		.byte	0x1
  3274 03e9 AC04     		.2byte	0x4ac
  3275 03eb 76000000 		.4byte	0x76
@@ -5547,7 +5547,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3277 03f0 91       		.byte	0x91
  3278 03f1 6E       		.sleb128 -18
  3279 03f2 0F       		.uleb128 0xf
- 3280 03f3 04010000 		.4byte	.LASF65
+ 3280 03f3 11010000 		.4byte	.LASF65
  3281 03f7 01       		.byte	0x1
  3282 03f8 AE04     		.2byte	0x4ae
  3283 03fa 6B000000 		.4byte	0x6b
@@ -5556,7 +5556,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3286 0400 77       		.sleb128 -9
  3287 0401 00       		.byte	0
  3288 0402 14       		.uleb128 0x14
- 3289 0403 6E040000 		.4byte	.LASF89
+ 3289 0403 40040000 		.4byte	.LASF89
  3290 0407 01       		.byte	0x1
  3291 0408 2F05     		.2byte	0x52f
  3292 040a 6B000000 		.4byte	0x6b
@@ -5566,7 +5566,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3296 0417 9C       		.byte	0x9c
  3297 0418 5C040000 		.4byte	0x45c
  3298 041c 12       		.uleb128 0x12
- 3299 041d C2010000 		.4byte	.LASF69
+ 3299 041d 94010000 		.4byte	.LASF69
  3300 0421 01       		.byte	0x1
  3301 0422 2F05     		.2byte	0x52f
  3302 0424 6B000000 		.4byte	0x6b
@@ -5574,18 +5574,18 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3304 0429 91       		.byte	0x91
  3305 042a 6F       		.sleb128 -17
  3306 042b 0F       		.uleb128 0xf
- 3307 042c 04050000 		.4byte	.LASF70
+ 3307 042c E0040000 		.4byte	.LASF70
  3308 0430 01       		.byte	0x1
  3309 0431 3105     		.2byte	0x531
  3310 0433 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 94
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 94
 
 
  3311 0437 05       		.uleb128 0x5
  3312 0438 03       		.byte	0x3
  3313 0439 42000000 		.4byte	interruptStatus.4855
  3314 043d 0F       		.uleb128 0xf
- 3315 043e 04010000 		.4byte	.LASF65
+ 3315 043e 11010000 		.4byte	.LASF65
  3316 0442 01       		.byte	0x1
  3317 0443 3205     		.2byte	0x532
  3318 0445 6B000000 		.4byte	0x6b
@@ -5593,7 +5593,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3320 044a 91       		.byte	0x91
  3321 044b 77       		.sleb128 -9
  3322 044c 0F       		.uleb128 0xf
- 3323 044d 9C000000 		.4byte	.LASF71
+ 3323 044d A9000000 		.4byte	.LASF71
  3324 0451 01       		.byte	0x1
  3325 0452 3305     		.2byte	0x533
  3326 0454 6B000000 		.4byte	0x6b
@@ -5602,7 +5602,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3329 045a 76       		.sleb128 -10
  3330 045b 00       		.byte	0
  3331 045c 15       		.uleb128 0x15
- 3332 045d AB040000 		.4byte	.LASF72
+ 3332 045d 87040000 		.4byte	.LASF72
  3333 0461 01       		.byte	0x1
  3334 0462 5B05     		.2byte	0x55b
  3335 0464 00000000 		.4byte	.LFB7
@@ -5610,7 +5610,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3337 046c 01       		.uleb128 0x1
  3338 046d 9C       		.byte	0x9c
  3339 046e 15       		.uleb128 0x15
- 3340 046f B3010000 		.4byte	.LASF73
+ 3340 046f 85010000 		.4byte	.LASF73
  3341 0473 01       		.byte	0x1
  3342 0474 B505     		.2byte	0x5b5
  3343 0476 00000000 		.4byte	.LFB8
@@ -5618,7 +5618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3345 047e 01       		.uleb128 0x1
  3346 047f 9C       		.byte	0x9c
  3347 0480 0E       		.uleb128 0xe
- 3348 0481 8A040000 		.4byte	.LASF74
+ 3348 0481 66040000 		.4byte	.LASF74
  3349 0485 01       		.byte	0x1
  3350 0486 F205     		.2byte	0x5f2
  3351 0488 00000000 		.4byte	.LFB9
@@ -5627,7 +5627,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3354 0491 9C       		.byte	0x9c
  3355 0492 A6040000 		.4byte	0x4a6
  3356 0496 12       		.uleb128 0x12
- 3357 0497 5D020000 		.4byte	.LASF75
+ 3357 0497 2F020000 		.4byte	.LASF75
  3358 049b 01       		.byte	0x1
  3359 049c F205     		.2byte	0x5f2
  3360 049e 6B000000 		.4byte	0x6b
@@ -5636,9 +5636,9 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3363 04a4 77       		.sleb128 -9
  3364 04a5 00       		.byte	0
  3365 04a6 13       		.uleb128 0x13
- 3366 04a7 BD030000 		.4byte	.LASF76
+ 3366 04a7 8F030000 		.4byte	.LASF76
  3367 04ab 01       		.byte	0x1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 95
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 95
 
 
  3368 04ac 2606     		.2byte	0x626
@@ -5647,7 +5647,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3371 04b6 01       		.uleb128 0x1
  3372 04b7 9C       		.byte	0x9c
  3373 04b8 0E       		.uleb128 0xe
- 3374 04b9 B9000000 		.4byte	.LASF77
+ 3374 04b9 C6000000 		.4byte	.LASF77
  3375 04bd 01       		.byte	0x1
  3376 04be 4B06     		.2byte	0x64b
  3377 04c0 00000000 		.4byte	.LFB11
@@ -5656,7 +5656,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3380 04c9 9C       		.byte	0x9c
  3381 04ca DE040000 		.4byte	0x4de
  3382 04ce 12       		.uleb128 0x12
- 3383 04cf 4F040000 		.4byte	.LASF78
+ 3383 04cf 21040000 		.4byte	.LASF78
  3384 04d3 01       		.byte	0x1
  3385 04d4 4B06     		.2byte	0x64b
  3386 04d6 6B000000 		.4byte	0x6b
@@ -5665,7 +5665,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3389 04dc 77       		.sleb128 -9
  3390 04dd 00       		.byte	0
  3391 04de 16       		.uleb128 0x16
- 3392 04df 0C040000 		.4byte	.LASF79
+ 3392 04df DE030000 		.4byte	.LASF79
  3393 04e3 01       		.byte	0x1
  3394 04e4 8406     		.2byte	0x684
  3395 04e6 00000000 		.4byte	.LFB12
@@ -5681,7 +5681,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3405 0500 01       		.uleb128 0x1
  3406 0501 9C       		.byte	0x9c
  3407 0502 15       		.uleb128 0x15
- 3408 0503 86000000 		.4byte	.LASF81
+ 3408 0503 93000000 		.4byte	.LASF81
  3409 0507 01       		.byte	0x1
  3410 0508 5407     		.2byte	0x754
  3411 050a 00000000 		.4byte	.LFB14
@@ -5689,7 +5689,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3413 0512 01       		.uleb128 0x1
  3414 0513 9C       		.byte	0x9c
  3415 0514 15       		.uleb128 0x15
- 3416 0515 22010000 		.4byte	.LASF82
+ 3416 0515 2F010000 		.4byte	.LASF82
  3417 0519 01       		.byte	0x1
  3418 051a 9307     		.2byte	0x793
  3419 051c 00000000 		.4byte	.LFB15
@@ -5697,8 +5697,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3421 0524 01       		.uleb128 0x1
  3422 0525 9C       		.byte	0x9c
  3423 0526 17       		.uleb128 0x17
- 3424 0527 E6040000 		.4byte	.LASF83
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 96
+ 3424 0527 C2040000 		.4byte	.LASF83
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 96
 
 
  3425 052b 01       		.byte	0x1
@@ -5708,7 +5708,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3429 0532 03       		.byte	0x3
  3430 0533 00000000 		.4byte	cyPmBackup
  3431 0537 17       		.uleb128 0x17
- 3432 0538 D7030000 		.4byte	.LASF84
+ 3432 0538 A9030000 		.4byte	.LASF84
  3433 053c 01       		.byte	0x1
  3434 053d 24       		.byte	0x24
  3435 053e 91010000 		.4byte	0x191
@@ -5716,7 +5716,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3437 0543 03       		.byte	0x3
  3438 0544 30000000 		.4byte	cyPmClockBackup
  3439 0548 17       		.uleb128 0x17
- 3440 0549 5B040000 		.4byte	.LASF85
+ 3440 0549 2D040000 		.4byte	.LASF85
  3441 054d 01       		.byte	0x1
  3442 054e 27       		.byte	0x27
  3443 054f 59050000 		.4byte	0x559
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3479 001b 0E       		.uleb128 0xe
  3480 001c 00       		.byte	0
  3481 001d 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 97
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 97
 
 
  3482 001e 03       		.uleb128 0x3
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3536 0054 0B       		.uleb128 0xb
  3537 0055 01       		.uleb128 0x1
  3538 0056 13       		.uleb128 0x13
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 98
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 98
 
 
  3539 0057 00       		.byte	0
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3593 008d 00       		.byte	0
  3594 008e 00       		.byte	0
  3595 008f 0C       		.uleb128 0xc
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 99
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 99
 
 
  3596 0090 21       		.uleb128 0x21
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3650 00c8 00       		.byte	0
  3651 00c9 00       		.byte	0
  3652 00ca 0F       		.uleb128 0xf
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 100
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 100
 
 
  3653 00cb 34       		.uleb128 0x34
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3707 0101 3F       		.uleb128 0x3f
  3708 0102 19       		.uleb128 0x19
  3709 0103 03       		.uleb128 0x3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 101
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 101
 
 
  3710 0104 0E       		.uleb128 0xe
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3764 013c 19       		.uleb128 0x19
  3765 013d 11       		.uleb128 0x11
  3766 013e 01       		.uleb128 0x1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 102
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 102
 
 
  3767 013f 12       		.uleb128 0x12
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3821 0014 80020000 		.4byte	.LFE0-.LFB0
  3822 0018 00000000 		.4byte	.LFB1
  3823 001c 00030000 		.4byte	.LFE1-.LFB1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 103
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 103
 
 
  3824 0020 00000000 		.4byte	.LFB2
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3878 0058 00000000 		.4byte	.LFB11
  3879 005c 90000000 		.4byte	.LFE11
  3880 0060 00000000 		.4byte	.LFB12
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 104
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 104
 
 
  3881 0064 80020000 		.4byte	.LFE12
@@ -6214,424 +6214,420 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 1
  3900 0025 77616B65 		.ascii	"wakeupTrim1\000"
  3900      75705472 
  3900      696D3100 
- 3901              	.LASF20:
- 3902 0031 6D617374 		.ascii	"masterClkSrc\000"
- 3902      6572436C 
- 3902      6B537263 
+ 3901              	.LASF32:
+ 3902 0031 636C6B44 		.ascii	"clkDistDelay\000"
+ 3902      69737444 
+ 3902      656C6179 
  3902      00
- 3903              	.LASF56:
- 3904 003e 43595F50 		.ascii	"CY_PM_BACKUP_STRUCT\000"
- 3904      4D5F4241 
- 3904      434B5550 
- 3904      5F535452 
- 3904      55435400 
- 3905              	.LASF28:
- 3906 0052 636C6B53 		.ascii	"clkSyncDiv\000"
- 3906      796E6344 
- 3906      697600
- 3907              	.LASF60:
- 3908 005d 4379506D 		.ascii	"CyPmRestoreClocks\000"
- 3908      52657374 
- 3908      6F726543 
- 3908      6C6F636B 
- 3908      7300
- 3909              	.LASF7:
- 3910 006f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 3910      206C6F6E 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 105
+ 3903              	.LASF20:
+ 3904 003e 6D617374 		.ascii	"masterClkSrc\000"
+ 3904      6572436C 
+ 3904      6B537263 
+ 3904      00
+ 3905              	.LASF56:
+ 3906 004b 43595F50 		.ascii	"CY_PM_BACKUP_STRUCT\000"
+ 3906      4D5F4241 
+ 3906      434B5550 
+ 3906      5F535452 
+ 3906      55435400 
+ 3907              	.LASF28:
+ 3908 005f 636C6B53 		.ascii	"clkSyncDiv\000"
+ 3908      796E6344 
+ 3908      697600
+ 3909              	.LASF60:
+ 3910 006a 4379506D 		.ascii	"CyPmRestoreClocks\000"
+ 3910      52657374 
+ 3910      6F726543 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 105
 
 
- 3910      6720756E 
- 3910      7369676E 
- 3910      65642069 
- 3911              	.LASF81:
- 3912 0086 4379506D 		.ascii	"CyPmHviLviSaveDisable\000"
- 3912      4876694C 
- 3912      76695361 
- 3912      76654469 
- 3912      7361626C 
- 3913              	.LASF71:
- 3914 009c 746D7053 		.ascii	"tmpStatus\000"
- 3914      74617475 
- 3914      7300
- 3915              	.LASF49:
- 3916 00a6 6C766961 		.ascii	"lviaTrip\000"
- 3916      54726970 
- 3916      00
- 3917              	.LASF22:
- 3918 00af 696D6F55 		.ascii	"imoUsbClk\000"
- 3918      7362436C 
- 3918      6B00
- 3919              	.LASF77:
- 3920 00b9 4379506D 		.ascii	"CyPmFtwSetInterval\000"
- 3920      46747753 
- 3920      6574496E 
- 3920      74657276 
- 3920      616C00
- 3921              	.LASF50:
- 3922 00cc 68766961 		.ascii	"hviaEn\000"
- 3922      456E00
- 3923              	.LASF36:
- 3924 00d3 696C6F50 		.ascii	"iloPowerMode\000"
- 3924      6F776572 
- 3924      4D6F6465 
- 3924      00
- 3925              	.LASF6:
- 3926 00e0 6C6F6E67 		.ascii	"long long int\000"
- 3926      206C6F6E 
- 3926      6720696E 
- 3926      7400
- 3927              	.LASF0:
- 3928 00ee 7369676E 		.ascii	"signed char\000"
- 3928      65642063 
- 3928      68617200 
- 3929              	.LASF29:
- 3930 00fa 636C6B42 		.ascii	"clkBusDiv\000"
- 3930      75734469 
- 3930      7600
- 3931              	.LASF65:
- 3932 0104 696E7465 		.ascii	"interruptState\000"
- 3932      72727570 
- 3932      74537461 
- 3932      746500
- 3933              	.LASF27:
- 3934 0113 696D6F32 		.ascii	"imo2x\000"
- 3934      7800
- 3935              	.LASF4:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 106
+ 3910      6C6F636B 
+ 3910      7300
+ 3911              	.LASF7:
+ 3912 007c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3912      206C6F6E 
+ 3912      6720756E 
+ 3912      7369676E 
+ 3912      65642069 
+ 3913              	.LASF81:
+ 3914 0093 4379506D 		.ascii	"CyPmHviLviSaveDisable\000"
+ 3914      4876694C 
+ 3914      76695361 
+ 3914      76654469 
+ 3914      7361626C 
+ 3915              	.LASF71:
+ 3916 00a9 746D7053 		.ascii	"tmpStatus\000"
+ 3916      74617475 
+ 3916      7300
+ 3917              	.LASF49:
+ 3918 00b3 6C766961 		.ascii	"lviaTrip\000"
+ 3918      54726970 
+ 3918      00
+ 3919              	.LASF22:
+ 3920 00bc 696D6F55 		.ascii	"imoUsbClk\000"
+ 3920      7362436C 
+ 3920      6B00
+ 3921              	.LASF77:
+ 3922 00c6 4379506D 		.ascii	"CyPmFtwSetInterval\000"
+ 3922      46747753 
+ 3922      6574496E 
+ 3922      74657276 
+ 3922      616C00
+ 3923              	.LASF50:
+ 3924 00d9 68766961 		.ascii	"hviaEn\000"
+ 3924      456E00
+ 3925              	.LASF36:
+ 3926 00e0 696C6F50 		.ascii	"iloPowerMode\000"
+ 3926      6F776572 
+ 3926      4D6F6465 
+ 3926      00
+ 3927              	.LASF6:
+ 3928 00ed 6C6F6E67 		.ascii	"long long int\000"
+ 3928      206C6F6E 
+ 3928      6720696E 
+ 3928      7400
+ 3929              	.LASF0:
+ 3930 00fb 7369676E 		.ascii	"signed char\000"
+ 3930      65642063 
+ 3930      68617200 
+ 3931              	.LASF29:
+ 3932 0107 636C6B42 		.ascii	"clkBusDiv\000"
+ 3932      75734469 
+ 3932      7600
+ 3933              	.LASF65:
+ 3934 0111 696E7465 		.ascii	"interruptState\000"
+ 3934      72727570 
+ 3934      74537461 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 106
 
 
- 3936 0119 6C6F6E67 		.ascii	"long int\000"
- 3936      20696E74 
- 3936      00
- 3937              	.LASF82:
- 3938 0122 4379506D 		.ascii	"CyPmHviLviRestore\000"
- 3938      4876694C 
- 3938      76695265 
- 3938      73746F72 
- 3938      6500
- 3939              	.LASF88:
- 3940 0134 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prime 2.0\\MUX\\MU"
- 3940      73657273 
- 3940      5C526563 
- 3940      65706369 
- 3940      6F6E5C44 
- 3941 0161 585F5072 		.ascii	"X_Prime.cydsn\000"
- 3941      696D652E 
- 3941      63796473 
- 3941      6E00
- 3942              	.LASF9:
- 3943 016f 75696E74 		.ascii	"uint8\000"
- 3943      3800
- 3944              	.LASF13:
- 3945 0175 646F7562 		.ascii	"double\000"
- 3945      6C6500
- 3946              	.LASF87:
- 3947 017c 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cyPm.c\000"
- 3947      6E657261 
- 3947      7465645F 
- 3947      536F7572 
- 3947      63655C50 
- 3948              	.LASF11:
- 3949 019c 75696E74 		.ascii	"uint32\000"
- 3949      333200
- 3950              	.LASF31:
- 3951 01a3 786D687A 		.ascii	"xmhzEnableState\000"
- 3951      456E6162 
- 3951      6C655374 
- 3951      61746500 
- 3952              	.LASF73:
- 3953 01b3 4379506D 		.ascii	"CyPmHibRestore\000"
- 3953      48696252 
- 3953      6573746F 
- 3953      726500
- 3954              	.LASF69:
- 3955 01c2 6D61736B 		.ascii	"mask\000"
- 3955      00
- 3956              	.LASF53:
- 3957 01c7 696D6F41 		.ascii	"imoActFreq\000"
- 3957      63744672 
- 3957      657100
- 3958              	.LASF8:
- 3959 01d2 756E7369 		.ascii	"unsigned int\000"
- 3959      676E6564 
- 3959      20696E74 
- 3959      00
- 3960              	.LASF45:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 107
+ 3934      746500
+ 3935              	.LASF27:
+ 3936 0120 696D6F32 		.ascii	"imo2x\000"
+ 3936      7800
+ 3937              	.LASF4:
+ 3938 0126 6C6F6E67 		.ascii	"long int\000"
+ 3938      20696E74 
+ 3938      00
+ 3939              	.LASF82:
+ 3940 012f 4379506D 		.ascii	"CyPmHviLviRestore\000"
+ 3940      4876694C 
+ 3940      76695265 
+ 3940      73746F72 
+ 3940      6500
+ 3941              	.LASF9:
+ 3942 0141 75696E74 		.ascii	"uint8\000"
+ 3942      3800
+ 3943              	.LASF13:
+ 3944 0147 646F7562 		.ascii	"double\000"
+ 3944      6C6500
+ 3945              	.LASF87:
+ 3946 014e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cyPm.c\000"
+ 3946      6E657261 
+ 3946      7465645F 
+ 3946      536F7572 
+ 3946      63655C50 
+ 3947              	.LASF11:
+ 3948 016e 75696E74 		.ascii	"uint32\000"
+ 3948      333200
+ 3949              	.LASF31:
+ 3950 0175 786D687A 		.ascii	"xmhzEnableState\000"
+ 3950      456E6162 
+ 3950      6C655374 
+ 3950      61746500 
+ 3951              	.LASF73:
+ 3952 0185 4379506D 		.ascii	"CyPmHibRestore\000"
+ 3952      48696252 
+ 3952      6573746F 
+ 3952      726500
+ 3953              	.LASF69:
+ 3954 0194 6D61736B 		.ascii	"mask\000"
+ 3954      00
+ 3955              	.LASF53:
+ 3956 0199 696D6F41 		.ascii	"imoActFreq\000"
+ 3956      63744672 
+ 3956      657100
+ 3957              	.LASF8:
+ 3958 01a4 756E7369 		.ascii	"unsigned int\000"
+ 3958      676E6564 
+ 3958      20696E74 
+ 3958      00
+ 3959              	.LASF45:
+ 3960 01b1 73636374 		.ascii	"scctData\000"
+ 3960      44617461 
+ 3960      00
+ 3961              	.LASF21:
+ 3962 01ba 696D6F46 		.ascii	"imoFreq\000"
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 107
 
 
- 3961 01df 73636374 		.ascii	"scctData\000"
- 3961      44617461 
- 3961      00
- 3962              	.LASF21:
- 3963 01e8 696D6F46 		.ascii	"imoFreq\000"
- 3963      72657100 
- 3964              	.LASF5:
- 3965 01f0 6C6F6E67 		.ascii	"long unsigned int\000"
- 3965      20756E73 
- 3965      69676E65 
- 3965      6420696E 
- 3965      7400
- 3966              	.LASF46:
- 3967 0202 6C766964 		.ascii	"lvidEn\000"
- 3967      456E00
- 3968              	.LASF34:
- 3969 0209 6379506D 		.ascii	"cyPmClockBackupStruct\000"
- 3969      436C6F63 
- 3969      6B426163 
- 3969      6B757053 
- 3969      74727563 
- 3970              	.LASF35:
- 3971 021f 6379506D 		.ascii	"cyPmBackupStruct\000"
- 3971      4261636B 
- 3971      75705374 
- 3971      72756374 
- 3971      00
- 3972              	.LASF33:
- 3973 0230 43595F50 		.ascii	"CY_PM_CLOCK_BACKUP_STRUCT\000"
- 3973      4D5F434C 
- 3973      4F434B5F 
- 3973      4241434B 
- 3973      55505F53 
- 3974              	.LASF3:
- 3975 024a 73686F72 		.ascii	"short unsigned int\000"
- 3975      7420756E 
- 3975      7369676E 
- 3975      65642069 
- 3975      6E7400
- 3976              	.LASF75:
- 3977 025d 63747749 		.ascii	"ctwInterval\000"
- 3977      6E746572 
- 3977      76616C00 
- 3978              	.LASF40:
- 3979 0269 77616B65 		.ascii	"wakeupCfg0\000"
- 3979      75704366 
- 3979      673000
- 3980              	.LASF41:
- 3981 0274 77616B65 		.ascii	"wakeupCfg1\000"
- 3981      75704366 
- 3981      673100
- 3982              	.LASF42:
- 3983 027f 77616B65 		.ascii	"wakeupCfg2\000"
- 3983      75704366 
- 3983      673200
- 3984              	.LASF58:
- 3985 028a 636C6B42 		.ascii	"clkBusDivTmp\000"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 108
+ 3962      72657100 
+ 3963              	.LASF5:
+ 3964 01c2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3964      20756E73 
+ 3964      69676E65 
+ 3964      6420696E 
+ 3964      7400
+ 3965              	.LASF46:
+ 3966 01d4 6C766964 		.ascii	"lvidEn\000"
+ 3966      456E00
+ 3967              	.LASF34:
+ 3968 01db 6379506D 		.ascii	"cyPmClockBackupStruct\000"
+ 3968      436C6F63 
+ 3968      6B426163 
+ 3968      6B757053 
+ 3968      74727563 
+ 3969              	.LASF35:
+ 3970 01f1 6379506D 		.ascii	"cyPmBackupStruct\000"
+ 3970      4261636B 
+ 3970      75705374 
+ 3970      72756374 
+ 3970      00
+ 3971              	.LASF33:
+ 3972 0202 43595F50 		.ascii	"CY_PM_CLOCK_BACKUP_STRUCT\000"
+ 3972      4D5F434C 
+ 3972      4F434B5F 
+ 3972      4241434B 
+ 3972      55505F53 
+ 3973              	.LASF3:
+ 3974 021c 73686F72 		.ascii	"short unsigned int\000"
+ 3974      7420756E 
+ 3974      7369676E 
+ 3974      65642069 
+ 3974      6E7400
+ 3975              	.LASF75:
+ 3976 022f 63747749 		.ascii	"ctwInterval\000"
+ 3976      6E746572 
+ 3976      76616C00 
+ 3977              	.LASF40:
+ 3978 023b 77616B65 		.ascii	"wakeupCfg0\000"
+ 3978      75704366 
+ 3978      673000
+ 3979              	.LASF41:
+ 3980 0246 77616B65 		.ascii	"wakeupCfg1\000"
+ 3980      75704366 
+ 3980      673100
+ 3981              	.LASF42:
+ 3982 0251 77616B65 		.ascii	"wakeupCfg2\000"
+ 3982      75704366 
+ 3982      673200
+ 3983              	.LASF58:
+ 3984 025c 636C6B42 		.ascii	"clkBusDivTmp\000"
+ 3984      75734469 
+ 3984      76546D70 
+ 3984      00
+ 3985              	.LASF55:
+ 3986 0269 626F6F73 		.ascii	"boostRefExt\000"
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 108
 
 
- 3985      75734469 
- 3985      76546D70 
- 3985      00
- 3986              	.LASF55:
- 3987 0297 626F6F73 		.ascii	"boostRefExt\000"
- 3987      74526566 
- 3987      45787400 
- 3988              	.LASF26:
- 3989 02a3 636C6B49 		.ascii	"clkImoSrc\000"
- 3989      6D6F5372 
- 3989      6300
- 3990              	.LASF66:
- 3991 02ad 4379506D 		.ascii	"CyPmSaveClocks\000"
- 3991      53617665 
- 3991      436C6F63 
- 3991      6B7300
- 3992              	.LASF39:
- 3993 02bc 736C7054 		.ascii	"slpTrBypass\000"
- 3993      72427970 
- 3993      61737300 
- 3994              	.LASF17:
- 3995 02c8 73697A65 		.ascii	"sizetype\000"
- 3995      74797065 
- 3995      00
- 3996              	.LASF68:
- 3997 02d1 4379506D 		.ascii	"CyPmHibernateEx\000"
- 3997      48696265 
- 3997      726E6174 
- 3997      65457800 
- 3998              	.LASF59:
- 3999 02e1 6379506D 		.ascii	"cyPmImoFreqMhz2Reg\000"
- 3999      496D6F46 
- 3999      7265714D 
- 3999      687A3252 
- 3999      656700
- 4000              	.LASF18:
- 4001 02f4 656E436C 		.ascii	"enClkA\000"
- 4001      6B4100
- 4002              	.LASF19:
- 4003 02fb 656E436C 		.ascii	"enClkD\000"
- 4003      6B4400
- 4004              	.LASF86:
- 4005 0302 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 4005      4320342E 
- 4005      382E3420 
- 4005      32303134 
- 4005      30353236 
- 4006 0335 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
- 4006      20726576 
- 4006      6973696F 
- 4006      6E203231 
- 4006      31333538 
- 4007 0368 30202D66 		.ascii	"0 -ffunction-sections\000"
- 4007      66756E63 
- 4007      74696F6E 
- 4007      2D736563 
- 4007      74696F6E 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 109
+ 3986      74526566 
+ 3986      45787400 
+ 3987              	.LASF26:
+ 3988 0275 636C6B49 		.ascii	"clkImoSrc\000"
+ 3988      6D6F5372 
+ 3988      6300
+ 3989              	.LASF66:
+ 3990 027f 4379506D 		.ascii	"CyPmSaveClocks\000"
+ 3990      53617665 
+ 3990      436C6F63 
+ 3990      6B7300
+ 3991              	.LASF39:
+ 3992 028e 736C7054 		.ascii	"slpTrBypass\000"
+ 3992      72427970 
+ 3992      61737300 
+ 3993              	.LASF17:
+ 3994 029a 73697A65 		.ascii	"sizetype\000"
+ 3994      74797065 
+ 3994      00
+ 3995              	.LASF68:
+ 3996 02a3 4379506D 		.ascii	"CyPmHibernateEx\000"
+ 3996      48696265 
+ 3996      726E6174 
+ 3996      65457800 
+ 3997              	.LASF59:
+ 3998 02b3 6379506D 		.ascii	"cyPmImoFreqMhz2Reg\000"
+ 3998      496D6F46 
+ 3998      7265714D 
+ 3998      687A3252 
+ 3998      656700
+ 3999              	.LASF18:
+ 4000 02c6 656E436C 		.ascii	"enClkA\000"
+ 4000      6B4100
+ 4001              	.LASF19:
+ 4002 02cd 656E436C 		.ascii	"enClkD\000"
+ 4002      6B4400
+ 4003              	.LASF86:
+ 4004 02d4 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 4004      4320342E 
+ 4004      382E3420 
+ 4004      32303134 
+ 4004      30353236 
+ 4005 0307 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 4005      20726576 
+ 4005      6973696F 
+ 4005      6E203231 
+ 4005      31333538 
+ 4006 033a 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 4006      66756E63 
+ 4006      74696F6E 
+ 4006      2D736563 
+ 4006      74696F6E 
+ 4007              	.LASF63:
+ 4008 0350 77616B65 		.ascii	"wakeupSource\000"
+ 4008      7570536F 
+ 4008      75726365 
+ 4008      00
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 109
 
 
- 4008              	.LASF63:
- 4009 037e 77616B65 		.ascii	"wakeupSource\000"
- 4009      7570536F 
- 4009      75726365 
- 4009      00
- 4010              	.LASF25:
- 4011 038b 696D6F43 		.ascii	"imoClkSrc\000"
- 4011      6C6B5372 
- 4011      6300
- 4012              	.LASF12:
- 4013 0395 666C6F61 		.ascii	"float\000"
- 4013      7400
- 4014              	.LASF64:
- 4015 039b 4379506D 		.ascii	"CyPmSleep\000"
- 4015      536C6565 
- 4015      7000
- 4016              	.LASF51:
- 4017 03a5 6C766964 		.ascii	"lvidRst\000"
- 4017      52737400 
- 4018              	.LASF61:
- 4019 03ad 4379506D 		.ascii	"CyPmAltAct\000"
- 4019      416C7441 
- 4019      637400
- 4020              	.LASF16:
- 4021 03b8 72656738 		.ascii	"reg8\000"
- 4021      00
- 4022              	.LASF76:
- 4023 03bd 4379506D 		.ascii	"CyPmOppsSet\000"
- 4023      4F707073 
- 4023      53657400 
- 4024              	.LASF1:
- 4025 03c9 756E7369 		.ascii	"unsigned char\000"
- 4025      676E6564 
- 4025      20636861 
- 4025      7200
- 4026              	.LASF84:
- 4027 03d7 6379506D 		.ascii	"cyPmClockBackup\000"
- 4027      436C6F63 
- 4027      6B426163 
- 4027      6B757000 
- 4028              	.LASF30:
- 4029 03e7 706C6C45 		.ascii	"pllEnableState\000"
- 4029      6E61626C 
- 4029      65537461 
- 4029      746500
- 4030              	.LASF37:
- 4031 03f6 696C6F31 		.ascii	"ilo1kEnable\000"
- 4031      6B456E61 
- 4031      626C6500 
- 4032              	.LASF2:
- 4033 0402 73686F72 		.ascii	"short int\000"
- 4033      7420696E 
- 4033      7400
- 4034              	.LASF79:
- 4035 040c 4379506D 		.ascii	"CyPmHibSlpSaveSet\000"
- 4035      48696253 
- 4035      6C705361 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 110
+ 4009              	.LASF25:
+ 4010 035d 696D6F43 		.ascii	"imoClkSrc\000"
+ 4010      6C6B5372 
+ 4010      6300
+ 4011              	.LASF12:
+ 4012 0367 666C6F61 		.ascii	"float\000"
+ 4012      7400
+ 4013              	.LASF64:
+ 4014 036d 4379506D 		.ascii	"CyPmSleep\000"
+ 4014      536C6565 
+ 4014      7000
+ 4015              	.LASF51:
+ 4016 0377 6C766964 		.ascii	"lvidRst\000"
+ 4016      52737400 
+ 4017              	.LASF61:
+ 4018 037f 4379506D 		.ascii	"CyPmAltAct\000"
+ 4018      416C7441 
+ 4018      637400
+ 4019              	.LASF16:
+ 4020 038a 72656738 		.ascii	"reg8\000"
+ 4020      00
+ 4021              	.LASF76:
+ 4022 038f 4379506D 		.ascii	"CyPmOppsSet\000"
+ 4022      4F707073 
+ 4022      53657400 
+ 4023              	.LASF1:
+ 4024 039b 756E7369 		.ascii	"unsigned char\000"
+ 4024      676E6564 
+ 4024      20636861 
+ 4024      7200
+ 4025              	.LASF84:
+ 4026 03a9 6379506D 		.ascii	"cyPmClockBackup\000"
+ 4026      436C6F63 
+ 4026      6B426163 
+ 4026      6B757000 
+ 4027              	.LASF30:
+ 4028 03b9 706C6C45 		.ascii	"pllEnableState\000"
+ 4028      6E61626C 
+ 4028      65537461 
+ 4028      746500
+ 4029              	.LASF37:
+ 4030 03c8 696C6F31 		.ascii	"ilo1kEnable\000"
+ 4030      6B456E61 
+ 4030      626C6500 
+ 4031              	.LASF2:
+ 4032 03d4 73686F72 		.ascii	"short int\000"
+ 4032      7420696E 
+ 4032      7400
+ 4033              	.LASF79:
+ 4034 03de 4379506D 		.ascii	"CyPmHibSlpSaveSet\000"
+ 4034      48696253 
+ 4034      6C705361 
+ 4034      76655365 
+ 4034      7400
+ 4035              	.LASF38:
+ 4036 03f0 696C6F31 		.ascii	"ilo100kEnable\000"
+ 4036      30306B45 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 110
 
 
- 4035      76655365 
- 4035      7400
- 4036              	.LASF38:
- 4037 041e 696C6F31 		.ascii	"ilo100kEnable\000"
- 4037      30306B45 
- 4037      6E61626C 
- 4037      6500
- 4038              	.LASF14:
- 4039 042c 63686172 		.ascii	"char\000"
- 4039      00
- 4040              	.LASF54:
- 4041 0431 696D6F41 		.ascii	"imoActFreq12Mhz\000"
- 4041      63744672 
- 4041      65713132 
- 4041      4D687A00 
- 4042              	.LASF67:
- 4043 0441 4379506D 		.ascii	"CyPmHibernate\000"
- 4043      48696265 
- 4043      726E6174 
- 4043      6500
- 4044              	.LASF78:
- 4045 044f 66747749 		.ascii	"ftwInterval\000"
- 4045      6E746572 
- 4045      76616C00 
- 4046              	.LASF85:
- 4047 045b 6379506D 		.ascii	"cyPmImoFreqReg2Mhz\000"
- 4047      496D6F46 
- 4047      72657152 
- 4047      6567324D 
- 4047      687A00
- 4048              	.LASF89:
- 4049 046e 4379506D 		.ascii	"CyPmReadStatus\000"
- 4049      52656164 
- 4049      53746174 
- 4049      757300
- 4050              	.LASF32:
- 4051 047d 636C6B44 		.ascii	"clkDistDelay\000"
- 4051      69737444 
- 4051      656C6179 
- 4051      00
- 4052              	.LASF74:
- 4053 048a 4379506D 		.ascii	"CyPmCtwSetInterval\000"
- 4053      43747753 
- 4053      6574496E 
- 4053      74657276 
- 4053      616C00
- 4054              	.LASF57:
- 4055 049d 73746174 		.ascii	"status\000"
- 4055      757300
- 4056              	.LASF48:
- 4057 04a4 6C766961 		.ascii	"lviaEn\000"
- 4057      456E00
- 4058              	.LASF72:
- 4059 04ab 4379506D 		.ascii	"CyPmHibSaveSet\000"
- 4059      48696253 
- 4059      61766553 
- 4059      657400
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccwr9WeN.s 			page 111
+ 4036      6E61626C 
+ 4036      6500
+ 4037              	.LASF14:
+ 4038 03fe 63686172 		.ascii	"char\000"
+ 4038      00
+ 4039              	.LASF54:
+ 4040 0403 696D6F41 		.ascii	"imoActFreq12Mhz\000"
+ 4040      63744672 
+ 4040      65713132 
+ 4040      4D687A00 
+ 4041              	.LASF67:
+ 4042 0413 4379506D 		.ascii	"CyPmHibernate\000"
+ 4042      48696265 
+ 4042      726E6174 
+ 4042      6500
+ 4043              	.LASF78:
+ 4044 0421 66747749 		.ascii	"ftwInterval\000"
+ 4044      6E746572 
+ 4044      76616C00 
+ 4045              	.LASF85:
+ 4046 042d 6379506D 		.ascii	"cyPmImoFreqReg2Mhz\000"
+ 4046      496D6F46 
+ 4046      72657152 
+ 4046      6567324D 
+ 4046      687A00
+ 4047              	.LASF89:
+ 4048 0440 4379506D 		.ascii	"CyPmReadStatus\000"
+ 4048      52656164 
+ 4048      53746174 
+ 4048      757300
+ 4049              	.LASF88:
+ 4050 044f 453A5C4D 		.ascii	"E:\\MUX\\MUX_Prime.cydsn\000"
+ 4050      55585C4D 
+ 4050      55585F50 
+ 4050      72696D65 
+ 4050      2E637964 
+ 4051              	.LASF74:
+ 4052 0466 4379506D 		.ascii	"CyPmCtwSetInterval\000"
+ 4052      43747753 
+ 4052      6574496E 
+ 4052      74657276 
+ 4052      616C00
+ 4053              	.LASF57:
+ 4054 0479 73746174 		.ascii	"status\000"
+ 4054      757300
+ 4055              	.LASF48:
+ 4056 0480 6C766961 		.ascii	"lviaEn\000"
+ 4056      456E00
+ 4057              	.LASF72:
+ 4058 0487 4379506D 		.ascii	"CyPmHibSaveSet\000"
+ 4058      48696253 
+ 4058      61766553 
+ 4058      657400
+ 4059              	.LASF62:
+ 4060 0496 77616B65 		.ascii	"wakeupTime\000"
+ 4060      75705469 
+ 4060      6D6500
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccm3QNnw.s 			page 111
 
 
- 4060              	.LASF62:
- 4061 04ba 77616B65 		.ascii	"wakeupTime\000"
- 4061      75705469 
- 4061      6D6500
- 4062              	.LASF15:
- 4063 04c5 63797374 		.ascii	"cystatus\000"
- 4063      61747573 
- 4063      00
- 4064              	.LASF23:
- 4065 04ce 666C6173 		.ascii	"flashWaitCycles\000"
- 4065      68576169 
- 4065      74437963 
- 4065      6C657300 
- 4066              	.LASF52:
- 4067 04de 6C766961 		.ascii	"lviaRst\000"
- 4067      52737400 
- 4068              	.LASF83:
- 4069 04e6 6379506D 		.ascii	"cyPmBackup\000"
- 4069      4261636B 
- 4069      757000
- 4070              	.LASF47:
- 4071 04f1 6C766964 		.ascii	"lvidTrip\000"
- 4071      54726970 
- 4071      00
- 4072              	.LASF24:
- 4073 04fa 696D6F45 		.ascii	"imoEnable\000"
- 4073      6E61626C 
- 4073      6500
- 4074              	.LASF70:
- 4075 0504 696E7465 		.ascii	"interruptStatus\000"
- 4075      72727570 
- 4075      74537461 
- 4075      74757300 
- 4076              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 4061              	.LASF15:
+ 4062 04a1 63797374 		.ascii	"cystatus\000"
+ 4062      61747573 
+ 4062      00
+ 4063              	.LASF23:
+ 4064 04aa 666C6173 		.ascii	"flashWaitCycles\000"
+ 4064      68576169 
+ 4064      74437963 
+ 4064      6C657300 
+ 4065              	.LASF52:
+ 4066 04ba 6C766961 		.ascii	"lviaRst\000"
+ 4066      52737400 
+ 4067              	.LASF83:
+ 4068 04c2 6379506D 		.ascii	"cyPmBackup\000"
+ 4068      4261636B 
+ 4068      757000
+ 4069              	.LASF47:
+ 4070 04cd 6C766964 		.ascii	"lvidTrip\000"
+ 4070      54726970 
+ 4070      00
+ 4071              	.LASF24:
+ 4072 04d6 696D6F45 		.ascii	"imoEnable\000"
+ 4072      6E61626C 
+ 4072      6500
+ 4073              	.LASF70:
+ 4074 04e0 696E7465 		.ascii	"interruptStatus\000"
+ 4074      72727570 
+ 4074      74537461 
+ 4074      74757300 
+ 4075              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

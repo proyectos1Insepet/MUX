@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
   23:.\Generated_Source\PSoC5/Impresora.c **** /***************************************
   24:.\Generated_Source\PSoC5/Impresora.c **** * Global data allocation
   25:.\Generated_Source\PSoC5/Impresora.c **** ***************************************/
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 2
 
 
   26:.\Generated_Source\PSoC5/Impresora.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
   35              		@ args = 0, pretend = 0, frame = 0
   36              		@ frame_needed = 1, uses_anonymous_args = 0
   37 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 3
 
 
   38              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
   96:.\Generated_Source\PSoC5/Impresora.c **** *  the Impresora_Start() API calls this function and is the preferred
   97:.\Generated_Source\PSoC5/Impresora.c **** *  method to begin component operation.
   98:.\Generated_Source\PSoC5/Impresora.c **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 4
 
 
   99:.\Generated_Source\PSoC5/Impresora.c **** * Parameters:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  135:.\Generated_Source\PSoC5/Impresora.c **** 
  136:.\Generated_Source\PSoC5/Impresora.c ****         /* Write Counter Value for TX Bit Clk Generator*/
  137:.\Generated_Source\PSoC5/Impresora.c ****         #if (Impresora_TXCLKGEN_DP)
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 5
 
 
  138:.\Generated_Source\PSoC5/Impresora.c ****             Impresora_TXBITCLKGEN_CTR_REG = Impresora_BIT_CENTER;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  123              		.thumb
  124              		.thumb_func
  125              		.type	Impresora_Enable, %function
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 6
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 6
 
 
  126              	Impresora_Enable:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  150 001a D2B2     		uxtb	r2, r2
  151 001c 1A70     		strb	r2, [r3]
  191:.\Generated_Source\PSoC5/Impresora.c **** 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 7
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 7
 
 
  192:.\Generated_Source\PSoC5/Impresora.c ****         /* Enable the RX Interrupt */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  174              		.loc 1 223 0
  175 004a 0837     		adds	r7, r7, #8
  176 004c BD46     		mov	sp, r7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 8
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 8
 
 
  177              		@ sp needed
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  211 000c FB71     		strb	r3, [r7, #7]
  244:.\Generated_Source\PSoC5/Impresora.c **** 
  245:.\Generated_Source\PSoC5/Impresora.c ****     /* Write Bit Counter Disable */
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 9
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 9
 
 
  246:.\Generated_Source\PSoC5/Impresora.c ****     #if (Impresora_RX_ENABLED || Impresora_HD_ENABLED)
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  274:.\Generated_Source\PSoC5/Impresora.c ****         #endif /* (Impresora_TX_INTERRUPT_ENABLED) */
  275:.\Generated_Source\PSoC5/Impresora.c ****     #endif /* (Impresora_TX_ENABLED) */
  276:.\Generated_Source\PSoC5/Impresora.c **** 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 10
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 10
 
 
  277:.\Generated_Source\PSoC5/Impresora.c ****     CyExitCriticalSection(enableInterrupts);
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  272 0002 00AF     		add	r7, sp, #0
  273              		.cfi_def_cfa_register 7
  297:.\Generated_Source\PSoC5/Impresora.c ****     #if (Impresora_CONTROL_REG_REMOVED)
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 11
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 11
 
 
  298:.\Generated_Source\PSoC5/Impresora.c ****         return(0u);
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  305 0006 0346     		mov	r3, r0
  306 0008 FB71     		strb	r3, [r7, #7]
  321:.\Generated_Source\PSoC5/Impresora.c ****     #if (Impresora_CONTROL_REG_REMOVED)
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 12
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 12
 
 
  322:.\Generated_Source\PSoC5/Impresora.c ****         if(0u != control)
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  359:.\Generated_Source\PSoC5/Impresora.c ****     void Impresora_SetRxInterruptMode(uint8 intSrc) 
  360:.\Generated_Source\PSoC5/Impresora.c ****     {
  324              		.loc 1 360 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 13
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 13
 
 
  325              		.cfi_startproc
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  377:.\Generated_Source\PSoC5/Impresora.c ****     *  Received data from RX register
  378:.\Generated_Source\PSoC5/Impresora.c ****     *
  379:.\Generated_Source\PSoC5/Impresora.c ****     * Global Variables:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 14
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 14
 
 
  380:.\Generated_Source\PSoC5/Impresora.c ****     *  Impresora_rxBuffer - RAM buffer pointer for save received data.
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  422:.\Generated_Source\PSoC5/Impresora.c ****                 #if ((Impresora_RX_INTERRUPT_ENABLED) && (Impresora_FLOW_CONTROL != 0u))
  423:.\Generated_Source\PSoC5/Impresora.c ****                     /* When Hardware Flow Control selected - return RX mask */
  424:.\Generated_Source\PSoC5/Impresora.c ****                     #if( Impresora_HD_ENABLED )
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 15
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 15
 
 
  425:.\Generated_Source\PSoC5/Impresora.c ****                         if((Impresora_CONTROL_REG & Impresora_CTRL_HD_SEND) == 0u)
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  400              		.type	Impresora_ReadRxStatus, %function
  401              	Impresora_ReadRxStatus:
  402              	.LFB8:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 16
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 16
 
 
  454:.\Generated_Source\PSoC5/Impresora.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  490:.\Generated_Source\PSoC5/Impresora.c **** 
  491:.\Generated_Source\PSoC5/Impresora.c ****     #if (Impresora_RX_INTERRUPT_ENABLED)
  492:.\Generated_Source\PSoC5/Impresora.c ****         if(Impresora_rxBufferOverflow != 0u)
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 17
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 17
 
 
  493:.\Generated_Source\PSoC5/Impresora.c ****         {
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  523:.\Generated_Source\PSoC5/Impresora.c ****     *  Impresora_rxBufferRead - cyclic index for read from rxBuffer,
  524:.\Generated_Source\PSoC5/Impresora.c ****     *     incremented after each byte has been read from buffer.
  525:.\Generated_Source\PSoC5/Impresora.c ****     *  Impresora_rxBufferLoopDetect - cleared if loop condition was detected
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 18
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 18
 
 
  526:.\Generated_Source\PSoC5/Impresora.c ****     *     in RX ISR.
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  565:.\Generated_Source\PSoC5/Impresora.c ****                         {   /* In Half duplex mode return RX mask only if
  566:.\Generated_Source\PSoC5/Impresora.c ****                             *  RX configuration set, otherwise
  567:.\Generated_Source\PSoC5/Impresora.c ****                             *  mask will be returned in LoadRxConfig() API.
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 19
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 19
 
 
  568:.\Generated_Source\PSoC5/Impresora.c ****                             */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  476              		.loc 1 603 0
  477 0026 002B     		cmp	r3, #0
  478 0028 01D0     		beq	.L29
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 20
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 20
 
 
  605:.\Generated_Source\PSoC5/Impresora.c ****             {
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  630:.\Generated_Source\PSoC5/Impresora.c ****     * Reentrant:
  631:.\Generated_Source\PSoC5/Impresora.c ****     *  No.
  632:.\Generated_Source\PSoC5/Impresora.c ****     *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 21
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 21
 
 
  633:.\Generated_Source\PSoC5/Impresora.c ****     *******************************************************************************/
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  650:.\Generated_Source\PSoC5/Impresora.c **** 
  651:.\Generated_Source\PSoC5/Impresora.c **** 
  652:.\Generated_Source\PSoC5/Impresora.c ****     /*******************************************************************************
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 22
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 22
 
 
  653:.\Generated_Source\PSoC5/Impresora.c ****     * Function Name: Impresora_GetRxBufferSize
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  695:.\Generated_Source\PSoC5/Impresora.c ****             if(Impresora_rxBufferLoopDetect != 0u)
  696:.\Generated_Source\PSoC5/Impresora.c ****             {
  697:.\Generated_Source\PSoC5/Impresora.c ****                 size = Impresora_RX_BUFFER_SIZE;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 23
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 23
 
 
  698:.\Generated_Source\PSoC5/Impresora.c ****             }
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  585 002c 6C640040 		.word	1073767532
  586              		.cfi_endproc
  587              	.LFE11:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 24
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 24
 
 
  588              		.size	Impresora_GetRxBufferSize, .-Impresora_GetRxBufferSize
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  607 0004 00AF     		add	r7, sp, #0
  608              		.cfi_def_cfa_register 7
  759:.\Generated_Source\PSoC5/Impresora.c ****         uint8 enableInterrupts;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 25
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 25
 
 
  760:.\Generated_Source\PSoC5/Impresora.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  641 003c 9C640040 		.word	1073767580
  642              		.cfi_endproc
  643              	.LFE12:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 26
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 26
 
 
  644              		.size	Impresora_ClearRxBuffer, .-Impresora_ClearRxBuffer
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  664              		.cfi_def_cfa_register 7
  665 0006 0346     		mov	r3, r0
  666 0008 FB71     		strb	r3, [r7, #7]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 27
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 27
 
 
  816:.\Generated_Source\PSoC5/Impresora.c ****         #if(Impresora_RXHW_ADDRESS_ENABLED)
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  853:.\Generated_Source\PSoC5/Impresora.c ****     * Return:
  854:.\Generated_Source\PSoC5/Impresora.c ****     *  None.
  855:.\Generated_Source\PSoC5/Impresora.c ****     *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 28
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 28
 
 
  856:.\Generated_Source\PSoC5/Impresora.c ****     *******************************************************************************/
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  871:.\Generated_Source\PSoC5/Impresora.c ****     *  address: Address #2 for hardware address detection.
  872:.\Generated_Source\PSoC5/Impresora.c ****     *
  873:.\Generated_Source\PSoC5/Impresora.c ****     * Return:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 29
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 29
 
 
  874:.\Generated_Source\PSoC5/Impresora.c ****     *  None.
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  889:.\Generated_Source\PSoC5/Impresora.c ****     *
  890:.\Generated_Source\PSoC5/Impresora.c ****     * Summary:
  891:.\Generated_Source\PSoC5/Impresora.c ****     *  Configures the TX interrupt sources to be enabled, but does not enable the
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 30
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 30
 
 
  892:.\Generated_Source\PSoC5/Impresora.c ****     *  interrupt.
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  796              		.thumb
  797              		.thumb_func
  798              		.type	Impresora_WriteTxData, %function
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 31
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 31
 
 
  799              	Impresora_WriteTxData:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  819 0010 02D0     		beq	.L54
  946:.\Generated_Source\PSoC5/Impresora.c ****         {
  947:.\Generated_Source\PSoC5/Impresora.c ****         #if (Impresora_TX_INTERRUPT_ENABLED)
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 32
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 32
 
 
  948:.\Generated_Source\PSoC5/Impresora.c **** 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  841              		.global	Impresora_ReadTxStatus
  842              		.thumb
  843              		.thumb_func
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 33
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 33
 
 
  844              		.type	Impresora_ReadTxStatus, %function
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  872              	.LFE18:
  873              		.size	Impresora_ReadTxStatus, .-Impresora_ReadTxStatus
  874              		.section	.text.Impresora_PutChar,"ax",%progbits
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 34
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 34
 
 
  875              		.align	2
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  893              		.cfi_def_cfa_register 7
  894 0006 0346     		mov	r3, r0
  895 0008 FB71     		strb	r3, [r7, #7]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 35
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 35
 
 
 1043:.\Generated_Source\PSoC5/Impresora.c ****     #if (Impresora_TX_INTERRUPT_ENABLED)
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
 1097:.\Generated_Source\PSoC5/Impresora.c **** 
 1098:.\Generated_Source\PSoC5/Impresora.c ****             if(0u != (Impresora_TXSTATUS_REG & Impresora_TX_STS_FIFO_EMPTY))
 1099:.\Generated_Source\PSoC5/Impresora.c ****             {
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 36
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 36
 
 
 1100:.\Generated_Source\PSoC5/Impresora.c ****                 /* Trigger TX interrupt to send software buffer */
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
 1118:.\Generated_Source\PSoC5/Impresora.c **** 
 1119:.\Generated_Source\PSoC5/Impresora.c ****     /*******************************************************************************
 1120:.\Generated_Source\PSoC5/Impresora.c ****     * Function Name: Impresora_PutString
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 37
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 37
 
 
 1121:.\Generated_Source\PSoC5/Impresora.c ****     ********************************************************************************
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  953              		.loc 1 1153 0
  954 0014 09E0     		b	.L68
  955              	.L69:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 38
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 38
 
 
 1154:.\Generated_Source\PSoC5/Impresora.c ****             {
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
 1167:.\Generated_Source\PSoC5/Impresora.c ****     *  Places N bytes of data from a memory array into the TX buffer for
 1168:.\Generated_Source\PSoC5/Impresora.c ****     *  transmission.
 1169:.\Generated_Source\PSoC5/Impresora.c ****     *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 39
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 39
 
 
 1170:.\Generated_Source\PSoC5/Impresora.c ****     * Parameters:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1020 0018 09E0     		b	.L74
  1021              	.L75:
 1200:.\Generated_Source\PSoC5/Impresora.c ****             {
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 40
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 40
 
 
 1201:.\Generated_Source\PSoC5/Impresora.c ****                 Impresora_PutChar(string[bufIndex]);
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
 1216:.\Generated_Source\PSoC5/Impresora.c ****     * Parameters:
 1217:.\Generated_Source\PSoC5/Impresora.c ****     *  txDataByte: Data byte to transmit before the carriage return and line feed.
 1218:.\Generated_Source\PSoC5/Impresora.c ****     *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 41
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 41
 
 
 1219:.\Generated_Source\PSoC5/Impresora.c ****     * Return:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1093              		@ sp needed
  1094 002a 80BD     		pop	{r7, pc}
  1095              	.L81:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 42
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 42
 
 
  1096              		.align	2
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1114              		@ link register save eliminated.
  1115 0000 80B4     		push	{r7}
  1116              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 43
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 43
 
 
  1117              		.cfi_offset 7, -4
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1138 001e 03F00203 		and	r3, r3, #2
  1139 0022 002B     		cmp	r3, #0
  1140 0024 02D0     		beq	.L85
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 44
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 44
 
 
 1309:.\Generated_Source\PSoC5/Impresora.c ****         {
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
 1330:.\Generated_Source\PSoC5/Impresora.c ****     *
 1331:.\Generated_Source\PSoC5/Impresora.c ****     * Parameters:
 1332:.\Generated_Source\PSoC5/Impresora.c ****     *  None.
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 45
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 45
 
 
 1333:.\Generated_Source\PSoC5/Impresora.c ****     *
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1199 001e 074B     		ldr	r3, .L90
  1200 0020 064A     		ldr	r2, .L90
  1201 0022 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 46
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 46
 
 
  1202 0024 D2B2     		uxtb	r2, r2
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
 1388:.\Generated_Source\PSoC5/Impresora.c ****     *   Impresora_SEND_BREAK - Initialize registers for break, send the Break
 1389:.\Generated_Source\PSoC5/Impresora.c ****     *       signal and return immediately.
 1390:.\Generated_Source\PSoC5/Impresora.c ****     *   Impresora_WAIT_FOR_COMPLETE_REINIT - Wait until break transmission is
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 47
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 47
 
 
 1391:.\Generated_Source\PSoC5/Impresora.c ****     *       complete, reinitialize registers to normal transmission mode then return
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1233              		@ frame_needed = 1, uses_anonymous_args = 0
  1234              		@ link register save eliminated.
  1235 0000 80B4     		push	{r7}
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 48
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 48
 
 
  1236              		.cfi_def_cfa_offset 4
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
 1482:.\Generated_Source\PSoC5/Impresora.c ****                 Impresora_WriteControlRegister(Impresora_ReadControlRegister() &
 1483:.\Generated_Source\PSoC5/Impresora.c ****                                               (uint8)~Impresora_CTRL_HD_SEND_BREAK);
 1484:.\Generated_Source\PSoC5/Impresora.c ****             }
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 49
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 49
 
 
 1485:.\Generated_Source\PSoC5/Impresora.c **** 
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1275 0034 184B     		ldr	r3, .L100+16
  1276 0036 1B78     		ldrb	r3, [r3]
  1277 0038 FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 50
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 50
 
 
 1514:.\Generated_Source\PSoC5/Impresora.c ****                 }
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1316 0074 03D1     		bne	.L92
  1317              	.L99:
 1530:.\Generated_Source\PSoC5/Impresora.c ****                 (retMode == Impresora_SEND_WAIT_REINIT) )
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 51
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 51
 
 
 1531:.\Generated_Source\PSoC5/Impresora.c ****             {
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
 1553:.\Generated_Source\PSoC5/Impresora.c ****     *
 1554:.\Generated_Source\PSoC5/Impresora.c ****     * Summary:
 1555:.\Generated_Source\PSoC5/Impresora.c ****     *  Configures the transmitter to signal the next bytes is address or data.
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 52
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 52
 
 
 1556:.\Generated_Source\PSoC5/Impresora.c ****     *
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1370              		.cfi_endproc
  1371              	.LFE26:
  1372              		.size	Impresora_SetTxAddressMode, .-Impresora_SetTxAddressMode
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 53
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 53
 
 
  1373              		.bss
@@ -3134,10 +3134,10 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1383 0006 00000000 		.4byte	.Ldebug_abbrev0
  1384 000a 04       		.byte	0x4
  1385 000b 01       		.uleb128 0x1
- 1386 000c 76020000 		.4byte	.LASF60
+ 1386 000c 3B020000 		.4byte	.LASF60
  1387 0010 01       		.byte	0x1
  1388 0011 24000000 		.4byte	.LASF61
- 1389 0015 DE000000 		.4byte	.LASF62
+ 1389 0015 2A040000 		.4byte	.LASF62
  1390 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1391 001d 00000000 		.4byte	0
  1392 0021 00000000 		.4byte	.Ldebug_line0
@@ -3148,15 +3148,15 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1397 002c 02       		.uleb128 0x2
  1398 002d 01       		.byte	0x1
  1399 002e 08       		.byte	0x8
- 1400 002f 84030000 		.4byte	.LASF1
+ 1400 002f 49030000 		.4byte	.LASF1
  1401 0033 02       		.uleb128 0x2
  1402 0034 02       		.byte	0x2
  1403 0035 05       		.byte	0x5
- 1404 0036 92030000 		.4byte	.LASF2
+ 1404 0036 57030000 		.4byte	.LASF2
  1405 003a 02       		.uleb128 0x2
  1406 003b 02       		.byte	0x2
  1407 003c 07       		.byte	0x7
- 1408 003d 18020000 		.4byte	.LASF3
+ 1408 003d DD010000 		.4byte	.LASF3
  1409 0041 02       		.uleb128 0x2
  1410 0042 04       		.byte	0x4
  1411 0043 05       		.byte	0x5
@@ -3164,7 +3164,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1413 0048 02       		.uleb128 0x2
  1414 0049 04       		.byte	0x4
  1415 004a 07       		.byte	0x7
- 1416 004b B6010000 		.4byte	.LASF5
+ 1416 004b 7B010000 		.4byte	.LASF5
  1417 004f 02       		.uleb128 0x2
  1418 0050 08       		.byte	0x8
  1419 0051 05       		.byte	0x5
@@ -3178,14 +3178,14 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1427 005f 05       		.byte	0x5
  1428 0060 696E7400 		.ascii	"int\000"
  1429 0064 02       		.uleb128 0x2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 54
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 54
 
 
  1430 0065 04       		.byte	0x4
  1431 0066 07       		.byte	0x7
- 1432 0067 6A010000 		.4byte	.LASF8
+ 1432 0067 2F010000 		.4byte	.LASF8
  1433 006b 04       		.uleb128 0x4
- 1434 006c 19010000 		.4byte	.LASF9
+ 1434 006c DE000000 		.4byte	.LASF9
  1435 0070 02       		.byte	0x2
  1436 0071 B3       		.byte	0xb3
  1437 0072 2C000000 		.4byte	0x2c
@@ -3197,22 +3197,22 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1443 0081 02       		.uleb128 0x2
  1444 0082 04       		.byte	0x4
  1445 0083 04       		.byte	0x4
- 1446 0084 0F030000 		.4byte	.LASF11
+ 1446 0084 D4020000 		.4byte	.LASF11
  1447 0088 02       		.uleb128 0x2
  1448 0089 08       		.byte	0x8
  1449 008a 04       		.byte	0x4
- 1450 008b 1F010000 		.4byte	.LASF12
+ 1450 008b E4000000 		.4byte	.LASF12
  1451 008f 04       		.uleb128 0x4
- 1452 0090 05040000 		.4byte	.LASF13
+ 1452 0090 CA030000 		.4byte	.LASF13
  1453 0094 02       		.byte	0x2
  1454 0095 C4       		.byte	0xc4
  1455 0096 9A000000 		.4byte	0x9a
  1456 009a 02       		.uleb128 0x2
  1457 009b 01       		.byte	0x1
  1458 009c 08       		.byte	0x8
- 1459 009d D6030000 		.4byte	.LASF14
+ 1459 009d 9B030000 		.4byte	.LASF14
  1460 00a1 05       		.uleb128 0x5
- 1461 00a2 2F030000 		.4byte	.LASF15
+ 1461 00a2 F4020000 		.4byte	.LASF15
  1462 00a6 02       		.byte	0x2
  1463 00a7 5D01     		.2byte	0x15d
  1464 00a9 AD000000 		.4byte	0xad
@@ -3221,7 +3221,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1467 00b2 02       		.uleb128 0x2
  1468 00b3 04       		.byte	0x4
  1469 00b4 07       		.byte	0x7
- 1470 00b5 65020000 		.4byte	.LASF16
+ 1470 00b5 2A020000 		.4byte	.LASF16
  1471 00b9 07       		.uleb128 0x7
  1472 00ba 6F000000 		.4byte	.LASF17
  1473 00be 01       		.byte	0x1
@@ -3231,18 +3231,18 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1477 00c8 01       		.uleb128 0x1
  1478 00c9 9C       		.byte	0x9c
  1479 00ca 08       		.uleb128 0x8
- 1480 00cb 2A040000 		.4byte	.LASF18
+ 1480 00cb EF030000 		.4byte	.LASF18
  1481 00cf 01       		.byte	0x1
  1482 00d0 6A       		.byte	0x6a
  1483 00d1 00000000 		.4byte	.LFB1
  1484 00d5 40000000 		.4byte	.LFE1-.LFB1
  1485 00d9 01       		.uleb128 0x1
  1486 00da 9C       		.byte	0x9c
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 55
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 55
 
 
  1487 00db 09       		.uleb128 0x9
- 1488 00dc 77010000 		.4byte	.LASF19
+ 1488 00dc 3C010000 		.4byte	.LASF19
  1489 00e0 01       		.byte	0x1
  1490 00e1 B7       		.byte	0xb7
  1491 00e2 00000000 		.4byte	.LFB2
@@ -3251,7 +3251,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1494 00eb 9C       		.byte	0x9c
  1495 00ec FF000000 		.4byte	0xff
  1496 00f0 0A       		.uleb128 0xa
- 1497 00f1 65040000 		.4byte	.LASF21
+ 1497 00f1 41040000 		.4byte	.LASF21
  1498 00f5 01       		.byte	0x1
  1499 00f6 B9       		.byte	0xb9
  1500 00f7 6B000000 		.4byte	0x6b
@@ -3260,7 +3260,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1503 00fd 77       		.sleb128 -9
  1504 00fe 00       		.byte	0
  1505 00ff 09       		.uleb128 0x9
- 1506 0100 34020000 		.4byte	.LASF20
+ 1506 0100 F9010000 		.4byte	.LASF20
  1507 0104 01       		.byte	0x1
  1508 0105 F0       		.byte	0xf0
  1509 0106 00000000 		.4byte	.LFB3
@@ -3269,7 +3269,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1512 010f 9C       		.byte	0x9c
  1513 0110 23010000 		.4byte	0x123
  1514 0114 0A       		.uleb128 0xa
- 1515 0115 65040000 		.4byte	.LASF21
+ 1515 0115 41040000 		.4byte	.LASF21
  1516 0119 01       		.byte	0x1
  1517 011a F2       		.byte	0xf2
  1518 011b 6B000000 		.4byte	0x6b
@@ -3278,7 +3278,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1521 0121 77       		.sleb128 -9
  1522 0122 00       		.byte	0
  1523 0123 0B       		.uleb128 0xb
- 1524 0124 4C010000 		.4byte	.LASF32
+ 1524 0124 11010000 		.4byte	.LASF32
  1525 0128 01       		.byte	0x1
  1526 0129 2701     		.2byte	0x127
  1527 012b 6B000000 		.4byte	0x6b
@@ -3287,7 +3287,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1530 0137 01       		.uleb128 0x1
  1531 0138 9C       		.byte	0x9c
  1532 0139 0C       		.uleb128 0xc
- 1533 013a 0B040000 		.4byte	.LASF22
+ 1533 013a D0030000 		.4byte	.LASF22
  1534 013e 01       		.byte	0x1
  1535 013f 3F01     		.2byte	0x13f
  1536 0141 00000000 		.4byte	.LFB5
@@ -3296,9 +3296,9 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1539 014a 9C       		.byte	0x9c
  1540 014b 5F010000 		.4byte	0x15f
  1541 014f 0D       		.uleb128 0xd
- 1542 0150 32010000 		.4byte	.LASF24
+ 1542 0150 F7000000 		.4byte	.LASF24
  1543 0154 01       		.byte	0x1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 56
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 56
 
 
  1544 0155 3F01     		.2byte	0x13f
@@ -3308,7 +3308,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1548 015d 77       		.sleb128 -9
  1549 015e 00       		.byte	0
  1550 015f 0C       		.uleb128 0xc
- 1551 0160 51030000 		.4byte	.LASF23
+ 1551 0160 16030000 		.4byte	.LASF23
  1552 0164 01       		.byte	0x1
  1553 0165 6701     		.2byte	0x167
  1554 0167 00000000 		.4byte	.LFB6
@@ -3317,7 +3317,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1557 0170 9C       		.byte	0x9c
  1558 0171 85010000 		.4byte	0x185
  1559 0175 0D       		.uleb128 0xd
- 1560 0176 43020000 		.4byte	.LASF25
+ 1560 0176 08020000 		.4byte	.LASF25
  1561 017a 01       		.byte	0x1
  1562 017b 6701     		.2byte	0x167
  1563 017d 6B000000 		.4byte	0x6b
@@ -3326,7 +3326,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1566 0183 77       		.sleb128 -9
  1567 0184 00       		.byte	0
  1568 0185 0E       		.uleb128 0xe
- 1569 0186 39040000 		.4byte	.LASF27
+ 1569 0186 FE030000 		.4byte	.LASF27
  1570 018a 01       		.byte	0x1
  1571 018b 8801     		.2byte	0x188
  1572 018d 6B000000 		.4byte	0x6b
@@ -3336,7 +3336,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1576 019a 9C       		.byte	0x9c
  1577 019b AF010000 		.4byte	0x1af
  1578 019f 0F       		.uleb128 0xf
- 1579 01a0 A6030000 		.4byte	.LASF26
+ 1579 01a0 6B030000 		.4byte	.LASF26
  1580 01a4 01       		.byte	0x1
  1581 01a5 8A01     		.2byte	0x18a
  1582 01a7 6B000000 		.4byte	0x6b
@@ -3345,7 +3345,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1585 01ad 77       		.sleb128 -9
  1586 01ae 00       		.byte	0
  1587 01af 0E       		.uleb128 0xe
- 1588 01b0 4E040000 		.4byte	.LASF28
+ 1588 01b0 13040000 		.4byte	.LASF28
  1589 01b4 01       		.byte	0x1
  1590 01b5 E501     		.2byte	0x1e5
  1591 01b7 6B000000 		.4byte	0x6b
@@ -3355,10 +3355,10 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1595 01c4 9C       		.byte	0x9c
  1596 01c5 D9010000 		.4byte	0x1d9
  1597 01c9 0F       		.uleb128 0xf
- 1598 01ca 88040000 		.4byte	.LASF29
+ 1598 01ca 64040000 		.4byte	.LASF29
  1599 01ce 01       		.byte	0x1
  1600 01cf E701     		.2byte	0x1e7
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 57
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 57
 
 
  1601 01d1 6B000000 		.4byte	0x6b
@@ -3367,7 +3367,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1604 01d7 77       		.sleb128 -9
  1605 01d8 00       		.byte	0
  1606 01d9 0E       		.uleb128 0xe
- 1607 01da F3030000 		.4byte	.LASF30
+ 1607 01da B8030000 		.4byte	.LASF30
  1608 01de 01       		.byte	0x1
  1609 01df 1402     		.2byte	0x214
  1610 01e1 6B000000 		.4byte	0x6b
@@ -3377,7 +3377,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1614 01ee 9C       		.byte	0x9c
  1615 01ef 12020000 		.4byte	0x212
  1616 01f3 0F       		.uleb128 0xf
- 1617 01f4 A6030000 		.4byte	.LASF26
+ 1617 01f4 6B030000 		.4byte	.LASF26
  1618 01f8 01       		.byte	0x1
  1619 01f9 1602     		.2byte	0x216
  1620 01fb 6B000000 		.4byte	0x6b
@@ -3385,7 +3385,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1622 0200 91       		.byte	0x91
  1623 0201 77       		.sleb128 -9
  1624 0202 0F       		.uleb128 0xf
- 1625 0203 F2020000 		.4byte	.LASF31
+ 1625 0203 B7020000 		.4byte	.LASF31
  1626 0207 01       		.byte	0x1
  1627 0208 1702     		.2byte	0x217
  1628 020a 6B000000 		.4byte	0x6b
@@ -3394,7 +3394,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1631 0210 76       		.sleb128 -10
  1632 0211 00       		.byte	0
  1633 0212 10       		.uleb128 0x10
- 1634 0213 3A010000 		.4byte	.LASF33
+ 1634 0213 FF000000 		.4byte	.LASF33
  1635 0217 01       		.byte	0x1
  1636 0218 7A02     		.2byte	0x27a
  1637 021a 76000000 		.4byte	0x76
@@ -3403,7 +3403,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1640 0226 01       		.uleb128 0x1
  1641 0227 9C       		.byte	0x9c
  1642 0228 0E       		.uleb128 0xe
- 1643 0229 15030000 		.4byte	.LASF34
+ 1643 0229 DA020000 		.4byte	.LASF34
  1644 022d 01       		.byte	0x1
  1645 022e AB02     		.2byte	0x2ab
  1646 0230 6B000000 		.4byte	0x6b
@@ -3413,19 +3413,19 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1650 023d 9C       		.byte	0x9c
  1651 023e 52020000 		.4byte	0x252
  1652 0242 0F       		.uleb128 0xf
- 1653 0243 13020000 		.4byte	.LASF35
+ 1653 0243 D8010000 		.4byte	.LASF35
  1654 0247 01       		.byte	0x1
  1655 0248 AE02     		.2byte	0x2ae
  1656 024a 6B000000 		.4byte	0x6b
  1657 024e 02       		.uleb128 0x2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 58
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 58
 
 
  1658 024f 91       		.byte	0x91
  1659 0250 77       		.sleb128 -9
  1660 0251 00       		.byte	0
  1661 0252 11       		.uleb128 0x11
- 1662 0253 DB030000 		.4byte	.LASF36
+ 1662 0253 A0030000 		.4byte	.LASF36
  1663 0257 01       		.byte	0x1
  1664 0258 F502     		.2byte	0x2f5
  1665 025a 00000000 		.4byte	.LFB12
@@ -3434,7 +3434,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1668 0263 9C       		.byte	0x9c
  1669 0264 78020000 		.4byte	0x278
  1670 0268 0F       		.uleb128 0xf
- 1671 0269 65040000 		.4byte	.LASF21
+ 1671 0269 41040000 		.4byte	.LASF21
  1672 026d 01       		.byte	0x1
  1673 026e F702     		.2byte	0x2f7
  1674 0270 6B000000 		.4byte	0x6b
@@ -3443,7 +3443,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1677 0276 77       		.sleb128 -9
  1678 0277 00       		.byte	0
  1679 0278 0C       		.uleb128 0xc
- 1680 0279 F8010000 		.4byte	.LASF37
+ 1680 0279 BD010000 		.4byte	.LASF37
  1681 027d 01       		.byte	0x1
  1682 027e 2D03     		.2byte	0x32d
  1683 0280 00000000 		.4byte	.LFB13
@@ -3452,7 +3452,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1686 0289 9C       		.byte	0x9c
  1687 028a 9E020000 		.4byte	0x29e
  1688 028e 0D       		.uleb128 0xd
- 1689 028f 26010000 		.4byte	.LASF38
+ 1689 028f EB000000 		.4byte	.LASF38
  1690 0293 01       		.byte	0x1
  1691 0294 2D03     		.2byte	0x32d
  1692 0296 6B000000 		.4byte	0x6b
@@ -3461,7 +3461,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1695 029c 77       		.sleb128 -9
  1696 029d 00       		.byte	0
  1697 029e 0C       		.uleb128 0xc
- 1698 029f C8010000 		.4byte	.LASF39
+ 1698 029f 8D010000 		.4byte	.LASF39
  1699 02a3 01       		.byte	0x1
  1700 02a4 5903     		.2byte	0x359
  1701 02a6 00000000 		.4byte	.LFB14
@@ -3470,7 +3470,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1704 02af 9C       		.byte	0x9c
  1705 02b0 C4020000 		.4byte	0x2c4
  1706 02b4 0D       		.uleb128 0xd
- 1707 02b5 6E020000 		.4byte	.LASF40
+ 1707 02b5 33020000 		.4byte	.LASF40
  1708 02b9 01       		.byte	0x1
  1709 02ba 5903     		.2byte	0x359
  1710 02bc 6B000000 		.4byte	0x6b
@@ -3478,11 +3478,11 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1712 02c1 91       		.byte	0x91
  1713 02c2 77       		.sleb128 -9
  1714 02c3 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 59
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 59
 
 
  1715 02c4 0C       		.uleb128 0xc
- 1716 02c5 E0010000 		.4byte	.LASF41
+ 1716 02c5 A5010000 		.4byte	.LASF41
  1717 02c9 01       		.byte	0x1
  1718 02ca 6D03     		.2byte	0x36d
  1719 02cc 00000000 		.4byte	.LFB15
@@ -3491,7 +3491,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1722 02d5 9C       		.byte	0x9c
  1723 02d6 EA020000 		.4byte	0x2ea
  1724 02da 0D       		.uleb128 0xd
- 1725 02db 6E020000 		.4byte	.LASF40
+ 1725 02db 33020000 		.4byte	.LASF40
  1726 02df 01       		.byte	0x1
  1727 02e0 6D03     		.2byte	0x36d
  1728 02e2 6B000000 		.4byte	0x6b
@@ -3500,7 +3500,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1731 02e8 77       		.sleb128 -9
  1732 02e9 00       		.byte	0
  1733 02ea 0C       		.uleb128 0xc
- 1734 02eb 34030000 		.4byte	.LASF42
+ 1734 02eb F9020000 		.4byte	.LASF42
  1735 02ef 01       		.byte	0x1
  1736 02f0 8C03     		.2byte	0x38c
  1737 02f2 00000000 		.4byte	.LFB16
@@ -3509,7 +3509,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1740 02fb 9C       		.byte	0x9c
  1741 02fc 10030000 		.4byte	0x310
  1742 0300 0D       		.uleb128 0xd
- 1743 0301 43020000 		.4byte	.LASF25
+ 1743 0301 08020000 		.4byte	.LASF25
  1744 0305 01       		.byte	0x1
  1745 0306 8C03     		.2byte	0x38c
  1746 0308 6B000000 		.4byte	0x6b
@@ -3518,7 +3518,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1749 030e 77       		.sleb128 -9
  1750 030f 00       		.byte	0
  1751 0310 0C       		.uleb128 0xc
- 1752 0311 6E030000 		.4byte	.LASF43
+ 1752 0311 33030000 		.4byte	.LASF43
  1753 0315 01       		.byte	0x1
  1754 0316 AE03     		.2byte	0x3ae
  1755 0318 00000000 		.4byte	.LFB17
@@ -3536,9 +3536,9 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1767 0334 77       		.sleb128 -9
  1768 0335 00       		.byte	0
  1769 0336 0B       		.uleb128 0xb
- 1770 0337 AD030000 		.4byte	.LASF45
+ 1770 0337 72030000 		.4byte	.LASF45
  1771 033b 01       		.byte	0x1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 60
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 60
 
 
  1772 033c EB03     		.2byte	0x3eb
@@ -3548,7 +3548,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1776 034a 01       		.uleb128 0x1
  1777 034b 9C       		.byte	0x9c
  1778 034c 0C       		.uleb128 0xc
- 1779 034d C4030000 		.4byte	.LASF46
+ 1779 034d 89030000 		.4byte	.LASF46
  1780 0351 01       		.byte	0x1
  1781 0352 1104     		.2byte	0x411
  1782 0354 00000000 		.4byte	.LFB19
@@ -3566,7 +3566,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1794 0370 77       		.sleb128 -9
  1795 0371 00       		.byte	0
  1796 0372 11       		.uleb128 0x11
- 1797 0373 FB020000 		.4byte	.LASF47
+ 1797 0373 C0020000 		.4byte	.LASF47
  1798 0377 01       		.byte	0x1
  1799 0378 7904     		.2byte	0x479
  1800 037a 00000000 		.4byte	.LFB20
@@ -3583,7 +3583,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1811 0395 91       		.byte	0x91
  1812 0396 6C       		.sleb128 -20
  1813 0397 0F       		.uleb128 0xf
- 1814 0398 2B020000 		.4byte	.LASF49
+ 1814 0398 F0010000 		.4byte	.LASF49
  1815 039c 01       		.byte	0x1
  1816 039d 7B04     		.2byte	0x47b
  1817 039f 76000000 		.4byte	0x76
@@ -3597,8 +3597,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1825 03ad 13       		.uleb128 0x13
  1826 03ae 8F000000 		.4byte	0x8f
  1827 03b2 11       		.uleb128 0x11
- 1828 03b3 52020000 		.4byte	.LASF50
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 61
+ 1828 03b3 17020000 		.4byte	.LASF50
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 61
 
 
  1829 03b7 01       		.byte	0x1
@@ -3617,7 +3617,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1842 03d5 91       		.byte	0x91
  1843 03d6 6C       		.sleb128 -20
  1844 03d7 0D       		.uleb128 0xd
- 1845 03d8 9C030000 		.4byte	.LASF51
+ 1845 03d8 61030000 		.4byte	.LASF51
  1846 03dc 01       		.byte	0x1
  1847 03dd A704     		.2byte	0x4a7
  1848 03df 6B000000 		.4byte	0x6b
@@ -3625,7 +3625,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1850 03e4 91       		.byte	0x91
  1851 03e5 6B       		.sleb128 -21
  1852 03e6 0F       		.uleb128 0xf
- 1853 03e7 2B020000 		.4byte	.LASF49
+ 1853 03e7 F0010000 		.4byte	.LASF49
  1854 03eb 01       		.byte	0x1
  1855 03ec AA04     		.2byte	0x4aa
  1856 03ee 6B000000 		.4byte	0x6b
@@ -3639,7 +3639,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1864 03fc 13       		.uleb128 0x13
  1865 03fd 6B000000 		.4byte	0x6b
  1866 0401 11       		.uleb128 0x11
- 1867 0402 76040000 		.4byte	.LASF52
+ 1867 0402 52040000 		.4byte	.LASF52
  1868 0406 01       		.byte	0x1
  1869 0407 CE04     		.2byte	0x4ce
  1870 0409 00000000 		.4byte	.LFB22
@@ -3657,8 +3657,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1882 0425 77       		.sleb128 -9
  1883 0426 00       		.byte	0
  1884 0427 0E       		.uleb128 0xe
- 1885 0428 88010000 		.4byte	.LASF53
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 62
+ 1885 0428 4D010000 		.4byte	.LASF53
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 62
 
 
  1886 042c 01       		.byte	0x1
@@ -3670,7 +3670,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1892 043c 9C       		.byte	0x9c
  1893 043d 51040000 		.4byte	0x451
  1894 0441 0F       		.uleb128 0xf
- 1895 0442 13020000 		.4byte	.LASF35
+ 1895 0442 D8010000 		.4byte	.LASF35
  1896 0446 01       		.byte	0x1
  1897 0447 FC04     		.2byte	0x4fc
  1898 0449 6B000000 		.4byte	0x6b
@@ -3688,7 +3688,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1910 0462 9C       		.byte	0x9c
  1911 0463 77040000 		.4byte	0x477
  1912 0467 0F       		.uleb128 0xf
- 1913 0468 65040000 		.4byte	.LASF21
+ 1913 0468 41040000 		.4byte	.LASF21
  1914 046c 01       		.byte	0x1
  1915 046d 4C05     		.2byte	0x54c
  1916 046f 6B000000 		.4byte	0x6b
@@ -3697,7 +3697,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1919 0475 77       		.sleb128 -9
  1920 0476 00       		.byte	0
  1921 0477 0C       		.uleb128 0xc
- 1922 0478 A2010000 		.4byte	.LASF55
+ 1922 0478 67010000 		.4byte	.LASF55
  1923 047c 01       		.byte	0x1
  1924 047d A005     		.2byte	0x5a0
  1925 047f 00000000 		.4byte	.LFB25
@@ -3717,8 +3717,8 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1939 049d 12000000 		.4byte	.LBB2
  1940 04a1 6C000000 		.4byte	.LBE2-.LBB2
  1941 04a5 0F       		.uleb128 0xf
- 1942 04a6 4A020000 		.4byte	.LASF57
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 63
+ 1942 04a6 0F020000 		.4byte	.LASF57
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 63
 
 
  1943 04aa 01       		.byte	0x1
@@ -3747,7 +3747,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1966 04d9 9C       		.byte	0x9c
  1967 04da EE040000 		.4byte	0x4ee
  1968 04de 0D       		.uleb128 0xd
- 1969 04df 26010000 		.4byte	.LASF38
+ 1969 04df EB000000 		.4byte	.LASF38
  1970 04e3 01       		.byte	0x1
  1971 04e4 2406     		.2byte	0x624
  1972 04e6 6B000000 		.4byte	0x6b
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  1997 0009 1B       		.uleb128 0x1b
  1998 000a 0E       		.uleb128 0xe
  1999 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 64
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 64
 
 
  2000 000c 17       		.uleb128 0x17
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2054 0042 00       		.byte	0
  2055 0043 06       		.uleb128 0x6
  2056 0044 35       		.uleb128 0x35
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 65
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 65
 
 
  2057 0045 00       		.byte	0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2111 007d 3F       		.uleb128 0x3f
  2112 007e 19       		.uleb128 0x19
  2113 007f 03       		.uleb128 0x3
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 66
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 66
 
 
  2114 0080 0E       		.uleb128 0xe
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2168 00b7 18       		.uleb128 0x18
  2169 00b8 9742     		.uleb128 0x2117
  2170 00ba 19       		.uleb128 0x19
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 67
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 67
 
 
  2171 00bb 00       		.byte	0
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2225 00f2 19       		.uleb128 0x19
  2226 00f3 49       		.uleb128 0x49
  2227 00f4 13       		.uleb128 0x13
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 68
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 68
 
 
  2228 00f5 11       		.uleb128 0x11
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2282 012d 01       		.byte	0x1
  2283 012e 3F       		.uleb128 0x3f
  2284 012f 19       		.uleb128 0x19
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 69
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 69
 
 
  2285 0130 03       		.uleb128 0x3
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2339 0167 49       		.uleb128 0x49
  2340 0168 13       		.uleb128 0x13
  2341 0169 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 70
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 70
 
 
  2342 016a 19       		.uleb128 0x19
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2396 00b0 00000000 		.4byte	.LFB20
  2397 00b4 40000000 		.4byte	.LFE20-.LFB20
  2398 00b8 00000000 		.4byte	.LFB21
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 71
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 71
 
 
  2399 00bc 40000000 		.4byte	.LFE21-.LFB21
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2453 009c 34000000 		.4byte	.LFE19
  2454 00a0 00000000 		.4byte	.LFB20
  2455 00a4 40000000 		.4byte	.LFE20
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 72
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 72
 
 
  2456 00a8 00000000 		.4byte	.LFB21
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2488      65736F72 
  2488      615F5374 
  2488      61727400 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 73
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 73
 
 
  2489              	.LASF6:
@@ -4350,278 +4350,274 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 1
  2500 00d5 6C6F6E67 		.ascii	"long int\000"
  2500      20696E74 
  2500      00
- 2501              	.LASF62:
- 2502 00de 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prime 2.0\\MUX\\MU"
- 2502      73657273 
- 2502      5C526563 
- 2502      65706369 
- 2502      6F6E5C44 
- 2503 010b 585F5072 		.ascii	"X_Prime.cydsn\000"
- 2503      696D652E 
- 2503      63796473 
- 2503      6E00
- 2504              	.LASF9:
- 2505 0119 75696E74 		.ascii	"uint8\000"
- 2505      3800
- 2506              	.LASF12:
- 2507 011f 646F7562 		.ascii	"double\000"
- 2507      6C6500
- 2508              	.LASF38:
- 2509 0126 61646472 		.ascii	"addressMode\000"
- 2509      6573734D 
- 2509      6F646500 
- 2510              	.LASF24:
- 2511 0132 636F6E74 		.ascii	"control\000"
- 2511      726F6C00 
- 2512              	.LASF33:
- 2513 013a 496D7072 		.ascii	"Impresora_GetByte\000"
- 2513      65736F72 
- 2513      615F4765 
- 2513      74427974 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 74
+ 2501              	.LASF9:
+ 2502 00de 75696E74 		.ascii	"uint8\000"
+ 2502      3800
+ 2503              	.LASF12:
+ 2504 00e4 646F7562 		.ascii	"double\000"
+ 2504      6C6500
+ 2505              	.LASF38:
+ 2506 00eb 61646472 		.ascii	"addressMode\000"
+ 2506      6573734D 
+ 2506      6F646500 
+ 2507              	.LASF24:
+ 2508 00f7 636F6E74 		.ascii	"control\000"
+ 2508      726F6C00 
+ 2509              	.LASF33:
+ 2510 00ff 496D7072 		.ascii	"Impresora_GetByte\000"
+ 2510      65736F72 
+ 2510      615F4765 
+ 2510      74427974 
+ 2510      6500
+ 2511              	.LASF32:
+ 2512 0111 496D7072 		.ascii	"Impresora_ReadControlRegister\000"
+ 2512      65736F72 
+ 2512      615F5265 
+ 2512      6164436F 
+ 2512      6E74726F 
+ 2513              	.LASF8:
+ 2514 012f 756E7369 		.ascii	"unsigned int\000"
+ 2514      676E6564 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 74
 
 
- 2513      6500
- 2514              	.LASF32:
- 2515 014c 496D7072 		.ascii	"Impresora_ReadControlRegister\000"
- 2515      65736F72 
- 2515      615F5265 
- 2515      6164436F 
- 2515      6E74726F 
- 2516              	.LASF8:
- 2517 016a 756E7369 		.ascii	"unsigned int\000"
- 2517      676E6564 
- 2517      20696E74 
- 2517      00
- 2518              	.LASF19:
- 2519 0177 496D7072 		.ascii	"Impresora_Enable\000"
- 2519      65736F72 
- 2519      615F456E 
- 2519      61626C65 
- 2519      00
- 2520              	.LASF53:
- 2521 0188 496D7072 		.ascii	"Impresora_GetTxBufferSize\000"
- 2521      65736F72 
- 2521      615F4765 
- 2521      74547842 
- 2521      75666665 
- 2522              	.LASF55:
- 2523 01a2 496D7072 		.ascii	"Impresora_SendBreak\000"
- 2523      65736F72 
- 2523      615F5365 
- 2523      6E644272 
- 2523      65616B00 
- 2524              	.LASF5:
- 2525 01b6 6C6F6E67 		.ascii	"long unsigned int\000"
- 2525      20756E73 
- 2525      69676E65 
- 2525      6420696E 
- 2525      7400
- 2526              	.LASF39:
- 2527 01c8 496D7072 		.ascii	"Impresora_SetRxAddress1\000"
- 2527      65736F72 
- 2527      615F5365 
- 2527      74527841 
- 2527      64647265 
- 2528              	.LASF41:
- 2529 01e0 496D7072 		.ascii	"Impresora_SetRxAddress2\000"
- 2529      65736F72 
- 2529      615F5365 
- 2529      74527841 
- 2529      64647265 
- 2530              	.LASF37:
- 2531 01f8 496D7072 		.ascii	"Impresora_SetRxAddressMode\000"
- 2531      65736F72 
- 2531      615F5365 
- 2531      74527841 
- 2531      64647265 
- 2532              	.LASF35:
- 2533 0213 73697A65 		.ascii	"size\000"
- 2533      00
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 75
+ 2514      20696E74 
+ 2514      00
+ 2515              	.LASF19:
+ 2516 013c 496D7072 		.ascii	"Impresora_Enable\000"
+ 2516      65736F72 
+ 2516      615F456E 
+ 2516      61626C65 
+ 2516      00
+ 2517              	.LASF53:
+ 2518 014d 496D7072 		.ascii	"Impresora_GetTxBufferSize\000"
+ 2518      65736F72 
+ 2518      615F4765 
+ 2518      74547842 
+ 2518      75666665 
+ 2519              	.LASF55:
+ 2520 0167 496D7072 		.ascii	"Impresora_SendBreak\000"
+ 2520      65736F72 
+ 2520      615F5365 
+ 2520      6E644272 
+ 2520      65616B00 
+ 2521              	.LASF5:
+ 2522 017b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2522      20756E73 
+ 2522      69676E65 
+ 2522      6420696E 
+ 2522      7400
+ 2523              	.LASF39:
+ 2524 018d 496D7072 		.ascii	"Impresora_SetRxAddress1\000"
+ 2524      65736F72 
+ 2524      615F5365 
+ 2524      74527841 
+ 2524      64647265 
+ 2525              	.LASF41:
+ 2526 01a5 496D7072 		.ascii	"Impresora_SetRxAddress2\000"
+ 2526      65736F72 
+ 2526      615F5365 
+ 2526      74527841 
+ 2526      64647265 
+ 2527              	.LASF37:
+ 2528 01bd 496D7072 		.ascii	"Impresora_SetRxAddressMode\000"
+ 2528      65736F72 
+ 2528      615F5365 
+ 2528      74527841 
+ 2528      64647265 
+ 2529              	.LASF35:
+ 2530 01d8 73697A65 		.ascii	"size\000"
+ 2530      00
+ 2531              	.LASF3:
+ 2532 01dd 73686F72 		.ascii	"short unsigned int\000"
+ 2532      7420756E 
+ 2532      7369676E 
+ 2532      65642069 
+ 2532      6E7400
+ 2533              	.LASF49:
+ 2534 01f0 62756649 		.ascii	"bufIndex\000"
+ 2534      6E646578 
+ 2534      00
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 75
 
 
- 2534              	.LASF3:
- 2535 0218 73686F72 		.ascii	"short unsigned int\000"
- 2535      7420756E 
- 2535      7369676E 
- 2535      65642069 
- 2535      6E7400
- 2536              	.LASF49:
- 2537 022b 62756649 		.ascii	"bufIndex\000"
- 2537      6E646578 
- 2537      00
- 2538              	.LASF20:
- 2539 0234 496D7072 		.ascii	"Impresora_Stop\000"
- 2539      65736F72 
- 2539      615F5374 
- 2539      6F7000
- 2540              	.LASF25:
- 2541 0243 696E7453 		.ascii	"intSrc\000"
- 2541      726300
- 2542              	.LASF57:
- 2543 024a 746D7053 		.ascii	"tmpStat\000"
- 2543      74617400 
- 2544              	.LASF50:
- 2545 0252 496D7072 		.ascii	"Impresora_PutArray\000"
- 2545      65736F72 
- 2545      615F5075 
- 2545      74417272 
- 2545      617900
- 2546              	.LASF16:
- 2547 0265 73697A65 		.ascii	"sizetype\000"
- 2547      74797065 
- 2547      00
- 2548              	.LASF40:
- 2549 026e 61646472 		.ascii	"address\000"
- 2549      65737300 
- 2550              	.LASF60:
- 2551 0276 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 2551      4320342E 
- 2551      382E3420 
- 2551      32303134 
- 2551      30353236 
- 2552 02a9 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
- 2552      20726576 
- 2552      6973696F 
- 2552      6E203231 
- 2552      31333538 
- 2553 02dc 30202D66 		.ascii	"0 -ffunction-sections\000"
- 2553      66756E63 
- 2553      74696F6E 
- 2553      2D736563 
- 2553      74696F6E 
- 2554              	.LASF31:
- 2555 02f2 72785374 		.ascii	"rxStatus\000"
- 2555      61747573 
- 2555      00
- 2556              	.LASF47:
- 2557 02fb 496D7072 		.ascii	"Impresora_PutString\000"
- 2557      65736F72 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 76
+ 2535              	.LASF20:
+ 2536 01f9 496D7072 		.ascii	"Impresora_Stop\000"
+ 2536      65736F72 
+ 2536      615F5374 
+ 2536      6F7000
+ 2537              	.LASF25:
+ 2538 0208 696E7453 		.ascii	"intSrc\000"
+ 2538      726300
+ 2539              	.LASF57:
+ 2540 020f 746D7053 		.ascii	"tmpStat\000"
+ 2540      74617400 
+ 2541              	.LASF50:
+ 2542 0217 496D7072 		.ascii	"Impresora_PutArray\000"
+ 2542      65736F72 
+ 2542      615F5075 
+ 2542      74417272 
+ 2542      617900
+ 2543              	.LASF16:
+ 2544 022a 73697A65 		.ascii	"sizetype\000"
+ 2544      74797065 
+ 2544      00
+ 2545              	.LASF40:
+ 2546 0233 61646472 		.ascii	"address\000"
+ 2546      65737300 
+ 2547              	.LASF60:
+ 2548 023b 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 2548      4320342E 
+ 2548      382E3420 
+ 2548      32303134 
+ 2548      30353236 
+ 2549 026e 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 2549      20726576 
+ 2549      6973696F 
+ 2549      6E203231 
+ 2549      31333538 
+ 2550 02a1 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 2550      66756E63 
+ 2550      74696F6E 
+ 2550      2D736563 
+ 2550      74696F6E 
+ 2551              	.LASF31:
+ 2552 02b7 72785374 		.ascii	"rxStatus\000"
+ 2552      61747573 
+ 2552      00
+ 2553              	.LASF47:
+ 2554 02c0 496D7072 		.ascii	"Impresora_PutString\000"
+ 2554      65736F72 
+ 2554      615F5075 
+ 2554      74537472 
+ 2554      696E6700 
+ 2555              	.LASF11:
+ 2556 02d4 666C6F61 		.ascii	"float\000"
+ 2556      7400
+ 2557              	.LASF34:
+ 2558 02da 496D7072 		.ascii	"Impresora_GetRxBufferSize\000"
+ 2558      65736F72 
+ 2558      615F4765 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 76
 
 
- 2557      615F5075 
- 2557      74537472 
- 2557      696E6700 
- 2558              	.LASF11:
- 2559 030f 666C6F61 		.ascii	"float\000"
- 2559      7400
- 2560              	.LASF34:
- 2561 0315 496D7072 		.ascii	"Impresora_GetRxBufferSize\000"
- 2561      65736F72 
- 2561      615F4765 
- 2561      74527842 
- 2561      75666665 
- 2562              	.LASF15:
- 2563 032f 72656738 		.ascii	"reg8\000"
- 2563      00
- 2564              	.LASF42:
- 2565 0334 496D7072 		.ascii	"Impresora_SetTxInterruptMode\000"
- 2565      65736F72 
- 2565      615F5365 
- 2565      74547849 
- 2565      6E746572 
- 2566              	.LASF23:
- 2567 0351 496D7072 		.ascii	"Impresora_SetRxInterruptMode\000"
- 2567      65736F72 
- 2567      615F5365 
- 2567      74527849 
- 2567      6E746572 
- 2568              	.LASF43:
- 2569 036e 496D7072 		.ascii	"Impresora_WriteTxData\000"
- 2569      65736F72 
- 2569      615F5772 
- 2569      69746554 
- 2569      78446174 
- 2570              	.LASF1:
- 2571 0384 756E7369 		.ascii	"unsigned char\000"
- 2571      676E6564 
- 2571      20636861 
- 2571      7200
- 2572              	.LASF2:
- 2573 0392 73686F72 		.ascii	"short int\000"
- 2573      7420696E 
- 2573      7400
- 2574              	.LASF51:
- 2575 039c 62797465 		.ascii	"byteCount\000"
- 2575      436F756E 
- 2575      7400
- 2576              	.LASF26:
- 2577 03a6 72784461 		.ascii	"rxData\000"
- 2577      746100
- 2578              	.LASF45:
- 2579 03ad 496D7072 		.ascii	"Impresora_ReadTxStatus\000"
- 2579      65736F72 
- 2579      615F5265 
- 2579      61645478 
- 2579      53746174 
- 2580              	.LASF46:
- 2581 03c4 496D7072 		.ascii	"Impresora_PutChar\000"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 77
+ 2558      74527842 
+ 2558      75666665 
+ 2559              	.LASF15:
+ 2560 02f4 72656738 		.ascii	"reg8\000"
+ 2560      00
+ 2561              	.LASF42:
+ 2562 02f9 496D7072 		.ascii	"Impresora_SetTxInterruptMode\000"
+ 2562      65736F72 
+ 2562      615F5365 
+ 2562      74547849 
+ 2562      6E746572 
+ 2563              	.LASF23:
+ 2564 0316 496D7072 		.ascii	"Impresora_SetRxInterruptMode\000"
+ 2564      65736F72 
+ 2564      615F5365 
+ 2564      74527849 
+ 2564      6E746572 
+ 2565              	.LASF43:
+ 2566 0333 496D7072 		.ascii	"Impresora_WriteTxData\000"
+ 2566      65736F72 
+ 2566      615F5772 
+ 2566      69746554 
+ 2566      78446174 
+ 2567              	.LASF1:
+ 2568 0349 756E7369 		.ascii	"unsigned char\000"
+ 2568      676E6564 
+ 2568      20636861 
+ 2568      7200
+ 2569              	.LASF2:
+ 2570 0357 73686F72 		.ascii	"short int\000"
+ 2570      7420696E 
+ 2570      7400
+ 2571              	.LASF51:
+ 2572 0361 62797465 		.ascii	"byteCount\000"
+ 2572      436F756E 
+ 2572      7400
+ 2573              	.LASF26:
+ 2574 036b 72784461 		.ascii	"rxData\000"
+ 2574      746100
+ 2575              	.LASF45:
+ 2576 0372 496D7072 		.ascii	"Impresora_ReadTxStatus\000"
+ 2576      65736F72 
+ 2576      615F5265 
+ 2576      61645478 
+ 2576      53746174 
+ 2577              	.LASF46:
+ 2578 0389 496D7072 		.ascii	"Impresora_PutChar\000"
+ 2578      65736F72 
+ 2578      615F5075 
+ 2578      74436861 
+ 2578      7200
+ 2579              	.LASF14:
+ 2580 039b 63686172 		.ascii	"char\000"
+ 2580      00
+ 2581              	.LASF36:
+ 2582 03a0 496D7072 		.ascii	"Impresora_ClearRxBuffer\000"
+ 2582      65736F72 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 77
 
 
- 2581      65736F72 
- 2581      615F5075 
- 2581      74436861 
- 2581      7200
- 2582              	.LASF14:
- 2583 03d6 63686172 		.ascii	"char\000"
- 2583      00
- 2584              	.LASF36:
- 2585 03db 496D7072 		.ascii	"Impresora_ClearRxBuffer\000"
- 2585      65736F72 
- 2585      615F436C 
- 2585      65617252 
- 2585      78427566 
- 2586              	.LASF30:
- 2587 03f3 496D7072 		.ascii	"Impresora_GetChar\000"
- 2587      65736F72 
- 2587      615F4765 
- 2587      74436861 
- 2587      7200
- 2588              	.LASF13:
- 2589 0405 63686172 		.ascii	"char8\000"
- 2589      3800
- 2590              	.LASF22:
- 2591 040b 496D7072 		.ascii	"Impresora_WriteControlRegister\000"
- 2591      65736F72 
- 2591      615F5772 
- 2591      69746543 
- 2591      6F6E7472 
- 2592              	.LASF18:
- 2593 042a 496D7072 		.ascii	"Impresora_Init\000"
- 2593      65736F72 
- 2593      615F496E 
- 2593      697400
- 2594              	.LASF27:
- 2595 0439 496D7072 		.ascii	"Impresora_ReadRxData\000"
- 2595      65736F72 
- 2595      615F5265 
- 2595      61645278 
- 2595      44617461 
- 2596              	.LASF28:
- 2597 044e 496D7072 		.ascii	"Impresora_ReadRxStatus\000"
- 2597      65736F72 
- 2597      615F5265 
- 2597      61645278 
- 2597      53746174 
- 2598              	.LASF21:
- 2599 0465 656E6162 		.ascii	"enableInterrupts\000"
- 2599      6C65496E 
- 2599      74657272 
- 2599      75707473 
- 2599      00
- 2600              	.LASF52:
- 2601 0476 496D7072 		.ascii	"Impresora_PutCRLF\000"
- 2601      65736F72 
- 2601      615F5075 
- 2601      7443524C 
- 2601      4600
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccb4EHJy.s 			page 78
+ 2582      615F436C 
+ 2582      65617252 
+ 2582      78427566 
+ 2583              	.LASF30:
+ 2584 03b8 496D7072 		.ascii	"Impresora_GetChar\000"
+ 2584      65736F72 
+ 2584      615F4765 
+ 2584      74436861 
+ 2584      7200
+ 2585              	.LASF13:
+ 2586 03ca 63686172 		.ascii	"char8\000"
+ 2586      3800
+ 2587              	.LASF22:
+ 2588 03d0 496D7072 		.ascii	"Impresora_WriteControlRegister\000"
+ 2588      65736F72 
+ 2588      615F5772 
+ 2588      69746543 
+ 2588      6F6E7472 
+ 2589              	.LASF18:
+ 2590 03ef 496D7072 		.ascii	"Impresora_Init\000"
+ 2590      65736F72 
+ 2590      615F496E 
+ 2590      697400
+ 2591              	.LASF27:
+ 2592 03fe 496D7072 		.ascii	"Impresora_ReadRxData\000"
+ 2592      65736F72 
+ 2592      615F5265 
+ 2592      61645278 
+ 2592      44617461 
+ 2593              	.LASF28:
+ 2594 0413 496D7072 		.ascii	"Impresora_ReadRxStatus\000"
+ 2594      65736F72 
+ 2594      615F5265 
+ 2594      61645278 
+ 2594      53746174 
+ 2595              	.LASF62:
+ 2596 042a 453A5C4D 		.ascii	"E:\\MUX\\MUX_Prime.cydsn\000"
+ 2596      55585C4D 
+ 2596      55585F50 
+ 2596      72696D65 
+ 2596      2E637964 
+ 2597              	.LASF21:
+ 2598 0441 656E6162 		.ascii	"enableInterrupts\000"
+ 2598      6C65496E 
+ 2598      74657272 
+ 2598      75707473 
+ 2598      00
+ 2599              	.LASF52:
+ 2600 0452 496D7072 		.ascii	"Impresora_PutCRLF\000"
+ 2600      65736F72 
+ 2600      615F5075 
+ 2600      7443524C 
+ 2600      4600
+ 2601              	.LASF29:
+ 2602 0464 73746174 		.ascii	"status\000"
+ 2602      757300
+ 2603              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccDOXoFx.s 			page 78
 
 
- 2602              	.LASF29:
- 2603 0488 73746174 		.ascii	"status\000"
- 2603      757300
- 2604              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

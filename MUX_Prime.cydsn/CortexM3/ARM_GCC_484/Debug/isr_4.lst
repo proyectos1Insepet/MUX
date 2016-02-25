@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
   29:.\Generated_Source\PSoC5/isr_4.c **** 
   30:.\Generated_Source\PSoC5/isr_4.c **** /* `#END` */
   31:.\Generated_Source\PSoC5/isr_4.c **** 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/isr_4.c **** #ifndef CYINT_IRQ_BASE
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
   43 000e 0420     		movs	r0, #4
   44 0010 FFF7FEFF 		bl	isr_4_SetPriority
   70:.\Generated_Source\PSoC5/isr_4.c **** 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 3
 
 
   71:.\Generated_Source\PSoC5/isr_4.c ****     /* Enable it. */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
   65              		.cfi_startproc
   66              		@ args = 0, pretend = 0, frame = 8
   67              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 4
 
 
   68 0000 80B5     		push	{r7, lr}
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  124:.\Generated_Source\PSoC5/isr_4.c **** *   Disables and removes the interrupt.
  125:.\Generated_Source\PSoC5/isr_4.c **** *
  126:.\Generated_Source\PSoC5/isr_4.c **** * Parameters:  
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 5
 
 
  127:.\Generated_Source\PSoC5/isr_4.c **** *   None
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  149:.\Generated_Source\PSoC5/isr_4.c **** *
  150:.\Generated_Source\PSoC5/isr_4.c **** *   Add custom code between the coments to keep the next version of this file
  151:.\Generated_Source\PSoC5/isr_4.c **** *   from over writting your code.
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 6
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 6
 
 
  152:.\Generated_Source\PSoC5/isr_4.c **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  180:.\Generated_Source\PSoC5/isr_4.c **** *   Function definition example:
  181:.\Generated_Source\PSoC5/isr_4.c **** *   CY_ISR(MyISR)
  182:.\Generated_Source\PSoC5/isr_4.c **** *   {
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 7
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 7
 
 
  183:.\Generated_Source\PSoC5/isr_4.c **** *   }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  195              		.size	isr_4_SetVector, .-isr_4_SetVector
  196              		.section	.text.isr_4_GetVector,"ax",%progbits
  197              		.align	2
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 8
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 8
 
 
  198              		.global	isr_4_GetVector
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  228 0018 5DF8047B 		ldr	r7, [sp], #4
  229 001c 7047     		bx	lr
  230              	.L15:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 9
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 9
 
 
  231 001e 00BF     		.align	2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  257 0006 0346     		mov	r3, r0
  258 0008 FB71     		strb	r3, [r7, #7]
  255:.\Generated_Source\PSoC5/isr_4.c ****     *isr_4_INTC_PRIOR = priority << 5;
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 10
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 10
 
 
  259              		.loc 1 255 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  292              		.cfi_def_cfa_offset 4
  293              		.cfi_offset 7, -4
  294 0002 83B0     		sub	sp, sp, #12
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 11
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 11
 
 
  295              		.cfi_def_cfa_offset 16
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  298:.\Generated_Source\PSoC5/isr_4.c **** * Return:
  299:.\Generated_Source\PSoC5/isr_4.c **** *   None
  300:.\Generated_Source\PSoC5/isr_4.c **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 12
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 12
 
 
  301:.\Generated_Source\PSoC5/isr_4.c **** *******************************************************************************/
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  321:.\Generated_Source\PSoC5/isr_4.c **** *
  322:.\Generated_Source\PSoC5/isr_4.c **** *******************************************************************************/
  323:.\Generated_Source\PSoC5/isr_4.c **** uint8 isr_4_GetState(void)
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 13
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 13
 
 
  324:.\Generated_Source\PSoC5/isr_4.c **** {
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  334:.\Generated_Source\PSoC5/isr_4.c **** * Summary:
  335:.\Generated_Source\PSoC5/isr_4.c **** *   Disables the Interrupt in the interrupt controller.
  336:.\Generated_Source\PSoC5/isr_4.c **** *
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 14
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 14
 
 
  337:.\Generated_Source\PSoC5/isr_4.c **** * Parameters:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  357:.\Generated_Source\PSoC5/isr_4.c **** *   generating the interrupt.
  358:.\Generated_Source\PSoC5/isr_4.c **** *
  359:.\Generated_Source\PSoC5/isr_4.c **** * Parameters:
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 15
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 15
 
 
  360:.\Generated_Source\PSoC5/isr_4.c **** *   None
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  380:.\Generated_Source\PSoC5/isr_4.c **** *
  381:.\Generated_Source\PSoC5/isr_4.c **** * Summary:
  382:.\Generated_Source\PSoC5/isr_4.c **** *   Clears a pending interrupt in the interrupt controller.
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 16
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 16
 
 
  383:.\Generated_Source\PSoC5/isr_4.c **** *
@@ -954,11 +954,11 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  507 0006 00000000 		.4byte	.Ldebug_abbrev0
  508 000a 04       		.byte	0x4
  509 000b 01       		.uleb128 0x1
- 510 000c 70010000 		.4byte	.LASF33
+ 510 000c 4C010000 		.4byte	.LASF33
  511 0010 01       		.byte	0x1
- 512 0011 14000000 		.4byte	.LASF34
- 513 0015 53000000 		.4byte	.LASF35
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 17
+ 512 0011 2B000000 		.4byte	.LASF34
+ 513 0015 06000000 		.4byte	.LASF35
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 17
 
 
  514 0019 00000000 		.4byte	.Ldebug_ranges0+0
@@ -971,43 +971,43 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  521 002c 03       		.uleb128 0x3
  522 002d 04       		.byte	0x4
  523 002e 07       		.byte	0x7
- 524 002f 37010000 		.4byte	.LASF0
+ 524 002f 13010000 		.4byte	.LASF0
  525 0033 03       		.uleb128 0x3
  526 0034 01       		.byte	0x1
  527 0035 06       		.byte	0x6
- 528 0036 58020000 		.4byte	.LASF1
+ 528 0036 34020000 		.4byte	.LASF1
  529 003a 03       		.uleb128 0x3
  530 003b 01       		.byte	0x1
  531 003c 08       		.byte	0x8
- 532 003d B4000000 		.4byte	.LASF2
+ 532 003d 90000000 		.4byte	.LASF2
  533 0041 03       		.uleb128 0x3
  534 0042 02       		.byte	0x2
  535 0043 05       		.byte	0x5
- 536 0044 28020000 		.4byte	.LASF3
+ 536 0044 04020000 		.4byte	.LASF3
  537 0048 03       		.uleb128 0x3
  538 0049 02       		.byte	0x2
  539 004a 07       		.byte	0x7
- 540 004b 35000000 		.4byte	.LASF4
+ 540 004b 4C000000 		.4byte	.LASF4
  541 004f 03       		.uleb128 0x3
  542 0050 04       		.byte	0x4
  543 0051 05       		.byte	0x5
- 544 0052 32020000 		.4byte	.LASF5
+ 544 0052 0E020000 		.4byte	.LASF5
  545 0056 03       		.uleb128 0x3
  546 0057 04       		.byte	0x4
  547 0058 07       		.byte	0x7
- 548 0059 C7000000 		.4byte	.LASF6
+ 548 0059 A3000000 		.4byte	.LASF6
  549 005d 03       		.uleb128 0x3
  550 005e 08       		.byte	0x8
  551 005f 05       		.byte	0x5
- 552 0060 F5010000 		.4byte	.LASF7
+ 552 0060 D1010000 		.4byte	.LASF7
  553 0064 03       		.uleb128 0x3
  554 0065 08       		.byte	0x8
  555 0066 07       		.byte	0x7
- 556 0067 4C010000 		.4byte	.LASF8
+ 556 0067 28010000 		.4byte	.LASF8
  557 006b 03       		.uleb128 0x3
  558 006c 04       		.byte	0x4
  559 006d 07       		.byte	0x7
- 560 006e EC010000 		.4byte	.LASF9
+ 560 006e C8010000 		.4byte	.LASF9
  561 0072 04       		.uleb128 0x4
  562 0073 04       		.byte	0x4
  563 0074 78000000 		.4byte	0x78
@@ -1015,30 +1015,30 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  565 0079 03       		.uleb128 0x3
  566 007a 01       		.byte	0x1
  567 007b 08       		.byte	0x8
- 568 007c 03020000 		.4byte	.LASF10
+ 568 007c DF010000 		.4byte	.LASF10
  569 0080 06       		.uleb128 0x6
- 570 0081 D9000000 		.4byte	.LASF11
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 18
+ 570 0081 B5000000 		.4byte	.LASF11
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 18
 
 
  571 0085 02       		.byte	0x2
  572 0086 B3       		.byte	0xb3
  573 0087 3A000000 		.4byte	0x3a
  574 008b 06       		.uleb128 0x6
- 575 008c 30010000 		.4byte	.LASF12
+ 575 008c 0C010000 		.4byte	.LASF12
  576 0090 02       		.byte	0x2
  577 0091 B5       		.byte	0xb5
  578 0092 56000000 		.4byte	0x56
  579 0096 03       		.uleb128 0x3
  580 0097 04       		.byte	0x4
  581 0098 04       		.byte	0x4
- 582 0099 AE000000 		.4byte	.LASF13
+ 582 0099 8A000000 		.4byte	.LASF13
  583 009d 03       		.uleb128 0x3
  584 009e 08       		.byte	0x8
  585 009f 04       		.byte	0x4
- 586 00a0 F4000000 		.4byte	.LASF14
+ 586 00a0 D0000000 		.4byte	.LASF14
  587 00a4 07       		.uleb128 0x7
- 588 00a5 C2000000 		.4byte	.LASF15
+ 588 00a5 9E000000 		.4byte	.LASF15
  589 00a9 02       		.byte	0x2
  590 00aa 5D01     		.2byte	0x15d
  591 00ac B0000000 		.4byte	0xb0
@@ -1052,12 +1052,12 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  599 00c1 08       		.uleb128 0x8
  600 00c2 8B000000 		.4byte	0x8b
  601 00c6 07       		.uleb128 0x7
- 602 00c7 63010000 		.4byte	.LASF17
+ 602 00c7 3F010000 		.4byte	.LASF17
  603 00cb 02       		.byte	0x2
  604 00cc 6F01     		.2byte	0x16f
  605 00ce 72000000 		.4byte	0x72
  606 00d2 09       		.uleb128 0x9
- 607 00d3 E8000000 		.4byte	.LASF18
+ 607 00d3 C4000000 		.4byte	.LASF18
  608 00d7 01       		.byte	0x1
  609 00d8 3C       		.byte	0x3c
  610 00d9 00000000 		.4byte	.LFB0
@@ -1065,7 +1065,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  612 00e1 01       		.uleb128 0x1
  613 00e2 9C       		.byte	0x9c
  614 00e3 0A       		.uleb128 0xa
- 615 00e4 06000000 		.4byte	.LASF21
+ 615 00e4 1D000000 		.4byte	.LASF21
  616 00e8 01       		.byte	0x1
  617 00e9 67       		.byte	0x67
  618 00ea 00000000 		.4byte	.LFB1
@@ -1074,11 +1074,11 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  621 00f3 9C       		.byte	0x9c
  622 00f4 07010000 		.4byte	0x107
  623 00f8 0B       		.uleb128 0xb
- 624 00f9 44010000 		.4byte	.LASF23
+ 624 00f9 20010000 		.4byte	.LASF23
  625 00fd 01       		.byte	0x1
  626 00fe 67       		.byte	0x67
  627 00ff C6000000 		.4byte	0xc6
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 19
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 19
 
 
  628 0103 02       		.uleb128 0x2
@@ -1086,7 +1086,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  630 0105 74       		.sleb128 -12
  631 0106 00       		.byte	0
  632 0107 09       		.uleb128 0x9
- 633 0108 48000000 		.4byte	.LASF19
+ 633 0108 5F000000 		.4byte	.LASF19
  634 010c 01       		.byte	0x1
  635 010d 85       		.byte	0x85
  636 010e 00000000 		.4byte	.LFB2
@@ -1094,7 +1094,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  638 0116 01       		.uleb128 0x1
  639 0117 9C       		.byte	0x9c
  640 0118 0C       		.uleb128 0xc
- 641 0119 64020000 		.4byte	.LASF20
+ 641 0119 40020000 		.4byte	.LASF20
  642 011d 01       		.byte	0x1
  643 011e 9F       		.byte	0x9f
  644 011f 00000000 		.4byte	.LFB3
@@ -1102,7 +1102,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  646 0127 01       		.uleb128 0x1
  647 0128 9C       		.byte	0x9c
  648 0129 0D       		.uleb128 0xd
- 649 012a 20010000 		.4byte	.LASF22
+ 649 012a FC000000 		.4byte	.LASF22
  650 012e 01       		.byte	0x1
  651 012f C3       		.byte	0xc3
  652 0130 00000000 		.4byte	.LFB4
@@ -1111,7 +1111,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  655 0139 9C       		.byte	0x9c
  656 013a 5B010000 		.4byte	0x15b
  657 013e 0B       		.uleb128 0xb
- 658 013f 44010000 		.4byte	.LASF23
+ 658 013f 20010000 		.4byte	.LASF23
  659 0143 01       		.byte	0x1
  660 0144 C3       		.byte	0xc3
  661 0145 C6000000 		.4byte	0xc6
@@ -1119,7 +1119,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  663 014a 91       		.byte	0x91
  664 014b 6C       		.sleb128 -20
  665 014c 0E       		.uleb128 0xe
- 666 014d 08020000 		.4byte	.LASF24
+ 666 014d E4010000 		.4byte	.LASF24
  667 0151 01       		.byte	0x1
  668 0152 C5       		.byte	0xc5
  669 0153 5B010000 		.4byte	0x15b
@@ -1131,20 +1131,20 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  675 015c 04       		.byte	0x4
  676 015d C6000000 		.4byte	0xc6
  677 0161 0F       		.uleb128 0xf
- 678 0162 48020000 		.4byte	.LASF27
+ 678 0162 24020000 		.4byte	.LASF27
  679 0166 01       		.byte	0x1
  680 0167 DB       		.byte	0xdb
  681 0168 C6000000 		.4byte	0xc6
  682 016c 00000000 		.4byte	.LFB5
  683 0170 24000000 		.4byte	.LFE5-.LFB5
  684 0174 01       		.uleb128 0x1
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 20
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 20
 
 
  685 0175 9C       		.byte	0x9c
  686 0176 89010000 		.4byte	0x189
  687 017a 0E       		.uleb128 0xe
- 688 017b 08020000 		.4byte	.LASF24
+ 688 017b E4010000 		.4byte	.LASF24
  689 017f 01       		.byte	0x1
  690 0180 DD       		.byte	0xdd
  691 0181 5B010000 		.4byte	0x15b
@@ -1153,7 +1153,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  694 0187 74       		.sleb128 -12
  695 0188 00       		.byte	0
  696 0189 0D       		.uleb128 0xd
- 697 018a 0E010000 		.4byte	.LASF25
+ 697 018a EA000000 		.4byte	.LASF25
  698 018e 01       		.byte	0x1
  699 018f FD       		.byte	0xfd
  700 0190 00000000 		.4byte	.LFB6
@@ -1162,7 +1162,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  703 0199 9C       		.byte	0x9c
  704 019a AD010000 		.4byte	0x1ad
  705 019e 0B       		.uleb128 0xb
- 706 019f DF000000 		.4byte	.LASF26
+ 706 019f BB000000 		.4byte	.LASF26
  707 01a3 01       		.byte	0x1
  708 01a4 FD       		.byte	0xfd
  709 01a5 80000000 		.4byte	0x80
@@ -1171,7 +1171,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  712 01ab 77       		.sleb128 -9
  713 01ac 00       		.byte	0
  714 01ad 10       		.uleb128 0x10
- 715 01ae 8E000000 		.4byte	.LASF28
+ 715 01ae 6A000000 		.4byte	.LASF28
  716 01b2 01       		.byte	0x1
  717 01b3 1301     		.2byte	0x113
  718 01b5 80000000 		.4byte	0x80
@@ -1181,7 +1181,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  722 01c2 9C       		.byte	0x9c
  723 01c3 D7010000 		.4byte	0x1d7
  724 01c7 11       		.uleb128 0x11
- 725 01c8 DF000000 		.4byte	.LASF26
+ 725 01c8 BB000000 		.4byte	.LASF26
  726 01cc 01       		.byte	0x1
  727 01cd 1501     		.2byte	0x115
  728 01cf 80000000 		.4byte	0x80
@@ -1190,7 +1190,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  731 01d5 77       		.sleb128 -9
  732 01d6 00       		.byte	0
  733 01d7 12       		.uleb128 0x12
- 734 01d8 3B020000 		.4byte	.LASF29
+ 734 01d8 17020000 		.4byte	.LASF29
  735 01dc 01       		.byte	0x1
  736 01dd 2E01     		.2byte	0x12e
  737 01df 00000000 		.4byte	.LFB8
@@ -1198,10 +1198,10 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  739 01e7 01       		.uleb128 0x1
  740 01e8 9C       		.byte	0x9c
  741 01e9 13       		.uleb128 0x13
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 21
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 21
 
 
- 742 01ea 74020000 		.4byte	.LASF36
+ 742 01ea 50020000 		.4byte	.LASF36
  743 01ee 01       		.byte	0x1
  744 01ef 4301     		.2byte	0x143
  745 01f1 80000000 		.4byte	0x80
@@ -1210,7 +1210,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  748 01fd 01       		.uleb128 0x1
  749 01fe 9C       		.byte	0x9c
  750 01ff 12       		.uleb128 0x12
- 751 0200 A0000000 		.4byte	.LASF30
+ 751 0200 7C000000 		.4byte	.LASF30
  752 0204 01       		.byte	0x1
  753 0205 5801     		.2byte	0x158
  754 0207 00000000 		.4byte	.LFB10
@@ -1218,7 +1218,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  756 020f 01       		.uleb128 0x1
  757 0210 9C       		.byte	0x9c
  758 0211 12       		.uleb128 0x12
- 759 0212 17020000 		.4byte	.LASF31
+ 759 0212 F3010000 		.4byte	.LASF31
  760 0216 01       		.byte	0x1
  761 0217 7301     		.2byte	0x173
  762 0219 00000000 		.4byte	.LFB11
@@ -1226,7 +1226,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  764 0221 01       		.uleb128 0x1
  765 0222 9C       		.byte	0x9c
  766 0223 12       		.uleb128 0x12
- 767 0224 FB000000 		.4byte	.LASF32
+ 767 0224 D7000000 		.4byte	.LASF32
  768 0228 01       		.byte	0x1
  769 0229 8C01     		.2byte	0x18c
  770 022b 00000000 		.4byte	.LFB12
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  796 0013 02       		.uleb128 0x2
  797 0014 24       		.uleb128 0x24
  798 0015 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 22
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 22
 
 
  799 0016 0B       		.uleb128 0xb
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  853 004c 0B       		.uleb128 0xb
  854 004d 3B       		.uleb128 0x3b
  855 004e 05       		.uleb128 0x5
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 23
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 23
 
 
  856 004f 49       		.uleb128 0x49
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  910 0087 19       		.uleb128 0x19
  911 0088 01       		.uleb128 0x1
  912 0089 13       		.uleb128 0x13
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 24
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 24
 
 
  913 008a 00       		.byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  967 00c1 01       		.uleb128 0x1
  968 00c2 12       		.uleb128 0x12
  969 00c3 06       		.uleb128 0x6
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 25
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 25
 
 
  970 00c4 40       		.uleb128 0x40
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  1024 00fc 19       		.uleb128 0x19
  1025 00fd 03       		.uleb128 0x3
  1026 00fe 0E       		.uleb128 0xe
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 26
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 26
 
 
  1027 00ff 3A       		.uleb128 0x3a
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  1081 0136 9742     		.uleb128 0x2117
  1082 0138 19       		.uleb128 0x19
  1083 0139 00       		.byte	0
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 27
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 27
 
 
  1084 013a 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  1138 005c 24000000 		.4byte	.LFE9-.LFB9
  1139 0060 00000000 		.4byte	.LFB10
  1140 0064 18000000 		.4byte	.LFE10-.LFB10
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 28
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 28
 
 
  1141 0068 00000000 		.4byte	.LFB11
@@ -1667,199 +1667,192 @@ ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 1
  1180              	.LASF16:
  1181 0000 72656733 		.ascii	"reg32\000"
  1181      3200
- 1182              	.LASF21:
- 1183 0006 6973725F 		.ascii	"isr_4_StartEx\000"
- 1183      345F5374 
- 1183      61727445 
- 1183      7800
- 1184              	.LASF34:
- 1185 0014 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\isr_4.c\000"
- 1185      6E657261 
- 1185      7465645F 
- 1185      536F7572 
- 1185      63655C50 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 29
+ 1182              	.LASF35:
+ 1183 0006 453A5C4D 		.ascii	"E:\\MUX\\MUX_Prime.cydsn\000"
+ 1183      55585C4D 
+ 1183      55585F50 
+ 1183      72696D65 
+ 1183      2E637964 
+ 1184              	.LASF21:
+ 1185 001d 6973725F 		.ascii	"isr_4_StartEx\000"
+ 1185      345F5374 
+ 1185      61727445 
+ 1185      7800
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 29
 
 
- 1186              	.LASF4:
- 1187 0035 73686F72 		.ascii	"short unsigned int\000"
- 1187      7420756E 
- 1187      7369676E 
- 1187      65642069 
- 1187      6E7400
- 1188              	.LASF19:
- 1189 0048 6973725F 		.ascii	"isr_4_Stop\000"
- 1189      345F5374 
- 1189      6F7000
- 1190              	.LASF35:
- 1191 0053 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prime 2.0\\MUX\\MU"
- 1191      73657273 
- 1191      5C526563 
- 1191      65706369 
- 1191      6F6E5C44 
- 1192 0080 585F5072 		.ascii	"X_Prime.cydsn\000"
- 1192      696D652E 
- 1192      63796473 
- 1192      6E00
- 1193              	.LASF28:
- 1194 008e 6973725F 		.ascii	"isr_4_GetPriority\000"
- 1194      345F4765 
- 1194      74507269 
- 1194      6F726974 
- 1194      7900
- 1195              	.LASF30:
- 1196 00a0 6973725F 		.ascii	"isr_4_Disable\000"
- 1196      345F4469 
- 1196      7361626C 
- 1196      6500
- 1197              	.LASF13:
- 1198 00ae 666C6F61 		.ascii	"float\000"
- 1198      7400
- 1199              	.LASF2:
- 1200 00b4 756E7369 		.ascii	"unsigned char\000"
- 1200      676E6564 
- 1200      20636861 
- 1200      7200
- 1201              	.LASF15:
- 1202 00c2 72656738 		.ascii	"reg8\000"
- 1202      00
- 1203              	.LASF6:
- 1204 00c7 6C6F6E67 		.ascii	"long unsigned int\000"
- 1204      20756E73 
- 1204      69676E65 
- 1204      6420696E 
- 1204      7400
- 1205              	.LASF11:
- 1206 00d9 75696E74 		.ascii	"uint8\000"
- 1206      3800
- 1207              	.LASF26:
- 1208 00df 7072696F 		.ascii	"priority\000"
- 1208      72697479 
- 1208      00
- 1209              	.LASF18:
- 1210 00e8 6973725F 		.ascii	"isr_4_Start\000"
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 30
+ 1186              	.LASF34:
+ 1187 002b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\isr_4.c\000"
+ 1187      6E657261 
+ 1187      7465645F 
+ 1187      536F7572 
+ 1187      63655C50 
+ 1188              	.LASF4:
+ 1189 004c 73686F72 		.ascii	"short unsigned int\000"
+ 1189      7420756E 
+ 1189      7369676E 
+ 1189      65642069 
+ 1189      6E7400
+ 1190              	.LASF19:
+ 1191 005f 6973725F 		.ascii	"isr_4_Stop\000"
+ 1191      345F5374 
+ 1191      6F7000
+ 1192              	.LASF28:
+ 1193 006a 6973725F 		.ascii	"isr_4_GetPriority\000"
+ 1193      345F4765 
+ 1193      74507269 
+ 1193      6F726974 
+ 1193      7900
+ 1194              	.LASF30:
+ 1195 007c 6973725F 		.ascii	"isr_4_Disable\000"
+ 1195      345F4469 
+ 1195      7361626C 
+ 1195      6500
+ 1196              	.LASF13:
+ 1197 008a 666C6F61 		.ascii	"float\000"
+ 1197      7400
+ 1198              	.LASF2:
+ 1199 0090 756E7369 		.ascii	"unsigned char\000"
+ 1199      676E6564 
+ 1199      20636861 
+ 1199      7200
+ 1200              	.LASF15:
+ 1201 009e 72656738 		.ascii	"reg8\000"
+ 1201      00
+ 1202              	.LASF6:
+ 1203 00a3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1203      20756E73 
+ 1203      69676E65 
+ 1203      6420696E 
+ 1203      7400
+ 1204              	.LASF11:
+ 1205 00b5 75696E74 		.ascii	"uint8\000"
+ 1205      3800
+ 1206              	.LASF26:
+ 1207 00bb 7072696F 		.ascii	"priority\000"
+ 1207      72697479 
+ 1207      00
+ 1208              	.LASF18:
+ 1209 00c4 6973725F 		.ascii	"isr_4_Start\000"
+ 1209      345F5374 
+ 1209      61727400 
+ 1210              	.LASF14:
+ 1211 00d0 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 30
 
 
- 1210      345F5374 
- 1210      61727400 
- 1211              	.LASF14:
- 1212 00f4 646F7562 		.ascii	"double\000"
- 1212      6C6500
- 1213              	.LASF32:
- 1214 00fb 6973725F 		.ascii	"isr_4_ClearPending\000"
- 1214      345F436C 
- 1214      65617250 
- 1214      656E6469 
- 1214      6E6700
- 1215              	.LASF25:
- 1216 010e 6973725F 		.ascii	"isr_4_SetPriority\000"
- 1216      345F5365 
- 1216      74507269 
- 1216      6F726974 
- 1216      7900
- 1217              	.LASF22:
- 1218 0120 6973725F 		.ascii	"isr_4_SetVector\000"
- 1218      345F5365 
- 1218      74566563 
- 1218      746F7200 
- 1219              	.LASF12:
- 1220 0130 75696E74 		.ascii	"uint32\000"
- 1220      333200
- 1221              	.LASF0:
- 1222 0137 756E7369 		.ascii	"unsigned int\000"
- 1222      676E6564 
- 1222      20696E74 
- 1222      00
- 1223              	.LASF23:
- 1224 0144 61646472 		.ascii	"address\000"
- 1224      65737300 
- 1225              	.LASF8:
- 1226 014c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1226      206C6F6E 
- 1226      6720756E 
- 1226      7369676E 
- 1226      65642069 
- 1227              	.LASF17:
- 1228 0163 63796973 		.ascii	"cyisraddress\000"
- 1228      72616464 
- 1228      72657373 
- 1228      00
- 1229              	.LASF33:
- 1230 0170 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 1230      4320342E 
- 1230      382E3420 
- 1230      32303134 
- 1230      30353236 
- 1231 01a3 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
- 1231      20726576 
- 1231      6973696F 
- 1231      6E203231 
- 1231      31333538 
- 1232 01d6 30202D66 		.ascii	"0 -ffunction-sections\000"
- 1232      66756E63 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 31
+ 1211      6C6500
+ 1212              	.LASF32:
+ 1213 00d7 6973725F 		.ascii	"isr_4_ClearPending\000"
+ 1213      345F436C 
+ 1213      65617250 
+ 1213      656E6469 
+ 1213      6E6700
+ 1214              	.LASF25:
+ 1215 00ea 6973725F 		.ascii	"isr_4_SetPriority\000"
+ 1215      345F5365 
+ 1215      74507269 
+ 1215      6F726974 
+ 1215      7900
+ 1216              	.LASF22:
+ 1217 00fc 6973725F 		.ascii	"isr_4_SetVector\000"
+ 1217      345F5365 
+ 1217      74566563 
+ 1217      746F7200 
+ 1218              	.LASF12:
+ 1219 010c 75696E74 		.ascii	"uint32\000"
+ 1219      333200
+ 1220              	.LASF0:
+ 1221 0113 756E7369 		.ascii	"unsigned int\000"
+ 1221      676E6564 
+ 1221      20696E74 
+ 1221      00
+ 1222              	.LASF23:
+ 1223 0120 61646472 		.ascii	"address\000"
+ 1223      65737300 
+ 1224              	.LASF8:
+ 1225 0128 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1225      206C6F6E 
+ 1225      6720756E 
+ 1225      7369676E 
+ 1225      65642069 
+ 1226              	.LASF17:
+ 1227 013f 63796973 		.ascii	"cyisraddress\000"
+ 1227      72616464 
+ 1227      72657373 
+ 1227      00
+ 1228              	.LASF33:
+ 1229 014c 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1229      4320342E 
+ 1229      382E3420 
+ 1229      32303134 
+ 1229      30353236 
+ 1230 017f 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 1230      20726576 
+ 1230      6973696F 
+ 1230      6E203231 
+ 1230      31333538 
+ 1231 01b2 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 1231      66756E63 
+ 1231      74696F6E 
+ 1231      2D736563 
+ 1231      74696F6E 
+ 1232              	.LASF9:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccxx0wNx.s 			page 31
 
 
- 1232      74696F6E 
- 1232      2D736563 
- 1232      74696F6E 
- 1233              	.LASF9:
- 1234 01ec 73697A65 		.ascii	"sizetype\000"
- 1234      74797065 
- 1234      00
- 1235              	.LASF7:
- 1236 01f5 6C6F6E67 		.ascii	"long long int\000"
- 1236      206C6F6E 
- 1236      6720696E 
- 1236      7400
- 1237              	.LASF10:
- 1238 0203 63686172 		.ascii	"char\000"
- 1238      00
- 1239              	.LASF24:
- 1240 0208 72616D56 		.ascii	"ramVectorTable\000"
- 1240      6563746F 
- 1240      72546162 
- 1240      6C6500
- 1241              	.LASF31:
- 1242 0217 6973725F 		.ascii	"isr_4_SetPending\000"
- 1242      345F5365 
- 1242      7450656E 
- 1242      64696E67 
- 1242      00
- 1243              	.LASF3:
- 1244 0228 73686F72 		.ascii	"short int\000"
- 1244      7420696E 
- 1244      7400
- 1245              	.LASF5:
- 1246 0232 6C6F6E67 		.ascii	"long int\000"
- 1246      20696E74 
- 1246      00
- 1247              	.LASF29:
- 1248 023b 6973725F 		.ascii	"isr_4_Enable\000"
- 1248      345F456E 
- 1248      61626C65 
- 1248      00
- 1249              	.LASF27:
- 1250 0248 6973725F 		.ascii	"isr_4_GetVector\000"
- 1250      345F4765 
- 1250      74566563 
- 1250      746F7200 
- 1251              	.LASF1:
- 1252 0258 7369676E 		.ascii	"signed char\000"
- 1252      65642063 
- 1252      68617200 
- 1253              	.LASF20:
- 1254 0264 6973725F 		.ascii	"isr_4_Interrupt\000"
- 1254      345F496E 
- 1254      74657272 
- 1254      75707400 
- 1255              	.LASF36:
- 1256 0274 6973725F 		.ascii	"isr_4_GetState\000"
- 1256      345F4765 
- 1256      74537461 
-ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccf8Kskx.s 			page 32
-
-
- 1256      746500
- 1257              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 1233 01c8 73697A65 		.ascii	"sizetype\000"
+ 1233      74797065 
+ 1233      00
+ 1234              	.LASF7:
+ 1235 01d1 6C6F6E67 		.ascii	"long long int\000"
+ 1235      206C6F6E 
+ 1235      6720696E 
+ 1235      7400
+ 1236              	.LASF10:
+ 1237 01df 63686172 		.ascii	"char\000"
+ 1237      00
+ 1238              	.LASF24:
+ 1239 01e4 72616D56 		.ascii	"ramVectorTable\000"
+ 1239      6563746F 
+ 1239      72546162 
+ 1239      6C6500
+ 1240              	.LASF31:
+ 1241 01f3 6973725F 		.ascii	"isr_4_SetPending\000"
+ 1241      345F5365 
+ 1241      7450656E 
+ 1241      64696E67 
+ 1241      00
+ 1242              	.LASF3:
+ 1243 0204 73686F72 		.ascii	"short int\000"
+ 1243      7420696E 
+ 1243      7400
+ 1244              	.LASF5:
+ 1245 020e 6C6F6E67 		.ascii	"long int\000"
+ 1245      20696E74 
+ 1245      00
+ 1246              	.LASF29:
+ 1247 0217 6973725F 		.ascii	"isr_4_Enable\000"
+ 1247      345F456E 
+ 1247      61626C65 
+ 1247      00
+ 1248              	.LASF27:
+ 1249 0224 6973725F 		.ascii	"isr_4_GetVector\000"
+ 1249      345F4765 
+ 1249      74566563 
+ 1249      746F7200 
+ 1250              	.LASF1:
+ 1251 0234 7369676E 		.ascii	"signed char\000"
+ 1251      65642063 
+ 1251      68617200 
+ 1252              	.LASF20:
+ 1253 0240 6973725F 		.ascii	"isr_4_Interrupt\000"
+ 1253      345F496E 
+ 1253      74657272 
+ 1253      75707400 
+ 1254              	.LASF36:
+ 1255 0250 6973725F 		.ascii	"isr_4_GetState\000"
+ 1255      345F4765 
+ 1255      74537461 
+ 1255      746500
+ 1256              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
