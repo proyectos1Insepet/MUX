@@ -7239,16 +7239,7 @@ void polling_pos4(void){
             //CyDelay(100);            
             LCD_2_ClearRxBuffer();
          }
-//		 if((count_protector2>=30)&&(rventa4.tipo_venta==0)&&(id_teclado2=2)){
-//			count_teclas2=0;
-//			teclas2=7;
-//			posx2=4;
-//			posy2=3;
-//			sizeletra2=1;				//Error de entrada
-//			set_imagen(2,10);
-//	        flujo_LCD4=13;
-//            //count_protector2=0;  //Añadir contador
-//		 }		
+	
         break;
         
         case 3:  

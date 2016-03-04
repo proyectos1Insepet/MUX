@@ -1,6 +1,6 @@
-E:\MUX\MUX_Prime.cydsn\MUX_Prime.cyprj|4ed64bec-433f-41e3-9bbd-0a59473cd1cb
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d9d84129-b199-401f-a136-effbac09eeac
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|74e39366-ac3d-4ce5-81c3-bfc9427e5eba
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d5da2de2-d1a7-4484-a85f-3364a8420d0f
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b97eb0cc-178c-4c03-a4f8-3db3029f9ca2
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8577c54d-0d58-451b-beaa-e379af71a863
+C:\Users\Recepcion\Documents\Prime 2.0\MUX\MUX_Prime.cydsn\MUX_Prime.cyprj|f5961f77-15e9-4edc-bcf1-8f4e5d6f7a90
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7251e46d-47b1-44be-bfbe-90dbc656c26e
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|a090486a-6be9-4f9a-b0c1-c571ce32f97d
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|3800c3ac-d14e-46bc-8206-759ed2478983
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|de6bfa17-46c2-41be-8b1b-9a15cc8a19ff
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9d2db470-dfcf-49a7-b96b-386636465a77
