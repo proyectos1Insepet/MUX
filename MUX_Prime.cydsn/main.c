@@ -3680,7 +3680,7 @@ void polling_pos1(void){
 					  }
                       rventa1.preset[0]=3;					
 					  for(x=5;x<=6;x++){
-						rventa1.preset[x]=9;		
+						rventa1.preset[x]=9;	//Preset full	
 					  }						
 					  if(rventa1.tipo_venta==0){				
 						if((lado1.mangueras!=1)&&(imagen_grado1!=1)){

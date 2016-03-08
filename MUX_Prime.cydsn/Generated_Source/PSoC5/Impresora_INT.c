@@ -15,6 +15,7 @@
 #include "Impresora.h"
 
 
+
 /***************************************
 * Custom Declarations
 ***************************************/
@@ -65,6 +66,10 @@
         uint8 int_en;
     #endif /* (CY_PSOC3) */
 
+    #ifdef Impresora_RXISR_ENTRY_CALLBACK
+        Impresora_RXISR_EntryCallback();
+    #endif /* Impresora_RXISR_ENTRY_CALLBACK */
+
         /* User code required at start of ISR */
         /* `#START Impresora_RXISR_START` */
         
@@ -97,6 +102,10 @@
                 /* `#START Impresora_RXISR_ERROR` */
 
                 /* `#END` */
+                
+            #ifdef Impresora_RXISR_ERROR_CALLBACK
+                Impresora_RXISR_ERROR_Callback();
+            #endif /* Impresora_RXISR_ERROR_CALLBACK */
             }
             
             if((readStatus & Impresora_RX_STS_FIFO_NOTEMPTY) != 0u)
@@ -170,11 +179,15 @@
 
         /* `#END` */
 
+    #ifdef Impresora_RXISR_EXIT_CALLBACK
+        Impresora_RXISR_ExitCallback();
+    #endif /* Impresora_RXISR_EXIT_CALLBACK */
+
     #if(CY_PSOC3)
         EA = int_en;
     #endif /* (CY_PSOC3) */
     }
-
+    
 #endif /* (Impresora_RX_INTERRUPT_ENABLED && (Impresora_RX_ENABLED || Impresora_HD_ENABLED)) */
 
 
@@ -206,6 +219,10 @@
         uint8 int_en;
     #endif /* (CY_PSOC3) */
 
+    #ifdef Impresora_TXISR_ENTRY_CALLBACK
+        Impresora_TXISR_EntryCallback();
+    #endif /* Impresora_TXISR_ENTRY_CALLBACK */
+
         /* User code required at start of ISR */
         /* `#START Impresora_TXISR_START` */
 
@@ -236,11 +253,14 @@
 
         /* `#END` */
 
+    #ifdef Impresora_TXISR_EXIT_CALLBACK
+        Impresora_TXISR_ExitCallback();
+    #endif /* Impresora_TXISR_EXIT_CALLBACK */
+
     #if(CY_PSOC3)
         EA = int_en;
     #endif /* (CY_PSOC3) */
-    }
-
+   }
 #endif /* (Impresora_TX_INTERRUPT_ENABLED && Impresora_TX_ENABLED) */
 
 

@@ -15,6 +15,7 @@
 #include "LCD_2.h"
 
 
+
 /***************************************
 * Custom Declarations
 ***************************************/
@@ -65,6 +66,10 @@
         uint8 int_en;
     #endif /* (CY_PSOC3) */
 
+    #ifdef LCD_2_RXISR_ENTRY_CALLBACK
+        LCD_2_RXISR_EntryCallback();
+    #endif /* LCD_2_RXISR_ENTRY_CALLBACK */
+
         /* User code required at start of ISR */
         /* `#START LCD_2_RXISR_START` */
 
@@ -97,6 +102,10 @@
                 /* `#START LCD_2_RXISR_ERROR` */
 
                 /* `#END` */
+                
+            #ifdef LCD_2_RXISR_ERROR_CALLBACK
+                LCD_2_RXISR_ERROR_Callback();
+            #endif /* LCD_2_RXISR_ERROR_CALLBACK */
             }
             
             if((readStatus & LCD_2_RX_STS_FIFO_NOTEMPTY) != 0u)
@@ -170,11 +179,15 @@
 
         /* `#END` */
 
+    #ifdef LCD_2_RXISR_EXIT_CALLBACK
+        LCD_2_RXISR_ExitCallback();
+    #endif /* LCD_2_RXISR_EXIT_CALLBACK */
+
     #if(CY_PSOC3)
         EA = int_en;
     #endif /* (CY_PSOC3) */
     }
-
+    
 #endif /* (LCD_2_RX_INTERRUPT_ENABLED && (LCD_2_RX_ENABLED || LCD_2_HD_ENABLED)) */
 
 
@@ -206,6 +219,10 @@
         uint8 int_en;
     #endif /* (CY_PSOC3) */
 
+    #ifdef LCD_2_TXISR_ENTRY_CALLBACK
+        LCD_2_TXISR_EntryCallback();
+    #endif /* LCD_2_TXISR_ENTRY_CALLBACK */
+
         /* User code required at start of ISR */
         /* `#START LCD_2_TXISR_START` */
 
@@ -236,11 +253,14 @@
 
         /* `#END` */
 
+    #ifdef LCD_2_TXISR_EXIT_CALLBACK
+        LCD_2_TXISR_ExitCallback();
+    #endif /* LCD_2_TXISR_EXIT_CALLBACK */
+
     #if(CY_PSOC3)
         EA = int_en;
     #endif /* (CY_PSOC3) */
-    }
-
+   }
 #endif /* (LCD_2_TX_INTERRUPT_ENABLED && LCD_2_TX_ENABLED) */
 
 

@@ -15,6 +15,7 @@
 #include "PC.h"
 
 
+
 /***************************************
 * Custom Declarations
 ***************************************/
@@ -65,6 +66,10 @@
         uint8 int_en;
     #endif /* (CY_PSOC3) */
 
+    #ifdef PC_RXISR_ENTRY_CALLBACK
+        PC_RXISR_EntryCallback();
+    #endif /* PC_RXISR_ENTRY_CALLBACK */
+
         /* User code required at start of ISR */
         /* `#START PC_RXISR_START` */
 
@@ -97,6 +102,10 @@
                 /* `#START PC_RXISR_ERROR` */
 
                 /* `#END` */
+                
+            #ifdef PC_RXISR_ERROR_CALLBACK
+                PC_RXISR_ERROR_Callback();
+            #endif /* PC_RXISR_ERROR_CALLBACK */
             }
             
             if((readStatus & PC_RX_STS_FIFO_NOTEMPTY) != 0u)
@@ -170,11 +179,15 @@
 
         /* `#END` */
 
+    #ifdef PC_RXISR_EXIT_CALLBACK
+        PC_RXISR_ExitCallback();
+    #endif /* PC_RXISR_EXIT_CALLBACK */
+
     #if(CY_PSOC3)
         EA = int_en;
     #endif /* (CY_PSOC3) */
     }
-
+    
 #endif /* (PC_RX_INTERRUPT_ENABLED && (PC_RX_ENABLED || PC_HD_ENABLED)) */
 
 
@@ -206,6 +219,10 @@
         uint8 int_en;
     #endif /* (CY_PSOC3) */
 
+    #ifdef PC_TXISR_ENTRY_CALLBACK
+        PC_TXISR_EntryCallback();
+    #endif /* PC_TXISR_ENTRY_CALLBACK */
+
         /* User code required at start of ISR */
         /* `#START PC_TXISR_START` */
 
@@ -236,11 +253,14 @@
 
         /* `#END` */
 
+    #ifdef PC_TXISR_EXIT_CALLBACK
+        PC_TXISR_ExitCallback();
+    #endif /* PC_TXISR_EXIT_CALLBACK */
+
     #if(CY_PSOC3)
         EA = int_en;
     #endif /* (CY_PSOC3) */
-    }
-
+   }
 #endif /* (PC_TX_INTERRUPT_ENABLED && PC_TX_ENABLED) */
 
 

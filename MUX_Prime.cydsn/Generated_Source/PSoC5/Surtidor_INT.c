@@ -15,6 +15,7 @@
 #include "Surtidor.h"
 
 
+
 /***************************************
 * Custom Declarations
 ***************************************/
@@ -65,6 +66,10 @@
         uint8 int_en;
     #endif /* (CY_PSOC3) */
 
+    #ifdef Surtidor_RXISR_ENTRY_CALLBACK
+        Surtidor_RXISR_EntryCallback();
+    #endif /* Surtidor_RXISR_ENTRY_CALLBACK */
+
         /* User code required at start of ISR */
         /* `#START Surtidor_RXISR_START` */
 
@@ -97,6 +102,10 @@
                 /* `#START Surtidor_RXISR_ERROR` */
 
                 /* `#END` */
+                
+            #ifdef Surtidor_RXISR_ERROR_CALLBACK
+                Surtidor_RXISR_ERROR_Callback();
+            #endif /* Surtidor_RXISR_ERROR_CALLBACK */
             }
             
             if((readStatus & Surtidor_RX_STS_FIFO_NOTEMPTY) != 0u)
@@ -170,11 +179,15 @@
 
         /* `#END` */
 
+    #ifdef Surtidor_RXISR_EXIT_CALLBACK
+        Surtidor_RXISR_ExitCallback();
+    #endif /* Surtidor_RXISR_EXIT_CALLBACK */
+
     #if(CY_PSOC3)
         EA = int_en;
     #endif /* (CY_PSOC3) */
     }
-
+    
 #endif /* (Surtidor_RX_INTERRUPT_ENABLED && (Surtidor_RX_ENABLED || Surtidor_HD_ENABLED)) */
 
 
@@ -206,6 +219,10 @@
         uint8 int_en;
     #endif /* (CY_PSOC3) */
 
+    #ifdef Surtidor_TXISR_ENTRY_CALLBACK
+        Surtidor_TXISR_EntryCallback();
+    #endif /* Surtidor_TXISR_ENTRY_CALLBACK */
+
         /* User code required at start of ISR */
         /* `#START Surtidor_TXISR_START` */
 
@@ -236,11 +253,14 @@
 
         /* `#END` */
 
+    #ifdef Surtidor_TXISR_EXIT_CALLBACK
+        Surtidor_TXISR_ExitCallback();
+    #endif /* Surtidor_TXISR_EXIT_CALLBACK */
+
     #if(CY_PSOC3)
         EA = int_en;
     #endif /* (CY_PSOC3) */
-    }
-
+   }
 #endif /* (Surtidor_TX_INTERRUPT_ENABLED && Surtidor_TX_ENABLED) */
 
 

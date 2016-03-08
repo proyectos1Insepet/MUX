@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
   29:.\Generated_Source\PSoC5/timer_clock_1.c **** 
   30:.\Generated_Source\PSoC5/timer_clock_1.c **** /*******************************************************************************
   31:.\Generated_Source\PSoC5/timer_clock_1.c **** * Function Name: timer_clock_1_Start
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/timer_clock_1.c **** ********************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
   62              		.align	2
   63              	.L2:
   64 002c A2430040 		.word	1073759138
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 3
 
 
   65 0030 B2430040 		.word	1073759154
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
   75:.\Generated_Source\PSoC5/timer_clock_1.c **** 	timer_clock_1_CLKSTBY &= (uint8)(~timer_clock_1_CLKSTBY_MASK);
   95              		.loc 1 75 0
   96 0014 064A     		ldr	r2, .L5+4
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 4
 
 
   97 0016 064B     		ldr	r3, .L5+4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  100:.\Generated_Source\PSoC5/timer_clock_1.c **** void timer_clock_1_StopBlock(void) 
  101:.\Generated_Source\PSoC5/timer_clock_1.c **** {
  127              		.loc 1 101 0
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 5
 
 
  128              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  164 002e 03F07F03 		and	r3, r3, #127
  165 0032 DBB2     		uxtb	r3, r3
  166 0034 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 6
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 6
 
 
  120:.\Generated_Source\PSoC5/timer_clock_1.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  205              		.loc 1 135 0
  206 0078 064B     		ldr	r3, .L10+4
  207 007a 0022     		movs	r2, #0
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 7
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 7
 
 
  208 007c 1A70     		strb	r2, [r3]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  151:.\Generated_Source\PSoC5/timer_clock_1.c **** *  state:  0 to disable clock during standby, nonzero to enable.
  152:.\Generated_Source\PSoC5/timer_clock_1.c **** *
  153:.\Generated_Source\PSoC5/timer_clock_1.c **** * Returns:
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 8
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 8
 
 
  154:.\Generated_Source\PSoC5/timer_clock_1.c **** *  None
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  287 0034 BD46     		mov	sp, r7
  288              		.cfi_def_cfa_register 13
  289              		@ sp needed
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 9
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 9
 
 
  290 0036 5DF8047B 		ldr	r7, [sp], #4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  316              		.cfi_offset 14, -4
  317 0002 84B0     		sub	sp, sp, #16
  318              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 10
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 10
 
 
  319 0004 00AF     		add	r7, sp, #0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  360 004a 002B     		cmp	r3, #0
  361 004c 0BD1     		bne	.L21
  209:.\Generated_Source\PSoC5/timer_clock_1.c ****             {
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 11
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 11
 
 
  210:.\Generated_Source\PSoC5/timer_clock_1.c ****                 /* Moving away from SSS, set the divider first so when SSS is cleared we    */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  228:.\Generated_Source\PSoC5/timer_clock_1.c ****             {
  229:.\Generated_Source\PSoC5/timer_clock_1.c ****                 CLK_DIST_LD = 0x00u;
  396              		.loc 1 229 0
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 12
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 12
 
 
  397 0084 314B     		ldr	r3, .L30+12
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  433 00c0 224B     		ldr	r3, .L30+12
  434 00c2 0722     		movs	r2, #7
  435 00c4 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 13
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 13
 
 
  248:.\Generated_Source\PSoC5/timer_clock_1.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  268:.\Generated_Source\PSoC5/timer_clock_1.c ****                 CLK_DIST_LD = (CYCLK_LD_LOAD | ((restart != 0u) ? CYCLK_LD_SYNC_EN : 0x00u));
  470              		.loc 1 268 0
  471 0100 124A     		ldr	r2, .L30+12
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 14
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 14
 
 
  472 0102 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  515              		@ sp needed
  516 013c 80BD     		pop	{r7, pc}
  517              	.L31:
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 15
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 15
 
 
  518 013e 00BF     		.align	2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  552 0008 9BB2     		uxth	r3, r3
  300:.\Generated_Source\PSoC5/timer_clock_1.c **** }
  553              		.loc 1 300 0
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 16
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 16
 
 
  554 000a 1846     		mov	r0, r3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  332:.\Generated_Source\PSoC5/timer_clock_1.c **** void timer_clock_1_SetModeRegister(uint8 modeBitMask) 
  333:.\Generated_Source\PSoC5/timer_clock_1.c **** {
  577              		.loc 1 333 0
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 17
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 17
 
 
  578              		.cfi_startproc
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  337:.\Generated_Source\PSoC5/timer_clock_1.c **** 
  338:.\Generated_Source\PSoC5/timer_clock_1.c **** /*******************************************************************************
  339:.\Generated_Source\PSoC5/timer_clock_1.c **** * Function Name: timer_clock_1_ClearModeRegister
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 18
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 18
 
 
  340:.\Generated_Source\PSoC5/timer_clock_1.c **** ********************************************************************************
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  653 001e 1340     		ands	r3, r3, r2
  654 0020 DBB2     		uxtb	r3, r3
  655 0022 0B70     		strb	r3, [r1]
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 19
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 19
 
 
  370:.\Generated_Source\PSoC5/timer_clock_1.c **** }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  690              		.cfi_def_cfa_register 7
  390:.\Generated_Source\PSoC5/timer_clock_1.c ****     return timer_clock_1_MOD_SRC & (uint8)(timer_clock_1_MODE_MASK);
  691              		.loc 1 390 0
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 20
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 20
 
 
  692 0004 054B     		ldr	r3, .L44
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  416:.\Generated_Source\PSoC5/timer_clock_1.c **** *  None
  417:.\Generated_Source\PSoC5/timer_clock_1.c **** *
  418:.\Generated_Source\PSoC5/timer_clock_1.c **** *******************************************************************************/
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 21
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 21
 
 
  419:.\Generated_Source\PSoC5/timer_clock_1.c **** void timer_clock_1_SetSourceRegister(uint8 clkSource) 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  763              		.loc 1 430 0
  764 003c 1E4B     		ldr	r3, .L50
  431:.\Generated_Source\PSoC5/timer_clock_1.c ****             (timer_clock_1_MOD_SRC & (uint8)(~timer_clock_1_SRC_SEL_MSK)) | clkSource;
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 22
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 22
 
 
  765              		.loc 1 431 0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  808 0084 0C4A     		ldr	r2, .L50
  809 0086 0C4B     		ldr	r3, .L50
  810 0088 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 23
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 23
 
 
  811 008a DBB2     		uxtb	r3, r3
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  450:.\Generated_Source\PSoC5/timer_clock_1.c **** /*******************************************************************************
  451:.\Generated_Source\PSoC5/timer_clock_1.c **** * Function Name: timer_clock_1_GetSourceRegister
  452:.\Generated_Source\PSoC5/timer_clock_1.c **** ********************************************************************************
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 24
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 24
 
 
  453:.\Generated_Source\PSoC5/timer_clock_1.c **** *
@@ -1438,24 +1438,24 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  894 0006 00000000 		.4byte	.Ldebug_abbrev0
  895 000a 04       		.byte	0x4
  896 000b 01       		.uleb128 0x1
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 25
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 25
 
 
- 897 000c 14010000 		.4byte	.LASF37
+ 897 000c E3000000 		.4byte	.LASF37
  898 0010 01       		.byte	0x1
  899 0011 00000000 		.4byte	.LASF38
- 900 0015 82000000 		.4byte	.LASF39
+ 900 0015 44020000 		.4byte	.LASF39
  901 0019 00000000 		.4byte	.Ldebug_ranges0+0
  902 001d 00000000 		.4byte	0
  903 0021 00000000 		.4byte	.Ldebug_line0
  904 0025 02       		.uleb128 0x2
  905 0026 01       		.byte	0x1
  906 0027 06       		.byte	0x6
- 907 0028 E9010000 		.4byte	.LASF0
+ 907 0028 B8010000 		.4byte	.LASF0
  908 002c 02       		.uleb128 0x2
  909 002d 01       		.byte	0x1
  910 002e 08       		.byte	0x8
- 911 002f CF010000 		.4byte	.LASF1
+ 911 002f 9E010000 		.4byte	.LASF1
  912 0033 02       		.uleb128 0x2
  913 0034 02       		.byte	0x2
  914 0035 05       		.byte	0x5
@@ -1463,23 +1463,23 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  916 003a 02       		.uleb128 0x2
  917 003b 02       		.byte	0x2
  918 003c 07       		.byte	0x7
- 919 003d 19020000 		.4byte	.LASF3
+ 919 003d E8010000 		.4byte	.LASF3
  920 0041 02       		.uleb128 0x2
  921 0042 04       		.byte	0x4
  922 0043 05       		.byte	0x5
- 923 0044 4F020000 		.4byte	.LASF4
+ 923 0044 1E020000 		.4byte	.LASF4
  924 0048 02       		.uleb128 0x2
  925 0049 04       		.byte	0x4
  926 004a 07       		.byte	0x7
- 927 004b B6020000 		.4byte	.LASF5
+ 927 004b C0020000 		.4byte	.LASF5
  928 004f 02       		.uleb128 0x2
  929 0050 08       		.byte	0x8
  930 0051 05       		.byte	0x5
- 931 0052 06010000 		.4byte	.LASF6
+ 931 0052 D5000000 		.4byte	.LASF6
  932 0056 02       		.uleb128 0x2
  933 0057 08       		.byte	0x8
  934 0058 07       		.byte	0x7
- 935 0059 F5010000 		.4byte	.LASF7
+ 935 0059 C4010000 		.4byte	.LASF7
  936 005d 03       		.uleb128 0x3
  937 005e 04       		.byte	0x4
  938 005f 05       		.byte	0x5
@@ -1487,34 +1487,34 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  940 0064 02       		.uleb128 0x2
  941 0065 04       		.byte	0x4
  942 0066 07       		.byte	0x7
- 943 0067 0C020000 		.4byte	.LASF8
+ 943 0067 DB010000 		.4byte	.LASF8
  944 006b 04       		.uleb128 0x4
- 945 006c EF000000 		.4byte	.LASF9
+ 945 006c BE000000 		.4byte	.LASF9
  946 0070 02       		.byte	0x2
  947 0071 B3       		.byte	0xb3
  948 0072 2C000000 		.4byte	0x2c
  949 0076 04       		.uleb128 0x4
- 950 0077 D9000000 		.4byte	.LASF10
+ 950 0077 A8000000 		.4byte	.LASF10
  951 007b 02       		.byte	0x2
  952 007c B4       		.byte	0xb4
  953 007d 3A000000 		.4byte	0x3a
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 26
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 26
 
 
  954 0081 02       		.uleb128 0x2
  955 0082 04       		.byte	0x4
  956 0083 04       		.byte	0x4
- 957 0084 00010000 		.4byte	.LASF11
+ 957 0084 CF000000 		.4byte	.LASF11
  958 0088 02       		.uleb128 0x2
  959 0089 08       		.byte	0x8
  960 008a 04       		.byte	0x4
- 961 008b C8020000 		.4byte	.LASF12
+ 961 008b D2020000 		.4byte	.LASF12
  962 008f 02       		.uleb128 0x2
  963 0090 01       		.byte	0x1
  964 0091 08       		.byte	0x8
- 965 0092 4A020000 		.4byte	.LASF13
+ 965 0092 19020000 		.4byte	.LASF13
  966 0096 05       		.uleb128 0x5
- 967 0097 B1020000 		.4byte	.LASF14
+ 967 0097 BB020000 		.4byte	.LASF14
  968 009b 02       		.byte	0x2
  969 009c 5D01     		.2byte	0x15d
  970 009e A2000000 		.4byte	0xa2
@@ -1528,7 +1528,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  978 00b3 06       		.uleb128 0x6
  979 00b4 76000000 		.4byte	0x76
  980 00b8 07       		.uleb128 0x7
- 981 00b9 A2010000 		.4byte	.LASF16
+ 981 00b9 71010000 		.4byte	.LASF16
  982 00bd 01       		.byte	0x1
  983 00be 2D       		.byte	0x2d
  984 00bf 00000000 		.4byte	.LFB0
@@ -1536,7 +1536,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  986 00c7 01       		.uleb128 0x1
  987 00c8 9C       		.byte	0x9c
  988 00c9 07       		.uleb128 0x7
- 989 00ca BC010000 		.4byte	.LASF17
+ 989 00ca 8B010000 		.4byte	.LASF17
  990 00ce 01       		.byte	0x1
  991 00cf 47       		.byte	0x47
  992 00d0 00000000 		.4byte	.LFB1
@@ -1544,7 +1544,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  994 00d8 01       		.uleb128 0x1
  995 00d9 9C       		.byte	0x9c
  996 00da 08       		.uleb128 0x8
- 997 00db CF020000 		.4byte	.LASF18
+ 997 00db D9020000 		.4byte	.LASF18
  998 00df 01       		.byte	0x1
  999 00e0 64       		.byte	0x64
  1000 00e1 00000000 		.4byte	.LFB2
@@ -1556,9 +1556,9 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1006 00f0 14000000 		.4byte	.LBB2
  1007 00f4 70000000 		.4byte	.LBE2-.LBB2
  1008 00f8 0A       		.uleb128 0xa
- 1009 00f9 6A020000 		.4byte	.LASF24
+ 1009 00f9 39020000 		.4byte	.LASF24
  1010 00fd 01       		.byte	0x1
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 27
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 27
 
 
  1011 00fe 69       		.byte	0x69
@@ -1569,7 +1569,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1016 0106 00       		.byte	0
  1017 0107 00       		.byte	0
  1018 0108 08       		.uleb128 0x8
- 1019 0109 75020000 		.4byte	.LASF19
+ 1019 0109 7F020000 		.4byte	.LASF19
  1020 010d 01       		.byte	0x1
  1021 010e 9D       		.byte	0x9d
  1022 010f 00000000 		.4byte	.LFB3
@@ -1578,7 +1578,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1025 0118 9C       		.byte	0x9c
  1026 0119 2C010000 		.4byte	0x12c
  1027 011d 0B       		.uleb128 0xb
- 1028 011e B6010000 		.4byte	.LASF21
+ 1028 011e 85010000 		.4byte	.LASF21
  1029 0122 01       		.byte	0x1
  1030 0123 9D       		.byte	0x9d
  1031 0124 6B000000 		.4byte	0x6b
@@ -1596,7 +1596,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1043 013c 9C       		.byte	0x9c
  1044 013d 88010000 		.4byte	0x188
  1045 0141 0B       		.uleb128 0xb
- 1046 0142 F5000000 		.4byte	.LASF22
+ 1046 0142 C4000000 		.4byte	.LASF22
  1047 0146 01       		.byte	0x1
  1048 0147 C1       		.byte	0xc1
  1049 0148 76000000 		.4byte	0x76
@@ -1604,7 +1604,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1051 014d 91       		.byte	0x91
  1052 014e 6E       		.sleb128 -18
  1053 014f 0B       		.uleb128 0xb
- 1054 0150 E0000000 		.4byte	.LASF23
+ 1054 0150 AF000000 		.4byte	.LASF23
  1055 0154 01       		.byte	0x1
  1056 0155 C1       		.byte	0xc1
  1057 0156 6B000000 		.4byte	0x6b
@@ -1612,18 +1612,18 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1059 015b 91       		.byte	0x91
  1060 015c 6D       		.sleb128 -19
  1061 015d 0A       		.uleb128 0xa
- 1062 015e B3000000 		.4byte	.LASF25
+ 1062 015e 82000000 		.4byte	.LASF25
  1063 0162 01       		.byte	0x1
  1064 0163 C4       		.byte	0xc4
  1065 0164 6B000000 		.4byte	0x6b
  1066 0168 02       		.uleb128 0x2
  1067 0169 91       		.byte	0x91
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 28
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 28
 
 
  1068 016a 73       		.sleb128 -13
  1069 016b 0A       		.uleb128 0xa
- 1070 016c 62020000 		.4byte	.LASF26
+ 1070 016c 31020000 		.4byte	.LASF26
  1071 0170 01       		.byte	0x1
  1072 0171 C6       		.byte	0xc6
  1073 0172 6B000000 		.4byte	0x6b
@@ -1631,7 +1631,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1075 0177 91       		.byte	0x91
  1076 0178 77       		.sleb128 -9
  1077 0179 0A       		.uleb128 0xa
- 1078 017a 6A020000 		.4byte	.LASF24
+ 1078 017a 39020000 		.4byte	.LASF24
  1079 017e 01       		.byte	0x1
  1080 017f C7       		.byte	0xc7
  1081 0180 76000000 		.4byte	0x76
@@ -1640,7 +1640,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1084 0186 74       		.sleb128 -12
  1085 0187 00       		.byte	0
  1086 0188 0D       		.uleb128 0xd
- 1087 0189 90020000 		.4byte	.LASF30
+ 1087 0189 9A020000 		.4byte	.LASF30
  1088 018d 01       		.byte	0x1
  1089 018e 2901     		.2byte	0x129
  1090 0190 76000000 		.4byte	0x76
@@ -1649,7 +1649,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1093 019c 01       		.uleb128 0x1
  1094 019d 9C       		.byte	0x9c
  1095 019e 0E       		.uleb128 0xe
- 1096 019f BB000000 		.4byte	.LASF27
+ 1096 019f 8A000000 		.4byte	.LASF27
  1097 01a3 01       		.byte	0x1
  1098 01a4 4C01     		.2byte	0x14c
  1099 01a6 00000000 		.4byte	.LFB6
@@ -1658,7 +1658,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1102 01af 9C       		.byte	0x9c
  1103 01b0 C4010000 		.4byte	0x1c4
  1104 01b4 0F       		.uleb128 0xf
- 1105 01b5 DD010000 		.4byte	.LASF28
+ 1105 01b5 AC010000 		.4byte	.LASF28
  1106 01b9 01       		.byte	0x1
  1107 01ba 4C01     		.2byte	0x14c
  1108 01bc 6B000000 		.4byte	0x6b
@@ -1676,9 +1676,9 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1120 01d5 9C       		.byte	0x9c
  1121 01d6 EA010000 		.4byte	0x1ea
  1122 01da 0F       		.uleb128 0xf
- 1123 01db DD010000 		.4byte	.LASF28
+ 1123 01db AC010000 		.4byte	.LASF28
  1124 01df 01       		.byte	0x1
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 29
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 29
 
 
  1125 01e0 6F01     		.2byte	0x16f
@@ -1688,7 +1688,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1129 01e8 77       		.sleb128 -9
  1130 01e9 00       		.byte	0
  1131 01ea 0D       		.uleb128 0xd
- 1132 01eb 2C020000 		.4byte	.LASF31
+ 1132 01eb FB010000 		.4byte	.LASF31
  1133 01ef 01       		.byte	0x1
  1134 01f0 8401     		.2byte	0x184
  1135 01f2 6B000000 		.4byte	0x6b
@@ -1697,7 +1697,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1138 01fe 01       		.uleb128 0x1
  1139 01ff 9C       		.byte	0x9c
  1140 0200 10       		.uleb128 0x10
- 1141 0201 07030000 		.4byte	.LASF32
+ 1141 0201 11030000 		.4byte	.LASF32
  1142 0205 01       		.byte	0x1
  1143 0206 A301     		.2byte	0x1a3
  1144 0208 00000000 		.4byte	.LFB9
@@ -1706,7 +1706,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1147 0211 9C       		.byte	0x9c
  1148 0212 44020000 		.4byte	0x244
  1149 0216 0F       		.uleb128 0xf
- 1150 0217 58020000 		.4byte	.LASF33
+ 1150 0217 27020000 		.4byte	.LASF33
  1151 021b 01       		.byte	0x1
  1152 021c A301     		.2byte	0x1a3
  1153 021e 6B000000 		.4byte	0x6b
@@ -1722,7 +1722,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1163 0232 91       		.byte	0x91
  1164 0233 76       		.sleb128 -10
  1165 0234 11       		.uleb128 0x11
- 1166 0235 E8000000 		.4byte	.LASF35
+ 1166 0235 B7000000 		.4byte	.LASF35
  1167 0239 01       		.byte	0x1
  1168 023a A601     		.2byte	0x1a6
  1169 023c 6B000000 		.4byte	0x6b
@@ -1731,14 +1731,14 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1172 0242 75       		.sleb128 -11
  1173 0243 00       		.byte	0
  1174 0244 0D       		.uleb128 0xd
- 1175 0245 E7020000 		.4byte	.LASF36
+ 1175 0245 F1020000 		.4byte	.LASF36
  1176 0249 01       		.byte	0x1
  1177 024a D001     		.2byte	0x1d0
  1178 024c 6B000000 		.4byte	0x6b
  1179 0250 00000000 		.4byte	.LFB10
  1180 0254 20000000 		.4byte	.LFE10-.LFB10
  1181 0258 01       		.uleb128 0x1
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 30
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 30
 
 
  1182 0259 9C       		.byte	0x9c
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1236 0032 49       		.uleb128 0x49
  1237 0033 13       		.uleb128 0x13
  1238 0034 00       		.byte	0
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 31
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 31
 
 
  1239 0035 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1293 006c 0B       		.uleb128 0xb
  1294 006d 27       		.uleb128 0x27
  1295 006e 19       		.uleb128 0x19
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 32
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 32
 
 
  1296 006f 11       		.uleb128 0x11
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1350 00a6 3F       		.uleb128 0x3f
  1351 00a7 19       		.uleb128 0x19
  1352 00a8 03       		.uleb128 0x3
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 33
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 33
 
 
  1353 00a9 0E       		.uleb128 0xe
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1407 00e1 05       		.uleb128 0x5
  1408 00e2 27       		.uleb128 0x27
  1409 00e3 19       		.uleb128 0x19
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 34
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 34
 
 
  1410 00e4 11       		.uleb128 0x11
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1464 011c 00       		.byte	0
  1465 011d 03       		.uleb128 0x3
  1466 011e 0E       		.uleb128 0xe
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 35
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 35
 
 
  1467 011f 3A       		.uleb128 0x3a
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1521 0024 60010000 		.4byte	.LFE4
  1522 0028 00000000 		.4byte	.LFB5
  1523 002c 18000000 		.4byte	.LFE5
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 36
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 36
 
 
  1524 0030 00000000 		.4byte	.LFB6
@@ -2148,178 +2148,181 @@ ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 1
  1550      6F636B5F 
  1550      315F436C 
  1550      6561724D 
- 1551              	.LASF39:
- 1552 0082 433A5C55 		.ascii	"C:\\Users\\sistemas_pc\\Desktop\\MUX\\MUX_Prime.cyd"
- 1552      73657273 
- 1552      5C736973 
- 1552      74656D61 
- 1552      735F7063 
- 1553 00b0 736E00   		.ascii	"sn\000"
- 1554              	.LASF25:
- 1555 00b3 656E6162 		.ascii	"enabled\000"
- 1555      6C656400 
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 37
+ 1551              	.LASF25:
+ 1552 0082 656E6162 		.ascii	"enabled\000"
+ 1552      6C656400 
+ 1553              	.LASF27:
+ 1554 008a 74696D65 		.ascii	"timer_clock_1_SetModeRegister\000"
+ 1554      725F636C 
+ 1554      6F636B5F 
+ 1554      315F5365 
+ 1554      744D6F64 
+ 1555              	.LASF10:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 37
 
 
- 1556              	.LASF27:
- 1557 00bb 74696D65 		.ascii	"timer_clock_1_SetModeRegister\000"
- 1557      725F636C 
- 1557      6F636B5F 
- 1557      315F5365 
- 1557      744D6F64 
- 1558              	.LASF10:
- 1559 00d9 75696E74 		.ascii	"uint16\000"
- 1559      313600
- 1560              	.LASF23:
- 1561 00e0 72657374 		.ascii	"restart\000"
- 1561      61727400 
- 1562              	.LASF35:
- 1563 00e8 6F6C6453 		.ascii	"oldSrc\000"
- 1563      726300
- 1564              	.LASF9:
- 1565 00ef 75696E74 		.ascii	"uint8\000"
- 1565      3800
- 1566              	.LASF22:
- 1567 00f5 636C6B44 		.ascii	"clkDivider\000"
- 1567      69766964 
- 1567      657200
- 1568              	.LASF11:
- 1569 0100 666C6F61 		.ascii	"float\000"
- 1569      7400
- 1570              	.LASF6:
- 1571 0106 6C6F6E67 		.ascii	"long long int\000"
- 1571      206C6F6E 
- 1571      6720696E 
- 1571      7400
- 1572              	.LASF37:
- 1573 0114 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1573      4320342E 
- 1573      392E3320 
- 1573      32303135 
- 1573      30333033 
- 1574 0147 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1574      20726576 
- 1574      6973696F 
- 1574      6E203232 
- 1574      31323230 
- 1575 017a 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1575      66756E63 
- 1575      74696F6E 
- 1575      2D736563 
- 1575      74696F6E 
- 1576              	.LASF16:
- 1577 01a2 74696D65 		.ascii	"timer_clock_1_Start\000"
- 1577      725F636C 
- 1577      6F636B5F 
- 1577      315F5374 
- 1577      61727400 
- 1578              	.LASF21:
- 1579 01b6 73746174 		.ascii	"state\000"
- 1579      6500
- 1580              	.LASF17:
- 1581 01bc 74696D65 		.ascii	"timer_clock_1_Stop\000"
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 38
+ 1556 00a8 75696E74 		.ascii	"uint16\000"
+ 1556      313600
+ 1557              	.LASF23:
+ 1558 00af 72657374 		.ascii	"restart\000"
+ 1558      61727400 
+ 1559              	.LASF35:
+ 1560 00b7 6F6C6453 		.ascii	"oldSrc\000"
+ 1560      726300
+ 1561              	.LASF9:
+ 1562 00be 75696E74 		.ascii	"uint8\000"
+ 1562      3800
+ 1563              	.LASF22:
+ 1564 00c4 636C6B44 		.ascii	"clkDivider\000"
+ 1564      69766964 
+ 1564      657200
+ 1565              	.LASF11:
+ 1566 00cf 666C6F61 		.ascii	"float\000"
+ 1566      7400
+ 1567              	.LASF6:
+ 1568 00d5 6C6F6E67 		.ascii	"long long int\000"
+ 1568      206C6F6E 
+ 1568      6720696E 
+ 1568      7400
+ 1569              	.LASF37:
+ 1570 00e3 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1570      4320342E 
+ 1570      392E3320 
+ 1570      32303135 
+ 1570      30333033 
+ 1571 0116 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1571      20726576 
+ 1571      6973696F 
+ 1571      6E203232 
+ 1571      31323230 
+ 1572 0149 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1572      66756E63 
+ 1572      74696F6E 
+ 1572      2D736563 
+ 1572      74696F6E 
+ 1573              	.LASF16:
+ 1574 0171 74696D65 		.ascii	"timer_clock_1_Start\000"
+ 1574      725F636C 
+ 1574      6F636B5F 
+ 1574      315F5374 
+ 1574      61727400 
+ 1575              	.LASF21:
+ 1576 0185 73746174 		.ascii	"state\000"
+ 1576      6500
+ 1577              	.LASF17:
+ 1578 018b 74696D65 		.ascii	"timer_clock_1_Stop\000"
+ 1578      725F636C 
+ 1578      6F636B5F 
+ 1578      315F5374 
+ 1578      6F7000
+ 1579              	.LASF1:
+ 1580 019e 756E7369 		.ascii	"unsigned char\000"
+ 1580      676E6564 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 38
 
 
- 1581      725F636C 
- 1581      6F636B5F 
- 1581      315F5374 
- 1581      6F7000
- 1582              	.LASF1:
- 1583 01cf 756E7369 		.ascii	"unsigned char\000"
- 1583      676E6564 
- 1583      20636861 
- 1583      7200
- 1584              	.LASF28:
- 1585 01dd 6D6F6465 		.ascii	"modeBitMask\000"
- 1585      4269744D 
- 1585      61736B00 
- 1586              	.LASF0:
- 1587 01e9 7369676E 		.ascii	"signed char\000"
- 1587      65642063 
- 1587      68617200 
- 1588              	.LASF7:
- 1589 01f5 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1589      206C6F6E 
- 1589      6720756E 
- 1589      7369676E 
- 1589      65642069 
- 1590              	.LASF8:
- 1591 020c 756E7369 		.ascii	"unsigned int\000"
- 1591      676E6564 
- 1591      20696E74 
- 1591      00
- 1592              	.LASF3:
- 1593 0219 73686F72 		.ascii	"short unsigned int\000"
- 1593      7420756E 
- 1593      7369676E 
- 1593      65642069 
- 1593      6E7400
- 1594              	.LASF31:
- 1595 022c 74696D65 		.ascii	"timer_clock_1_GetModeRegister\000"
- 1595      725F636C 
- 1595      6F636B5F 
- 1595      315F4765 
- 1595      744D6F64 
- 1596              	.LASF13:
- 1597 024a 63686172 		.ascii	"char\000"
- 1597      00
- 1598              	.LASF4:
- 1599 024f 6C6F6E67 		.ascii	"long int\000"
- 1599      20696E74 
- 1599      00
- 1600              	.LASF33:
- 1601 0258 636C6B53 		.ascii	"clkSource\000"
- 1601      6F757263 
- 1601      6500
- 1602              	.LASF26:
- 1603 0262 63757272 		.ascii	"currSrc\000"
- 1603      53726300 
- 1604              	.LASF24:
- 1605 026a 6F6C6444 		.ascii	"oldDivider\000"
- 1605      69766964 
-ARM GAS  C:\Users\SISTEM~1\AppData\Local\Temp\ccpiaVyk.s 			page 39
+ 1580      20636861 
+ 1580      7200
+ 1581              	.LASF28:
+ 1582 01ac 6D6F6465 		.ascii	"modeBitMask\000"
+ 1582      4269744D 
+ 1582      61736B00 
+ 1583              	.LASF0:
+ 1584 01b8 7369676E 		.ascii	"signed char\000"
+ 1584      65642063 
+ 1584      68617200 
+ 1585              	.LASF7:
+ 1586 01c4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1586      206C6F6E 
+ 1586      6720756E 
+ 1586      7369676E 
+ 1586      65642069 
+ 1587              	.LASF8:
+ 1588 01db 756E7369 		.ascii	"unsigned int\000"
+ 1588      676E6564 
+ 1588      20696E74 
+ 1588      00
+ 1589              	.LASF3:
+ 1590 01e8 73686F72 		.ascii	"short unsigned int\000"
+ 1590      7420756E 
+ 1590      7369676E 
+ 1590      65642069 
+ 1590      6E7400
+ 1591              	.LASF31:
+ 1592 01fb 74696D65 		.ascii	"timer_clock_1_GetModeRegister\000"
+ 1592      725F636C 
+ 1592      6F636B5F 
+ 1592      315F4765 
+ 1592      744D6F64 
+ 1593              	.LASF13:
+ 1594 0219 63686172 		.ascii	"char\000"
+ 1594      00
+ 1595              	.LASF4:
+ 1596 021e 6C6F6E67 		.ascii	"long int\000"
+ 1596      20696E74 
+ 1596      00
+ 1597              	.LASF33:
+ 1598 0227 636C6B53 		.ascii	"clkSource\000"
+ 1598      6F757263 
+ 1598      6500
+ 1599              	.LASF26:
+ 1600 0231 63757272 		.ascii	"currSrc\000"
+ 1600      53726300 
+ 1601              	.LASF24:
+ 1602 0239 6F6C6444 		.ascii	"oldDivider\000"
+ 1602      69766964 
+ 1602      657200
+ 1603              	.LASF39:
+ 1604 0244 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prime 2.0\\MUX\\MU"
+ 1604      73657273 
+ 1604      5C526563 
+ 1604      65706369 
+ 1604      6F6E5C44 
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccg7WdnJ.s 			page 39
 
 
- 1605      657200
+ 1605 0271 585F5072 		.ascii	"X_Prime.cydsn\000"
+ 1605      696D652E 
+ 1605      63796473 
+ 1605      6E00
  1606              	.LASF19:
- 1607 0275 74696D65 		.ascii	"timer_clock_1_StandbyPower\000"
+ 1607 027f 74696D65 		.ascii	"timer_clock_1_StandbyPower\000"
  1607      725F636C 
  1607      6F636B5F 
  1607      315F5374 
  1607      616E6462 
  1608              	.LASF30:
- 1609 0290 74696D65 		.ascii	"timer_clock_1_GetDividerRegister\000"
+ 1609 029a 74696D65 		.ascii	"timer_clock_1_GetDividerRegister\000"
  1609      725F636C 
  1609      6F636B5F 
  1609      315F4765 
  1609      74446976 
  1610              	.LASF14:
- 1611 02b1 72656738 		.ascii	"reg8\000"
+ 1611 02bb 72656738 		.ascii	"reg8\000"
  1611      00
  1612              	.LASF5:
- 1613 02b6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1613 02c0 6C6F6E67 		.ascii	"long unsigned int\000"
  1613      20756E73 
  1613      69676E65 
  1613      6420696E 
  1613      7400
  1614              	.LASF12:
- 1615 02c8 646F7562 		.ascii	"double\000"
+ 1615 02d2 646F7562 		.ascii	"double\000"
  1615      6C6500
  1616              	.LASF18:
- 1617 02cf 74696D65 		.ascii	"timer_clock_1_StopBlock\000"
+ 1617 02d9 74696D65 		.ascii	"timer_clock_1_StopBlock\000"
  1617      725F636C 
  1617      6F636B5F 
  1617      315F5374 
  1617      6F70426C 
  1618              	.LASF36:
- 1619 02e7 74696D65 		.ascii	"timer_clock_1_GetSourceRegister\000"
+ 1619 02f1 74696D65 		.ascii	"timer_clock_1_GetSourceRegister\000"
  1619      725F636C 
  1619      6F636B5F 
  1619      315F4765 
  1619      74536F75 
  1620              	.LASF32:
- 1621 0307 74696D65 		.ascii	"timer_clock_1_SetSourceRegister\000"
+ 1621 0311 74696D65 		.ascii	"timer_clock_1_SetSourceRegister\000"
  1621      725F636C 
  1621      6F636B5F 
  1621      315F5365 

@@ -20,6 +20,7 @@
 #include <CyLib.h>
 #include <isr_5.h>
 
+
 #if !defined(isr_5__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
@@ -158,6 +159,10 @@ void isr_5_Stop(void)
 *******************************************************************************/
 CY_ISR(isr_5_Interrupt)
 {
+    #ifdef isr_5_INTERRUPT_INTERRUPT_CALLBACK
+        isr_5_Interrupt_InterruptCallback();
+    #endif /* isr_5_INTERRUPT_INTERRUPT_CALLBACK */ 
+
     /*  Place your Interrupt code here. */
     /* `#START isr_5_Interrupt` */
 
