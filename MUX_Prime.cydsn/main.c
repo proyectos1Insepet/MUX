@@ -3491,10 +3491,10 @@ void polling_pos1(void){
 										if((lado1.mangueras!=1)&&(imagen_grado1!=1)){
 			                        		set_imagen(1,imagen_grado1);
 										}
-										else{
-											flujo_LCD1=12;
+										else{											
 											//set_imagen(1,7);
 											rventa1.producto=lado1.grado[0][0];	
+                                            flujo_LCD1=12;
 										}
 									}
 									else{
@@ -3595,23 +3595,23 @@ void polling_pos1(void){
 					  for(x=0;x<=10;x++){
 					 	  rventa1.km[x]=0;
 					  }					 
-					  if(rventa1.autorizado=='1'){
-	                      flujo_LCD1=16;                                
+					  if(rventa1.autorizado=='1'){	                                                      
 	                      set_imagen(1,18);     //Esperando ID
 						  rventa1.tipo_venta=1;	
+                          flujo_LCD1=16;
 					  }
 					  else if (rventa1.autorizado=='0'){
 						lado1.estado=28;
 						error_op(1,65);
 					  }	
 					  else if ((rventa1.autorizado=='2')||(rventa1.autorizado==0)||(rventa1.autorizado==1)||(rventa1.autorizado==100)){
-						//error_op(1,85);
-                        flujo_LCD1 = 100;
+						//error_op(1,85);                        
                         set_imagen(1,85);
                         count_protector=1;
 	                    isr_3_StartEx(animacion);  
 	                    Timer_Animacion_Start();
 						lado1.estado=28;   //Error de operación
+                        flujo_LCD1 = 100;
 					  }					
                     break;
                     
@@ -4035,8 +4035,7 @@ void polling_pos1(void){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
                 switch(LCD_1_rxBuffer[3]){
                     case 0x39:                          //Si Imprime cambiar imagen
-                      set_imagen(1,7);					//Suba la manija
-                      flujo_LCD1=6;
+                      set_imagen(1,7);					//Suba la manija                      
 					  rventa1.imprimir=1;
 					  /*if(((rventa1.autorizado=='2')||(rventa1.autorizado==0))&&(rventa1.tipo_venta==0)){
 						set_imagen(1,55);
@@ -4048,6 +4047,7 @@ void polling_pos1(void){
 					  	imprimir(lado1.dir,print1[1], lado1.grado[rventa1.manguera-1][0], rventa1.ppu, rventa1.volumen, rventa1.dinero, rventa1.placa,rventa1.km);
 						set_imagen(1,12);
 					  }*/
+                     flujo_LCD1=6;
                     break; 
                     
                     case 0x38:                          //No Imprime 
@@ -4115,8 +4115,7 @@ void polling_pos1(void){
 		             set_imagen(1,19);              //Esperando ID
 		             count_protector=0;              
 		             isr_3_StartEx(animacion);       //Lectura de ibutton
-		             Timer_Animacion_Start(); 
-					 flujo_LCD1=101;
+		             Timer_Animacion_Start(); 					 
 					 prox_caso[0][0]=2;
 					 prox_caso[0][1]=14;
 					 count_teclas1=0;							//Inicia el contador de teclas	
@@ -4124,16 +4123,17 @@ void polling_pos1(void){
 					 teclas1=10;
 					 posx1=2;
 					 posy1=3;
-					 sizeletra1=1;	
+					 sizeletra1=1;
+                     flujo_LCD1=101;
 				 }
              }
          }
          if(LCD_1_GetRxBufferSize()==8){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
                 switch(LCD_1_rxBuffer[3]){
-                    case 0x3B:
-                     flujo_LCD1=0;      // presiona cancelar
+                    case 0x3B:                     
                      set_imagen(1,46);  //Cambio a imagen de pos a pos b
+                     flujo_LCD1=0;      // presiona cancelar
                     break; 
                 }
             }
@@ -8152,8 +8152,8 @@ int main()
     PC_Start();
     for(;;)
     {
-		polling_mod();
-       	polling_rf();
+		//polling_mod();
+       	//polling_rf();
        	polling_LCD1();					//Revisa si hay venta en alguna de las dos posiciones
 		if(estado_pos[0]==1){				
 			polling_pos1();
@@ -8163,7 +8163,7 @@ int main()
 			polling_pos2();
 		}		
 		CyWdtClear();
-	   	polling_rf();
+	   	//polling_rf();
 	   	polling_LCD2();					//Revisa si hay venta en alguna de las dos posiciones
 		if(estado_pos[2]==1){				
 			polling_pos3();
