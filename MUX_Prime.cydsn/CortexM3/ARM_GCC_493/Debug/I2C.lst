@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
   55              		.comm	lado2,93,4
   56              		.comm	lado3,93,4
   57              		.comm	lado4,93,4
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 2
 
 
   58              		.comm	nombre,33,4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
   25:.\I2C.c       **** * Programmer(s) : 
   26:.\I2C.c       ****                   
   27:.\I2C.c       **** ***************************************************************************************************
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 3
 
 
   28:.\I2C.c       **** */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  109 0010 6820     		movs	r0, #104
  110 0012 0021     		movs	r1, #0
  111 0014 FFF7FEFF 		bl	I2C_1_MasterSendStart
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 4
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 4
 
 
  112 0018 0346     		mov	r3, r0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  153 0060 1A46     		mov	r2, r3
  154 0062 0A4B     		ldr	r3, .L11
  155 0064 1A55     		strb	r2, [r3, r4]
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 5
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 5
 
 
   74:.\I2C.c       **** 		        }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  194              		.size	leer_hora, .-leer_hora
  195              		.section	.text.leer_fecha,"ax",%progbits
  196              		.align	2
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 6
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 6
 
 
  197              		.global	leer_fecha
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  109:.\I2C.c       ****         if(I2C_1_MSTR_NO_ERROR == status)								 		/* Check if transfer completed without errors *
  229              		.loc 1 109 0
  230 001c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 7
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 7
 
 
  231 001e 002B     		cmp	r3, #0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  124:.\I2C.c       **** 					return 0;
  125:.\I2C.c       **** 				}
  126:.\I2C.c       **** 		        I2C_1_MasterSendStop();	
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 8
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 8
 
 
  271              		.loc 1 126 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  314              		.thumb_func
  315              		.type	write_hora, %function
  316              	write_hora:
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 9
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 9
 
 
  317              	.LFB65:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  346 001e FFF7FEFF 		bl	I2C_1_MasterSendStart
  347 0022 0346     		mov	r3, r0
  348 0024 BB71     		strb	r3, [r7, #6]
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 10
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 10
 
 
  160:.\I2C.c       ****     if(I2C_1_MSTR_NO_ERROR == status) 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  388 0062 02E0     		b	.L32
  389              	.L33:
  173:.\I2C.c       ****     }
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 11
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 11
 
 
  174:.\I2C.c       ****     I2C_1_MasterSendStop();	
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  422 0000 80B5     		push	{r7, lr}
  423              		.cfi_def_cfa_offset 8
  424              		.cfi_offset 7, -8
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 12
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 12
 
 
  425              		.cfi_offset 14, -4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  467 0044 1846     		mov	r0, r3
  468 0046 FFF7FEFF 		bl	I2C_1_MasterWriteByte
  469 004a 0346     		mov	r3, r0
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 13
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 13
 
 
  470 004c BB71     		strb	r3, [r7, #6]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  510 0078 00000000 		.word	fecha
  511              		.cfi_endproc
  512              	.LFE66:
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 14
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 14
 
 
  513              		.size	write_fecha, .-write_fecha
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  242:.\I2C.c       **** 	dato[0]=page;
  545              		.loc 1 242 0
  546 0018 FB88     		ldrh	r3, [r7, #6]	@ movhi
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 15
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 15
 
 
  547 001a DBB2     		uxtb	r3, r3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  589 0064 FB73     		strb	r3, [r7, #15]
  590              	.L49:
  248:.\I2C.c       ****         {
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 16
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 16
 
 
  591              		.loc 1 248 0 is_stmt 0 discriminator 1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  264:.\I2C.c       ****         }		
  265:.\I2C.c       ****     }
  266:.\I2C.c       ****     else{
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 17
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 17
 
 
  267:.\I2C.c       **** 		return 0;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  287:.\I2C.c       **** *
  288:.\I2C.c       **** * Note(s)     : none.
  289:.\I2C.c       **** ***************************************************************************************************
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 18
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 18
 
 
  290:.\I2C.c       **** */
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  710 0038 0023     		movs	r3, #0
  711 003a FB82     		strh	r3, [r7, #22]	@ movhi
  712 003c 17E0     		b	.L61
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 19
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 19
 
 
  713              	.L64:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  752 007a FFF7FEFF 		bl	I2C_1_MasterSendStop
  314:.\I2C.c       ****     CyDelay(50);
  753              		.loc 1 314 0
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 20
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 20
 
 
  754 007e 3220     		movs	r0, #50
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  797 00c6 0023     		movs	r3, #0
  798 00c8 05E0     		b	.L70
  799              	.L72:
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 21
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 21
 
 
  324:.\I2C.c       **** 	}
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  347:.\I2C.c       **** uint8 write_psoc1( uint8 puerto, uint8 valor ){
  831              		.loc 1 347 0
  832              		.cfi_startproc
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 22
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 22
 
 
  833              		@ args = 0, pretend = 0, frame = 16
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  877 0042 FFF7FEFF 		bl	I2C_1_MasterWriteByte
  878 0046 0346     		mov	r3, r0
  879 0048 BB73     		strb	r3, [r7, #14]
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 23
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 23
 
 
  358:.\I2C.c       ****             if(status != I2C_1_MSTR_NO_ERROR)
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  920              	.Letext0:
  921              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
  922              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 24
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 24
 
 
  923              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
@@ -1394,7 +1394,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  933 000c 54010000 		.4byte	.LASF109
  934 0010 01       		.byte	0x1
  935 0011 00000000 		.4byte	.LASF110
- 936 0015 EB030000 		.4byte	.LASF111
+ 936 0015 8C030000 		.4byte	.LASF111
  937 0019 00000000 		.4byte	.Ldebug_ranges0+0
  938 001d 00000000 		.4byte	0
  939 0021 00000000 		.4byte	.Ldebug_line0
@@ -1422,11 +1422,11 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  961 004c 02       		.uleb128 0x2
  962 004d 04       		.byte	0x4
  963 004e 05       		.byte	0x5
- 964 004f 91040000 		.4byte	.LASF4
+ 964 004f 9E040000 		.4byte	.LASF4
  965 0053 02       		.uleb128 0x2
  966 0054 04       		.byte	0x4
  967 0055 07       		.byte	0x7
- 968 0056 B3030000 		.4byte	.LASF5
+ 968 0056 EE030000 		.4byte	.LASF5
  969 005a 02       		.uleb128 0x2
  970 005b 08       		.byte	0x8
  971 005c 05       		.byte	0x5
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  977 0068 04       		.uleb128 0x4
  978 0069 04       		.byte	0x4
  979 006a 05       		.byte	0x5
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 25
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 25
 
 
  980 006b 696E7400 		.ascii	"int\000"
@@ -1468,7 +1468,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1004 009e 02       		.uleb128 0x2
  1005 009f 08       		.byte	0x8
  1006 00a0 04       		.byte	0x4
- 1007 00a1 74040000 		.4byte	.LASF14
+ 1007 00a1 81040000 		.4byte	.LASF14
  1008 00a5 02       		.uleb128 0x2
  1009 00a6 01       		.byte	0x1
  1010 00a7 08       		.byte	0x8
@@ -1498,13 +1498,13 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1034 00da 64697200 		.ascii	"dir\000"
  1035 00de 05       		.byte	0x5
  1036 00df 5D       		.byte	0x5d
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 26
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 26
 
 
  1037 00e0 AC000000 		.4byte	0xac
  1038 00e4 00       		.byte	0
  1039 00e5 0A       		.uleb128 0xa
- 1040 00e6 9A040000 		.4byte	.LASF17
+ 1040 00e6 A7040000 		.4byte	.LASF17
  1041 00ea 05       		.byte	0x5
  1042 00eb 5E       		.byte	0x5e
  1043 00ec AC000000 		.4byte	0xac
@@ -1528,7 +1528,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1061 0110 6E010000 		.4byte	0x16e
  1062 0114 59       		.byte	0x59
  1063 0115 0A       		.uleb128 0xa
- 1064 0116 9F030000 		.4byte	.LASF20
+ 1064 0116 DA030000 		.4byte	.LASF20
  1065 011a 05       		.byte	0x5
  1066 011b 62       		.byte	0x62
  1067 011c AC000000 		.4byte	0xac
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1091 0152 00       		.byte	0
  1092 0153 05       		.uleb128 0x5
  1093 0154 3D010000 		.4byte	0x13d
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 27
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 27
 
 
  1094 0158 06       		.uleb128 0x6
@@ -1574,7 +1574,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1104 016e 05       		.uleb128 0x5
  1105 016f 58010000 		.4byte	0x158
  1106 0173 08       		.uleb128 0x8
- 1107 0174 C5030000 		.4byte	.LASF22
+ 1107 0174 00040000 		.4byte	.LASF22
  1108 0178 61       		.byte	0x61
  1109 0179 05       		.byte	0x5
  1110 017a 75       		.byte	0x75
@@ -1618,14 +1618,14 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1148 01c7 0A       		.uleb128 0xa
  1149 01c8 05010000 		.4byte	.LASF27
  1150 01cc 05       		.byte	0x5
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 28
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 28
 
 
  1151 01cd 7C       		.byte	0x7c
  1152 01ce 81000000 		.4byte	0x81
  1153 01d2 1A       		.byte	0x1a
  1154 01d3 0A       		.uleb128 0xa
- 1155 01d4 19040000 		.4byte	.LASF28
+ 1155 01d4 26040000 		.4byte	.LASF28
  1156 01d8 05       		.byte	0x5
  1157 01d9 7D       		.byte	0x7d
  1158 01da 6A020000 		.4byte	0x26a
@@ -1643,7 +1643,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1170 01f0 8A020000 		.4byte	0x28a
  1171 01f4 33       		.byte	0x33
  1172 01f5 0A       		.uleb128 0xa
- 1173 01f6 6E040000 		.4byte	.LASF29
+ 1173 01f6 7B040000 		.4byte	.LASF29
  1174 01fa 05       		.byte	0x5
  1175 01fb 80       		.byte	0x80
  1176 01fc 5A020000 		.4byte	0x25a
@@ -1655,7 +1655,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1182 0208 81000000 		.4byte	0x81
  1183 020c 47       		.byte	0x47
  1184 020d 0A       		.uleb128 0xa
- 1185 020e 63040000 		.4byte	.LASF31
+ 1185 020e 70040000 		.4byte	.LASF31
  1186 0212 05       		.byte	0x5
  1187 0213 82       		.byte	0x82
  1188 0214 81000000 		.4byte	0x81
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1205 0237 85       		.byte	0x85
  1206 0238 81000000 		.4byte	0x81
  1207 023c 5F       		.byte	0x5f
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 29
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 29
 
 
  1208 023d 0A       		.uleb128 0xa
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1262 02b8 01       		.byte	0x1
  1263 02b9 39       		.byte	0x39
  1264 02ba 81000000 		.4byte	0x81
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 30
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 30
 
 
  1265 02be 02       		.uleb128 0x2
@@ -1754,7 +1754,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1275 02cc 6F       		.sleb128 -17
  1276 02cd 00       		.byte	0
  1277 02ce 0B       		.uleb128 0xb
- 1278 02cf DB030000 		.4byte	.LASF38
+ 1278 02cf 16040000 		.4byte	.LASF38
  1279 02d3 01       		.byte	0x1
  1280 02d4 68       		.byte	0x68
  1281 02d5 81000000 		.4byte	0x81
@@ -1798,11 +1798,11 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1319 0326 02       		.uleb128 0x2
  1320 0327 91       		.byte	0x91
  1321 0328 76       		.sleb128 -10
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 31
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 31
 
 
  1322 0329 0C       		.uleb128 0xc
- 1323 032a D6030000 		.4byte	.LASF39
+ 1323 032a 11040000 		.4byte	.LASF39
  1324 032e 01       		.byte	0x1
  1325 032f 9A       		.byte	0x9a
  1326 0330 44030000 		.4byte	0x344
@@ -1826,7 +1826,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1344 0352 02       		.byte	0x2
  1345 0353 00       		.byte	0
  1346 0354 0E       		.uleb128 0xe
- 1347 0355 51040000 		.4byte	.LASF41
+ 1347 0355 5E040000 		.4byte	.LASF41
  1348 0359 01       		.byte	0x1
  1349 035a C3       		.byte	0xc3
  1350 035b 81000000 		.4byte	0x81
@@ -1844,7 +1844,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1362 0379 91       		.byte	0x91
  1363 037a 76       		.sleb128 -10
  1364 037b 0C       		.uleb128 0xc
- 1365 037c D6030000 		.4byte	.LASF39
+ 1365 037c 11040000 		.4byte	.LASF39
  1366 0380 01       		.byte	0x1
  1367 0381 C4       		.byte	0xc4
  1368 0382 BD000000 		.4byte	0xbd
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1376 038e 81000000 		.4byte	0x81
  1377 0392 02       		.uleb128 0x2
  1378 0393 91       		.byte	0x91
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 32
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 32
 
 
  1379 0394 77       		.sleb128 -9
@@ -1898,7 +1898,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1413 03d7 91       		.byte	0x91
  1414 03d8 76       		.sleb128 -10
  1415 03d9 0C       		.uleb128 0xc
- 1416 03da D6030000 		.4byte	.LASF39
+ 1416 03da 11040000 		.4byte	.LASF39
  1417 03de 01       		.byte	0x1
  1418 03df EF       		.byte	0xef
  1419 03e0 BD000000 		.4byte	0xbd
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1433 03f5 04       		.byte	0x4
  1434 03f6 81000000 		.4byte	0x81
  1435 03fa 11       		.uleb128 0x11
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 33
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 33
 
 
  1436 03fb EB000000 		.4byte	.LASF45
@@ -1939,7 +1939,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1451 0421 91       		.byte	0x91
  1452 0422 5E       		.sleb128 -34
  1453 0423 12       		.uleb128 0x12
- 1454 0424 E6030000 		.4byte	.LASF46
+ 1454 0424 21040000 		.4byte	.LASF46
  1455 0428 01       		.byte	0x1
  1456 0429 2301     		.2byte	0x123
  1457 042b AC000000 		.4byte	0xac
@@ -1955,7 +1955,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1467 043f 91       		.byte	0x91
  1468 0440 6C       		.sleb128 -20
  1469 0441 13       		.uleb128 0x13
- 1470 0442 D6030000 		.4byte	.LASF39
+ 1470 0442 11040000 		.4byte	.LASF39
  1471 0446 01       		.byte	0x1
  1472 0447 2401     		.2byte	0x124
  1473 0449 5E040000 		.4byte	0x45e
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1490 0468 B6000000 		.4byte	0xb6
  1491 046c 03       		.byte	0x3
  1492 046d 00       		.byte	0
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 34
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 34
 
 
  1493 046e 11       		.uleb128 0x11
@@ -1992,7 +1992,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1501 0483 9C       		.byte	0x9c
  1502 0484 D2040000 		.4byte	0x4d2
  1503 0488 12       		.uleb128 0x12
- 1504 0489 AC040000 		.4byte	.LASF48
+ 1504 0489 B9040000 		.4byte	.LASF48
  1505 048d 01       		.byte	0x1
  1506 048e 5B01     		.2byte	0x15b
  1507 0490 81000000 		.4byte	0x81
@@ -2016,7 +2016,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1525 04b3 91       		.byte	0x91
  1526 04b4 76       		.sleb128 -10
  1527 04b5 13       		.uleb128 0x13
- 1528 04b6 D6030000 		.4byte	.LASF39
+ 1528 04b6 11040000 		.4byte	.LASF39
  1529 04ba 01       		.byte	0x1
  1530 04bb 5C01     		.2byte	0x15c
  1531 04bd D2040000 		.4byte	0x4d2
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1547 04db 07       		.uleb128 0x7
  1548 04dc B6000000 		.4byte	0xb6
  1549 04e0 01       		.byte	0x1
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 35
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 35
 
 
  1550 04e1 00       		.byte	0
@@ -2058,7 +2058,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1564 04ff 03       		.byte	0x3
  1565 0500 00000000 		.4byte	count_teclas1
  1566 0504 16       		.uleb128 0x16
- 1567 0505 B3040000 		.4byte	.LASF51
+ 1567 0505 C0040000 		.4byte	.LASF51
  1568 0509 05       		.byte	0x5
  1569 050a 4A       		.byte	0x4a
  1570 050b AC000000 		.4byte	0xac
@@ -2066,7 +2066,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1572 0510 03       		.byte	0x3
  1573 0511 00000000 		.4byte	comas1
  1574 0515 16       		.uleb128 0x16
- 1575 0516 BA040000 		.4byte	.LASF52
+ 1575 0516 C7040000 		.4byte	.LASF52
  1576 051a 05       		.byte	0x5
  1577 051b 4A       		.byte	0x4a
  1578 051c AC000000 		.4byte	0xac
@@ -2074,7 +2074,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1580 0521 03       		.byte	0x3
  1581 0522 00000000 		.4byte	comas2
  1582 0526 16       		.uleb128 0x16
- 1583 0527 20040000 		.4byte	.LASF53
+ 1583 0527 2D040000 		.4byte	.LASF53
  1584 052b 05       		.byte	0x5
  1585 052c 4A       		.byte	0x4a
  1586 052d AC000000 		.4byte	0xac
@@ -2098,10 +2098,10 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1604 0554 03       		.byte	0x3
  1605 0555 00000000 		.4byte	count_teclas2
  1606 0559 16       		.uleb128 0x16
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 36
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 36
 
 
- 1607 055a 29040000 		.4byte	.LASF56
+ 1607 055a 36040000 		.4byte	.LASF56
  1608 055e 05       		.byte	0x5
  1609 055f 4A       		.byte	0x4a
  1610 0560 AC000000 		.4byte	0xac
@@ -2109,7 +2109,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1612 0565 03       		.byte	0x3
  1613 0566 00000000 		.4byte	id_coma2
  1614 056a 16       		.uleb128 0x16
- 1615 056b 3E040000 		.4byte	.LASF57
+ 1615 056b 4B040000 		.4byte	.LASF57
  1616 056f 05       		.byte	0x5
  1617 0570 4A       		.byte	0x4a
  1618 0571 AC000000 		.4byte	0xac
@@ -2133,7 +2133,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1636 0598 03       		.byte	0x3
  1637 0599 00000000 		.4byte	posy1
  1638 059d 16       		.uleb128 0x16
- 1639 059e A1040000 		.4byte	.LASF60
+ 1639 059e AE040000 		.4byte	.LASF60
  1640 05a2 05       		.byte	0x5
  1641 05a3 4B       		.byte	0x4b
  1642 05a4 B1000000 		.4byte	0xb1
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1661 05cc 00000000 		.4byte	posy2
  1662 05d0 16       		.uleb128 0x16
  1663 05d1 C9020000 		.4byte	.LASF63
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 37
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 37
 
 
  1664 05d5 05       		.byte	0x5
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1718 0647 06       		.uleb128 0x6
  1719 0648 81000000 		.4byte	0x81
  1720 064c 57060000 		.4byte	0x657
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 38
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 38
 
 
  1721 0650 07       		.uleb128 0x7
@@ -2262,7 +2262,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1759 06a0 03       		.byte	0x3
  1760 06a1 00000000 		.4byte	count_protector2
  1761 06a5 16       		.uleb128 0x16
- 1762 06a6 84040000 		.4byte	.LASF74
+ 1762 06a6 91040000 		.4byte	.LASF74
  1763 06aa 05       		.byte	0x5
  1764 06ab 51       		.byte	0x51
  1765 06ac B6060000 		.4byte	0x6b6
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1775 06c2 B1000000 		.4byte	0xb1
  1776 06c6 05       		.uleb128 0x5
  1777 06c7 03       		.byte	0x3
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 39
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 39
 
 
  1778 06c8 00000000 		.4byte	imagen_grado1
@@ -2291,7 +2291,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1785 06d8 03       		.byte	0x3
  1786 06d9 00000000 		.4byte	imagen_grado2
  1787 06dd 16       		.uleb128 0x16
- 1788 06de C1040000 		.4byte	.LASF77
+ 1788 06de CE040000 		.4byte	.LASF77
  1789 06e2 05       		.byte	0x5
  1790 06e3 52       		.byte	0x52
  1791 06e4 B1000000 		.4byte	0xb1
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1832 073d 44030000 		.4byte	0x344
  1833 0741 16       		.uleb128 0x16
  1834 0742 36000000 		.4byte	.LASF81
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 40
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 40
 
 
  1835 0746 05       		.byte	0x5
@@ -2365,7 +2365,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1856 0773 05       		.uleb128 0x5
  1857 0774 52070000 		.4byte	0x752
  1858 0778 16       		.uleb128 0x16
- 1859 0779 32040000 		.4byte	.LASF83
+ 1859 0779 3F040000 		.4byte	.LASF83
  1860 077d 05       		.byte	0x5
  1861 077e 59       		.byte	0x59
  1862 077f 89070000 		.4byte	0x789
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1889 07bb 29010000 		.4byte	.LASF86
  1890 07bf 05       		.byte	0x5
  1891 07c0 64       		.byte	0x64
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 41
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 41
 
 
  1892 07c1 CD000000 		.4byte	0xcd
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1946 0839 05       		.byte	0x5
  1947 083a 6C       		.byte	0x6c
  1948 083b 45080000 		.4byte	0x845
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 42
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 42
 
 
  1949 083f 05       		.uleb128 0x5
@@ -2474,7 +2474,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1959 0858 13       		.byte	0x13
  1960 0859 00       		.byte	0
  1961 085a 16       		.uleb128 0x16
- 1962 085b 7B040000 		.4byte	.LASF91
+ 1962 085b 88040000 		.4byte	.LASF91
  1963 085f 05       		.byte	0x5
  1964 0860 6D       		.byte	0x6d
  1965 0861 6B080000 		.4byte	0x86b
@@ -2484,7 +2484,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  1969 086b 05       		.uleb128 0x5
  1970 086c 4A080000 		.4byte	0x84a
  1971 0870 16       		.uleb128 0x16
- 1972 0871 A9030000 		.4byte	.LASF92
+ 1972 0871 E4030000 		.4byte	.LASF92
  1973 0875 05       		.byte	0x5
  1974 0876 6E       		.byte	0x6e
  1975 0877 81080000 		.4byte	0x881
@@ -2518,13 +2518,13 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2003 08b7 05       		.uleb128 0x5
  2004 08b8 03       		.byte	0x3
  2005 08b9 00000000 		.4byte	lema2
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 43
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 43
 
 
  2006 08bd 05       		.uleb128 0x5
  2007 08be 86080000 		.4byte	0x886
  2008 08c2 16       		.uleb128 0x16
- 2009 08c3 97030000 		.4byte	.LASF95
+ 2009 08c3 D2030000 		.4byte	.LASF95
  2010 08c7 05       		.byte	0x5
  2011 08c8 71       		.byte	0x71
  2012 08c9 D3080000 		.4byte	0x8d3
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2060 0931 16       		.uleb128 0x16
  2061 0932 58030000 		.4byte	.LASF100
  2062 0936 05       		.byte	0x5
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 44
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 44
 
 
  2063 0937 8A       		.byte	0x8a
@@ -2595,7 +2595,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2074 094e 03       		.byte	0x3
  2075 094f 00000000 		.4byte	rventa4
  2076 0953 16       		.uleb128 0x16
- 2077 0954 5D040000 		.4byte	.LASF102
+ 2077 0954 6A040000 		.4byte	.LASF102
  2078 0958 05       		.byte	0x5
  2079 0959 90       		.byte	0x90
  2080 095a 81000000 		.4byte	0x81
@@ -2618,7 +2618,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2097 0983 C7       		.byte	0xc7
  2098 0984 00       		.byte	0
  2099 0985 16       		.uleb128 0x16
- 2100 0986 4A040000 		.4byte	.LASF104
+ 2100 0986 57040000 		.4byte	.LASF104
  2101 098a 05       		.byte	0x5
  2102 098b 92       		.byte	0x92
  2103 098c 75090000 		.4byte	0x975
@@ -2633,18 +2633,18 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2112 09a4 3F       		.byte	0x3f
  2113 09a5 00       		.byte	0
  2114 09a6 16       		.uleb128 0x16
- 2115 09a7 8C030000 		.4byte	.LASF105
+ 2115 09a7 C7030000 		.4byte	.LASF105
  2116 09ab 05       		.byte	0x5
  2117 09ac 97       		.byte	0x97
  2118 09ad 96090000 		.4byte	0x996
  2119 09b1 05       		.uleb128 0x5
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 45
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 45
 
 
  2120 09b2 03       		.byte	0x3
  2121 09b3 00000000 		.4byte	buffer_i2c
  2122 09b7 16       		.uleb128 0x16
- 2123 09b8 CC030000 		.4byte	.LASF106
+ 2123 09b8 07040000 		.4byte	.LASF106
  2124 09bc 05       		.byte	0x5
  2125 09bd 9C       		.byte	0x9c
  2126 09be 81000000 		.4byte	0x81
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2174 0019 0B       		.uleb128 0xb
  2175 001a 03       		.uleb128 0x3
  2176 001b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 46
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 46
 
 
  2177 001c 00       		.byte	0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2231 0052 03       		.uleb128 0x3
  2232 0053 0E       		.uleb128 0xe
  2233 0054 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 47
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 47
 
 
  2234 0055 0B       		.uleb128 0xb
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2288 008b 12       		.uleb128 0x12
  2289 008c 06       		.uleb128 0x6
  2290 008d 40       		.uleb128 0x40
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 48
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 48
 
 
  2291 008e 18       		.uleb128 0x18
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2345 00c5 12       		.uleb128 0x12
  2346 00c6 06       		.uleb128 0x6
  2347 00c7 40       		.uleb128 0x40
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 49
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 49
 
 
  2348 00c8 18       		.uleb128 0x18
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2402 0100 01       		.uleb128 0x1
  2403 0101 13       		.uleb128 0x13
  2404 0102 00       		.byte	0
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 50
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 50
 
 
  2405 0103 00       		.byte	0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2459 0139 05       		.uleb128 0x5
  2460 013a 49       		.uleb128 0x49
  2461 013b 13       		.uleb128 0x13
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 51
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 51
 
 
  2462 013c 3F       		.uleb128 0x3f
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2516 0024 78000000 		.4byte	.LFE65-.LFB65
  2517 0028 00000000 		.4byte	.LFB66
  2518 002c 7C000000 		.4byte	.LFE66-.LFB66
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 52
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 52
 
 
  2519 0030 00000000 		.4byte	.LFB67
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2560              	.LASF81:
  2561 0036 70707578 		.ascii	"ppux10\000"
  2561      313000
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 53
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 53
 
 
  2562              	.LASF0:
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2591 00ca 7072696E 		.ascii	"print2\000"
  2591      743200
  2592              	.LASF44:
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 54
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 54
 
 
  2593 00d1 76616C6F 		.ascii	"valor\000"
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2624              	.LASF43:
  2625 014f 70616765 		.ascii	"page\000"
  2625      00
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 55
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 55
 
 
  2626              	.LASF109:
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2649 0247 706F7369 		.ascii	"posicion\000"
  2649      63696F6E 
  2649      00
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 56
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 56
 
 
  2650              	.LASF25:
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2675      00
  2676              	.LASF26:
  2677 02e5 70726F64 		.ascii	"producto\000"
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 57
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 57
 
 
  2677      7563746F 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2707 0376 5F5F696E 		.ascii	"__int32_t\000"
  2707      7433325F 
  2707      7400
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 58
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 58
 
 
  2708              	.LASF96:
@@ -3427,127 +3427,131 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 1
  2710              	.LASF87:
  2711 0386 6C61646F 		.ascii	"lado2\000"
  2711      3200
- 2712              	.LASF105:
- 2713 038c 62756666 		.ascii	"buffer_i2c\000"
- 2713      65725F69 
- 2713      326300
- 2714              	.LASF95:
- 2715 0397 69645F6C 		.ascii	"id_logo\000"
- 2715      6F676F00 
- 2716              	.LASF20:
- 2717 039f 6D616E67 		.ascii	"mangueras\000"
- 2717      75657261 
- 2717      7300
- 2718              	.LASF92:
- 2719 03a9 64697265 		.ascii	"direccion\000"
- 2719      6363696F 
- 2719      6E00
- 2720              	.LASF5:
- 2721 03b3 6C6F6E67 		.ascii	"long unsigned int\000"
- 2721      20756E73 
- 2721      69676E65 
- 2721      6420696E 
- 2721      7400
- 2722              	.LASF22:
- 2723 03c5 72656369 		.ascii	"recibo\000"
- 2723      626F00
- 2724              	.LASF106:
- 2725 03cc 6372635F 		.ascii	"crc_total\000"
- 2725      746F7461 
- 2725      6C00
- 2726              	.LASF39:
- 2727 03d6 6461746F 		.ascii	"dato\000"
- 2727      00
- 2728              	.LASF38:
- 2729 03db 6C656572 		.ascii	"leer_fecha\000"
- 2729      5F666563 
- 2729      686100
- 2730              	.LASF46:
- 2731 03e6 73697A65 		.ascii	"size\000"
- 2731      00
- 2732              	.LASF111:
- 2733 03eb 433A5C55 		.ascii	"C:\\Users\\Usuario\\Desktop\\MUX2\\MUX_Prime.cydsn\000"
- 2733      73657273 
- 2733      5C557375 
- 2733      6172696F 
- 2733      5C446573 
- 2734              	.LASF28:
- 2735 0419 70726573 		.ascii	"preset\000"
- 2735      657400
- 2736              	.LASF53:
- 2737 0420 69645F63 		.ascii	"id_coma1\000"
- 2737      6F6D6131 
- 2737      00
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 59
+ 2712              	.LASF111:
+ 2713 038c 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prime 2.0\\MUX\\MU"
+ 2713      73657273 
+ 2713      5C526563 
+ 2713      65706369 
+ 2713      6F6E5C44 
+ 2714 03b9 585F5072 		.ascii	"X_Prime.cydsn\000"
+ 2714      696D652E 
+ 2714      63796473 
+ 2714      6E00
+ 2715              	.LASF105:
+ 2716 03c7 62756666 		.ascii	"buffer_i2c\000"
+ 2716      65725F69 
+ 2716      326300
+ 2717              	.LASF95:
+ 2718 03d2 69645F6C 		.ascii	"id_logo\000"
+ 2718      6F676F00 
+ 2719              	.LASF20:
+ 2720 03da 6D616E67 		.ascii	"mangueras\000"
+ 2720      75657261 
+ 2720      7300
+ 2721              	.LASF92:
+ 2722 03e4 64697265 		.ascii	"direccion\000"
+ 2722      6363696F 
+ 2722      6E00
+ 2723              	.LASF5:
+ 2724 03ee 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2724      20756E73 
+ 2724      69676E65 
+ 2724      6420696E 
+ 2724      7400
+ 2725              	.LASF22:
+ 2726 0400 72656369 		.ascii	"recibo\000"
+ 2726      626F00
+ 2727              	.LASF106:
+ 2728 0407 6372635F 		.ascii	"crc_total\000"
+ 2728      746F7461 
+ 2728      6C00
+ 2729              	.LASF39:
+ 2730 0411 6461746F 		.ascii	"dato\000"
+ 2730      00
+ 2731              	.LASF38:
+ 2732 0416 6C656572 		.ascii	"leer_fecha\000"
+ 2732      5F666563 
+ 2732      686100
+ 2733              	.LASF46:
+ 2734 0421 73697A65 		.ascii	"size\000"
+ 2734      00
+ 2735              	.LASF28:
+ 2736 0426 70726573 		.ascii	"preset\000"
+ 2736      657400
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 59
 
 
- 2738              	.LASF56:
- 2739 0429 69645F63 		.ascii	"id_coma2\000"
- 2739      6F6D6132 
- 2739      00
- 2740              	.LASF83:
- 2741 0432 6E6F6D62 		.ascii	"nombre_pro2\000"
- 2741      72655F70 
- 2741      726F3200 
- 2742              	.LASF57:
- 2743 043e 69645F74 		.ascii	"id_teclado2\000"
- 2743      65636C61 
- 2743      646F3200 
- 2744              	.LASF104:
- 2745 044a 72665F6D 		.ascii	"rf_mod\000"
- 2745      6F6400
- 2746              	.LASF41:
- 2747 0451 77726974 		.ascii	"write_fecha\000"
- 2747      655F6665 
- 2747      63686100 
- 2748              	.LASF102:
- 2749 045d 6F6B5F52 		.ascii	"ok_RF\000"
- 2749      4600
- 2750              	.LASF31:
- 2751 0463 7469706F 		.ascii	"tipo_venta\000"
- 2751      5F76656E 
- 2751      746100
- 2752              	.LASF29:
- 2753 046e 706C6163 		.ascii	"placa\000"
- 2753      6100
- 2754              	.LASF14:
- 2755 0474 646F7562 		.ascii	"double\000"
- 2755      6C6500
- 2756              	.LASF91:
- 2757 047b 74656C65 		.ascii	"telefono\000"
- 2757      666F6E6F 
- 2757      00
- 2758              	.LASF74:
- 2759 0484 70617373 		.ascii	"password_lcd\000"
- 2759      776F7264 
- 2759      5F6C6364 
- 2759      00
- 2760              	.LASF4:
- 2761 0491 6C6F6E67 		.ascii	"long int\000"
- 2761      20696E74 
- 2761      00
- 2762              	.LASF17:
- 2763 049a 65737461 		.ascii	"estado\000"
- 2763      646F00
- 2764              	.LASF60:
- 2765 04a1 73697A65 		.ascii	"sizeletra1\000"
- 2765      6C657472 
- 2765      613100
- 2766              	.LASF48:
- 2767 04ac 70756572 		.ascii	"puerto\000"
- 2767      746F00
- 2768              	.LASF51:
- 2769 04b3 636F6D61 		.ascii	"comas1\000"
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\ccAY0OnG.s 			page 60
+ 2737              	.LASF53:
+ 2738 042d 69645F63 		.ascii	"id_coma1\000"
+ 2738      6F6D6131 
+ 2738      00
+ 2739              	.LASF56:
+ 2740 0436 69645F63 		.ascii	"id_coma2\000"
+ 2740      6F6D6132 
+ 2740      00
+ 2741              	.LASF83:
+ 2742 043f 6E6F6D62 		.ascii	"nombre_pro2\000"
+ 2742      72655F70 
+ 2742      726F3200 
+ 2743              	.LASF57:
+ 2744 044b 69645F74 		.ascii	"id_teclado2\000"
+ 2744      65636C61 
+ 2744      646F3200 
+ 2745              	.LASF104:
+ 2746 0457 72665F6D 		.ascii	"rf_mod\000"
+ 2746      6F6400
+ 2747              	.LASF41:
+ 2748 045e 77726974 		.ascii	"write_fecha\000"
+ 2748      655F6665 
+ 2748      63686100 
+ 2749              	.LASF102:
+ 2750 046a 6F6B5F52 		.ascii	"ok_RF\000"
+ 2750      4600
+ 2751              	.LASF31:
+ 2752 0470 7469706F 		.ascii	"tipo_venta\000"
+ 2752      5F76656E 
+ 2752      746100
+ 2753              	.LASF29:
+ 2754 047b 706C6163 		.ascii	"placa\000"
+ 2754      6100
+ 2755              	.LASF14:
+ 2756 0481 646F7562 		.ascii	"double\000"
+ 2756      6C6500
+ 2757              	.LASF91:
+ 2758 0488 74656C65 		.ascii	"telefono\000"
+ 2758      666F6E6F 
+ 2758      00
+ 2759              	.LASF74:
+ 2760 0491 70617373 		.ascii	"password_lcd\000"
+ 2760      776F7264 
+ 2760      5F6C6364 
+ 2760      00
+ 2761              	.LASF4:
+ 2762 049e 6C6F6E67 		.ascii	"long int\000"
+ 2762      20696E74 
+ 2762      00
+ 2763              	.LASF17:
+ 2764 04a7 65737461 		.ascii	"estado\000"
+ 2764      646F00
+ 2765              	.LASF60:
+ 2766 04ae 73697A65 		.ascii	"sizeletra1\000"
+ 2766      6C657472 
+ 2766      613100
+ 2767              	.LASF48:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\cc0PDjBQ.s 			page 60
 
 
- 2769      733100
- 2770              	.LASF52:
- 2771 04ba 636F6D61 		.ascii	"comas2\000"
- 2771      733200
- 2772              	.LASF77:
- 2773 04c1 696D6167 		.ascii	"imagen_grado3\000"
- 2773      656E5F67 
- 2773      7261646F 
- 2773      3300
- 2774              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 2768 04b9 70756572 		.ascii	"puerto\000"
+ 2768      746F00
+ 2769              	.LASF51:
+ 2770 04c0 636F6D61 		.ascii	"comas1\000"
+ 2770      733100
+ 2771              	.LASF52:
+ 2772 04c7 636F6D61 		.ascii	"comas2\000"
+ 2772      733200
+ 2773              	.LASF77:
+ 2774 04ce 696D6167 		.ascii	"imagen_grado3\000"
+ 2774      656E5F67 
+ 2774      7261646F 
+ 2774      3300
+ 2775              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

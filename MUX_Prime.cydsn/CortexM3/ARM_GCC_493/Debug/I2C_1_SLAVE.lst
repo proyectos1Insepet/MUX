@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\cckaPA80.s 			page 1
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccets7OB.s 			page 1
 
 
    1              		.syntax unified
@@ -26,46 +26,46 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\cckaPA80.s 			page 1
   23 0006 00000000 		.4byte	.Ldebug_abbrev0
   24 000a 04       		.byte	0x4
   25 000b 01       		.uleb128 0x1
-  26 000c B5000000 		.4byte	.LASF13
+  26 000c C2000000 		.4byte	.LASF13
   27 0010 01       		.byte	0x1
   28 0011 1B000000 		.4byte	.LASF14
-  29 0015 6B000000 		.4byte	.LASF15
+  29 0015 42000000 		.4byte	.LASF15
   30 0019 00000000 		.4byte	.Ldebug_line0
   31 001d 02       		.uleb128 0x2
   32 001e 01       		.byte	0x1
   33 001f 06       		.byte	0x6
-  34 0020 5D010000 		.4byte	.LASF0
+  34 0020 6A010000 		.4byte	.LASF0
   35 0024 02       		.uleb128 0x2
   36 0025 01       		.byte	0x1
   37 0026 08       		.byte	0x8
-  38 0027 99000000 		.4byte	.LASF1
+  38 0027 A6000000 		.4byte	.LASF1
   39 002b 02       		.uleb128 0x2
   40 002c 02       		.byte	0x2
   41 002d 05       		.byte	0x5
-  42 002e 6F010000 		.4byte	.LASF2
+  42 002e 7C010000 		.4byte	.LASF2
   43 0032 02       		.uleb128 0x2
   44 0033 02       		.byte	0x2
   45 0034 07       		.byte	0x7
-  46 0035 4A010000 		.4byte	.LASF3
+  46 0035 57010000 		.4byte	.LASF3
   47 0039 02       		.uleb128 0x2
   48 003a 04       		.byte	0x4
   49 003b 05       		.byte	0x5
-  50 003c AC000000 		.4byte	.LASF4
+  50 003c B9000000 		.4byte	.LASF4
   51 0040 02       		.uleb128 0x2
   52 0041 04       		.byte	0x4
   53 0042 07       		.byte	0x7
-  54 0043 42000000 		.4byte	.LASF5
+  54 0043 7D000000 		.4byte	.LASF5
   55 0047 02       		.uleb128 0x2
   56 0048 08       		.byte	0x8
   57 0049 05       		.byte	0x5
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\cckaPA80.s 			page 2
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccets7OB.s 			page 2
 
 
   58 004a 00000000 		.4byte	.LASF6
   59 004e 02       		.uleb128 0x2
   60 004f 08       		.byte	0x8
   61 0050 07       		.byte	0x7
-  62 0051 54000000 		.4byte	.LASF7
+  62 0051 8F000000 		.4byte	.LASF7
   63 0055 03       		.uleb128 0x3
   64 0056 04       		.byte	0x4
   65 0057 05       		.byte	0x5
@@ -77,19 +77,19 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\cckaPA80.s 			page 1
   71 0063 02       		.uleb128 0x2
   72 0064 04       		.byte	0x4
   73 0065 04       		.byte	0x4
-  74 0066 69010000 		.4byte	.LASF9
+  74 0066 76010000 		.4byte	.LASF9
   75 006a 02       		.uleb128 0x2
   76 006b 08       		.byte	0x8
   77 006c 04       		.byte	0x4
-  78 006d 43010000 		.4byte	.LASF10
+  78 006d 50010000 		.4byte	.LASF10
   79 0071 02       		.uleb128 0x2
   80 0072 01       		.byte	0x1
   81 0073 08       		.byte	0x8
-  82 0074 A7000000 		.4byte	.LASF11
+  82 0074 B4000000 		.4byte	.LASF11
   83 0078 02       		.uleb128 0x2
   84 0079 04       		.byte	0x4
   85 007a 07       		.byte	0x7
-  86 007b 79010000 		.4byte	.LASF12
+  86 007b 86010000 		.4byte	.LASF12
   87 007f 00       		.byte	0
   88              		.section	.debug_abbrev,"",%progbits
   89              	.Ldebug_abbrev0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\cckaPA80.s 			page 1
  112 0016 03       		.uleb128 0x3
  113 0017 0E       		.uleb128 0xe
  114 0018 00       		.byte	0
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\cckaPA80.s 			page 3
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccets7OB.s 			page 3
 
 
  115 0019 00       		.byte	0
@@ -167,80 +167,84 @@ ARM GAS  C:\Users\Usuario\AppData\Local\Temp\cckaPA80.s 			page 1
  146      7465645F 
  146      536F7572 
  146      63655C50 
- 147              	.LASF5:
- 148 0042 6C6F6E67 		.ascii	"long unsigned int\000"
- 148      20756E73 
- 148      69676E65 
- 148      6420696E 
- 148      7400
- 149              	.LASF7:
- 150 0054 6C6F6E67 		.ascii	"long long unsigned int\000"
- 150      206C6F6E 
- 150      6720756E 
- 150      7369676E 
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\cckaPA80.s 			page 4
+ 147              	.LASF15:
+ 148 0042 433A5C55 		.ascii	"C:\\Users\\Recepcion\\Documents\\Prime 2.0\\MUX\\MU"
+ 148      73657273 
+ 148      5C526563 
+ 148      65706369 
+ 148      6F6E5C44 
+ 149 006f 585F5072 		.ascii	"X_Prime.cydsn\000"
+ 149      696D652E 
+ 149      63796473 
+ 149      6E00
+ 150              	.LASF5:
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccets7OB.s 			page 4
 
 
- 150      65642069 
- 151              	.LASF15:
- 152 006b 433A5C55 		.ascii	"C:\\Users\\Usuario\\Desktop\\MUX2\\MUX_Prime.cydsn\000"
- 152      73657273 
- 152      5C557375 
- 152      6172696F 
- 152      5C446573 
- 153              	.LASF1:
- 154 0099 756E7369 		.ascii	"unsigned char\000"
- 154      676E6564 
- 154      20636861 
- 154      7200
- 155              	.LASF11:
- 156 00a7 63686172 		.ascii	"char\000"
- 156      00
- 157              	.LASF4:
- 158 00ac 6C6F6E67 		.ascii	"long int\000"
- 158      20696E74 
- 158      00
- 159              	.LASF13:
- 160 00b5 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 160      4320342E 
- 160      392E3320 
- 160      32303135 
- 160      30333033 
- 161 00e8 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 161      20726576 
- 161      6973696F 
- 161      6E203232 
- 161      31323230 
- 162 011b 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 162      66756E63 
- 162      74696F6E 
- 162      2D736563 
- 162      74696F6E 
- 163              	.LASF10:
- 164 0143 646F7562 		.ascii	"double\000"
- 164      6C6500
- 165              	.LASF3:
- 166 014a 73686F72 		.ascii	"short unsigned int\000"
- 166      7420756E 
- 166      7369676E 
- 166      65642069 
- 166      6E7400
- 167              	.LASF0:
- 168 015d 7369676E 		.ascii	"signed char\000"
- 168      65642063 
- 168      68617200 
- 169              	.LASF9:
- 170 0169 666C6F61 		.ascii	"float\000"
- 170      7400
- 171              	.LASF2:
- 172 016f 73686F72 		.ascii	"short int\000"
- 172      7420696E 
- 172      7400
- 173              	.LASF12:
- 174 0179 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\Usuario\AppData\Local\Temp\cckaPA80.s 			page 5
+ 151 007d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 151      20756E73 
+ 151      69676E65 
+ 151      6420696E 
+ 151      7400
+ 152              	.LASF7:
+ 153 008f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 153      206C6F6E 
+ 153      6720756E 
+ 153      7369676E 
+ 153      65642069 
+ 154              	.LASF1:
+ 155 00a6 756E7369 		.ascii	"unsigned char\000"
+ 155      676E6564 
+ 155      20636861 
+ 155      7200
+ 156              	.LASF11:
+ 157 00b4 63686172 		.ascii	"char\000"
+ 157      00
+ 158              	.LASF4:
+ 159 00b9 6C6F6E67 		.ascii	"long int\000"
+ 159      20696E74 
+ 159      00
+ 160              	.LASF13:
+ 161 00c2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 161      4320342E 
+ 161      392E3320 
+ 161      32303135 
+ 161      30333033 
+ 162 00f5 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 162      20726576 
+ 162      6973696F 
+ 162      6E203232 
+ 162      31323230 
+ 163 0128 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 163      66756E63 
+ 163      74696F6E 
+ 163      2D736563 
+ 163      74696F6E 
+ 164              	.LASF10:
+ 165 0150 646F7562 		.ascii	"double\000"
+ 165      6C6500
+ 166              	.LASF3:
+ 167 0157 73686F72 		.ascii	"short unsigned int\000"
+ 167      7420756E 
+ 167      7369676E 
+ 167      65642069 
+ 167      6E7400
+ 168              	.LASF0:
+ 169 016a 7369676E 		.ascii	"signed char\000"
+ 169      65642063 
+ 169      68617200 
+ 170              	.LASF9:
+ 171 0176 666C6F61 		.ascii	"float\000"
+ 171      7400
+ 172              	.LASF2:
+ 173 017c 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\RECEPC~1\AppData\Local\Temp\ccets7OB.s 			page 5
 
 
- 174      74797065 
- 174      00
- 175              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 173      7420696E 
+ 173      7400
+ 174              	.LASF12:
+ 175 0186 73697A65 		.ascii	"sizetype\000"
+ 175      74797065 
+ 175      00
+ 176              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
