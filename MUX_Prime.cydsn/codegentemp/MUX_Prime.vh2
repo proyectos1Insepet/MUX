@@ -2,7 +2,7 @@
 --	Conversion of MUX_Prime.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Mar 07 09:25:38 2016
+--	Fri Mar 18 11:31:15 2016
 --
 
 USE cypress.cypress.all;
