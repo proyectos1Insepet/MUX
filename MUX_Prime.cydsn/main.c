@@ -560,13 +560,13 @@ void init_surt(void){
 			}
 			else{
 				set_imagen(2,85);
-			}			
+			}
+  			set_imagen(2,46);				//Pos A y B
+			set_imagen(1,46);
 			flujo_LCD1=0;
 			flujo_LCD2=0;
 			flujo_LCD3=0;
 			flujo_LCD4=0;
-			set_imagen(2,46);				//Pos A y B
-			set_imagen(1,46);
 			estado_lcd1=0;
 			estado_lcd2=0;
 			estado_pos[0]=0;
@@ -3491,10 +3491,10 @@ void polling_pos1(void){
 										if((lado1.mangueras!=1)&&(imagen_grado1!=1)){
 			                        		set_imagen(1,imagen_grado1);
 										}
-										else{
-											flujo_LCD1=12;
+										else{											
 											//set_imagen(1,7);
 											rventa1.producto=lado1.grado[0][0];	
+                                            flujo_LCD1=12;
 										}
 									}
 									else{
@@ -3580,14 +3580,18 @@ void polling_pos1(void){
 						  rventa1.tipo_venta=0;
 					  }
 					  else if(rventa1.autorizado=='0'){
-						lado1.estado=28;
-						error_op(1,65);   //Error de turno
+						lado1.estado=28;	
+                        set_imagen(1,65);
+                        count_protector=1;
+	                    isr_3_StartEx(animacion);  
+	                    Timer_Animacion_Start();
+                        flujo_LCD1=100;   //Error de turno
 					  }
-					  else if((rventa1.autorizado=='2')||(rventa1.autorizado==0)||(rventa1.autorizado==1)||(rventa1.autorizado==100)){
-                      	flujo_LCD1=4;                                
+					  else if((rventa1.autorizado=='2')||(rventa1.autorizado==0)||(rventa1.autorizado==1)||(rventa1.autorizado==100)){                      	                              
                       	set_imagen(1,5);
 					  	rventa1.tipo_venta=0;
 						lado1.estado=28;
+                        flujo_LCD1=4;  
 					  }					
                     break;
                     
@@ -3595,23 +3599,23 @@ void polling_pos1(void){
 					  for(x=0;x<=10;x++){
 					 	  rventa1.km[x]=0;
 					  }					 
-					  if(rventa1.autorizado=='1'){
-	                      flujo_LCD1=16;                                
-	                      set_imagen(1,18);     //Esperando ID
+					  if(rventa1.autorizado=='1'){	                                                      
+	                      set_imagen(1,18);      //Esperando ID
 						  rventa1.tipo_venta=1;	
+                          flujo_LCD1=16;
 					  }
 					  else if (rventa1.autorizado=='0'){
 						lado1.estado=28;
 						error_op(1,65);
 					  }	
 					  else if ((rventa1.autorizado=='2')||(rventa1.autorizado==0)||(rventa1.autorizado==1)||(rventa1.autorizado==100)){
-						//error_op(1,85);
-                        flujo_LCD1 = 100;
+						//error_op(1,85);                        
                         set_imagen(1,85);
                         count_protector=1;
 	                    isr_3_StartEx(animacion);  
 	                    Timer_Animacion_Start();
 						lado1.estado=28;   //Error de operación
+                        flujo_LCD1 = 100;
 					  }					
                     break;
                     
@@ -3764,7 +3768,11 @@ void polling_pos1(void){
 			programar(lado1.dir,1,aux,2);
          }
          else if(x==0x0C){
-            error_op(1,85);
+            set_imagen(1,85);
+            count_protector=1;
+	        isr_3_StartEx(animacion);  
+	        Timer_Animacion_Start();
+            flujo_LCD1=100;
          }
 		 else if(x==0x0B){                    //Termino venta
 			flujo_LCD1=11;
@@ -3784,17 +3792,21 @@ void polling_pos1(void){
                     CyDelay(10);
 				}
 				else{
-					error_op(1,85);
+                    set_imagen(1,85);
+                    count_protector=1;
+	                isr_3_StartEx(animacion);  
+	                Timer_Animacion_Start();
+					flujo_LCD1=100;
 				}
 			 }
 			 else if(rventa1.tipo_venta==1){
 				flujo_LCD1=8; 
                 CyDelay(10);
 			 }
-			 else if(rventa1.tipo_venta==2){
-				flujo_LCD1=102;
+			 else if(rventa1.tipo_venta==2){				
 				set_imagen(1,57);
 				lado1.estado=31; 
+                flujo_LCD1=102;
 			 }			
 		 }	
 		break;
@@ -3834,12 +3846,12 @@ void polling_pos1(void){
 					lado1.estado=28;
 				}
 			 }
-			 else{
-				flujo_LCD1=102;   //Flujo venta a credito
+			 else{				
 				set_imagen(1,57); //Ocupado
 				lado1.estado=9;  //Esperando
 				leer_hora();
-				leer_fecha();				
+				leer_fecha();	
+                flujo_LCD1=102;   //Flujo venta a credito
 			 }
 		}
 		break;
@@ -4035,8 +4047,7 @@ void polling_pos1(void){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
                 switch(LCD_1_rxBuffer[3]){
                     case 0x39:                          //Si Imprime cambiar imagen
-                      set_imagen(1,7);					//Suba la manija
-                      flujo_LCD1=6;
+                      set_imagen(1,7);					//Suba la manija                      
 					  rventa1.imprimir=1;
 					  /*if(((rventa1.autorizado=='2')||(rventa1.autorizado==0))&&(rventa1.tipo_venta==0)){
 						set_imagen(1,55);
@@ -4048,6 +4059,7 @@ void polling_pos1(void){
 					  	imprimir(lado1.dir,print1[1], lado1.grado[rventa1.manguera-1][0], rventa1.ppu, rventa1.volumen, rventa1.dinero, rventa1.placa,rventa1.km);
 						set_imagen(1,12);
 					  }*/
+                     flujo_LCD1=6;
                     break; 
                     
                     case 0x38:                          //No Imprime 
@@ -4115,8 +4127,7 @@ void polling_pos1(void){
 		             set_imagen(1,19);              //Esperando ID
 		             count_protector=0;              
 		             isr_3_StartEx(animacion);       //Lectura de ibutton
-		             Timer_Animacion_Start(); 
-					 flujo_LCD1=101;
+		             Timer_Animacion_Start(); 					 
 					 prox_caso[0][0]=2;
 					 prox_caso[0][1]=14;
 					 count_teclas1=0;							//Inicia el contador de teclas	
@@ -4124,16 +4135,17 @@ void polling_pos1(void){
 					 teclas1=10;
 					 posx1=2;
 					 posy1=3;
-					 sizeletra1=1;	
+					 sizeletra1=1;
+                     flujo_LCD1=101;
 				 }
              }
          }
          if(LCD_1_GetRxBufferSize()==8){
             if((LCD_1_rxBuffer[0]==0xAA) && (LCD_1_rxBuffer[6]==0xC3) && (LCD_1_rxBuffer[7]==0x3C)){
                 switch(LCD_1_rxBuffer[3]){
-                    case 0x3B:
-                     flujo_LCD1=0;      // presiona cancelar
+                    case 0x3B:                     
                      set_imagen(1,46);  //Cambio a imagen de pos a pos b
+                     flujo_LCD1=0;      // presiona cancelar
                     break; 
                 }
             }
@@ -4148,18 +4160,22 @@ void polling_pos1(void){
                 switch(LCD_1_rxBuffer[3]){
                     case 0x46:                          //Turnos 
 						if((rventa1.autorizado=='2')||(rventa1.autorizado==0)){
-							error_op(1,85);
+							set_imagen(1,85);
+                            count_protector=1;
+	                        isr_3_StartEx(animacion);  
+	                        Timer_Animacion_Start();
+					        flujo_LCD1=100;
 						}
 						else{
-						  set_imagen(1,57); 
-						  flujo_LCD1=102;
+						  set_imagen(1,57); 						  
 						  lado1.estado=13;
 						  count_teclas1=0;
 						  id_teclado1=3;
 						  teclas1=10;
 						  posx1=2;
 						  posy1=3;
-						  sizeletra1=1;					  
+						  sizeletra1=1;	
+                          flujo_LCD1=102;
 						}
                     break;
                     
@@ -4176,12 +4192,16 @@ void polling_pos1(void){
 					
                     case 0xB5:                          //Copia de Recibo
 						if((rventa1.autorizado=='2')||(rventa1.autorizado==0)){
-							error_op(1,85);
+							set_imagen(1,85);
+                            count_protector=1;
+	                        isr_3_StartEx(animacion);  
+	                        Timer_Animacion_Start();
+					        flujo_LCD1=100;
 						}
-						else{
-							flujo_LCD1=102;
+						else{							
 							set_imagen(1,57);
 							lado1.estado=25;
+                            flujo_LCD1=102;
 						}
                     break;					
                    
@@ -4961,11 +4981,11 @@ void polling_pos2(void){
 						lado2.estado=28;
 						error_op(2,65); //Error de turno
 					  }
-					  else if((rventa2.autorizado=='2')||(rventa2.autorizado==0)||(rventa2.autorizado==1)||(rventa2.autorizado==100)){
-                      	flujo_LCD2=4;                                
+					  else if((rventa2.autorizado=='2')||(rventa2.autorizado==0)||(rventa2.autorizado==1)||(rventa2.autorizado==100)){                      	                                
                       	set_imagen(2,5);
 					  	rventa2.tipo_venta=0;
 						lado2.estado=28;
+                        flujo_LCD2=4;
 					  }					
                     break;
                     

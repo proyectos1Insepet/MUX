@@ -1,10 +1,10 @@
-C:/Users/Recepcion/Documents/Prime\ 2.0/MUX/MUX_Prime.cydsn/CortexM3/ARM_GCC_493/Debug/CyBootAsmGnu.o : C:/Users/Recepcion/Documents/Prime\ 2.0/MUX/MUX_Prime.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s C:/Users/Recepcion/Documents/Prime\ 2.0/MUX/MUX_Prime.cydsn/Generated_Source/PSoC5/cydevicegnu.inc C:/Users/Recepcion/Documents/Prime\ 2.0/MUX/MUX_Prime.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc C:/Users/Recepcion/Documents/Prime\ 2.0/MUX/MUX_Prime.cydsn/Generated_Source/PSoC5/cyfittergnu.inc 
+C:/Users/Usuario/Desktop/MUX2/MUX_Prime.cydsn/CortexM3/ARM_GCC_493/Debug/CyBootAsmGnu.o : C:/Users/Usuario/Desktop/MUX2/MUX_Prime.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s C:/Users/Usuario/Desktop/MUX2/MUX_Prime.cydsn/Generated_Source/PSoC5/cydevicegnu.inc C:/Users/Usuario/Desktop/MUX2/MUX_Prime.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc C:/Users/Usuario/Desktop/MUX2/MUX_Prime.cydsn/Generated_Source/PSoC5/cyfittergnu.inc 
 
-C:/Users/Recepcion/Documents/Prime\ 2.0/MUX/MUX_Prime.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s : 
+C:/Users/Usuario/Desktop/MUX2/MUX_Prime.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s : 
 
-C:/Users/Recepcion/Documents/Prime\ 2.0/MUX/MUX_Prime.cydsn/Generated_Source/PSoC5/cydevicegnu.inc : 
+C:/Users/Usuario/Desktop/MUX2/MUX_Prime.cydsn/Generated_Source/PSoC5/cydevicegnu.inc : 
 
-C:/Users/Recepcion/Documents/Prime\ 2.0/MUX/MUX_Prime.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc : 
+C:/Users/Usuario/Desktop/MUX2/MUX_Prime.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc : 
 
-C:/Users/Recepcion/Documents/Prime\ 2.0/MUX/MUX_Prime.cydsn/Generated_Source/PSoC5/cyfittergnu.inc : 
+C:/Users/Usuario/Desktop/MUX2/MUX_Prime.cydsn/Generated_Source/PSoC5/cyfittergnu.inc : 
 

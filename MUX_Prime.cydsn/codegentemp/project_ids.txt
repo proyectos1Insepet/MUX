@@ -1,6 +1,6 @@
-C:\Users\Recepcion\Documents\Prime 2.0\MUX\MUX_Prime.cydsn\MUX_Prime.cyprj|9f2ea1b5-53ce-4d94-a9f9-f0ae8e196d5e
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|94953c44-1001-4ca0-ba15-9ecc81c6e8a5
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|39a88df2-74aa-4263-bf35-9a11482d3d88
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|4b42e721-8e3a-4ef2-8999-91498d0352c2
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|5e40a564-cbe8-42e2-a6d0-3d985d0c2c93
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|317c566a-eab5-4528-8d84-713c7cd28a86
+C:\Users\Usuario\Desktop\MUX2\MUX_Prime.cydsn\MUX_Prime.cyprj|212639e8-ac93-4aef-8ae3-7b63828968db
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2e08b568-7c7b-471f-8575-bb032879a72c
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|adcaac8a-b5a4-4065-9236-c7c72276d8da
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a6bbb42d-40cc-4ce8-bac1-783a188d5d19
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|114864f7-a229-4ea8-b3c9-ed382cbf32ac
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|78fc213c-080d-48f3-a812-f57f42ffedd6
